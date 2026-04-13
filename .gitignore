@@ -42,7 +42,7 @@ npm-debug.log*
 yarn-debug.log*
 
 # graphify build output (large generated files)
-graphify-out/
+graphify-out/cache/
 
 # OMC / Claude session state
 .omc/
