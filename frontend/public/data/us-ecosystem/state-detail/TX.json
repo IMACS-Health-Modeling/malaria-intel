@@ -1,0 +1,16 @@
+{
+  "code": "TX",
+  "name": "Texas",
+  "nih_grants_usd": 164000000,
+  "usaspending_usd": 88000000,
+  "clinical_trials": 11,
+  "org_count": 22,
+  "countries_reached": 10,
+  "top_orgs": [
+    { "name": "Baylor College of Medicine", "type": "University", "usd": 62000000, "countries": ["NGA", "UGA", "ETH", "KEN"] },
+    { "name": "UT Health Science Center Houston", "type": "University", "usd": 44000000, "countries": ["NGA", "GHA", "TZA"] },
+    { "name": "Texas Biomedical Research Institute", "type": "Research Institute", "usd": 38000000, "countries": ["MOZ", "ZMB", "MWI"] },
+    { "name": "Sabin Vaccine Institute (TX hub)", "type": "NGO", "usd": 28000000, "countries": ["NGA", "ETH", "UGA"] },
+    { "name": "UT MD Anderson Cancer Center", "type": "University", "usd": 20000000, "countries": ["KEN", "GHA"] }
+  ]
+}

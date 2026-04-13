@@ -1,0 +1,15 @@
+{
+  "code": "AL",
+  "name": "Alabama",
+  "nih_grants_usd": 92000000,
+  "usaspending_usd": 18000000,
+  "clinical_trials": 5,
+  "org_count": 9,
+  "countries_reached": 7,
+  "top_orgs": [
+    { "name": "University of Alabama at Birmingham (UAB)", "type": "University", "usd": 58000000, "countries": ["Uganda","Tanzania","Zambia","Malawi","Zimbabwe","Mozambique"] },
+    { "name": "UAB Center for Clinical and Translational Science", "type": "Research Institute", "usd": 18000000, "countries": ["Ghana","Nigeria"] },
+    { "name": "Alabama International Development", "type": "NGO / Implementing Partner", "usd": 10000000, "countries": ["Mali","Senegal"] },
+    { "name": "Tuskegee University", "type": "University", "usd": 6000000, "countries": ["Guinea","Ethiopia"] }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "code": "NY",
+  "name": "New York",
+  "nih_grants_usd": 276000000,
+  "usaspending_usd": 98000000,
+  "clinical_trials": 16,
+  "org_count": 31,
+  "countries_reached": 15,
+  "top_orgs": [
+    { "name": "Columbia Mailman School of Public Health", "type": "University", "usd": 84000000, "countries": ["MOZ", "TZA", "UGA", "ZMB", "MWI"] },
+    { "name": "Cornell University", "type": "University", "usd": 52000000, "countries": ["NGA", "GHA", "ETH"] },
+    { "name": "NYU Grossman School of Medicine", "type": "University", "usd": 48000000, "countries": ["UGA", "KEN", "TZA"] },
+    { "name": "UNICEF Supply Division (NY Hub)", "type": "Multilateral", "usd": 38000000, "countries": ["NGA", "DRC", "MOZ", "MDG"] },
+    { "name": "Population Council", "type": "NGO", "usd": 22000000, "countries": ["KEN", "GHA", "ZMB"] }
+  ]
+}

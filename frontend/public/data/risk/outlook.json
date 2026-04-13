@@ -1,0 +1,38 @@
+{
+  "_meta": {
+    "generated_at": "2026-04-12T00:00:00Z",
+    "sources": ["who-world-malaria-report@2024","gf-financial@2024","pmi-reports@FY2024"],
+    "record_count": 27,
+    "pipeline_version": "1.0.0"
+  },
+  "funding_gap_usd": 4300000000,
+  "who_target_usd": 8300000000,
+  "current_funded_usd": 4000000000,
+  "economic_cost_trade_partners_usd": 12000000000,
+  "high_dependency_countries": [
+    { "iso3": "MWI", "name": "Malawi",       "us_pct_of_budget": 74, "at_risk_programs": 8 },
+    { "iso3": "MOZ", "name": "Mozambique",   "us_pct_of_budget": 68, "at_risk_programs": 9 },
+    { "iso3": "MDG", "name": "Madagascar",   "us_pct_of_budget": 71, "at_risk_programs": 7 },
+    { "iso3": "LSO", "name": "Lesotho",      "us_pct_of_budget": 82, "at_risk_programs": 6 },
+    { "iso3": "ZWE", "name": "Zimbabwe",     "us_pct_of_budget": 61, "at_risk_programs": 7 },
+    { "iso3": "TGO", "name": "Togo",         "us_pct_of_budget": 58, "at_risk_programs": 5 },
+    { "iso3": "SWZ", "name": "Eswatini",     "us_pct_of_budget": 77, "at_risk_programs": 4 },
+    { "iso3": "HTI", "name": "Haiti",        "us_pct_of_budget": 63, "at_risk_programs": 4 }
+  ],
+  "resistance_hotspots": [
+    { "iso3": "MMR", "name": "Myanmar",       "severity": "high",     "drug": "Artemisinin" },
+    { "iso3": "KHM", "name": "Cambodia",      "severity": "high",     "drug": "Artemisinin" },
+    { "iso3": "THA", "name": "Thailand",      "severity": "moderate", "drug": "Artemisinin" },
+    { "iso3": "VNM", "name": "Vietnam",       "severity": "moderate", "drug": "Artemisinin" },
+    { "iso3": "GHA", "name": "Ghana",         "severity": "moderate", "drug": "Partial resistance" },
+    { "iso3": "UGA", "name": "Uganda",        "severity": "moderate", "drug": "Partial resistance" },
+    { "iso3": "COD", "name": "DR Congo",      "severity": "low",      "drug": "Early signals" },
+    { "iso3": "TZA", "name": "Tanzania",      "severity": "low",      "drug": "Early signals" }
+  ],
+  "scenarios": [
+    { "label": "Full funding maintained", "lives_at_risk": 0,       "cases_rebound": 0 },
+    { "label": "25% US funding cut",      "lives_at_risk": 140000,  "cases_rebound": 14000000 },
+    { "label": "50% US funding cut",      "lives_at_risk": 310000,  "cases_rebound": 31000000 },
+    { "label": "Full US withdrawal",      "lives_at_risk": 680000,  "cases_rebound": 68000000 }
+  ]
+}

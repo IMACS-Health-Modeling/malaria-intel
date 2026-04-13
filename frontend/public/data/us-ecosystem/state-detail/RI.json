@@ -1,0 +1,14 @@
+{
+  "code": "RI",
+  "name": "Rhode Island",
+  "nih_grants_usd": 36000000,
+  "usaspending_usd": 4000000,
+  "clinical_trials": 2,
+  "org_count": 4,
+  "countries_reached": 3,
+  "top_orgs": [
+    { "name": "Brown University School of Public Health", "type": "University", "usd": 22000000, "countries": ["Mozambique","Zambia","Tanzania"] },
+    { "name": "Lifespan / Rhode Island Hospital", "type": "Research Institute", "usd": 10000000, "countries": ["Nigeria","Uganda"] },
+    { "name": "Brown Global Health Initiative", "type": "Research Institute", "usd": 4000000, "countries": ["Malawi"] }
+  ]
+}

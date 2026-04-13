@@ -1,0 +1,49 @@
+{
+  "_meta": {
+    "generated_at": "2026-04-12T00:00:00Z",
+    "sources": ["pmi-annual-reports@FY2024", "who-world-malaria-report@2024"],
+    "record_count": 27,
+    "pipeline_version": "1.1.0"
+  },
+  "lives_saved_total": 2200000,
+  "cases_averted_annual": 51000000,
+  "child_deaths_prevented": 1800000,
+  "cost_per_life_saved_usd": 4700,
+  "gf_nets_distributed_millions": 162,
+  "gf_cases_treated_millions": 173,
+  "gf_smc_children_millions": 51,
+  "gf_malaria_disbursed_usd": 21150000000,
+  "cost_vs_comparators": [
+    { "intervention": "PMI Malaria",         "cost_usd": 4700 },
+    { "intervention": "Tuberculosis",        "cost_usd": 9200 },
+    { "intervention": "Road Safety",         "cost_usd": 31000 },
+    { "intervention": "HIV/AIDS (ART)",      "cost_usd": 11000 },
+    { "intervention": "Childhood Vaccines",  "cost_usd": 2100 },
+    { "intervention": "Cardiovascular",      "cost_usd": 48000 }
+  ],
+  "country_progress": [
+    { "iso3": "RWA", "name": "Rwanda",        "cases_2010": 1079765,  "cases_2023": 748570,   "pct_reduction": 31, "note": "Scale-up in IRS+ITN drove reduction 2010-2016; recent uptick from COVID disruption" },
+    { "iso3": "TZA", "name": "Tanzania",      "cases_2010": 6515227,  "cases_2023": 9223258,  "pct_reduction": -42 },
+    { "iso3": "KEN", "name": "Kenya",         "cases_2010": 3339223,  "cases_2023": 4082575,  "pct_reduction": -22 },
+    { "iso3": "MOZ", "name": "Mozambique",    "cases_2010": 8692340,  "cases_2023": 10208354, "pct_reduction": -17 },
+    { "iso3": "GHA", "name": "Ghana",         "cases_2010": 9334147,  "cases_2023": 6585886,  "pct_reduction": 29 },
+    { "iso3": "SEN", "name": "Senegal",       "cases_2010": 763134,   "cases_2023": 627067,   "pct_reduction": 18 },
+    { "iso3": "ZMB", "name": "Zambia",        "cases_2010": 2373068,  "cases_2023": 5224073,  "pct_reduction": -120 },
+    { "iso3": "MWI", "name": "Malawi",        "cases_2010": 5779560,  "cases_2023": 6141690,  "pct_reduction": -6 },
+    { "iso3": "ETH", "name": "Ethiopia",      "cases_2010": 9471475,  "cases_2023": 9559569,  "pct_reduction": -1 },
+    { "iso3": "NGA", "name": "Nigeria",       "cases_2010": 60551056, "cases_2023": 68136453, "pct_reduction": -13, "note": "Largest burden country — needs intensified investment" },
+    { "iso3": "COD", "name": "DR Congo",      "cases_2010": 26144344, "cases_2023": 34412847, "pct_reduction": -32 },
+    { "iso3": "UGA", "name": "Uganda",        "cases_2010": 13149835, "cases_2023": 13019258, "pct_reduction": 1 },
+    { "iso3": "BFA", "name": "Burkina Faso",  "cases_2010": 9194223,  "cases_2023": 8139355,  "pct_reduction": 11 },
+    { "iso3": "MDG", "name": "Madagascar",    "cases_2010": 987619,   "cases_2023": 6239945,  "pct_reduction": -532 },
+    { "iso3": "MLI", "name": "Mali",          "cases_2010": 5957047,  "cases_2023": 8229337,  "pct_reduction": -38 },
+    { "iso3": "CMR", "name": "Cameroon",      "cases_2010": 5815288,  "cases_2023": 7350770,  "pct_reduction": -26 },
+    { "iso3": "GIN", "name": "Guinea",        "cases_2010": 4322048,  "cases_2023": 4112792,  "pct_reduction": 5 },
+    { "iso3": "ZWE", "name": "Zimbabwe",      "cases_2010": 1097776,  "cases_2023": 635589,   "pct_reduction": 42 },
+    { "iso3": "TGO", "name": "Togo",          "cases_2010": 2144504,  "cases_2023": 2463762,  "pct_reduction": -15 },
+    { "iso3": "BEN", "name": "Benin",         "cases_2010": 4086249,  "cases_2023": 5097786,  "pct_reduction": -25 },
+    { "iso3": "AGO", "name": "Angola",        "cases_2010": 3968548,  "cases_2023": 9388568,  "pct_reduction": -137 },
+    { "iso3": "MMR", "name": "Myanmar",       "cases_2010": 1507212,  "cases_2023": 847232,   "pct_reduction": 44 },
+    { "iso3": "HTI", "name": "Haiti",         "cases_2010": 85077,    "cases_2023": 23824,    "pct_reduction": 72 }
+  ]
+}

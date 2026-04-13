@@ -1,0 +1,16 @@
+{
+  "code": "FL",
+  "name": "Florida",
+  "nih_grants_usd": 68000000,
+  "usaspending_usd": 18000000,
+  "clinical_trials": 3,
+  "org_count": 8,
+  "countries_reached": 4,
+  "top_orgs": [
+    { "name": "University of Florida Emerging Pathogens Institute", "type": "University", "usd": 28000000, "countries": ["MOZ", "MDG", "TZA"] },
+    { "name": "University of South Florida", "type": "University", "usd": 22000000, "countries": ["GHA", "NGA"] },
+    { "name": "Florida International University", "type": "University", "usd": 12000000, "countries": ["KEN", "ETH"] },
+    { "name": "Moffitt Cancer Center (immunology)", "type": "Research Institute", "usd": 8000000, "countries": ["TZA"] },
+    { "name": "University of Miami", "type": "University", "usd": 6000000, "countries": ["GHA", "NGA"] }
+  ]
+}

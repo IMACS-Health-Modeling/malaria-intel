@@ -1,0 +1,15 @@
+{
+  "code": "MI",
+  "name": "Michigan",
+  "nih_grants_usd": 32000000,
+  "usaspending_usd": 6000000,
+  "clinical_trials": 1,
+  "org_count": 4,
+  "countries_reached": 2,
+  "top_orgs": [
+    { "name": "University of Michigan School of Public Health", "type": "University", "usd": 18000000, "countries": ["NGA", "GHA"] },
+    { "name": "Michigan State University Global Health", "type": "University", "usd": 12000000, "countries": ["TZA", "KEN"] },
+    { "name": "Henry Ford Health System", "type": "Research Institute", "usd": 6000000, "countries": ["ETH"] },
+    { "name": "Wayne State University", "type": "University", "usd": 4000000, "countries": ["NGA"] }
+  ]
+}

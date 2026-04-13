@@ -1,0 +1,16 @@
+{
+  "code": "GA",
+  "name": "Georgia",
+  "nih_grants_usd": 96000000,
+  "usaspending_usd": 38000000,
+  "clinical_trials": 6,
+  "org_count": 12,
+  "countries_reached": 6,
+  "top_orgs": [
+    { "name": "Emory Rollins School of Public Health", "type": "University", "usd": 42000000, "countries": ["ETH", "KEN", "GHA", "UGA"] },
+    { "name": "Carter Center", "type": "NGO", "usd": 28000000, "countries": ["ETH", "NGA", "MOZ"] },
+    { "name": "CDC Foundation (Atlanta)", "type": "Foundation", "usd": 24000000, "countries": ["NGA", "KEN", "GHA", "TZA"] },
+    { "name": "Morehouse School of Medicine", "type": "University", "usd": 14000000, "countries": ["GHA", "NGA"] },
+    { "name": "Georgia Tech Research Institute", "type": "University", "usd": 8000000, "countries": ["KEN", "ETH"] }
+  ]
+}

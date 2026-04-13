@@ -1,0 +1,16 @@
+{
+  "code": "MN",
+  "name": "Minnesota",
+  "nih_grants_usd": 62000000,
+  "usaspending_usd": 14000000,
+  "clinical_trials": 3,
+  "org_count": 7,
+  "countries_reached": 3,
+  "top_orgs": [
+    { "name": "University of Minnesota School of Public Health", "type": "University", "usd": 28000000, "countries": ["ETH", "UGA", "TZA"] },
+    { "name": "Mayo Clinic", "type": "Research Institute", "usd": 18000000, "countries": ["KEN", "NGA"] },
+    { "name": "Target Corporation (bed net donation)", "type": "Industry", "usd": 12000000, "countries": ["MOZ", "MDG", "GHA"] },
+    { "name": "Medtronic Foundation (capacity grants)", "type": "Foundation", "usd": 8000000, "countries": ["ETH", "NGA"] },
+    { "name": "Minnesota Department of Health (PMI Tech)", "type": "Government", "usd": 4000000, "countries": ["TZA"] }
+  ]
+}

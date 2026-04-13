@@ -1,0 +1,16 @@
+{
+  "code": "IL",
+  "name": "Illinois",
+  "nih_grants_usd": 74000000,
+  "usaspending_usd": 22000000,
+  "clinical_trials": 4,
+  "org_count": 9,
+  "countries_reached": 4,
+  "top_orgs": [
+    { "name": "University of Chicago", "type": "University", "usd": 32000000, "countries": ["KEN", "TZA", "UGA"] },
+    { "name": "Northwestern University Feinberg", "type": "University", "usd": 24000000, "countries": ["NGA", "GHA"] },
+    { "name": "Rush University Medical Center", "type": "University", "usd": 14000000, "countries": ["MOZ", "ETH"] },
+    { "name": "Abbott Laboratories (R&D grants)", "type": "Industry", "usd": 12000000, "countries": ["NGA", "KEN"] },
+    { "name": "Loyola University Chicago", "type": "University", "usd": 8000000, "countries": ["GHA", "MDG"] }
+  ]
+}

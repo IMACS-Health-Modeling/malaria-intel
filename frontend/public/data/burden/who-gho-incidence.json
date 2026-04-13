@@ -1,0 +1,2022 @@
+{
+  "_meta": {
+    "source": "WHO Global Health Observatory API",
+    "fetched_at": "2026-04-12T18:27:30Z",
+    "coverage": "2010-2024",
+    "indicators": [
+      "MALARIA_EST_INCIDENCE"
+    ],
+    "note": "Incidence per 1,000 population at risk",
+    "url": "https://ghoapi.azureedge.net/api/"
+  },
+  "countries": {
+    "MOZ": {
+      "name": "Mozambique",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 295.0966751,
+          "incidence_per_1000_low": 223.2721708,
+          "incidence_per_1000_high": 377.4653984
+        },
+        "2023": {
+          "incidence_per_1000": 303.5024659,
+          "incidence_per_1000_low": 241.5333724,
+          "incidence_per_1000_high": 374.6244087
+        },
+        "2022": {
+          "incidence_per_1000": 304.5014421,
+          "incidence_per_1000_low": 244.4148005,
+          "incidence_per_1000_high": 374.7066373
+        },
+        "2021": {
+          "incidence_per_1000": 312.4499019,
+          "incidence_per_1000_low": 248.9057621,
+          "incidence_per_1000_high": 390.1358254
+        },
+        "2020": {
+          "incidence_per_1000": 320.6527106,
+          "incidence_per_1000_low": 251.9078692,
+          "incidence_per_1000_high": 402.8207691
+        },
+        "2019": {
+          "incidence_per_1000": 323.9677718,
+          "incidence_per_1000_low": 255.761796,
+          "incidence_per_1000_high": 404.1198303
+        },
+        "2018": {
+          "incidence_per_1000": 331.298561,
+          "incidence_per_1000_low": 262.7193624,
+          "incidence_per_1000_high": 409.1742218
+        },
+        "2017": {
+          "incidence_per_1000": 333.7416332,
+          "incidence_per_1000_low": 266.4037467,
+          "incidence_per_1000_high": 411.458819
+        },
+        "2016": {
+          "incidence_per_1000": 345.2099754,
+          "incidence_per_1000_low": 279.345388,
+          "incidence_per_1000_high": 422.4710114
+        },
+        "2015": {
+          "incidence_per_1000": 353.6724564,
+          "incidence_per_1000_low": 289.1440929,
+          "incidence_per_1000_high": 429.6363892
+        },
+        "2014": {
+          "incidence_per_1000": 361.474302,
+          "incidence_per_1000_low": 295.9905849,
+          "incidence_per_1000_high": 439.5630684
+        },
+        "2013": {
+          "incidence_per_1000": 372.3830775,
+          "incidence_per_1000_low": 303.1662485,
+          "incidence_per_1000_high": 453.2515114
+        },
+        "2012": {
+          "incidence_per_1000": 375.2321795,
+          "incidence_per_1000_low": 306.8349639,
+          "incidence_per_1000_high": 454.0731717
+        },
+        "2011": {
+          "incidence_per_1000": 375.9882167,
+          "incidence_per_1000_low": 309.2642232,
+          "incidence_per_1000_high": 453.3525897
+        },
+        "2010": {
+          "incidence_per_1000": 377.9403967,
+          "incidence_per_1000_low": 310.9315766,
+          "incidence_per_1000_high": 455.2480713
+        }
+      }
+    },
+    "TZA": {
+      "name": "Tanzania",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 136.7250515,
+          "incidence_per_1000_low": 97.06692146,
+          "incidence_per_1000_high": 188.5383449
+        },
+        "2023": {
+          "incidence_per_1000": 138.4507573,
+          "incidence_per_1000_low": 100.925264,
+          "incidence_per_1000_high": 186.2766759
+        },
+        "2022": {
+          "incidence_per_1000": 132.3930445,
+          "incidence_per_1000_low": 97.69358523,
+          "incidence_per_1000_high": 176.7966733
+        },
+        "2021": {
+          "incidence_per_1000": 133.3293979,
+          "incidence_per_1000_low": 97.29596155,
+          "incidence_per_1000_high": 178.3490318
+        },
+        "2020": {
+          "incidence_per_1000": 123.3493028,
+          "incidence_per_1000_low": 89.28394658,
+          "incidence_per_1000_high": 165.1995438
+        },
+        "2019": {
+          "incidence_per_1000": 116.092398,
+          "incidence_per_1000_low": 84.37270759,
+          "incidence_per_1000_high": 155.8788917
+        },
+        "2018": {
+          "incidence_per_1000": 111.4820751,
+          "incidence_per_1000_low": 82.43315684,
+          "incidence_per_1000_high": 148.037103
+        },
+        "2017": {
+          "incidence_per_1000": 123.1838275,
+          "incidence_per_1000_low": 91.09410176,
+          "incidence_per_1000_high": 162.1515073
+        },
+        "2016": {
+          "incidence_per_1000": 134.0467683,
+          "incidence_per_1000_low": 99.57775306,
+          "incidence_per_1000_high": 177.3345937
+        },
+        "2015": {
+          "incidence_per_1000": 141.8033753,
+          "incidence_per_1000_low": 106.0000419,
+          "incidence_per_1000_high": 186.658681
+        },
+        "2014": {
+          "incidence_per_1000": 146.359004,
+          "incidence_per_1000_low": 109.1291421,
+          "incidence_per_1000_high": 192.1086122
+        },
+        "2013": {
+          "incidence_per_1000": 131.7988925,
+          "incidence_per_1000_low": 98.46420196,
+          "incidence_per_1000_high": 174.1676789
+        },
+        "2012": {
+          "incidence_per_1000": 121.4475751,
+          "incidence_per_1000_low": 89.98237387,
+          "incidence_per_1000_high": 160.2519074
+        },
+        "2011": {
+          "incidence_per_1000": 132.9716744,
+          "incidence_per_1000_low": 98.86822146,
+          "incidence_per_1000_high": 175.5794779
+        },
+        "2010": {
+          "incidence_per_1000": 145.5640581,
+          "incidence_per_1000_low": 107.53831,
+          "incidence_per_1000_high": 192.9914655
+        }
+      }
+    },
+    "NGA": {
+      "name": "Nigeria",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 294.2517937,
+          "incidence_per_1000_low": 211.0299542,
+          "incidence_per_1000_high": 397.3596962
+        },
+        "2023": {
+          "incidence_per_1000": 298.9976001,
+          "incidence_per_1000_low": 215.6198428,
+          "incidence_per_1000_high": 406.1951295
+        },
+        "2022": {
+          "incidence_per_1000": 298.9976008,
+          "incidence_per_1000_low": 215.4783976,
+          "incidence_per_1000_high": 402.8461637
+        },
+        "2021": {
+          "incidence_per_1000": 299.2711055,
+          "incidence_per_1000_low": 217.4433874,
+          "incidence_per_1000_high": 407.2521096
+        },
+        "2020": {
+          "incidence_per_1000": 304.3687915,
+          "incidence_per_1000_low": 218.6892779,
+          "incidence_per_1000_high": 414.2790151
+        },
+        "2019": {
+          "incidence_per_1000": 292.9999532,
+          "incidence_per_1000_low": 226.4616604,
+          "incidence_per_1000_high": 376.2231471
+        },
+        "2018": {
+          "incidence_per_1000": 291.073537,
+          "incidence_per_1000_low": 228.9833585,
+          "incidence_per_1000_high": 367.0693166
+        },
+        "2017": {
+          "incidence_per_1000": 288.9798255,
+          "incidence_per_1000_low": 229.0768718,
+          "incidence_per_1000_high": 359.8038719
+        },
+        "2016": {
+          "incidence_per_1000": 284.8254203,
+          "incidence_per_1000_low": 225.4107528,
+          "incidence_per_1000_high": 353.7300677
+        },
+        "2015": {
+          "incidence_per_1000": 283.812818,
+          "incidence_per_1000_low": 227.0686476,
+          "incidence_per_1000_high": 351.9548768
+        },
+        "2014": {
+          "incidence_per_1000": 287.7049251,
+          "incidence_per_1000_low": 230.3116421,
+          "incidence_per_1000_high": 354.644266
+        },
+        "2013": {
+          "incidence_per_1000": 297.8264948,
+          "incidence_per_1000_low": 239.5965318,
+          "incidence_per_1000_high": 366.2851341
+        },
+        "2012": {
+          "incidence_per_1000": 316.2204182,
+          "incidence_per_1000_low": 255.2395212,
+          "incidence_per_1000_high": 389.0072903
+        },
+        "2011": {
+          "incidence_per_1000": 339.5066275,
+          "incidence_per_1000_low": 273.7594721,
+          "incidence_per_1000_high": 416.1799168
+        },
+        "2010": {
+          "incidence_per_1000": 363.3581836,
+          "incidence_per_1000_low": 294.238556,
+          "incidence_per_1000_high": 443.4500325
+        }
+      }
+    },
+    "ETH": {
+      "name": "Ethiopia",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 138.4950248,
+          "incidence_per_1000_low": 76.56462664,
+          "incidence_per_1000_high": 207.5954257
+        },
+        "2023": {
+          "incidence_per_1000": 109.2392957,
+          "incidence_per_1000_low": 60.34529487,
+          "incidence_per_1000_high": 164.109707
+        },
+        "2022": {
+          "incidence_per_1000": 59.88726611,
+          "incidence_per_1000_low": 33.2313284,
+          "incidence_per_1000_high": 89.39387915
+        },
+        "2021": {
+          "incidence_per_1000": 45.55933568,
+          "incidence_per_1000_low": 25.25301448,
+          "incidence_per_1000_high": 67.99392993
+        },
+        "2020": {
+          "incidence_per_1000": 52.28211767,
+          "incidence_per_1000_low": 29.16769617,
+          "incidence_per_1000_high": 78.47779938
+        },
+        "2019": {
+          "incidence_per_1000": 33.61048632,
+          "incidence_per_1000_low": 18.65889904,
+          "incidence_per_1000_high": 50.03388344
+        },
+        "2018": {
+          "incidence_per_1000": 36.4607078,
+          "incidence_per_1000_low": 20.1053938,
+          "incidence_per_1000_high": 54.80551822
+        },
+        "2017": {
+          "incidence_per_1000": 70.71058376,
+          "incidence_per_1000_low": 33.35468763,
+          "incidence_per_1000_high": 122.3471223
+        },
+        "2016": {
+          "incidence_per_1000": 92.88594821,
+          "incidence_per_1000_low": 38.87483249,
+          "incidence_per_1000_high": 171.829705
+        },
+        "2015": {
+          "incidence_per_1000": 130.0601358,
+          "incidence_per_1000_low": 49.51826995,
+          "incidence_per_1000_high": 238.8060232
+        },
+        "2014": {
+          "incidence_per_1000": 144.069847,
+          "incidence_per_1000_low": 54.10456645,
+          "incidence_per_1000_high": 251.5094851
+        },
+        "2013": {
+          "incidence_per_1000": 184.0959032,
+          "incidence_per_1000_low": 100.8099893,
+          "incidence_per_1000_high": 340.344377
+        },
+        "2012": {
+          "incidence_per_1000": 159.6738451,
+          "incidence_per_1000_low": 78.7492631,
+          "incidence_per_1000_high": 366.039927
+        },
+        "2011": {
+          "incidence_per_1000": 143.6950999,
+          "incidence_per_1000_low": 57.57346562,
+          "incidence_per_1000_high": 375.2873071
+        },
+        "2010": {
+          "incidence_per_1000": 153.8421519,
+          "incidence_per_1000_low": 50.22238099,
+          "incidence_per_1000_high": 439.9762831
+        }
+      }
+    },
+    "UGA": {
+      "name": "Uganda",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 264.2318243,
+          "incidence_per_1000_low": 154.1685033,
+          "incidence_per_1000_high": 426.6393927
+        },
+        "2023": {
+          "incidence_per_1000": 267.5743421,
+          "incidence_per_1000_low": 155.9123155,
+          "incidence_per_1000_high": 426.1067717
+        },
+        "2022": {
+          "incidence_per_1000": 266.5834318,
+          "incidence_per_1000_low": 160.0256619,
+          "incidence_per_1000_high": 417.7585952
+        },
+        "2021": {
+          "incidence_per_1000": 268.6123762,
+          "incidence_per_1000_low": 183.045766,
+          "incidence_per_1000_high": 380.1948605
+        },
+        "2020": {
+          "incidence_per_1000": 255.6631833,
+          "incidence_per_1000_low": 197.2209888,
+          "incidence_per_1000_high": 326.4055416
+        },
+        "2019": {
+          "incidence_per_1000": 250.8240477,
+          "incidence_per_1000_low": 197.1771378,
+          "incidence_per_1000_high": 314.094805
+        },
+        "2018": {
+          "incidence_per_1000": 269.2137925,
+          "incidence_per_1000_low": 208.1804277,
+          "incidence_per_1000_high": 341.1712068
+        },
+        "2017": {
+          "incidence_per_1000": 276.5116787,
+          "incidence_per_1000_low": 209.7878924,
+          "incidence_per_1000_high": 355.5238913
+        },
+        "2016": {
+          "incidence_per_1000": 281.0223533,
+          "incidence_per_1000_low": 211.0702329,
+          "incidence_per_1000_high": 365.8251435
+        },
+        "2015": {
+          "incidence_per_1000": 288.695679,
+          "incidence_per_1000_low": 219.8383888,
+          "incidence_per_1000_high": 371.3419041
+        },
+        "2014": {
+          "incidence_per_1000": 292.1084447,
+          "incidence_per_1000_low": 227.8836365,
+          "incidence_per_1000_high": 370.0019258
+        },
+        "2013": {
+          "incidence_per_1000": 310.2735934,
+          "incidence_per_1000_low": 244.5639317,
+          "incidence_per_1000_high": 387.7544695
+        },
+        "2012": {
+          "incidence_per_1000": 349.7942202,
+          "incidence_per_1000_low": 277.8102825,
+          "incidence_per_1000_high": 434.964086
+        },
+        "2011": {
+          "incidence_per_1000": 382.8950377,
+          "incidence_per_1000_low": 302.7692832,
+          "incidence_per_1000_high": 478.1518652
+        },
+        "2010": {
+          "incidence_per_1000": 405.9743691,
+          "incidence_per_1000_low": 322.4331323,
+          "incidence_per_1000_high": 503.8304448
+        }
+      }
+    },
+    "KEN": {
+      "name": "Kenya",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 74.1683085,
+          "incidence_per_1000_low": 37.3067339,
+          "incidence_per_1000_high": 131.0189816
+        },
+        "2023": {
+          "incidence_per_1000": 73.77391808,
+          "incidence_per_1000_low": 37.32295217,
+          "incidence_per_1000_high": 132.8598883
+        },
+        "2022": {
+          "incidence_per_1000": 82.09391795,
+          "incidence_per_1000_low": 44.41943831,
+          "incidence_per_1000_high": 140.0607249
+        },
+        "2021": {
+          "incidence_per_1000": 88.68703596,
+          "incidence_per_1000_low": 58.33939663,
+          "incidence_per_1000_high": 129.8524883
+        },
+        "2020": {
+          "incidence_per_1000": 84.99876851,
+          "incidence_per_1000_low": 63.78514199,
+          "incidence_per_1000_high": 110.6056436
+        },
+        "2019": {
+          "incidence_per_1000": 71.67133565,
+          "incidence_per_1000_low": 52.87011985,
+          "incidence_per_1000_high": 94.18054056
+        },
+        "2018": {
+          "incidence_per_1000": 74.1496418,
+          "incidence_per_1000_low": 53.35805148,
+          "incidence_per_1000_high": 99.08937145
+        },
+        "2017": {
+          "incidence_per_1000": 76.8492024,
+          "incidence_per_1000_low": 55.21773652,
+          "incidence_per_1000_high": 104.5301108
+        },
+        "2016": {
+          "incidence_per_1000": 77.26122108,
+          "incidence_per_1000_low": 55.28032567,
+          "incidence_per_1000_high": 106.2556208
+        },
+        "2015": {
+          "incidence_per_1000": 81.79663555,
+          "incidence_per_1000_low": 59.78192649,
+          "incidence_per_1000_high": 108.6892935
+        },
+        "2014": {
+          "incidence_per_1000": 84.43082344,
+          "incidence_per_1000_low": 62.96974373,
+          "incidence_per_1000_high": 111.0858553
+        },
+        "2013": {
+          "incidence_per_1000": 85.4403037,
+          "incidence_per_1000_low": 63.88103041,
+          "incidence_per_1000_high": 111.5923269
+        },
+        "2012": {
+          "incidence_per_1000": 84.2251522,
+          "incidence_per_1000_low": 63.2646129,
+          "incidence_per_1000_high": 110.1368387
+        },
+        "2011": {
+          "incidence_per_1000": 82.58194793,
+          "incidence_per_1000_low": 61.28061473,
+          "incidence_per_1000_high": 109.7169587
+        },
+        "2010": {
+          "incidence_per_1000": 80.27255074,
+          "incidence_per_1000_low": 59.38186066,
+          "incidence_per_1000_high": 106.7033206
+        }
+      }
+    },
+    "GHA": {
+      "name": "Ghana",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 195.7696618,
+          "incidence_per_1000_low": 135.6087531,
+          "incidence_per_1000_high": 274.0383601
+        },
+        "2023": {
+          "incidence_per_1000": 194.918396,
+          "incidence_per_1000_low": 144.1574959,
+          "incidence_per_1000_high": 257.2898019
+        },
+        "2022": {
+          "incidence_per_1000": 210.786297,
+          "incidence_per_1000_low": 158.5126401,
+          "incidence_per_1000_high": 275.3422508
+        },
+        "2021": {
+          "incidence_per_1000": 212.4652104,
+          "incidence_per_1000_low": 160.9065186,
+          "incidence_per_1000_high": 276.5365199
+        },
+        "2020": {
+          "incidence_per_1000": 219.6265037,
+          "incidence_per_1000_low": 168.1247565,
+          "incidence_per_1000_high": 282.8304384
+        },
+        "2019": {
+          "incidence_per_1000": 215.2688454,
+          "incidence_per_1000_low": 164.4414431,
+          "incidence_per_1000_high": 277.9878927
+        },
+        "2018": {
+          "incidence_per_1000": 212.7630234,
+          "incidence_per_1000_low": 162.3576299,
+          "incidence_per_1000_high": 273.6587054
+        },
+        "2017": {
+          "incidence_per_1000": 226.1852816,
+          "incidence_per_1000_low": 173.1852387,
+          "incidence_per_1000_high": 290.2046668
+        },
+        "2016": {
+          "incidence_per_1000": 244.9214645,
+          "incidence_per_1000_low": 188.9942577,
+          "incidence_per_1000_high": 312.9126842
+        },
+        "2015": {
+          "incidence_per_1000": 275.9898421,
+          "incidence_per_1000_low": 216.12485,
+          "incidence_per_1000_high": 347.1758308
+        },
+        "2014": {
+          "incidence_per_1000": 313.806791,
+          "incidence_per_1000_low": 250.8492332,
+          "incidence_per_1000_high": 387.7960094
+        },
+        "2013": {
+          "incidence_per_1000": 344.3307489,
+          "incidence_per_1000_low": 280.4884493,
+          "incidence_per_1000_high": 420.2636214
+        },
+        "2012": {
+          "incidence_per_1000": 367.317594,
+          "incidence_per_1000_low": 300.2225168,
+          "incidence_per_1000_high": 448.1028749
+        },
+        "2011": {
+          "incidence_per_1000": 375.1405245,
+          "incidence_per_1000_low": 307.2953165,
+          "incidence_per_1000_high": 453.8617182
+        },
+        "2010": {
+          "incidence_per_1000": 366.4042865,
+          "incidence_per_1000_low": 299.3956142,
+          "incidence_per_1000_high": 442.1780551
+        }
+      }
+    },
+    "MDG": {
+      "name": "Madagascar",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 255.4457137,
+          "incidence_per_1000_low": 163.1685603,
+          "incidence_per_1000_high": 354.7227274
+        },
+        "2023": {
+          "incidence_per_1000": 200.0243173,
+          "incidence_per_1000_low": 127.9292177,
+          "incidence_per_1000_high": 279.2842485
+        },
+        "2022": {
+          "incidence_per_1000": 117.0771285,
+          "incidence_per_1000_low": 74.86885318,
+          "incidence_per_1000_high": 162.5030316
+        },
+        "2021": {
+          "incidence_per_1000": 166.3284226,
+          "incidence_per_1000_low": 106.2935672,
+          "incidence_per_1000_high": 230.784155
+        },
+        "2020": {
+          "incidence_per_1000": 138.7306278,
+          "incidence_per_1000_low": 92.1305288,
+          "incidence_per_1000_high": 189.5956053
+        },
+        "2019": {
+          "incidence_per_1000": 71.72675373,
+          "incidence_per_1000_low": 49.00686772,
+          "incidence_per_1000_high": 96.31751976
+        },
+        "2018": {
+          "incidence_per_1000": 71.86049528,
+          "incidence_per_1000_low": 50.7944184,
+          "incidence_per_1000_high": 95.65172225
+        },
+        "2017": {
+          "incidence_per_1000": 77.22226814,
+          "incidence_per_1000_low": 55.79489726,
+          "incidence_per_1000_high": 101.1320312
+        },
+        "2016": {
+          "incidence_per_1000": 63.37210888,
+          "incidence_per_1000_low": 44.49089217,
+          "incidence_per_1000_high": 86.1709238
+        },
+        "2015": {
+          "incidence_per_1000": 106.9755724,
+          "incidence_per_1000_low": 75.78504774,
+          "incidence_per_1000_high": 143.6306083
+        },
+        "2014": {
+          "incidence_per_1000": 49.79904983,
+          "incidence_per_1000_low": 34.92558334,
+          "incidence_per_1000_high": 68.19904768
+        },
+        "2013": {
+          "incidence_per_1000": 63.67437614,
+          "incidence_per_1000_low": 40.80219181,
+          "incidence_per_1000_high": 97.78841061
+        },
+        "2012": {
+          "incidence_per_1000": 70.78624992,
+          "incidence_per_1000_low": 43.32339312,
+          "incidence_per_1000_high": 111.1356799
+        },
+        "2011": {
+          "incidence_per_1000": 37.07720243,
+          "incidence_per_1000_low": 22.59654144,
+          "incidence_per_1000_high": 54.43930298
+        },
+        "2010": {
+          "incidence_per_1000": 44.52075296,
+          "incidence_per_1000_low": 25.72563464,
+          "incidence_per_1000_high": 72.14342948
+        }
+      }
+    },
+    "MWI": {
+      "name": "Malawi",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 294.5279965,
+          "incidence_per_1000_low": 191.2981685,
+          "incidence_per_1000_high": 431.3356252
+        },
+        "2023": {
+          "incidence_per_1000": 291.0135392,
+          "incidence_per_1000_low": 198.8099578,
+          "incidence_per_1000_high": 409.2992036
+        },
+        "2022": {
+          "incidence_per_1000": 285.5038484,
+          "incidence_per_1000_low": 200.3636734,
+          "incidence_per_1000_high": 395.0983345
+        },
+        "2021": {
+          "incidence_per_1000": 280.4884339,
+          "incidence_per_1000_low": 193.8231852,
+          "incidence_per_1000_high": 395.2495848
+        },
+        "2020": {
+          "incidence_per_1000": 283.0146401,
+          "incidence_per_1000_low": 185.2744067,
+          "incidence_per_1000_high": 409.8895115
+        },
+        "2019": {
+          "incidence_per_1000": 280.2880012,
+          "incidence_per_1000_low": 185.0099394,
+          "incidence_per_1000_high": 404.4764709
+        },
+        "2018": {
+          "incidence_per_1000": 270.9531009,
+          "incidence_per_1000_low": 195.9733768,
+          "incidence_per_1000_high": 363.1691579
+        },
+        "2017": {
+          "incidence_per_1000": 264.4414837,
+          "incidence_per_1000_low": 202.7276013,
+          "incidence_per_1000_high": 340.5307207
+        },
+        "2016": {
+          "incidence_per_1000": 260.9226051,
+          "incidence_per_1000_low": 199.7808687,
+          "incidence_per_1000_high": 337.0372148
+        },
+        "2015": {
+          "incidence_per_1000": 260.8760238,
+          "incidence_per_1000_low": 198.3785602,
+          "incidence_per_1000_high": 335.6967425
+        },
+        "2014": {
+          "incidence_per_1000": 275.0492764,
+          "incidence_per_1000_low": 205.0661843,
+          "incidence_per_1000_high": 359.2903752
+        },
+        "2013": {
+          "incidence_per_1000": 306.1345523,
+          "incidence_per_1000_low": 234.4325792,
+          "incidence_per_1000_high": 397.3604821
+        },
+        "2012": {
+          "incidence_per_1000": 354.9587618,
+          "incidence_per_1000_low": 279.9155127,
+          "incidence_per_1000_high": 443.3748471
+        },
+        "2011": {
+          "incidence_per_1000": 395.2465971,
+          "incidence_per_1000_low": 318.7805691,
+          "incidence_per_1000_high": 484.1447182
+        },
+        "2010": {
+          "incidence_per_1000": 389.8138079,
+          "incidence_per_1000_low": 314.8456834,
+          "incidence_per_1000_high": 476.9122683
+        }
+      }
+    },
+    "ZMB": {
+      "name": "Zambia",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 252.4103382,
+          "incidence_per_1000_low": 203.3012197,
+          "incidence_per_1000_high": 312.097919
+        },
+        "2023": {
+          "incidence_per_1000": 252.0788372,
+          "incidence_per_1000_low": 203.3412778,
+          "incidence_per_1000_high": 308.7081924
+        },
+        "2022": {
+          "incidence_per_1000": 246.10104,
+          "incidence_per_1000_low": 199.2134869,
+          "incidence_per_1000_high": 300.7417355
+        },
+        "2021": {
+          "incidence_per_1000": 240.9800401,
+          "incidence_per_1000_low": 194.8196268,
+          "incidence_per_1000_high": 295.5630818
+        },
+        "2020": {
+          "incidence_per_1000": 234.2474145,
+          "incidence_per_1000_low": 185.8957748,
+          "incidence_per_1000_high": 291.2029474
+        },
+        "2019": {
+          "incidence_per_1000": 223.8523842,
+          "incidence_per_1000_low": 175.5007902,
+          "incidence_per_1000_high": 279.8617051
+        },
+        "2018": {
+          "incidence_per_1000": 221.9995372,
+          "incidence_per_1000_low": 175.5618959,
+          "incidence_per_1000_high": 275.5452367
+        },
+        "2017": {
+          "incidence_per_1000": 220.1043969,
+          "incidence_per_1000_low": 172.9731693,
+          "incidence_per_1000_high": 272.6179683
+        },
+        "2016": {
+          "incidence_per_1000": 229.0813586,
+          "incidence_per_1000_low": 182.7669631,
+          "incidence_per_1000_high": 283.603647
+        },
+        "2015": {
+          "incidence_per_1000": 237.7809668,
+          "incidence_per_1000_low": 190.2345423,
+          "incidence_per_1000_high": 294.0828767
+        },
+        "2014": {
+          "incidence_per_1000": 237.4727396,
+          "incidence_per_1000_low": 187.9832218,
+          "incidence_per_1000_high": 296.9260487
+        },
+        "2013": {
+          "incidence_per_1000": 228.0255656,
+          "incidence_per_1000_low": 177.3817168,
+          "incidence_per_1000_high": 287.9333781
+        },
+        "2012": {
+          "incidence_per_1000": 206.1546522,
+          "incidence_per_1000_low": 159.8948066,
+          "incidence_per_1000_high": 259.2735159
+        },
+        "2011": {
+          "incidence_per_1000": 181.1215632,
+          "incidence_per_1000_low": 141.5864975,
+          "incidence_per_1000_high": 227.5588014
+        },
+        "2010": {
+          "incidence_per_1000": 169.9224537,
+          "incidence_per_1000_low": 133.948044,
+          "incidence_per_1000_high": 212.5526508
+        }
+      }
+    },
+    "COD": {
+      "name": "Democratic Republic of the Congo",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 321.8929684,
+          "incidence_per_1000_low": 243.1034179,
+          "incidence_per_1000_high": 416.9310771
+        },
+        "2023": {
+          "incidence_per_1000": 325.2947774,
+          "incidence_per_1000_low": 246.4222286,
+          "incidence_per_1000_high": 420.4573864
+        },
+        "2022": {
+          "incidence_per_1000": 327.9426594,
+          "incidence_per_1000_low": 247.4510388,
+          "incidence_per_1000_high": 422.2856381
+        },
+        "2021": {
+          "incidence_per_1000": 338.0367627,
+          "incidence_per_1000_low": 259.4746485,
+          "incidence_per_1000_high": 435.7402049
+        },
+        "2020": {
+          "incidence_per_1000": 338.9196758,
+          "incidence_per_1000_low": 258.7575559,
+          "incidence_per_1000_high": 435.739004
+        },
+        "2019": {
+          "incidence_per_1000": 339.7696948,
+          "incidence_per_1000_low": 263.5523299,
+          "incidence_per_1000_high": 432.1087228
+        },
+        "2018": {
+          "incidence_per_1000": 337.4244232,
+          "incidence_per_1000_low": 260.6853258,
+          "incidence_per_1000_high": 427.1135401
+        },
+        "2017": {
+          "incidence_per_1000": 324.0694053,
+          "incidence_per_1000_low": 248.6514826,
+          "incidence_per_1000_high": 412.3534701
+        },
+        "2016": {
+          "incidence_per_1000": 310.2763857,
+          "incidence_per_1000_low": 237.6846296,
+          "incidence_per_1000_high": 399.3548054
+        },
+        "2015": {
+          "incidence_per_1000": 303.0394902,
+          "incidence_per_1000_low": 233.8963868,
+          "incidence_per_1000_high": 385.0363682
+        },
+        "2014": {
+          "incidence_per_1000": 297.362933,
+          "incidence_per_1000_low": 231.9887451,
+          "incidence_per_1000_high": 377.4171433
+        },
+        "2013": {
+          "incidence_per_1000": 310.4858404,
+          "incidence_per_1000_low": 244.5488162,
+          "incidence_per_1000_high": 388.0534292
+        },
+        "2012": {
+          "incidence_per_1000": 335.7967412,
+          "incidence_per_1000_low": 264.6808564,
+          "incidence_per_1000_high": 419.6588975
+        },
+        "2011": {
+          "incidence_per_1000": 360.232861,
+          "incidence_per_1000_low": 287.8369833,
+          "incidence_per_1000_high": 447.1753194
+        },
+        "2010": {
+          "incidence_per_1000": 381.318348,
+          "incidence_per_1000_low": 307.0639385,
+          "incidence_per_1000_high": 467.4500777
+        }
+      }
+    },
+    "MLI": {
+      "name": "Mali",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 346.2195913,
+          "incidence_per_1000_low": 243.9577987,
+          "incidence_per_1000_high": 492.3968715
+        },
+        "2023": {
+          "incidence_per_1000": 346.2195915,
+          "incidence_per_1000_low": 244.3470588,
+          "incidence_per_1000_high": 492.212284
+        },
+        "2022": {
+          "incidence_per_1000": 346.2195843,
+          "incidence_per_1000_low": 243.8980556,
+          "incidence_per_1000_high": 492.2391545
+        },
+        "2021": {
+          "incidence_per_1000": 345.9227287,
+          "incidence_per_1000_low": 244.02793,
+          "incidence_per_1000_high": 491.9512024
+        },
+        "2020": {
+          "incidence_per_1000": 349.3872937,
+          "incidence_per_1000_low": 246.5713657,
+          "incidence_per_1000_high": 496.4512973
+        },
+        "2019": {
+          "incidence_per_1000": 325.7605808,
+          "incidence_per_1000_low": 229.9300212,
+          "incidence_per_1000_high": 462.4161504
+        },
+        "2018": {
+          "incidence_per_1000": 377.1709055,
+          "incidence_per_1000_low": 266.18714,
+          "incidence_per_1000_high": 535.8584858
+        },
+        "2017": {
+          "incidence_per_1000": 376.9845688,
+          "incidence_per_1000_low": 266.4253346,
+          "incidence_per_1000_high": 535.9864031
+        },
+        "2016": {
+          "incidence_per_1000": 374.3880168,
+          "incidence_per_1000_low": 263.8235489,
+          "incidence_per_1000_high": 531.463067
+        },
+        "2015": {
+          "incidence_per_1000": 381.7113885,
+          "incidence_per_1000_low": 270.7481055,
+          "incidence_per_1000_high": 541.0357622
+        },
+        "2014": {
+          "incidence_per_1000": 429.5430268,
+          "incidence_per_1000_low": 308.6351117,
+          "incidence_per_1000_high": 595.3528633
+        },
+        "2013": {
+          "incidence_per_1000": 441.0003673,
+          "incidence_per_1000_low": 315.759071,
+          "incidence_per_1000_high": 606.0154214
+        },
+        "2012": {
+          "incidence_per_1000": 424.2861023,
+          "incidence_per_1000_low": 302.0698657,
+          "incidence_per_1000_high": 576.0641
+        },
+        "2011": {
+          "incidence_per_1000": 394.1824,
+          "incidence_per_1000_low": 281.3879413,
+          "incidence_per_1000_high": 537.8803394
+        },
+        "2010": {
+          "incidence_per_1000": 373.5950503,
+          "incidence_per_1000_low": 267.6532516,
+          "incidence_per_1000_high": 514.5394917
+        }
+      }
+    },
+    "SEN": {
+      "name": "Senegal",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 36.78065012,
+          "incidence_per_1000_low": 28.9143721,
+          "incidence_per_1000_high": 45.3384837
+        },
+        "2023": {
+          "incidence_per_1000": 34.68756564,
+          "incidence_per_1000_low": 24.54720139,
+          "incidence_per_1000_high": 49.28468689
+        },
+        "2022": {
+          "incidence_per_1000": 38.09999862,
+          "incidence_per_1000_low": 30.08006638,
+          "incidence_per_1000_high": 46.81492709
+        },
+        "2021": {
+          "incidence_per_1000": 41.85352816,
+          "incidence_per_1000_low": 33.06127868,
+          "incidence_per_1000_high": 51.1073964
+        },
+        "2020": {
+          "incidence_per_1000": 35.58551473,
+          "incidence_per_1000_low": 28.12338084,
+          "incidence_per_1000_high": 43.44792483
+        },
+        "2019": {
+          "incidence_per_1000": 41.10709029,
+          "incidence_per_1000_low": 27.80536425,
+          "incidence_per_1000_high": 55.55419273
+        },
+        "2018": {
+          "incidence_per_1000": 65.83047734,
+          "incidence_per_1000_low": 45.83155089,
+          "incidence_per_1000_high": 88.09923662
+        },
+        "2017": {
+          "incidence_per_1000": 52.06403541,
+          "incidence_per_1000_low": 36.178429,
+          "incidence_per_1000_high": 68.98699716
+        },
+        "2016": {
+          "incidence_per_1000": 45.5038804,
+          "incidence_per_1000_low": 31.24255879,
+          "incidence_per_1000_high": 61.42858402
+        },
+        "2015": {
+          "incidence_per_1000": 69.27335982,
+          "incidence_per_1000_low": 47.04620193,
+          "incidence_per_1000_high": 93.8759745
+        },
+        "2014": {
+          "incidence_per_1000": 37.64684834,
+          "incidence_per_1000_low": 27.60235918,
+          "incidence_per_1000_high": 48.8834626
+        },
+        "2013": {
+          "incidence_per_1000": 57.86767836,
+          "incidence_per_1000_low": 41.28246726,
+          "incidence_per_1000_high": 76.75070304
+        },
+        "2012": {
+          "incidence_per_1000": 53.04235891,
+          "incidence_per_1000_low": 36.79315546,
+          "incidence_per_1000_high": 71.89512463
+        },
+        "2011": {
+          "incidence_per_1000": 48.30951649,
+          "incidence_per_1000_low": 34.05249182,
+          "incidence_per_1000_high": 64.26115311
+        },
+        "2010": {
+          "incidence_per_1000": 60.3964477,
+          "incidence_per_1000_low": 42.41050074,
+          "incidence_per_1000_high": 80.33369232
+        }
+      }
+    },
+    "CMR": {
+      "name": "Cameroon",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 260.4594815,
+          "incidence_per_1000_low": 190.286276,
+          "incidence_per_1000_high": 349.3959259
+        },
+        "2023": {
+          "incidence_per_1000": 259.0790925,
+          "incidence_per_1000_low": 198.7384135,
+          "incidence_per_1000_high": 332.9362901
+        },
+        "2022": {
+          "incidence_per_1000": 265.0342957,
+          "incidence_per_1000_low": 204.6063685,
+          "incidence_per_1000_high": 336.9445549
+        },
+        "2021": {
+          "incidence_per_1000": 270.6524929,
+          "incidence_per_1000_low": 207.3611349,
+          "incidence_per_1000_high": 346.1296223
+        },
+        "2020": {
+          "incidence_per_1000": 264.811951,
+          "incidence_per_1000_low": 198.0330026,
+          "incidence_per_1000_high": 345.8377565
+        },
+        "2019": {
+          "incidence_per_1000": 243.4369903,
+          "incidence_per_1000_low": 183.8744994,
+          "incidence_per_1000_high": 317.0954521
+        },
+        "2018": {
+          "incidence_per_1000": 248.9797082,
+          "incidence_per_1000_low": 189.8935135,
+          "incidence_per_1000_high": 319.9394023
+        },
+        "2017": {
+          "incidence_per_1000": 258.9845553,
+          "incidence_per_1000_low": 194.6409315,
+          "incidence_per_1000_high": 336.7422846
+        },
+        "2016": {
+          "incidence_per_1000": 268.5342273,
+          "incidence_per_1000_low": 197.4590394,
+          "incidence_per_1000_high": 356.0771157
+        },
+        "2015": {
+          "incidence_per_1000": 271.055607,
+          "incidence_per_1000_low": 195.674334,
+          "incidence_per_1000_high": 364.9242168
+        },
+        "2014": {
+          "incidence_per_1000": 272.5068975,
+          "incidence_per_1000_low": 192.314004,
+          "incidence_per_1000_high": 374.6711351
+        },
+        "2013": {
+          "incidence_per_1000": 271.0968165,
+          "incidence_per_1000_low": 190.2299025,
+          "incidence_per_1000_high": 371.7780073
+        },
+        "2012": {
+          "incidence_per_1000": 261.1390195,
+          "incidence_per_1000_low": 193.5544613,
+          "incidence_per_1000_high": 344.9403612
+        },
+        "2011": {
+          "incidence_per_1000": 266.5984688,
+          "incidence_per_1000_low": 202.7275689,
+          "incidence_per_1000_high": 342.4175982
+        },
+        "2010": {
+          "incidence_per_1000": 295.6715724,
+          "incidence_per_1000_low": 225.970281,
+          "incidence_per_1000_high": 379.6385331
+        }
+      }
+    },
+    "BFA": {
+      "name": "Burkina Faso",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 353.4888665,
+          "incidence_per_1000_low": 233.8741926,
+          "incidence_per_1000_high": 512.0482611
+        },
+        "2023": {
+          "incidence_per_1000": 353.4888665,
+          "incidence_per_1000_low": 233.727555,
+          "incidence_per_1000_high": 508.228683
+        },
+        "2022": {
+          "incidence_per_1000": 356.2663849,
+          "incidence_per_1000_low": 237.6015399,
+          "incidence_per_1000_high": 514.8115846
+        },
+        "2021": {
+          "incidence_per_1000": 378.5779953,
+          "incidence_per_1000_low": 251.2821159,
+          "incidence_per_1000_high": 547.8608465
+        },
+        "2020": {
+          "incidence_per_1000": 378.1741521,
+          "incidence_per_1000_low": 250.2334209,
+          "incidence_per_1000_high": 545.5951571
+        },
+        "2019": {
+          "incidence_per_1000": 356.4877927,
+          "incidence_per_1000_low": 241.5595396,
+          "incidence_per_1000_high": 512.9091616
+        },
+        "2018": {
+          "incidence_per_1000": 356.2296901,
+          "incidence_per_1000_low": 239.3302426,
+          "incidence_per_1000_high": 507.9776569
+        },
+        "2017": {
+          "incidence_per_1000": 356.5617211,
+          "incidence_per_1000_low": 246.601565,
+          "incidence_per_1000_high": 502.8610001
+        },
+        "2016": {
+          "incidence_per_1000": 373.1719736,
+          "incidence_per_1000_low": 276.7622242,
+          "incidence_per_1000_high": 494.1937035
+        },
+        "2015": {
+          "incidence_per_1000": 417.9542768,
+          "incidence_per_1000_low": 330.7179829,
+          "incidence_per_1000_high": 520.5577775
+        },
+        "2014": {
+          "incidence_per_1000": 446.1424833,
+          "incidence_per_1000_low": 358.4627996,
+          "incidence_per_1000_high": 548.5989643
+        },
+        "2013": {
+          "incidence_per_1000": 487.1444339,
+          "incidence_per_1000_low": 392.2744524,
+          "incidence_per_1000_high": 598.6742423
+        },
+        "2012": {
+          "incidence_per_1000": 533.3901652,
+          "incidence_per_1000_low": 429.7884857,
+          "incidence_per_1000_high": 654.1561543
+        },
+        "2011": {
+          "incidence_per_1000": 554.6817927,
+          "incidence_per_1000_low": 447.4540461,
+          "incidence_per_1000_high": 677.819365
+        },
+        "2010": {
+          "incidence_per_1000": 568.369186,
+          "incidence_per_1000_low": 457.420064,
+          "incidence_per_1000_high": 696.0914671
+        }
+      }
+    },
+    "GIN": {
+      "name": "Guinea",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 286.0836671,
+          "incidence_per_1000_low": 198.1127817,
+          "incidence_per_1000_high": 400.6536778
+        },
+        "2023": {
+          "incidence_per_1000": 285.502144,
+          "incidence_per_1000_low": 200.0749351,
+          "incidence_per_1000_high": 392.0042914
+        },
+        "2022": {
+          "incidence_per_1000": 285.6958989,
+          "incidence_per_1000_low": 214.235788,
+          "incidence_per_1000_high": 374.085121
+        },
+        "2021": {
+          "incidence_per_1000": 294.4452917,
+          "incidence_per_1000_low": 227.6138245,
+          "incidence_per_1000_high": 376.2573928
+        },
+        "2020": {
+          "incidence_per_1000": 304.9429508,
+          "incidence_per_1000_low": 218.4423716,
+          "incidence_per_1000_high": 415.3234628
+        },
+        "2019": {
+          "incidence_per_1000": 321.2020764,
+          "incidence_per_1000_low": 222.894202,
+          "incidence_per_1000_high": 450.9192483
+        },
+        "2018": {
+          "incidence_per_1000": 350.284153,
+          "incidence_per_1000_low": 252.4940546,
+          "incidence_per_1000_high": 474.4108829
+        },
+        "2017": {
+          "incidence_per_1000": 358.4773325,
+          "incidence_per_1000_low": 259.241759,
+          "incidence_per_1000_high": 482.0283321
+        },
+        "2016": {
+          "incidence_per_1000": 366.519838,
+          "incidence_per_1000_low": 270.165762,
+          "incidence_per_1000_high": 488.5022091
+        },
+        "2015": {
+          "incidence_per_1000": 384.3909316,
+          "incidence_per_1000_low": 290.8155386,
+          "incidence_per_1000_high": 503.7725831
+        },
+        "2014": {
+          "incidence_per_1000": 396.6860584,
+          "incidence_per_1000_low": 302.5952517,
+          "incidence_per_1000_high": 507.2225398
+        },
+        "2013": {
+          "incidence_per_1000": 413.7324467,
+          "incidence_per_1000_low": 329.9210664,
+          "incidence_per_1000_high": 514.724115
+        },
+        "2012": {
+          "incidence_per_1000": 431.7485199,
+          "incidence_per_1000_low": 357.9721318,
+          "incidence_per_1000_high": 518.1947095
+        },
+        "2011": {
+          "incidence_per_1000": 428.7812206,
+          "incidence_per_1000_low": 351.1515055,
+          "incidence_per_1000_high": 516.5255011
+        },
+        "2010": {
+          "incidence_per_1000": 415.7379999,
+          "incidence_per_1000_low": 334.45243,
+          "incidence_per_1000_high": 513.7436411
+        }
+      }
+    },
+    "ZWE": {
+      "name": "Zimbabwe",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 11.36272542,
+          "incidence_per_1000_low": 6.827783476,
+          "incidence_per_1000_high": 16.36238798
+        },
+        "2023": {
+          "incidence_per_1000": 49.39604595,
+          "incidence_per_1000_low": 29.50589926,
+          "incidence_per_1000_high": 70.61433082
+        },
+        "2022": {
+          "incidence_per_1000": 28.90136636,
+          "incidence_per_1000_low": 17.37074701,
+          "incidence_per_1000_high": 41.30337737
+        },
+        "2021": {
+          "incidence_per_1000": 27.53749473,
+          "incidence_per_1000_low": 16.35279069,
+          "incidence_per_1000_high": 39.45940353
+        },
+        "2020": {
+          "incidence_per_1000": 94.29687221,
+          "incidence_per_1000_low": 56.56121918,
+          "incidence_per_1000_high": 135.9160272
+        },
+        "2019": {
+          "incidence_per_1000": 65.09225256,
+          "incidence_per_1000_low": 39.08498957,
+          "incidence_per_1000_high": 93.49224667
+        },
+        "2018": {
+          "incidence_per_1000": 53.61458214,
+          "incidence_per_1000_low": 33.18225113,
+          "incidence_per_1000_high": 75.77238244
+        },
+        "2017": {
+          "incidence_per_1000": 114.7046387,
+          "incidence_per_1000_low": 71.59187596,
+          "incidence_per_1000_high": 165.8095965
+        },
+        "2016": {
+          "incidence_per_1000": 66.16057787,
+          "incidence_per_1000_low": 43.35376824,
+          "incidence_per_1000_high": 91.47365345
+        },
+        "2015": {
+          "incidence_per_1000": 94.11756094,
+          "incidence_per_1000_low": 64.14672613,
+          "incidence_per_1000_high": 128.1554781
+        },
+        "2014": {
+          "incidence_per_1000": 97.70572,
+          "incidence_per_1000_low": 72.10578965,
+          "incidence_per_1000_high": 124.8368032
+        },
+        "2013": {
+          "incidence_per_1000": 78.2694755,
+          "incidence_per_1000_low": 55.66515126,
+          "incidence_per_1000_high": 102.4878134
+        },
+        "2012": {
+          "incidence_per_1000": 54.46025519,
+          "incidence_per_1000_low": 37.23099198,
+          "incidence_per_1000_high": 72.85474842
+        },
+        "2011": {
+          "incidence_per_1000": 67.44538249,
+          "incidence_per_1000_low": 44.33334037,
+          "incidence_per_1000_high": 93.00385516
+        },
+        "2010": {
+          "incidence_per_1000": 104.3780603,
+          "incidence_per_1000_low": 56.77171274,
+          "incidence_per_1000_high": 166.0582092
+        }
+      }
+    },
+    "RWA": {
+      "name": "Rwanda",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 77.13835155,
+          "incidence_per_1000_low": 59.95770826,
+          "incidence_per_1000_high": 94.97175547
+        },
+        "2023": {
+          "incidence_per_1000": 53.64373899,
+          "incidence_per_1000_low": 41.74752486,
+          "incidence_per_1000_high": 66.02376937
+        },
+        "2022": {
+          "incidence_per_1000": 85.57229747,
+          "incidence_per_1000_low": 66.53803779,
+          "incidence_per_1000_high": 105.5851848
+        },
+        "2021": {
+          "incidence_per_1000": 118.7353148,
+          "incidence_per_1000_low": 92.22065126,
+          "incidence_per_1000_high": 146.4344517
+        },
+        "2020": {
+          "incidence_per_1000": 213.1164655,
+          "incidence_per_1000_low": 165.6130296,
+          "incidence_per_1000_high": 262.5226325
+        },
+        "2019": {
+          "incidence_per_1000": 385.3459071,
+          "incidence_per_1000_low": 299.5446773,
+          "incidence_per_1000_high": 475.0557975
+        },
+        "2018": {
+          "incidence_per_1000": 477.5673375,
+          "incidence_per_1000_low": 360.7913572,
+          "incidence_per_1000_high": 600.5525967
+        },
+        "2017": {
+          "incidence_per_1000": 711.4383145,
+          "incidence_per_1000_low": 520.2246567,
+          "incidence_per_1000_high": 914.8840134
+        },
+        "2016": {
+          "incidence_per_1000": 410.0814628,
+          "incidence_per_1000_low": 301.6446975,
+          "incidence_per_1000_high": 523.2871498
+        },
+        "2015": {
+          "incidence_per_1000": 308.0374762,
+          "incidence_per_1000_low": 229.2430225,
+          "incidence_per_1000_high": 389.9888634
+        },
+        "2014": {
+          "incidence_per_1000": 202.3026977,
+          "incidence_per_1000_low": 151.95914,
+          "incidence_per_1000_high": 254.4458672
+        },
+        "2013": {
+          "incidence_per_1000": 109.4911902,
+          "incidence_per_1000_low": 91.24748723,
+          "incidence_per_1000_high": 128.8294035
+        },
+        "2012": {
+          "incidence_per_1000": 59.68531014,
+          "incidence_per_1000_low": 47.15994634,
+          "incidence_per_1000_high": 72.62751294
+        },
+        "2011": {
+          "incidence_per_1000": 36.94163641,
+          "incidence_per_1000_low": 27.57434626,
+          "incidence_per_1000_high": 46.7888966
+        },
+        "2010": {
+          "incidence_per_1000": 104.653206,
+          "incidence_per_1000_low": 72.4594824,
+          "incidence_per_1000_high": 138.2102399
+        }
+      }
+    },
+    "TGO": {
+      "name": "Togo",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 249.252173,
+          "incidence_per_1000_low": 166.3377153,
+          "incidence_per_1000_high": 356.9556059
+        },
+        "2023": {
+          "incidence_per_1000": 264.7971586,
+          "incidence_per_1000_low": 192.527036,
+          "incidence_per_1000_high": 353.8538076
+        },
+        "2022": {
+          "incidence_per_1000": 278.590208,
+          "incidence_per_1000_low": 201.6713133,
+          "incidence_per_1000_high": 371.4259751
+        },
+        "2021": {
+          "incidence_per_1000": 279.5067973,
+          "incidence_per_1000_low": 204.6844846,
+          "incidence_per_1000_high": 378.1018109
+        },
+        "2020": {
+          "incidence_per_1000": 283.9224335,
+          "incidence_per_1000_low": 204.2293119,
+          "incidence_per_1000_high": 386.2154545
+        },
+        "2019": {
+          "incidence_per_1000": 289.9780552,
+          "incidence_per_1000_low": 212.5595322,
+          "incidence_per_1000_high": 386.5965097
+        },
+        "2018": {
+          "incidence_per_1000": 322.4549685,
+          "incidence_per_1000_low": 251.3873542,
+          "incidence_per_1000_high": 406.157512
+        },
+        "2017": {
+          "incidence_per_1000": 351.1472248,
+          "incidence_per_1000_low": 282.6713769,
+          "incidence_per_1000_high": 431.2242813
+        },
+        "2016": {
+          "incidence_per_1000": 368.5680178,
+          "incidence_per_1000_low": 297.7993174,
+          "incidence_per_1000_high": 451.4047778
+        },
+        "2015": {
+          "incidence_per_1000": 372.3465213,
+          "incidence_per_1000_low": 301.4249409,
+          "incidence_per_1000_high": 454.4557035
+        },
+        "2014": {
+          "incidence_per_1000": 368.9771092,
+          "incidence_per_1000_low": 301.9169148,
+          "incidence_per_1000_high": 446.0527304
+        },
+        "2013": {
+          "incidence_per_1000": 369.590891,
+          "incidence_per_1000_low": 301.6231411,
+          "incidence_per_1000_high": 448.0258267
+        },
+        "2012": {
+          "incidence_per_1000": 336.2069791,
+          "incidence_per_1000_low": 266.7199041,
+          "incidence_per_1000_high": 418.3951107
+        },
+        "2011": {
+          "incidence_per_1000": 310.5693739,
+          "incidence_per_1000_low": 238.0153638,
+          "incidence_per_1000_high": 398.6288172
+        },
+        "2010": {
+          "incidence_per_1000": 318.5258571,
+          "incidence_per_1000_low": 243.5394737,
+          "incidence_per_1000_high": 413.4489253
+        }
+      }
+    },
+    "BEN": {
+      "name": "Benin",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 354.253113,
+          "incidence_per_1000_low": 227.8638848,
+          "incidence_per_1000_high": 527.484627
+        },
+        "2023": {
+          "incidence_per_1000": 361.2623993,
+          "incidence_per_1000_low": 243.4060998,
+          "incidence_per_1000_high": 516.3945941
+        },
+        "2022": {
+          "incidence_per_1000": 376.601112,
+          "incidence_per_1000_low": 266.2502598,
+          "incidence_per_1000_high": 521.3034231
+        },
+        "2021": {
+          "incidence_per_1000": 378.2004988,
+          "incidence_per_1000_low": 277.2783139,
+          "incidence_per_1000_high": 502.1958182
+        },
+        "2020": {
+          "incidence_per_1000": 377.0054542,
+          "incidence_per_1000_low": 281.1681375,
+          "incidence_per_1000_high": 491.1857146
+        },
+        "2019": {
+          "incidence_per_1000": 399.9118393,
+          "incidence_per_1000_low": 307.5886116,
+          "incidence_per_1000_high": 511.2915724
+        },
+        "2018": {
+          "incidence_per_1000": 407.709079,
+          "incidence_per_1000_low": 323.7784946,
+          "incidence_per_1000_high": 507.2398944
+        },
+        "2017": {
+          "incidence_per_1000": 415.7384105,
+          "incidence_per_1000_low": 336.5913497,
+          "incidence_per_1000_high": 510.3474897
+        },
+        "2016": {
+          "incidence_per_1000": 415.9183733,
+          "incidence_per_1000_low": 335.9661219,
+          "incidence_per_1000_high": 510.7936007
+        },
+        "2015": {
+          "incidence_per_1000": 390.7645149,
+          "incidence_per_1000_low": 310.2760059,
+          "incidence_per_1000_high": 486.1990294
+        },
+        "2014": {
+          "incidence_per_1000": 369.1138615,
+          "incidence_per_1000_low": 284.8999338,
+          "incidence_per_1000_high": 470.6866671
+        },
+        "2013": {
+          "incidence_per_1000": 362.1389931,
+          "incidence_per_1000_low": 279.104852,
+          "incidence_per_1000_high": 462.2210679
+        },
+        "2012": {
+          "incidence_per_1000": 365.180444,
+          "incidence_per_1000_low": 287.1751444,
+          "incidence_per_1000_high": 456.3219964
+        },
+        "2011": {
+          "incidence_per_1000": 382.9891408,
+          "incidence_per_1000_low": 301.8670229,
+          "incidence_per_1000_high": 480.1837953
+        },
+        "2010": {
+          "incidence_per_1000": 417.0712603,
+          "incidence_per_1000_low": 332.6538681,
+          "incidence_per_1000_high": 519.5534869
+        }
+      }
+    },
+    "SDN": {
+      "name": "Sudan",
+      "years": {}
+    },
+    "AGO": {
+      "name": "Angola",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 258.8999127,
+          "incidence_per_1000_low": 160.2673501,
+          "incidence_per_1000_high": 392.1348707
+        },
+        "2023": {
+          "incidence_per_1000": 255.4718915,
+          "incidence_per_1000_low": 157.5463948,
+          "incidence_per_1000_high": 395.4405251
+        },
+        "2022": {
+          "incidence_per_1000": 260.0909908,
+          "incidence_per_1000_low": 161.3792134,
+          "incidence_per_1000_high": 393.0457942
+        },
+        "2021": {
+          "incidence_per_1000": 258.6080753,
+          "incidence_per_1000_low": 169.5137743,
+          "incidence_per_1000_high": 375.1996182
+        },
+        "2020": {
+          "incidence_per_1000": 244.5295723,
+          "incidence_per_1000_low": 153.7013919,
+          "incidence_per_1000_high": 365.0353305
+        },
+        "2019": {
+          "incidence_per_1000": 243.1031771,
+          "incidence_per_1000_low": 160.147561,
+          "incidence_per_1000_high": 352.1128561
+        },
+        "2018": {
+          "incidence_per_1000": 232.4429808,
+          "incidence_per_1000_low": 170.3561458,
+          "incidence_per_1000_high": 312.9221059
+        },
+        "2017": {
+          "incidence_per_1000": 215.3145581,
+          "incidence_per_1000_low": 167.481851,
+          "incidence_per_1000_high": 271.8965479
+        },
+        "2016": {
+          "incidence_per_1000": 189.7796222,
+          "incidence_per_1000_low": 146.7869008,
+          "incidence_per_1000_high": 240.669909
+        },
+        "2015": {
+          "incidence_per_1000": 174.4717751,
+          "incidence_per_1000_low": 133.5345612,
+          "incidence_per_1000_high": 224.2944104
+        },
+        "2014": {
+          "incidence_per_1000": 163.8586153,
+          "incidence_per_1000_low": 120.2876343,
+          "incidence_per_1000_high": 216.9898282
+        },
+        "2013": {
+          "incidence_per_1000": 158.1038401,
+          "incidence_per_1000_low": 115.8460377,
+          "incidence_per_1000_high": 211.6336934
+        },
+        "2012": {
+          "incidence_per_1000": 153.0532906,
+          "incidence_per_1000_low": 113.4606981,
+          "incidence_per_1000_high": 201.9277819
+        },
+        "2011": {
+          "incidence_per_1000": 157.062634,
+          "incidence_per_1000_low": 117.605634,
+          "incidence_per_1000_high": 205.0635002
+        },
+        "2010": {
+          "incidence_per_1000": 170.3617864,
+          "incidence_per_1000_low": 129.1448755,
+          "incidence_per_1000_high": 219.719428
+        }
+      }
+    },
+    "LSO": {
+      "name": "Lesotho",
+      "years": {}
+    },
+    "SWZ": {
+      "name": "Eswatini",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 0.554613638,
+          "incidence_per_1000_low": 0.554613638,
+          "incidence_per_1000_high": 0.554613638
+        },
+        "2023": {
+          "incidence_per_1000": 1.73274008,
+          "incidence_per_1000_low": 1.73274008,
+          "incidence_per_1000_high": 1.73274008
+        },
+        "2022": {
+          "incidence_per_1000": 0.627021705,
+          "incidence_per_1000_low": 0.627021705,
+          "incidence_per_1000_high": 0.627021705
+        },
+        "2021": {
+          "incidence_per_1000": 1.494763887,
+          "incidence_per_1000_low": 1.494763887,
+          "incidence_per_1000_high": 1.494763887
+        },
+        "2020": {
+          "incidence_per_1000": 0.697679989,
+          "incidence_per_1000_low": 0.697679989,
+          "incidence_per_1000_high": 0.697679989
+        },
+        "2019": {
+          "incidence_per_1000": 0.762794978,
+          "incidence_per_1000_low": 0.762794978,
+          "incidence_per_1000_high": 0.762794978
+        },
+        "2018": {
+          "incidence_per_1000": 2.09593645,
+          "incidence_per_1000_low": 2.09593645,
+          "incidence_per_1000_high": 2.09593645
+        },
+        "2017": {
+          "incidence_per_1000": 1.356793527,
+          "incidence_per_1000_low": 1.356793527,
+          "incidence_per_1000_high": 1.356793527
+        },
+        "2016": {
+          "incidence_per_1000": 0.7767304,
+          "incidence_per_1000_low": 0.7767304,
+          "incidence_per_1000_high": 0.7767304
+        },
+        "2015": {
+          "incidence_per_1000": 0.993790373,
+          "incidence_per_1000_low": 0.993790373,
+          "incidence_per_1000_high": 0.993790373
+        },
+        "2014": {
+          "incidence_per_1000": 1.222643739,
+          "incidence_per_1000_low": 1.222643739,
+          "incidence_per_1000_high": 1.222643739
+        },
+        "2013": {
+          "incidence_per_1000": 2.300906772,
+          "incidence_per_1000_low": 2.300906772,
+          "incidence_per_1000_high": 2.300906772
+        },
+        "2012": {
+          "incidence_per_1000": 1.299728932,
+          "incidence_per_1000_low": 1.299728932,
+          "incidence_per_1000_high": 1.299728932
+        },
+        "2011": {
+          "incidence_per_1000": 1.2108897,
+          "incidence_per_1000_low": 1.2108897,
+          "incidence_per_1000_high": 1.2108897
+        },
+        "2010": {
+          "incidence_per_1000": 0.861010981,
+          "incidence_per_1000_low": 0.861010981,
+          "incidence_per_1000_high": 0.861010981
+        }
+      }
+    },
+    "MMR": {
+      "name": "Myanmar",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 14.77952057,
+          "incidence_per_1000_low": 8.877542147,
+          "incidence_per_1000_high": 61.96961092
+        },
+        "2023": {
+          "incidence_per_1000": 17.9635296,
+          "incidence_per_1000_low": 10.81810111,
+          "incidence_per_1000_high": 78.48392381
+        },
+        "2022": {
+          "incidence_per_1000": 12.50567544,
+          "incidence_per_1000_low": 7.520921881,
+          "incidence_per_1000_high": 53.57495436
+        },
+        "2021": {
+          "incidence_per_1000": 6.296093257,
+          "incidence_per_1000_low": 3.801431337,
+          "incidence_per_1000_high": 26.62444099
+        },
+        "2020": {
+          "incidence_per_1000": 1.778154805,
+          "incidence_per_1000_low": 1.439946228,
+          "incidence_per_1000_high": 2.137471583
+        },
+        "2019": {
+          "incidence_per_1000": 1.707819671,
+          "incidence_per_1000_low": 1.384575453,
+          "incidence_per_1000_high": 2.061483187
+        },
+        "2018": {
+          "incidence_per_1000": 2.386383773,
+          "incidence_per_1000_low": 1.932735689,
+          "incidence_per_1000_high": 2.87824757
+        },
+        "2017": {
+          "incidence_per_1000": 2.670778958,
+          "incidence_per_1000_low": 2.163803714,
+          "incidence_per_1000_high": 3.202347021
+        },
+        "2016": {
+          "incidence_per_1000": 3.611500509,
+          "incidence_per_1000_low": 2.922209021,
+          "incidence_per_1000_high": 4.354268983
+        },
+        "2015": {
+          "incidence_per_1000": 6.102992731,
+          "incidence_per_1000_low": 4.938223296,
+          "incidence_per_1000_high": 7.363449716
+        },
+        "2014": {
+          "incidence_per_1000": 8.689697833,
+          "incidence_per_1000_low": 6.386417221,
+          "incidence_per_1000_high": 12.05395759
+        },
+        "2013": {
+          "incidence_per_1000": 13.97168601,
+          "incidence_per_1000_low": 10.3985636,
+          "incidence_per_1000_high": 19.3274847
+        },
+        "2012": {
+          "incidence_per_1000": 40.40306568,
+          "incidence_per_1000_low": 28.87589751,
+          "incidence_per_1000_high": 58.376515
+        },
+        "2011": {
+          "incidence_per_1000": 30.81042165,
+          "incidence_per_1000_low": 23.77379514,
+          "incidence_per_1000_high": 41.15440741
+        },
+        "2010": {
+          "incidence_per_1000": 35.28743024,
+          "incidence_per_1000_low": 25.76123151,
+          "incidence_per_1000_high": 50.03673638
+        }
+      }
+    },
+    "PNG": {
+      "name": "Papua New Guinea",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 151.7625725,
+          "incidence_per_1000_low": 105.4662714,
+          "incidence_per_1000_high": 201.9865525
+        },
+        "2023": {
+          "incidence_per_1000": 147.2018026,
+          "incidence_per_1000_low": 101.5904168,
+          "incidence_per_1000_high": 195.4489667
+        },
+        "2022": {
+          "incidence_per_1000": 162.6976874,
+          "incidence_per_1000_low": 112.5677375,
+          "incidence_per_1000_high": 215.8366312
+        },
+        "2021": {
+          "incidence_per_1000": 123.5518675,
+          "incidence_per_1000_low": 85.45659517,
+          "incidence_per_1000_high": 164.3610425
+        },
+        "2020": {
+          "incidence_per_1000": 149.7716169,
+          "incidence_per_1000_low": 102.9710735,
+          "incidence_per_1000_high": 201.1781174
+        },
+        "2019": {
+          "incidence_per_1000": 140.0950774,
+          "incidence_per_1000_low": 95.10034853,
+          "incidence_per_1000_high": 190.9319847
+        },
+        "2018": {
+          "incidence_per_1000": 138.5673744,
+          "incidence_per_1000_low": 90.4666905,
+          "incidence_per_1000_high": 196.3514101
+        },
+        "2017": {
+          "incidence_per_1000": 134.0299959,
+          "incidence_per_1000_low": 86.92403969,
+          "incidence_per_1000_high": 191.4852505
+        },
+        "2016": {
+          "incidence_per_1000": 134.9033896,
+          "incidence_per_1000_low": 90.44059581,
+          "incidence_per_1000_high": 185.2512275
+        },
+        "2015": {
+          "incidence_per_1000": 101.1897641,
+          "incidence_per_1000_low": 65.9557646,
+          "incidence_per_1000_high": 143.9015927
+        },
+        "2014": {
+          "incidence_per_1000": 189.3447728,
+          "incidence_per_1000_low": 109.8763721,
+          "incidence_per_1000_high": 296.8205359
+        },
+        "2013": {
+          "incidence_per_1000": 171.0552607,
+          "incidence_per_1000_low": 92.67944199,
+          "incidence_per_1000_high": 269.2553546
+        },
+        "2012": {
+          "incidence_per_1000": 154.6660909,
+          "incidence_per_1000_low": 50.49661321,
+          "incidence_per_1000_high": 317.255667
+        },
+        "2011": {
+          "incidence_per_1000": 114.3929788,
+          "incidence_per_1000_low": 41.47868029,
+          "incidence_per_1000_high": 202.6733554
+        },
+        "2010": {
+          "incidence_per_1000": 141.387404,
+          "incidence_per_1000_low": 50.67197675,
+          "incidence_per_1000_high": 252.070656
+        }
+      }
+    },
+    "HTI": {
+      "name": "Haiti",
+      "years": {
+        "2024": {
+          "incidence_per_1000": 8.695799336,
+          "incidence_per_1000_low": 5.290695701,
+          "incidence_per_1000_high": 13.59668342
+        },
+        "2023": {
+          "incidence_per_1000": 2.291411707,
+          "incidence_per_1000_low": 1.521479484,
+          "incidence_per_1000_high": 3.096639885
+        },
+        "2022": {
+          "incidence_per_1000": 2.552261721,
+          "incidence_per_1000_low": 1.678023782,
+          "incidence_per_1000_high": 3.534701506
+        },
+        "2021": {
+          "incidence_per_1000": 2.218596178,
+          "incidence_per_1000_low": 1.353910962,
+          "incidence_per_1000_high": 3.442634735
+        },
+        "2020": {
+          "incidence_per_1000": 3.792054495,
+          "incidence_per_1000_low": 2.522923747,
+          "incidence_per_1000_high": 5.125403191
+        },
+        "2019": {
+          "incidence_per_1000": 1.7842935,
+          "incidence_per_1000_low": 1.188319515,
+          "incidence_per_1000_high": 2.409408527
+        },
+        "2018": {
+          "incidence_per_1000": 1.633654425,
+          "incidence_per_1000_low": 1.083408983,
+          "incidence_per_1000_high": 2.209418059
+        },
+        "2017": {
+          "incidence_per_1000": 3.427076637,
+          "incidence_per_1000_low": 2.277644838,
+          "incidence_per_1000_high": 4.626377564
+        },
+        "2016": {
+          "incidence_per_1000": 3.805186293,
+          "incidence_per_1000_low": 2.526509339,
+          "incidence_per_1000_high": 5.144930934
+        },
+        "2015": {
+          "incidence_per_1000": 3.423326527,
+          "incidence_per_1000_low": 2.273206878,
+          "incidence_per_1000_high": 4.619831532
+        },
+        "2014": {
+          "incidence_per_1000": 3.573611663,
+          "incidence_per_1000_low": 2.389490653,
+          "incidence_per_1000_high": 4.830143116
+        },
+        "2013": {
+          "incidence_per_1000": 6.849002334,
+          "incidence_per_1000_low": 4.180066536,
+          "incidence_per_1000_high": 10.58965573
+        },
+        "2012": {
+          "incidence_per_1000": 7.285583537,
+          "incidence_per_1000_low": 4.443475121,
+          "incidence_per_1000_high": 11.3383971
+        },
+        "2011": {
+          "incidence_per_1000": 9.198623689,
+          "incidence_per_1000_low": 5.576652206,
+          "incidence_per_1000_high": 14.294937
+        },
+        "2010": {
+          "incidence_per_1000": 9.713696178,
+          "incidence_per_1000_low": 5.518146002,
+          "incidence_per_1000_high": 15.76019432
+        }
+      }
+    }
+  }
+}

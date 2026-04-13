@@ -1,0 +1,15 @@
+{
+  "code": "WI",
+  "name": "Wisconsin",
+  "nih_grants_usd": 48000000,
+  "usaspending_usd": 8000000,
+  "clinical_trials": 3,
+  "org_count": 6,
+  "countries_reached": 4,
+  "top_orgs": [
+    { "name": "University of Wisconsin-Madison", "type": "University", "usd": 28000000, "countries": ["Uganda","Tanzania","Kenya","Malawi"] },
+    { "name": "UW Global Health Institute", "type": "Research Institute", "usd": 12000000, "countries": ["Uganda","Rwanda"] },
+    { "name": "Medical College of Wisconsin", "type": "University", "usd": 6000000, "countries": ["Nigeria","Ghana"] },
+    { "name": "Marquette University", "type": "University", "usd": 2000000, "countries": ["Kenya"] }
+  ]
+}

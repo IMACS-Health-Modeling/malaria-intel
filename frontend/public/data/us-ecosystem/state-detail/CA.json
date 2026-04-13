@@ -1,0 +1,16 @@
+{
+  "code": "CA",
+  "name": "California",
+  "nih_grants_usd": 248000000,
+  "usaspending_usd": 112000000,
+  "clinical_trials": 22,
+  "org_count": 29,
+  "countries_reached": 14,
+  "top_orgs": [
+    { "name": "UC San Francisco (UCSF)", "type": "University", "usd": 76000000, "countries": ["UGA", "KEN", "ZMB", "MOZ", "TZA"] },
+    { "name": "UC Berkeley School of Public Health", "type": "University", "usd": 62000000, "countries": ["NGA", "GHA", "ETH", "MDG"] },
+    { "name": "Stanford University", "type": "University", "usd": 44000000, "countries": ["KEN", "TZA", "UGA"] },
+    { "name": "PATH (CA operations)", "type": "NGO", "usd": 38000000, "countries": ["MOZ", "GHA", "MDG", "MWI"] },
+    { "name": "Gilead Sciences (drug donation)", "type": "Industry", "usd": 18000000, "countries": ["NGA", "UGA", "DRC"] }
+  ]
+}

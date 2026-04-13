@@ -1,0 +1,16 @@
+{
+  "code": "NJ",
+  "name": "New Jersey",
+  "nih_grants_usd": 28000000,
+  "usaspending_usd": 18000000,
+  "clinical_trials": 2,
+  "org_count": 7,
+  "countries_reached": 3,
+  "top_orgs": [
+    { "name": "Merck & Co. (MSD) Global Health", "type": "Industry", "usd": 18000000, "countries": ["NGA", "MOZ", "GHA"] },
+    { "name": "Rutgers School of Public Health", "type": "University", "usd": 14000000, "countries": ["NGA", "ETH"] },
+    { "name": "Johnson & Johnson Global Public Health", "type": "Industry", "usd": 8000000, "countries": ["KEN", "TZA"] },
+    { "name": "Princeton University Global Health Program", "type": "University", "usd": 4000000, "countries": ["GHA"] },
+    { "name": "Stevens Institute of Technology", "type": "University", "usd": 2000000, "countries": ["MDG"] }
+  ]
+}

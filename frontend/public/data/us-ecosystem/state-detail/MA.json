@@ -1,0 +1,16 @@
+{
+  "code": "MA",
+  "name": "Massachusetts",
+  "nih_grants_usd": 218000000,
+  "usaspending_usd": 76000000,
+  "clinical_trials": 19,
+  "org_count": 24,
+  "countries_reached": 12,
+  "top_orgs": [
+    { "name": "Harvard T.H. Chan School of Public Health", "type": "University", "usd": 88000000, "countries": ["MOZ", "ZMB", "KEN", "TZA", "UGA", "ETH"] },
+    { "name": "Broad Institute (MIT/Harvard)", "type": "Research Institute", "usd": 54000000, "countries": ["NGA", "GHA", "MDG", "MWI"] },
+    { "name": "Boston University School of Public Health", "type": "University", "usd": 36000000, "countries": ["ETH", "KEN", "GHA"] },
+    { "name": "MIT Department of Biology", "type": "University", "usd": 24000000, "countries": ["TZA", "UGA"] },
+    { "name": "John Snow Inc. (JSI)", "type": "Implementing Partner", "usd": 16000000, "countries": ["NGA", "MOZ", "MDG"] }
+  ]
+}

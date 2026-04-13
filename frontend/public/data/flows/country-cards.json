@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "generated_at": "2026-04-12T00:00:00Z",
+    "sources": ["pmi-annual-reports@FY2024"],
+    "record_count": 27,
+    "pipeline_version": "1.1.0"
+  },
+  "flows": [
+    { "iso3": "MOZ", "name": "Mozambique",      "region": "SSA", "us_allocation_usd": 195000000, "malaria_deaths": 56000,  "malaria_cases": 11200000, "funding_rank": 1,  "burden_rank": 3,  "programs": ["PMI","Global Fund","PEPFAR"], "gf_disbursed_usd": 791442733.76,  "gf_committed_usd": 847079051.88 },
+    { "iso3": "TZA", "name": "Tanzania",         "region": "SSA", "us_allocation_usd": 183000000, "malaria_deaths": 47000,  "malaria_cases": 10100000, "funding_rank": 2,  "burden_rank": 5,  "programs": ["PMI","Global Fund"],          "gf_disbursed_usd": 1162965768.37, "gf_committed_usd": 0 },
+    { "iso3": "NGA", "name": "Nigeria",          "region": "SSA", "us_allocation_usd": 175000000, "malaria_deaths": 194000, "malaria_cases": 68000000, "funding_rank": 3,  "burden_rank": 1,  "programs": ["PMI","Global Fund","PEPFAR"], "gf_disbursed_usd": 1849214704.18, "gf_committed_usd": 2015712411.38 },
+    { "iso3": "ETH", "name": "Ethiopia",         "region": "SSA", "us_allocation_usd": 162000000, "malaria_deaths": 11000,  "malaria_cases": 3200000,  "funding_rank": 4,  "burden_rank": 12, "programs": ["PMI","Global Fund"],          "gf_disbursed_usd": 886467342.85,  "gf_committed_usd": 905048648.59 },
+    { "iso3": "UGA", "name": "Uganda",           "region": "SSA", "us_allocation_usd": 159000000, "malaria_deaths": 22000,  "malaria_cases": 15600000, "funding_rank": 5,  "burden_rank": 7,  "programs": ["PMI","Global Fund","PEPFAR"], "gf_disbursed_usd": 1046548184.25, "gf_committed_usd": 1115502397.8 },
+    { "iso3": "KEN", "name": "Kenya",            "region": "SSA", "us_allocation_usd": 148000000, "malaria_deaths": 12000,  "malaria_cases": 6300000,  "funding_rank": 6,  "burden_rank": 11, "programs": ["PMI","Global Fund"],          "gf_disbursed_usd": 505586781.72,  "gf_committed_usd": 560110523.38 },
+    { "iso3": "GHA", "name": "Ghana",            "region": "SSA", "us_allocation_usd": 141000000, "malaria_deaths": 13000,  "malaria_cases": 5800000,  "funding_rank": 7,  "burden_rank": 10, "programs": ["PMI","Global Fund"],          "gf_disbursed_usd": 692761706.55,  "gf_committed_usd": 728347120.18 },
+    { "iso3": "MDG", "name": "Madagascar",       "region": "SSA", "us_allocation_usd": 135000000, "malaria_deaths": 9800,   "malaria_cases": 4100000,  "funding_rank": 8,  "burden_rank": 13, "programs": ["PMI","Global Fund"],          "gf_disbursed_usd": 429438176.97,  "gf_committed_usd": 432533529.32 },
+    { "iso3": "MWI", "name": "Malawi",           "region": "SSA", "us_allocation_usd": 128000000, "malaria_deaths": 8900,   "malaria_cases": 7200000,  "funding_rank": 9,  "burden_rank": 9,  "programs": ["PMI","Global Fund"],          "gf_disbursed_usd": 516693499.01,  "gf_committed_usd": 561580598.92 },
+    { "iso3": "ZMB", "name": "Zambia",           "region": "SSA", "us_allocation_usd": 122000000, "malaria_deaths": 11000,  "malaria_cases": 6800000,  "funding_rank": 10, "burden_rank": 8,  "programs": ["PMI","Global Fund"],          "gf_disbursed_usd": 409359721.28,  "gf_committed_usd": 442988731.87 }
+  ]
+}

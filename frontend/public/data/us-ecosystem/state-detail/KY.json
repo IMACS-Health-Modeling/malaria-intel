@@ -1,0 +1,14 @@
+{
+  "code": "KY",
+  "name": "Kentucky",
+  "nih_grants_usd": 24000000,
+  "usaspending_usd": 4000000,
+  "clinical_trials": 1,
+  "org_count": 3,
+  "countries_reached": 2,
+  "top_orgs": [
+    { "name": "University of Kentucky Center for Appalachian Research in Environmental Sciences", "type": "University", "usd": 14000000, "countries": ["Nigeria","Ghana"] },
+    { "name": "University of Louisville", "type": "University", "usd": 8000000, "countries": ["Uganda","Kenya"] },
+    { "name": "Morehead State University", "type": "University", "usd": 2000000, "countries": ["Malawi"] }
+  ]
+}

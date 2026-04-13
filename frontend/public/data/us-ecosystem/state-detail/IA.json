@@ -1,0 +1,14 @@
+{
+  "code": "IA",
+  "name": "Iowa",
+  "nih_grants_usd": 16000000,
+  "usaspending_usd": 2000000,
+  "clinical_trials": 1,
+  "org_count": 3,
+  "countries_reached": 2,
+  "top_orgs": [
+    { "name": "University of Iowa College of Public Health", "type": "University", "usd": 10000000, "countries": ["Kenya","Tanzania"] },
+    { "name": "Iowa State University", "type": "University", "usd": 4000000, "countries": ["Ghana","Senegal"] },
+    { "name": "World Relief Iowa", "type": "NGO / Implementing Partner", "usd": 2000000, "countries": ["Ethiopia"] }
+  ]
+}

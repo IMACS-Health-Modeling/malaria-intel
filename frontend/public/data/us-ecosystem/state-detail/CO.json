@@ -1,0 +1,16 @@
+{
+  "code": "CO",
+  "name": "Colorado",
+  "nih_grants_usd": 44000000,
+  "usaspending_usd": 12000000,
+  "clinical_trials": 2,
+  "org_count": 6,
+  "countries_reached": 3,
+  "top_orgs": [
+    { "name": "Colorado State University", "type": "University", "usd": 18000000, "countries": ["KEN", "ETH", "UGA"] },
+    { "name": "University of Colorado Anschutz", "type": "University", "usd": 14000000, "countries": ["ZMB", "MOZ"] },
+    { "name": "Colorado School of Public Health", "type": "University", "usd": 10000000, "countries": ["GHA", "TZA"] },
+    { "name": "IDRI (Infectious Disease Research Institute, CO)", "type": "Research Institute", "usd": 8000000, "countries": ["NGA", "MDG"] },
+    { "name": "National Jewish Health", "type": "Research Institute", "usd": 6000000, "countries": ["ETH"] }
+  ]
+}

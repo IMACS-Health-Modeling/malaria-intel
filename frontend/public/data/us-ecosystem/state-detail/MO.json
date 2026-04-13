@@ -1,0 +1,15 @@
+{
+  "code": "MO",
+  "name": "Missouri",
+  "nih_grants_usd": 54000000,
+  "usaspending_usd": 10000000,
+  "clinical_trials": 3,
+  "org_count": 7,
+  "countries_reached": 5,
+  "top_orgs": [
+    { "name": "Washington University in St. Louis", "type": "University", "usd": 32000000, "countries": ["Malawi","Zambia","Tanzania","Rwanda"] },
+    { "name": "Saint Louis University Center for World Health", "type": "University", "usd": 14000000, "countries": ["Congo (DRC)","Rwanda"] },
+    { "name": "University of Missouri", "type": "University", "usd": 6000000, "countries": ["Kenya","Uganda"] },
+    { "name": "World Relief Missouri", "type": "NGO / Implementing Partner", "usd": 2000000, "countries": ["Ethiopia"] }
+  ]
+}

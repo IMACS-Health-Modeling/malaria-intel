@@ -1,0 +1,17 @@
+{
+  "code": "MD",
+  "name": "Maryland",
+  "nih_grants_usd": 412000000,
+  "usaspending_usd": 189000000,
+  "clinical_trials": 24,
+  "org_count": 38,
+  "countries_reached": 21,
+  "top_orgs": [
+    { "name": "Johns Hopkins Bloomberg School of Public Health", "type": "University", "usd": 148000000, "countries": ["Nigeria","Mozambique","Uganda","Tanzania","Kenya","Malawi","Ghana"] },
+    { "name": "JHPIEGO", "type": "NGO / Implementing Partner", "usd": 86000000, "countries": ["Tanzania","Ethiopia","Nigeria","Ghana","Madagascar","Malawi"] },
+    { "name": "University of Maryland, Baltimore", "type": "University", "usd": 72000000, "countries": ["Mali","Burkina Faso","Senegal","Guinea"] },
+    { "name": "Abt Associates", "type": "Contractor", "usd": 54000000, "countries": ["Mozambique","Zimbabwe","Zambia"] },
+    { "name": "Center for Vaccine Development & Global Health (CVD)", "type": "Research Institute", "usd": 38000000, "countries": ["Mali","Burkina Faso","Senegal"] },
+    { "name": "RTI International (MD office)", "type": "Research Institute", "usd": 14000000, "countries": ["Uganda","Rwanda","Togo"] }
+  ]
+}

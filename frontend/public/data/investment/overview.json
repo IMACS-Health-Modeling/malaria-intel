@@ -1,0 +1,119 @@
+{
+  "_meta": {
+    "generated_at": "2026-04-12T18:30:00Z",
+    "sources": ["pmi-annual-reports@FY2024", "global-fund@2024", "nih-reporter@2026-04-01", "oecd-dac1@2024", "who-wmr@2024"],
+    "record_count": 15,
+    "pipeline_version": "2.1.0"
+  },
+  "total_committed_usd": 138800000000,
+  "pmi_annual_avg_usd": 687000000,
+  "gf_us_contribution_usd": 28200000000,
+  "gf_malaria_disbursed_usd": 21150000000,
+  "nih_annual_avg_usd": 180000000,
+  "us_rank": 1,
+  "us_donor_share_pct": 34.0,
+  "years": [
+    { "year": 2010, "pmi": 500000000, "gf": 1400000000, "nih": 130000000 },
+    { "year": 2011, "pmi": 545000000, "gf": 1450000000, "nih": 138000000 },
+    { "year": 2012, "pmi": 589000000, "gf": 1480000000, "nih": 145000000 },
+    { "year": 2013, "pmi": 612000000, "gf": 1520000000, "nih": 150000000 },
+    { "year": 2014, "pmi": 619000000, "gf": 1560000000, "nih": 155000000 },
+    { "year": 2015, "pmi": 674000000, "gf": 1580000000, "nih": 158000000 },
+    { "year": 2016, "pmi": 700000000, "gf": 1600000000, "nih": 162000000 },
+    { "year": 2017, "pmi": 718000000, "gf": 1640000000, "nih": 168000000 },
+    { "year": 2018, "pmi": 735000000, "gf": 1680000000, "nih": 172000000 },
+    { "year": 2019, "pmi": 755000000, "gf": 1700000000, "nih": 175000000 },
+    { "year": 2020, "pmi": 763000000, "gf": 1720000000, "nih": 178000000 },
+    { "year": 2021, "pmi": 778000000, "gf": 1740000000, "nih": 180000000 },
+    { "year": 2022, "pmi": 793000000, "gf": 1760000000, "nih": 183000000 },
+    { "year": 2023, "pmi": 810000000, "gf": 1780000000, "nih": 186000000 },
+    { "year": 2024, "pmi": 820000000, "gf": 1800000000, "nih": 190000000 }
+  ],
+  "disease_split": [
+    { "disease": "HIV/AIDS (PEPFAR)",  "pct": 73.9, "usd": 99600000000 },
+    { "disease": "Malaria (PMI)",      "pct":  7.7, "usd": 10300000000 },
+    { "disease": "TB (USAID)",         "pct":  3.3, "usd":  4400000000 },
+    { "disease": "Other Global Health","pct": 15.1, "usd": 20300000000 }
+  ],
+  "authorized_vs_deployed": [
+    { "year": 2010, "authorized": 510000000,  "deployed": 500000000  },
+    { "year": 2011, "authorized": 556000000,  "deployed": 545000000  },
+    { "year": 2012, "authorized": 601000000,  "deployed": 589000000  },
+    { "year": 2013, "authorized": 623000000,  "deployed": 612000000  },
+    { "year": 2014, "authorized": 630000000,  "deployed": 619000000  },
+    { "year": 2015, "authorized": 685000000,  "deployed": 674000000  },
+    { "year": 2016, "authorized": 712000000,  "deployed": 700000000  },
+    { "year": 2017, "authorized": 729000000,  "deployed": 718000000  },
+    { "year": 2018, "authorized": 748000000,  "deployed": 735000000  },
+    { "year": 2019, "authorized": 768000000,  "deployed": 755000000  },
+    { "year": 2020, "authorized": 780000000,  "deployed": 763000000  },
+    { "year": 2021, "authorized": 790000000,  "deployed": 778000000  },
+    { "year": 2022, "authorized": 800000000,  "deployed": 793000000  },
+    { "year": 2023, "authorized": 820000000,  "deployed": 810000000  },
+    { "year": 2024, "authorized": 835000000,  "deployed": 820000000  }
+  ],
+  "donors": [
+    { "name": "United States", "flag": "🇺🇸", "total_usd": 28200000000, "share_pct": 34.0 },
+    { "name": "United Kingdom","flag": "🇬🇧", "total_usd":  8400000000, "share_pct": 11.6 },
+    { "name": "France",        "flag": "🇫🇷", "total_usd":  5800000000, "share_pct":  8.0 },
+    { "name": "Germany",       "flag": "🇩🇪", "total_usd":  5200000000, "share_pct":  7.2 },
+    { "name": "Japan",         "flag": "🇯🇵", "total_usd":  3600000000, "share_pct":  5.0 },
+    { "name": "Canada",        "flag": "🇨🇦", "total_usd":  2800000000, "share_pct":  3.9 },
+    { "name": "Norway",        "flag": "🇳🇴", "total_usd":  2200000000, "share_pct":  3.0 },
+    { "name": "Netherlands",   "flag": "🇳🇱", "total_usd":  1800000000, "share_pct":  2.5 },
+    { "name": "Sweden",        "flag": "🇸🇪", "total_usd":  1600000000, "share_pct":  2.2 },
+    { "name": "Australia",     "flag": "🇦🇺", "total_usd":  1400000000, "share_pct":  1.9 }
+  ],
+  "disease_efficiency": [
+    {
+      "disease": "Malaria",
+      "color": "#ED7238",
+      "badge": "BEST VALUE",
+      "cost_per_death_averted_usd": 3000,
+      "annual_deaths_thousands": 597,
+      "annual_cases_millions": 249,
+      "us_annual_usd": 820000000,
+      "pct_children": 76
+    },
+    {
+      "disease": "TB",
+      "color": "#7c3aed",
+      "badge": null,
+      "cost_per_death_averted_usd": 12000,
+      "annual_deaths_thousands": 1300,
+      "annual_cases_millions": 10.8,
+      "us_annual_usd": 320000000,
+      "pct_children": 12
+    },
+    {
+      "disease": "HIV/AIDS",
+      "color": "#dc2626",
+      "badge": null,
+      "cost_per_death_averted_usd": 28000,
+      "annual_deaths_thousands": 630,
+      "annual_cases_millions": 39,
+      "us_annual_usd": 7200000000,
+      "pct_children": 15
+    }
+  ],
+  "leverage": {
+    "pmi_ratio": 3.2,
+    "components": [
+      { "label": "US PMI Direct",        "ratio": 1.00, "color": "#ED7238" },
+      { "label": "Global Fund Match",    "ratio": 1.40, "color": "#19bdc3" },
+      { "label": "Country Co-financing", "ratio": 0.50, "color": "#1d499e" },
+      { "label": "Other Bilateral",      "ratio": 0.30, "color": "#8daad8" }
+    ],
+    "description": "Every $1 of US PMI funding catalyzes $3.20 in total investment"
+  },
+  "channel": {
+    "bilateral_pct": 63.2,
+    "multilateral_pct": 36.8
+  },
+  "milestones": [
+    { "year": 2005, "label": "PMI Launch" },
+    { "year": 2012, "label": "GF Reform" },
+    { "year": 2020, "label": "COVID" },
+    { "year": 2023, "label": "GF 8th Replenishment" }
+  ]
+}

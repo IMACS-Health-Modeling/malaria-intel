@@ -1,0 +1,38 @@
+{
+  "_meta": {
+    "generated_at": "2026-04-12T18:30:00Z",
+    "sources": ["pmi-annual-reports@FY2024", "global-fund@2024", "oecd-dac1@2023"],
+    "record_count": 27,
+    "pipeline_version": "1.2.0",
+    "usaspending_note": "usaspending_actual_usd = USAID malaria keyword awards FY2019-2024, place-of-performance country. CHE/USA filtered. Some countries show 0 due to indirect routing."
+  },
+  "flows": [
+    { "iso3": "MOZ", "name": "Mozambique",       "region": "SSA", "us_allocation_usd": 195000000, "malaria_deaths": 17875,  "malaria_cases": 10208354, "funding_rank": 1,  "burden_rank": 3,  "programs": ["PMI","Global Fund","PEPFAR"], "usaspending_actual_usd": 46597817 },
+    { "iso3": "TZA", "name": "Tanzania",          "region": "SSA", "us_allocation_usd": 183000000, "malaria_deaths": 25540,  "malaria_cases": 9223258,  "funding_rank": 2,  "burden_rank": 5,  "programs": ["PMI","Global Fund"], "usaspending_actual_usd": 183945168 },
+    { "iso3": "NGA", "name": "Nigeria",           "region": "SSA", "us_allocation_usd": 175000000, "malaria_deaths": 184689, "malaria_cases": 68136453, "funding_rank": 3,  "burden_rank": 1,  "programs": ["PMI","Global Fund","PEPFAR"], "usaspending_actual_usd": 58503529 },
+    { "iso3": "ETH", "name": "Ethiopia",          "region": "SSA", "us_allocation_usd": 162000000, "malaria_deaths": 18567,  "malaria_cases": 9559569,  "funding_rank": 4,  "burden_rank": 12, "programs": ["PMI","Global Fund"], "usaspending_actual_usd": 67783266 },
+    { "iso3": "UGA", "name": "Uganda",            "region": "SSA", "us_allocation_usd": 159000000, "malaria_deaths": 15945,  "malaria_cases": 13019258, "funding_rank": 5,  "burden_rank": 7,  "programs": ["PMI","Global Fund","PEPFAR"], "usaspending_actual_usd": 35649373 },
+    { "iso3": "KEN", "name": "Kenya",             "region": "SSA", "us_allocation_usd": 148000000, "malaria_deaths": 11478,  "malaria_cases": 4082575,  "funding_rank": 6,  "burden_rank": 11, "programs": ["PMI","Global Fund"], "usaspending_actual_usd": 51746053 },
+    { "iso3": "GHA", "name": "Ghana",             "region": "SSA", "us_allocation_usd": 141000000, "malaria_deaths": 11464,  "malaria_cases": 6585886,  "funding_rank": 7,  "burden_rank": 10, "programs": ["PMI","Global Fund"], "usaspending_actual_usd": 312181455 },
+    { "iso3": "MDG", "name": "Madagascar",        "region": "SSA", "us_allocation_usd": 135000000, "malaria_deaths": 15974,  "malaria_cases": 6239945,  "funding_rank": 8,  "burden_rank": 13, "programs": ["PMI","Global Fund"], "usaspending_actual_usd": 51833758 },
+    { "iso3": "MWI", "name": "Malawi",            "region": "SSA", "us_allocation_usd": 128000000, "malaria_deaths": 7376,   "malaria_cases": 6141690,  "funding_rank": 9,  "burden_rank": 9,  "programs": ["PMI","Global Fund"], "usaspending_actual_usd": 28556117 },
+    { "iso3": "ZMB", "name": "Zambia",            "region": "SSA", "us_allocation_usd": 122000000, "malaria_deaths": 8525,   "malaria_cases": 5224073,  "funding_rank": 10, "burden_rank": 8,  "programs": ["PMI","Global Fund"], "usaspending_actual_usd": 35828025 },
+    { "iso3": "COD", "name": "DR Congo",          "region": "SSA", "us_allocation_usd": 118000000, "malaria_deaths": 67464,  "malaria_cases": 34412847, "funding_rank": 11, "burden_rank": 2,  "programs": ["PMI","Global Fund","PEPFAR"], "usaspending_actual_usd": 89793069 },
+    { "iso3": "MLI", "name": "Mali",              "region": "SSA", "us_allocation_usd": 112000000, "malaria_deaths": 14203,  "malaria_cases": 8229337,  "funding_rank": 12, "burden_rank": 14, "programs": ["PMI","Global Fund"], "usaspending_actual_usd": 0 },
+    { "iso3": "SEN", "name": "Senegal",           "region": "SSA", "us_allocation_usd": 108000000, "malaria_deaths": 1605,   "malaria_cases": 627067,   "funding_rank": 13, "burden_rank": 16, "programs": ["PMI","Global Fund"], "usaspending_actual_usd": 97870126 },
+    { "iso3": "CMR", "name": "Cameroon",          "region": "SSA", "us_allocation_usd": 104000000, "malaria_deaths": 11602,  "malaria_cases": 7350770,  "funding_rank": 14, "burden_rank": 15, "programs": ["Global Fund"], "usaspending_actual_usd": 13904838 },
+    { "iso3": "BFA", "name": "Burkina Faso",      "region": "SSA", "us_allocation_usd": 98000000,  "malaria_deaths": 16146,  "malaria_cases": 8139355,  "funding_rank": 15, "burden_rank": 6,  "programs": ["PMI","Global Fund"], "usaspending_actual_usd": 43450428 },
+    { "iso3": "GIN", "name": "Guinea",            "region": "SSA", "us_allocation_usd": 92000000,  "malaria_deaths": 10188,  "malaria_cases": 4112792,  "funding_rank": 16, "burden_rank": 17, "programs": ["PMI","Global Fund"], "usaspending_actual_usd": 34160718 },
+    { "iso3": "ZWE", "name": "Zimbabwe",          "region": "SSA", "us_allocation_usd": 88000000,  "malaria_deaths": 1627,   "malaria_cases": 635589,   "funding_rank": 17, "burden_rank": 18, "programs": ["PMI","Global Fund","PEPFAR"], "usaspending_actual_usd": 27757796 },
+    { "iso3": "RWA", "name": "Rwanda",            "region": "SSA", "us_allocation_usd": 82000000,  "malaria_deaths": 3349,   "malaria_cases": 748570,   "funding_rank": 18, "burden_rank": 19, "programs": ["PMI","Global Fund"], "usaspending_actual_usd": 77998791 },
+    { "iso3": "TGO", "name": "Togo",              "region": "SSA", "us_allocation_usd": 76000000,  "malaria_deaths": 3456,   "malaria_cases": 2463762,  "funding_rank": 19, "burden_rank": 20, "programs": ["PMI","Global Fund"], "usaspending_actual_usd": 0 },
+    { "iso3": "BEN", "name": "Benin",             "region": "SSA", "us_allocation_usd": 72000000,  "malaria_deaths": 9928,   "malaria_cases": 5097786,  "funding_rank": 20, "burden_rank": 21, "programs": ["PMI","Global Fund"], "usaspending_actual_usd": 18335844 },
+    { "iso3": "SDN", "name": "Sudan",             "region": "SSA", "us_allocation_usd": 68000000,  "malaria_deaths": 5800,   "malaria_cases": 3100000,  "funding_rank": 21, "burden_rank": 22, "programs": ["Global Fund"], "usaspending_actual_usd": 0 },
+    { "iso3": "AGO", "name": "Angola",            "region": "SSA", "us_allocation_usd": 64000000,  "malaria_deaths": 16169,  "malaria_cases": 9388568,  "funding_rank": 22, "burden_rank": 4,  "programs": ["Global Fund"], "usaspending_actual_usd": 4132723 },
+    { "iso3": "LSO", "name": "Lesotho",           "region": "SSA", "us_allocation_usd": 52000000,  "malaria_deaths": 400,    "malaria_cases": 180000,   "funding_rank": 23, "burden_rank": 27, "programs": ["PMI","PEPFAR"], "usaspending_actual_usd": 0 },
+    { "iso3": "SWZ", "name": "Eswatini",          "region": "SSA", "us_allocation_usd": 48000000,  "malaria_deaths": 200,    "malaria_cases": 90000,    "funding_rank": 24, "burden_rank": 28, "programs": ["PMI","PEPFAR"], "usaspending_actual_usd": 7658953 },
+    { "iso3": "MMR", "name": "Myanmar",           "region": "SEA", "us_allocation_usd": 42000000,  "malaria_deaths": 660,    "malaria_cases": 847232,   "funding_rank": 25, "burden_rank": 25, "programs": ["Global Fund"], "usaspending_actual_usd": 35045125 },
+    { "iso3": "PNG", "name": "Papua New Guinea",  "region": "PAC", "us_allocation_usd": 38000000,  "malaria_deaths": 900,    "malaria_cases": 1400000,  "funding_rank": 26, "burden_rank": 23, "programs": ["Global Fund"], "usaspending_actual_usd": 0 },
+    { "iso3": "HTI", "name": "Haiti",             "region": "LAC", "us_allocation_usd": 34000000,  "malaria_deaths": 60,     "malaria_cases": 23824,    "funding_rank": 27, "burden_rank": 26, "programs": ["PMI","Global Fund"], "usaspending_actual_usd": 0 }
+  ]
+}

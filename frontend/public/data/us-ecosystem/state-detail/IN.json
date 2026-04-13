@@ -1,0 +1,14 @@
+{
+  "code": "IN",
+  "name": "Indiana",
+  "nih_grants_usd": 42000000,
+  "usaspending_usd": 6000000,
+  "clinical_trials": 2,
+  "org_count": 5,
+  "countries_reached": 4,
+  "top_orgs": [
+    { "name": "Indiana University School of Medicine", "type": "University", "usd": 24000000, "countries": ["Uganda","Kenya","Nigeria","Zambia"] },
+    { "name": "Purdue University", "type": "University", "usd": 12000000, "countries": ["Ghana","Senegal"] },
+    { "name": "University of Notre Dame Eck Institute", "type": "Research Institute", "usd": 6000000, "countries": ["Kenya","Tanzania"] }
+  ]
+}

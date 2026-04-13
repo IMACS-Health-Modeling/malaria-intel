@@ -1,0 +1,3833 @@
+{
+  "_meta": {
+    "source": "WHO Global Health Observatory API",
+    "fetched_at": "2026-04-12T18:27:30Z",
+    "coverage": "2010-2024",
+    "indicators": [
+      "MALARIA_ITN_USE",
+      "MALARIA_ITN_COVERAGE",
+      "MALARIA_IRS_COVERAGE"
+    ],
+    "url": "https://ghoapi.azureedge.net/api/"
+  },
+  "countries": {
+    "MOZ": {
+      "name": "Mozambique",
+      "years": {
+        "2024": {
+          "itn_use": 51.3,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 58.9618582,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 1571052.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": 52.98,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 60.9028419,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 7123505.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": 43.26,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 49.7215975,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 5683813.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": 55.16,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 63.4062272,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 6484733.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": 61.59,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 70.7907984,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 6880851.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": 44.96,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 51.6830931,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 6303792.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": 56.75,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 65.2305304,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 4211138.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": 61.72,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 70.945036,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 5349948.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": 45.41,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 52.1917158,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 4375512.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": 50.22,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 57.7278284,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 3659845.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2014": {
+          "itn_use": 45.02,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2013": {
+          "itn_use": 33.53,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2012": {
+          "itn_use": 32.92,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2011": {
+          "itn_use": 29.79,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2010": {
+          "itn_use": 18.13,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "TZA": {
+      "name": "Tanzania",
+      "years": {
+        "2024": {
+          "itn_use": 57.4,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 65.9742048,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 93664.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": 55.48,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 63.7767681,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 288926.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": 51.08,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 58.7192848,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 1144624.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": 55.79,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 64.1230336,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2869266.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": 55.62,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 63.9309914,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2510463.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": 48.12,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 55.3089074,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2989048.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": 52.09,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 59.8767049,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2842635.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": 57.7,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 66.3277375,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2759641.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": 56.79,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 65.2778703,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2405067.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": 38.72,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 44.5044597,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 14684925.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2014": {
+          "itn_use": 19.14,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2013": {
+          "itn_use": 40.18,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2012": {
+          "itn_use": 57.09,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2011": {
+          "itn_use": 58.14,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2010": {
+          "itn_use": 45.09,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "NGA": {
+      "name": "Nigeria",
+      "years": {
+        "2024": {
+          "itn_use": 41.49,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 47.6913497,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": 48.18,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 55.3833918,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": 45.46,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 52.2493594,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": 40.53,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 46.5844018,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": 45.23,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 51.986534,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": 46.52,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 53.4771513,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": 42.73,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 49.1123607,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": 42.37,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 48.6999558,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": 46.03,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 52.9137695,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 130061.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": 48.91,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 56.2152339,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2014": {
+          "itn_use": 40.33,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2013": {
+          "itn_use": 32.82,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2012": {
+          "itn_use": 34.72,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2011": {
+          "itn_use": 27.86,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2010": {
+          "itn_use": 21.9,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "ETH": {
+      "name": "Ethiopia",
+      "years": {
+        "2024": {
+          "itn_use": 19.49,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 22.4046951,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 5614296.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": 27.63,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 31.7621472,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 3315640.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": 19.71,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 22.660472,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": 16.98,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 19.5132411,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 6690048.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": 24.94,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 28.6662086,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 6349834.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": 30.04,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 34.5264216,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 7782034.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": 19.38,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 22.2791034,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 10486854.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": 16.19,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 18.6068068,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 17628133.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": 28.42,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 32.664229,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 15050413.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": 35.01,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 40.2428429,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 16147333.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2014": {
+          "itn_use": 25.67,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2013": {
+          "itn_use": 19.32,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2012": {
+          "itn_use": 11.09,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2011": {
+          "itn_use": 19.49,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2010": {
+          "itn_use": 19.46,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "UGA": {
+      "name": "Uganda",
+      "years": {
+        "2024": {
+          "itn_use": 69.42,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 79.7948388,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 5743425.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": 66.31,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 76.2225617,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 6043526.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": 48.55,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 55.8047676,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 6876371.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": 65.28,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 75.034428,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 4466905.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": 63.5,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 72.9914927,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 4671960.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": 52.7,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 60.5814947,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 4478754.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": 70.65,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 81.2076024,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 4436156.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": 73.19,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 84.1275733,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 3223800.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": 57.22,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 65.7681749,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 3811484.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": 59.3,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 68.1671869,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 3700470.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2014": {
+          "itn_use": 61.02,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2013": {
+          "itn_use": 42.13,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2012": {
+          "itn_use": 12.51,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2011": {
+          "itn_use": 20.22,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2010": {
+          "itn_use": 31.91,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "KEN": {
+      "name": "Kenya",
+      "years": {
+        "2024": {
+          "itn_use": 54.1,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 62.18226,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 1474077.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": 43.7,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 50.2299155,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 1502836.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": 51.97,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 59.7318315,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 1614938.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": 52.55,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 60.3994007,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2083177.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": 31.16,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 35.8184429,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 1792495.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": 47.29,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 54.3618877,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2011860.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": 59.2,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 68.0430073,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 1833860.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": 59.52,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 68.4188984,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 906388.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": 53.5,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 61.4957239,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": 51.88,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 59.6377027,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2014": {
+          "itn_use": 45.68,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2013": {
+          "itn_use": 46.67,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2012": {
+          "itn_use": 50.84,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2011": {
+          "itn_use": 44.27,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2010": {
+          "itn_use": 33.87,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "GHA": {
+      "name": "Ghana",
+      "years": {
+        "2024": {
+          "itn_use": 64.37,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 73.990384,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2553813.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": 59.16,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 68.0065342,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2393545.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": 68.98,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 79.2887985,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2232692.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": 66.78,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 76.7644302,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2128109.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": 55.76,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 64.0956632,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2214552.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": 67.32,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 77.3790621,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 1986408.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": 68.77,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 79.0463948,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 1855326.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": 55.71,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 64.0377978,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 1868861.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": 62.06,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 71.3369914,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 1409967.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": 60.84,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 69.9344065,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 1325507.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2014": {
+          "itn_use": 53.35,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2013": {
+          "itn_use": 55.18,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2012": {
+          "itn_use": 51.82,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2011": {
+          "itn_use": 29.21,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2010": {
+          "itn_use": 15.96,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "MDG": {
+      "name": "Madagascar",
+      "years": {
+        "2024": {
+          "itn_use": 32.01,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 36.7979079,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 608526.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": 49.49,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 56.8879781,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 932715.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": 62.15,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 71.4431529,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 990154.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": 46.99,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 54.0162804,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 885814.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": 41.29,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 47.4572895,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 981936.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": 59.5,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 68.3963693,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 1640183.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": 55.28,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 63.5405639,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": 34.84,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 40.0455014,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2008963.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": 55.14,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 63.3835633,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2856873.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": 58.43,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 67.1619426,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 1327326.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2014": {
+          "itn_use": 46.9,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2013": {
+          "itn_use": 46.15,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2012": {
+          "itn_use": 40.78,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2011": {
+          "itn_use": 45.33,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2010": {
+          "itn_use": 43.47,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "MWI": {
+      "name": "Malawi",
+      "years": {
+        "2024": {
+          "itn_use": 31.93,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 36.7046284,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": 40.37,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 46.4054232,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": 53.98,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 62.0429017,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2363146.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": 51.03,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 58.6536939,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2407351.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": 36.31,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 41.7414878,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2379659.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": 62.48,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 71.8197842,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 1456138.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": 64.1,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 73.6783737,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": 54.08,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 62.1627485,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": 55.22,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 63.472606,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": 26.39,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 30.331341,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2014": {
+          "itn_use": 42.38,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2013": {
+          "itn_use": 54.62,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2012": {
+          "itn_use": 40.29,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2011": {
+          "itn_use": 22.99,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2010": {
+          "itn_use": 35.19,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "ZMB": {
+      "name": "Zambia",
+      "years": {
+        "2024": {
+          "itn_use": 61.47,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 70.6588986,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 3911835.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": 58.3,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 67.0106817,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 8800546.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": 22.31,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 25.6497408,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": 42.81,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 49.2046847,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 10744047.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": 44.84,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 51.5406911,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 11157421.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": 35.94,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 41.316271,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 11767404.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": 56.54,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 64.987344,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 6436719.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": 60.4,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 69.4250613,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 7717767.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": 31.07,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 35.7106412,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 6737918.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": 51.75,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 59.479442,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 5930141.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2014": {
+          "itn_use": 53.53,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2013": {
+          "itn_use": 51.05,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2012": {
+          "itn_use": 60.63,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2011": {
+          "itn_use": 47.12,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2010": {
+          "itn_use": 40.3,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "COD": {
+      "name": "Democratic Republic of the Congo",
+      "years": {
+        "2024": {
+          "itn_use": 60.79,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 69.8808405,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": 72.92,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 83.8151771,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": 65.13,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 74.8693163,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": 58.65,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 67.4145644,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": 56.22,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 64.621842,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": 52.73,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 60.6052721,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": 48.83,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 56.1262004,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 111735.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": 56.58,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 65.0373187,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 232181.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": 59.91,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 68.8604091,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 916524.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": 47.61,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 54.725145,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 77643.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2014": {
+          "itn_use": 41.67,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2013": {
+          "itn_use": 44.06,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2012": {
+          "itn_use": 46.36,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2011": {
+          "itn_use": 31.36,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2010": {
+          "itn_use": 23.6,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "MLI": {
+      "name": "Mali",
+      "years": {
+        "2024": {
+          "itn_use": 66.66,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 76.6186446,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": 64.41,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 74.0343085,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": 51.74,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 59.4698305,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 273864.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": 63.24,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 72.691274,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 233663.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": 69.45,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 79.8347506,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 503043.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": 62.55,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 71.8995007,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 690793.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": 58.34,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 67.06277,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 665581.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": 52.98,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 60.8929794,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 823201.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": 52.33,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 60.1553105,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 788711.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": 50.78,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 58.373424,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 494163.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2014": {
+          "itn_use": 50.86,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2013": {
+          "itn_use": 48.59,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2012": {
+          "itn_use": 46.99,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2011": {
+          "itn_use": 49.08,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2010": {
+          "itn_use": 42.13,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "SEN": {
+      "name": "Senegal",
+      "years": {
+        "2024": {
+          "itn_use": 28.44,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 32.6940609,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": 52.68,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 60.5496613,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": 53.53,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 61.5271495,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 570283.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": 42.1,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 48.3951246,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 803093.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": 62.68,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 72.0425094,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 793026.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": 59.46,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 68.3415555,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 51652.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": 50.9,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 58.508071,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": 65.51,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 75.3059717,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 619578.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": 62.42,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 71.7473112,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 496728.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": 53.25,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 61.2049437,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 514833.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2014": {
+          "itn_use": 52.93,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2013": {
+          "itn_use": 50.56,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2012": {
+          "itn_use": 39.11,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2011": {
+          "itn_use": 37.87,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2010": {
+          "itn_use": 36.25,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "CMR": {
+      "name": "Cameroon",
+      "years": {
+        "2024": {
+          "itn_use": 59.08,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 67.9065861,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": 63.46,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 72.9430715,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": 59.05,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 67.8753951,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": 53.39,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 61.3669968,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": 61.09,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 70.2240787,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": 60.91,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 70.0188686,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": 54.67,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 62.845134,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": 62.05,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 71.3248096,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": 61.03,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 70.1471687,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": 48.4,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 55.6302698,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2014": {
+          "itn_use": 48.21,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2013": {
+          "itn_use": 51.59,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2012": {
+          "itn_use": 54.78,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2011": {
+          "itn_use": 19.53,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2010": {
+          "itn_use": 5.6,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "BFA": {
+      "name": "Burkina Faso",
+      "years": {
+        "2024": {
+          "itn_use": 53.4,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 61.3797808,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 43218.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": 72.8,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 83.6825022,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": 73.46,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 84.4403608,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": 46.34,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 53.2662892,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 591249.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": 31.77,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 36.5192763,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 508017.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": 32.93,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 37.857235,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 587248.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": 42.89,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 49.3007728,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 766374.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": 60.18,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 69.1730218,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": 62.63,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 71.9961556,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": 44.81,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 51.5016085,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2014": {
+          "itn_use": 62.27,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2013": {
+          "itn_use": 44.99,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2012": {
+          "itn_use": 18.85,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2011": {
+          "itn_use": 30.48,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2010": {
+          "itn_use": 23.58,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "GIN": {
+      "name": "Guinea",
+      "years": {
+        "2024": {
+          "itn_use": 46.17,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 53.0686276,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": 65.79,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 75.621405,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": 63.78,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 73.3151229,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": 43.66,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 50.1903078,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": 66.41,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 76.3364888,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": 62.58,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 71.9278969,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": 26.25,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 30.1717408,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": 44.07,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 50.6563746,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": 43.49,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 49.9856666,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": 36.38,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 41.8155122,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2014": {
+          "itn_use": 57.43,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2013": {
+          "itn_use": 52.74,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2012": {
+          "itn_use": 15.85,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2011": {
+          "itn_use": 7.93,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2010": {
+          "itn_use": 7.75,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "ZWE": {
+      "name": "Zimbabwe",
+      "years": {
+        "2024": {
+          "itn_use": 47.13,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 54.1719499,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2576905.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": 51.85,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 59.6039439,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2694692.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": 49.43,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 56.8179197,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 3048913.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": 39.59,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 45.5116034,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 3113471.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": 39.62,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 45.5440123,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 3528051.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": 39.45,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 45.3499497,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 3164344.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": 36.18,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 41.5859261,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 3020032.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": 40.13,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 46.1274084,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 3673311.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": 42.02,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 48.2963177,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 3674932.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": 40.7,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 46.7809608,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 3548246.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2014": {
+          "itn_use": 40.29,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2013": {
+          "itn_use": 25.92,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2012": {
+          "itn_use": 13.08,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2011": {
+          "itn_use": 14.82,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2010": {
+          "itn_use": 16.55,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "RWA": {
+      "name": "Rwanda",
+      "years": {
+        "2024": {
+          "itn_use": 44.63,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 51.3001278,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 5844863.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": 60.77,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 69.850113,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 5326004.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": 60.37,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 69.3947896,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 5231805.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": 58.59,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 67.3479382,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 5170303.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": 52.99,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 60.9124877,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 5043795.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": 33.19,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 38.1541178,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 4532103.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": 51.82,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 59.5613019,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 1621955.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": 59.95,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 68.9066473,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 1753230.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": 54.15,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 62.2388803,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2484672.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": 53.52,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 61.5243534,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 2013652.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2014": {
+          "itn_use": 63.01,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2013": {
+          "itn_use": 59.86,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2012": {
+          "itn_use": 48.11,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2011": {
+          "itn_use": 50.7,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2010": {
+          "itn_use": 50.87,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "TGO": {
+      "name": "Togo",
+      "years": {
+        "2024": {
+          "itn_use": 83.09,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 95.50827,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": 75.79,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 87.1137704,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": 50.13,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 57.6186933,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": 48.32,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 55.5439621,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": 53.09,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 61.0207481,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": 60.53,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 69.5749373,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": 70.44,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 80.9681186,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": 68.31,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 78.5244218,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": 54.64,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 62.8058091,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": 68.12,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 78.2984456,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2014": {
+          "itn_use": 60.27,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2013": {
+          "itn_use": 48.39,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2012": {
+          "itn_use": 58.26,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2011": {
+          "itn_use": 57.25,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2010": {
+          "itn_use": 36.89,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "BEN": {
+      "name": "Benin",
+      "years": {
+        "2024": {
+          "itn_use": 52.65,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 60.5152165,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": 55.97,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 64.33974,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": 26.32,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 30.2502221,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": 57.0,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 65.5226618,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 927007.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": 61.04,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 70.1584159,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 1104928.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": 24.51,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 28.1699332,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 1077411.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": 51.58,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 59.2876644,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 1321758.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": 48.36,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 55.5878266,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 853221.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": 24.17,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 27.7790794,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 853221.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": 56.45,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 64.8845529,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 802597.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2014": {
+          "itn_use": 28.55,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2013": {
+          "itn_use": 13.95,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2012": {
+          "itn_use": 43.93,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2011": {
+          "itn_use": 61.5,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2010": {
+          "itn_use": 28.53,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "SDN": {
+      "name": "Sudan",
+      "years": {}
+    },
+    "AGO": {
+      "name": "Angola",
+      "years": {
+        "2024": {
+          "itn_use": 8.88,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 10.2103755,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": 23.0,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 26.4348656,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": 25.74,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 29.5837273,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 863135.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": 10.12,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 11.6333981,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 620815.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": 24.39,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 28.0356924,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 44633.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": 36.64,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 42.1165964,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": 28.97,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 33.2941172,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": 25.81,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 29.6656106,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": 19.48,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 22.3908187,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": 18.52,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": 21.291318,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2014": {
+          "itn_use": 18.63,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2013": {
+          "itn_use": 10.77,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2012": {
+          "itn_use": 10.64,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2011": {
+          "itn_use": 13.28,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2010": {
+          "itn_use": 12.16,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": null,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "LSO": {
+      "name": "Lesotho",
+      "years": {}
+    },
+    "SWZ": {
+      "name": "Eswatini",
+      "years": {
+        "2024": {
+          "itn_use": null,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 47494.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": null,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 43318.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": null,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 26540.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": null,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 67346.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": null,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 53517.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": null,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 15066.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": null,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 39144.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2017": {
+          "itn_use": null,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 21316.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": null,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 24179.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "MMR": {
+      "name": "Myanmar",
+      "years": {
+        "2024": {
+          "itn_use": null,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 354.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2023": {
+          "itn_use": null,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 21122.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2022": {
+          "itn_use": null,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 21566.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2021": {
+          "itn_use": null,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 1618.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2020": {
+          "itn_use": null,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 17381.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2019": {
+          "itn_use": null,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 4361.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2018": {
+          "itn_use": null,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 14017.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2016": {
+          "itn_use": null,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 44484.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        },
+        "2015": {
+          "itn_use": null,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 129545.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "PNG": {
+      "name": "Papua New Guinea",
+      "years": {
+        "2020": {
+          "itn_use": null,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 200.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    },
+    "HTI": {
+      "name": "Haiti",
+      "years": {
+        "2018": {
+          "itn_use": null,
+          "itn_use_low": null,
+          "itn_use_high": null,
+          "itn_coverage": null,
+          "itn_coverage_low": null,
+          "itn_coverage_high": null,
+          "irs_coverage": 42130.0,
+          "irs_coverage_low": null,
+          "irs_coverage_high": null
+        }
+      }
+    }
+  }
+}

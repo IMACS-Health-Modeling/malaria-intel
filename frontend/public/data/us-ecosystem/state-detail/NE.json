@@ -1,0 +1,13 @@
+{
+  "code": "NE",
+  "name": "Nebraska",
+  "nih_grants_usd": 14000000,
+  "usaspending_usd": 2000000,
+  "clinical_trials": 1,
+  "org_count": 2,
+  "countries_reached": 2,
+  "top_orgs": [
+    { "name": "University of Nebraska Medical Center (UNMC)", "type": "University", "usd": 10000000, "countries": ["Uganda","Rwanda"] },
+    { "name": "Creighton University Global Health Program", "type": "University", "usd": 4000000, "countries": ["Tanzania","Zambia"] }
+  ]
+}

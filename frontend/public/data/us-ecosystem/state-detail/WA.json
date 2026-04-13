@@ -1,0 +1,15 @@
+{
+  "code": "WA",
+  "name": "Washington",
+  "nih_grants_usd": 298000000,
+  "usaspending_usd": 142000000,
+  "clinical_trials": 18,
+  "org_count": 28,
+  "countries_reached": 18,
+  "top_orgs": [
+    { "name": "PATH", "type": "NGO / Implementing Partner", "usd": 142000000, "countries": ["Nigeria","DR Congo","Uganda","Ethiopia","Kenya","Ghana","Tanzania","Mozambique","Madagascar"] },
+    { "name": "University of Washington", "type": "University", "usd": 98000000, "countries": ["Kenya","Malawi","Tanzania","Uganda","Rwanda"] },
+    { "name": "Institute for Health Metrics and Evaluation (IHME)", "type": "Research Institute", "usd": 44000000, "countries": ["Global analysis & modeling"] },
+    { "name": "Intellectual Ventures (Global Good)", "type": "R&D / Biotech", "usd": 14000000, "countries": ["Tanzania","Kenya"] }
+  ]
+}

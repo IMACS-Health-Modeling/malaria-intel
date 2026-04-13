@@ -1,0 +1,16 @@
+{
+  "code": "DC",
+  "name": "Washington DC",
+  "nih_grants_usd": 148000000,
+  "usaspending_usd": 210000000,
+  "clinical_trials": 8,
+  "org_count": 45,
+  "countries_reached": 27,
+  "top_orgs": [
+    { "name": "PSI (Population Services International)", "type": "NGO", "usd": 68000000, "countries": ["MOZ", "TZA", "ETH", "MDG", "MWI", "UGA", "NGA"] },
+    { "name": "FHI 360", "type": "Implementing Partner", "usd": 52000000, "countries": ["NGA", "KEN", "GHA", "ZMB", "MOZ"] },
+    { "name": "Palladium Group", "type": "Implementing Partner", "usd": 38000000, "countries": ["ETH", "TZA", "KEN", "GHA"] },
+    { "name": "Results for Development (R4D)", "type": "NGO", "usd": 24000000, "countries": ["NGA", "MDG", "MWI"] },
+    { "name": "Center for Global Development", "type": "Think Tank", "usd": 12000000, "countries": ["NGA", "KEN", "ETH", "GHA"] }
+  ]
+}

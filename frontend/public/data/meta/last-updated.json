@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-04-12T00:00:00Z",
+  "chapters": {
+    "investment": "ok",
+    "flows": "ok",
+    "us-ecosystem": "ok",
+    "impact": "ok",
+    "outlook": "ok"
+  },
+  "pipeline_version": "1.0.0",
+  "note": "Local stub data — connect S3 pipeline for live data"
+}

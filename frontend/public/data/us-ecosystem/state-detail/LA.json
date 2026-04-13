@@ -1,0 +1,16 @@
+{
+  "code": "LA",
+  "name": "Louisiana",
+  "nih_grants_usd": 108000000,
+  "usaspending_usd": 24000000,
+  "clinical_trials": 6,
+  "org_count": 11,
+  "countries_reached": 9,
+  "top_orgs": [
+    { "name": "Tulane School of Public Health & Tropical Medicine", "type": "University", "usd": 62000000, "countries": ["Nigeria","Cameroon","Mali","Burkina Faso","Senegal","Benin","Togo"] },
+    { "name": "Tulane National Primate Research Center", "type": "Research Institute", "usd": 24000000, "countries": ["Nigeria","Cameroon","Côte d'Ivoire"] },
+    { "name": "LSU Health Sciences Center", "type": "University", "usd": 14000000, "countries": ["Ghana","Guinea"] },
+    { "name": "Xavier University of Louisiana", "type": "University", "usd": 6000000, "countries": ["Malawi","Tanzania"] },
+    { "name": "Mary Bird Perkins Cancer Center", "type": "Research Institute", "usd": 2000000, "countries": ["Uganda"] }
+  ]
+}

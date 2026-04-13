@@ -1,0 +1,16 @@
+{
+  "code": "PA",
+  "name": "Pennsylvania",
+  "nih_grants_usd": 132000000,
+  "usaspending_usd": 54000000,
+  "clinical_trials": 9,
+  "org_count": 18,
+  "countries_reached": 8,
+  "top_orgs": [
+    { "name": "University of Pennsylvania", "type": "University", "usd": 58000000, "countries": ["UGA", "MOZ", "ZMB", "KEN"] },
+    { "name": "Drexel University Dornsife School", "type": "University", "usd": 34000000, "countries": ["NGA", "ETH", "GHA"] },
+    { "name": "University of Pittsburgh", "type": "University", "usd": 26000000, "countries": ["TZA", "MDG"] },
+    { "name": "GSK Vaccines (Upper Merion PA)", "type": "Industry", "usd": 22000000, "countries": ["GHA", "KEN", "MOZ", "TZA"] },
+    { "name": "Temple University", "type": "University", "usd": 14000000, "countries": ["NGA", "UGA"] }
+  ]
+}

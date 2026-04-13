@@ -1,0 +1,16 @@
+{
+  "code": "OH",
+  "name": "Ohio",
+  "nih_grants_usd": 82000000,
+  "usaspending_usd": 28000000,
+  "clinical_trials": 5,
+  "org_count": 10,
+  "countries_reached": 5,
+  "top_orgs": [
+    { "name": "Ohio State University", "type": "University", "usd": 36000000, "countries": ["NGA", "GHA", "ETH"] },
+    { "name": "Case Western Reserve University", "type": "University", "usd": 28000000, "countries": ["ZMB", "MOZ", "TZA"] },
+    { "name": "Cincinnati Children's Hospital", "type": "Research Institute", "usd": 22000000, "countries": ["KEN", "UGA"] },
+    { "name": "University of Cincinnati", "type": "University", "usd": 12000000, "countries": ["NGA", "GHA"] },
+    { "name": "ProMedica Global", "type": "NGO", "usd": 8000000, "countries": ["MDG", "MWI"] }
+  ]
+}

@@ -1,0 +1,3147 @@
+{
+  "_meta": {
+    "source": "WHO Global Health Observatory API",
+    "fetched_at": "2026-04-12T18:27:30Z",
+    "coverage": "2010-2024",
+    "indicators": [
+      "MALARIA_EST_CASES",
+      "MALARIA_EST_DEATHS"
+    ],
+    "url": "https://ghoapi.azureedge.net/api/"
+  },
+  "countries": {
+    "MOZ": {
+      "name": "Mozambique",
+      "years": {
+        "2024": {
+          "cases": 10219719.0,
+          "cases_low": 7732000.0,
+          "cases_high": 13070000.0,
+          "deaths": 17946.0,
+          "deaths_low": 12500.0,
+          "deaths_high": 27400.0
+        },
+        "2023": {
+          "cases": 10208354.0,
+          "cases_low": 8124000.0,
+          "cases_high": 12600000.0,
+          "deaths": 17875.0,
+          "deaths_low": 12400.0,
+          "deaths_high": 27300.0
+        },
+        "2022": {
+          "cases": 9943874.0,
+          "cases_low": 7982000.0,
+          "cases_high": 12240000.0,
+          "deaths": 21094.0,
+          "deaths_low": 13100.0,
+          "deaths_high": 36000.0
+        },
+        "2021": {
+          "cases": 9907099.0,
+          "cases_low": 7892000.0,
+          "cases_high": 12370000.0,
+          "deaths": 21201.0,
+          "deaths_low": 13400.0,
+          "deaths_high": 35300.0
+        },
+        "2020": {
+          "cases": 9870873.0,
+          "cases_low": 7755000.0,
+          "cases_high": 12400000.0,
+          "deaths": 22295.0,
+          "deaths_low": 13900.0,
+          "deaths_high": 37400.0
+        },
+        "2019": {
+          "cases": 9681576.0,
+          "cases_low": 7643000.0,
+          "cases_high": 12080000.0,
+          "deaths": 18096.0,
+          "deaths_low": 13800.0,
+          "deaths_high": 24900.0
+        },
+        "2018": {
+          "cases": 9613835.0,
+          "cases_low": 7624000.0,
+          "cases_high": 11870000.0,
+          "deaths": 18980.0,
+          "deaths_low": 14900.0,
+          "deaths_high": 25500.0
+        },
+        "2017": {
+          "cases": 9400298.0,
+          "cases_low": 7504000.0,
+          "cases_high": 11590000.0,
+          "deaths": 19817.0,
+          "deaths_low": 15900.0,
+          "deaths_high": 25900.0
+        },
+        "2016": {
+          "cases": 9437041.0,
+          "cases_low": 7636000.0,
+          "cases_high": 11550000.0,
+          "deaths": 20963.0,
+          "deaths_low": 17100.0,
+          "deaths_high": 26700.0
+        },
+        "2015": {
+          "cases": 9389145.0,
+          "cases_low": 7676000.0,
+          "cases_high": 11410000.0,
+          "deaths": 21866.0,
+          "deaths_low": 18200.0,
+          "deaths_high": 27000.0
+        },
+        "2014": {
+          "cases": 9321871.0,
+          "cases_low": 7633000.0,
+          "cases_high": 11340000.0,
+          "deaths": 23197.0,
+          "deaths_low": 19800.0,
+          "deaths_high": 27800.0
+        },
+        "2013": {
+          "cases": 9328796.0,
+          "cases_low": 7595000.0,
+          "cases_high": 11350000.0,
+          "deaths": 23764.0,
+          "deaths_low": 20700.0,
+          "deaths_high": 27700.0
+        },
+        "2012": {
+          "cases": 9132343.0,
+          "cases_low": 7468000.0,
+          "cases_high": 11050000.0,
+          "deaths": 23302.0,
+          "deaths_low": 20800.0,
+          "deaths_high": 26300.0
+        },
+        "2011": {
+          "cases": 8891760.0,
+          "cases_low": 7314000.0,
+          "cases_high": 10720000.0,
+          "deaths": 23455.0,
+          "deaths_low": 21200.0,
+          "deaths_high": 26000.0
+        },
+        "2010": {
+          "cases": 8692340.0,
+          "cases_low": 7151000.0,
+          "cases_high": 10470000.0,
+          "deaths": 23849.0,
+          "deaths_low": 21900.0,
+          "deaths_high": 26100.0
+        }
+      }
+    },
+    "TZA": {
+      "name": "Tanzania",
+      "years": {
+        "2024": {
+          "cases": 9373891.0,
+          "cases_low": 6655000.0,
+          "cases_high": 12930000.0,
+          "deaths": 26062.0,
+          "deaths_low": 24500.0,
+          "deaths_high": 28000.0
+        },
+        "2023": {
+          "cases": 9223258.0,
+          "cases_low": 6723000.0,
+          "cases_high": 12410000.0,
+          "deaths": 25540.0,
+          "deaths_low": 24000.0,
+          "deaths_high": 27500.0
+        },
+        "2022": {
+          "cases": 8567395.0,
+          "cases_low": 6322000.0,
+          "cases_high": 11440000.0,
+          "deaths": 25499.0,
+          "deaths_low": 23800.0,
+          "deaths_high": 27700.0
+        },
+        "2021": {
+          "cases": 8377141.0,
+          "cases_low": 6113000.0,
+          "cases_high": 11210000.0,
+          "deaths": 25155.0,
+          "deaths_low": 23600.0,
+          "deaths_high": 27100.0
+        },
+        "2020": {
+          "cases": 7520952.0,
+          "cases_low": 5444000.0,
+          "cases_high": 10070000.0,
+          "deaths": 24568.0,
+          "deaths_low": 23100.0,
+          "deaths_high": 26300.0
+        },
+        "2019": {
+          "cases": 6869755.0,
+          "cases_low": 4993000.0,
+          "cases_high": 9224000.0,
+          "deaths": 23560.0,
+          "deaths_low": 22600.0,
+          "deaths_high": 24700.0
+        },
+        "2018": {
+          "cases": 6403212.0,
+          "cases_low": 4735000.0,
+          "cases_high": 8503000.0,
+          "deaths": 23280.0,
+          "deaths_low": 22400.0,
+          "deaths_high": 24300.0
+        },
+        "2017": {
+          "cases": 6855536.0,
+          "cases_low": 5070000.0,
+          "cases_high": 9024000.0,
+          "deaths": 23157.0,
+          "deaths_low": 22300.0,
+          "deaths_high": 24100.0
+        },
+        "2016": {
+          "cases": 7214935.0,
+          "cases_low": 5360000.0,
+          "cases_high": 9545000.0,
+          "deaths": 23354.0,
+          "deaths_low": 22500.0,
+          "deaths_high": 24300.0
+        },
+        "2015": {
+          "cases": 7376748.0,
+          "cases_low": 5514000.0,
+          "cases_high": 9710000.0,
+          "deaths": 23244.0,
+          "deaths_low": 22400.0,
+          "deaths_high": 24200.0
+        },
+        "2014": {
+          "cases": 7369397.0,
+          "cases_low": 5495000.0,
+          "cases_high": 9673000.0,
+          "deaths": 22996.0,
+          "deaths_low": 22200.0,
+          "deaths_high": 23900.0
+        },
+        "2013": {
+          "cases": 6434966.0,
+          "cases_low": 4807000.0,
+          "cases_high": 8504000.0,
+          "deaths": 22043.0,
+          "deaths_low": 21300.0,
+          "deaths_high": 22900.0
+        },
+        "2012": {
+          "cases": 5753489.0,
+          "cases_low": 4263000.0,
+          "cases_high": 7592000.0,
+          "deaths": 20796.0,
+          "deaths_low": 20200.0,
+          "deaths_high": 21500.0
+        },
+        "2011": {
+          "cases": 6120602.0,
+          "cases_low": 4551000.0,
+          "cases_high": 8082000.0,
+          "deaths": 21003.0,
+          "deaths_low": 20300.0,
+          "deaths_high": 21700.0
+        },
+        "2010": {
+          "cases": 6515227.0,
+          "cases_low": 4813000.0,
+          "cases_high": 8638000.0,
+          "deaths": 21418.0,
+          "deaths_low": 20700.0,
+          "deaths_high": 22200.0
+        }
+      }
+    },
+    "NGA": {
+      "name": "Nigeria",
+      "years": {
+        "2024": {
+          "cases": 68466353.0,
+          "cases_low": 49100000.0,
+          "cases_high": 92460000.0,
+          "deaths": 184933.0,
+          "deaths_low": 135000.0,
+          "deaths_high": 264000.0
+        },
+        "2023": {
+          "cases": 68136453.0,
+          "cases_low": 49140000.0,
+          "cases_high": 92560000.0,
+          "deaths": 184689.0,
+          "deaths_low": 135000.0,
+          "deaths_high": 264000.0
+        },
+        "2022": {
+          "cases": 66721582.0,
+          "cases_low": 48080000.0,
+          "cases_high": 89900000.0,
+          "deaths": 187692.0,
+          "deaths_low": 141000.0,
+          "deaths_high": 261000.0
+        },
+        "2021": {
+          "cases": 65399501.0,
+          "cases_low": 47520000.0,
+          "cases_high": 89000000.0,
+          "deaths": 190761.0,
+          "deaths_low": 146000.0,
+          "deaths_high": 258000.0
+        },
+        "2020": {
+          "cases": 65133759.0,
+          "cases_low": 46800000.0,
+          "cases_high": 88650000.0,
+          "deaths": 200257.0,
+          "deaths_low": 154000.0,
+          "deaths_high": 269000.0
+        },
+        "2019": {
+          "cases": 61379283.0,
+          "cases_low": 47440000.0,
+          "cases_high": 78810000.0,
+          "deaths": 181560.0,
+          "deaths_low": 146000.0,
+          "deaths_high": 231000.0
+        },
+        "2018": {
+          "cases": 59652248.0,
+          "cases_low": 46930000.0,
+          "cases_high": 75230000.0,
+          "deaths": 181095.0,
+          "deaths_low": 149000.0,
+          "deaths_high": 224000.0
+        },
+        "2017": {
+          "cases": 57869533.0,
+          "cases_low": 45870000.0,
+          "cases_high": 72050000.0,
+          "deaths": 177176.0,
+          "deaths_low": 150000.0,
+          "deaths_high": 214000.0
+        },
+        "2016": {
+          "cases": 55667334.0,
+          "cases_low": 44060000.0,
+          "cases_high": 69130000.0,
+          "deaths": 171827.0,
+          "deaths_low": 148000.0,
+          "deaths_high": 203000.0
+        },
+        "2015": {
+          "cases": 54115123.0,
+          "cases_low": 43300000.0,
+          "cases_high": 67110000.0,
+          "deaths": 169052.0,
+          "deaths_low": 148000.0,
+          "deaths_high": 196000.0
+        },
+        "2014": {
+          "cases": 53483458.0,
+          "cases_low": 42810000.0,
+          "cases_high": 65930000.0,
+          "deaths": 165886.0,
+          "deaths_low": 148000.0,
+          "deaths_high": 188000.0
+        },
+        "2013": {
+          "cases": 53921321.0,
+          "cases_low": 43380000.0,
+          "cases_high": 66320000.0,
+          "deaths": 163867.0,
+          "deaths_low": 148000.0,
+          "deaths_high": 183000.0
+        },
+        "2012": {
+          "cases": 55718235.0,
+          "cases_low": 44970000.0,
+          "cases_high": 68540000.0,
+          "deaths": 172012.0,
+          "deaths_low": 156000.0,
+          "deaths_high": 190000.0
+        },
+        "2011": {
+          "cases": 58184509.0,
+          "cases_low": 46920000.0,
+          "cases_high": 71320000.0,
+          "deaths": 183768.0,
+          "deaths_low": 168000.0,
+          "deaths_high": 201000.0
+        },
+        "2010": {
+          "cases": 60551056.0,
+          "cases_low": 49030000.0,
+          "cases_high": 73900000.0,
+          "deaths": 199233.0,
+          "deaths_low": 184000.0,
+          "deaths_high": 216000.0
+        }
+      }
+    },
+    "ETH": {
+      "name": "Ethiopia",
+      "years": {
+        "2024": {
+          "cases": 12436942.0,
+          "cases_low": 6876000.0,
+          "cases_high": 18640000.0,
+          "deaths": 22360.0,
+          "deaths_low": 8410.0,
+          "deaths_high": 43400.0
+        },
+        "2023": {
+          "cases": 9559569.0,
+          "cases_low": 5281000.0,
+          "cases_high": 14360000.0,
+          "deaths": 18567.0,
+          "deaths_low": 6760.0,
+          "deaths_high": 36000.0
+        },
+        "2022": {
+          "cases": 5106067.0,
+          "cases_low": 2833000.0,
+          "cases_high": 7622000.0,
+          "deaths": 10570.0,
+          "deaths_low": 3820.0,
+          "deaths_high": 20700.0
+        },
+        "2021": {
+          "cases": 3783896.0,
+          "cases_low": 2097000.0,
+          "cases_high": 5647000.0,
+          "deaths": 8041.0,
+          "deaths_low": 2890.0,
+          "deaths_high": 15600.0
+        },
+        "2020": {
+          "cases": 4227742.0,
+          "cases_low": 2359000.0,
+          "cases_high": 6346000.0,
+          "deaths": 9424.0,
+          "deaths_low": 3430.0,
+          "deaths_high": 18600.0
+        },
+        "2019": {
+          "cases": 2645193.0,
+          "cases_low": 1468000.0,
+          "cases_high": 3938000.0,
+          "deaths": 5708.0,
+          "deaths_low": 2030.0,
+          "deaths_high": 11200.0
+        },
+        "2018": {
+          "cases": 2793314.0,
+          "cases_low": 1540000.0,
+          "cases_high": 4199000.0,
+          "deaths": 6500.0,
+          "deaths_low": 2330.0,
+          "deaths_high": 12800.0
+        },
+        "2017": {
+          "cases": 5273115.0,
+          "cases_low": 2487000.0,
+          "cases_high": 9124000.0,
+          "deaths": 12046.0,
+          "deaths_low": 3490.0,
+          "deaths_high": 28000.0
+        },
+        "2016": {
+          "cases": 6740580.0,
+          "cases_low": 2821000.0,
+          "cases_high": 12470000.0,
+          "deaths": 15473.0,
+          "deaths_low": 3880.0,
+          "deaths_high": 39100.0
+        },
+        "2015": {
+          "cases": 9186102.0,
+          "cases_low": 3497000.0,
+          "cases_high": 16870000.0,
+          "deaths": 21051.0,
+          "deaths_low": 4540.0,
+          "deaths_high": 53300.0
+        },
+        "2014": {
+          "cases": 9906043.0,
+          "cases_low": 3720000.0,
+          "cases_high": 17290000.0,
+          "deaths": 22273.0,
+          "deaths_low": 4860.0,
+          "deaths_high": 54600.0
+        },
+        "2013": {
+          "cases": 12323076.0,
+          "cases_low": 6748000.0,
+          "cases_high": 22780000.0,
+          "deaths": 26097.0,
+          "deaths_low": 9250.0,
+          "deaths_high": 51400.0
+        },
+        "2012": {
+          "cases": 10401659.0,
+          "cases_low": 5130000.0,
+          "cases_high": 23840000.0,
+          "deaths": 19915.0,
+          "deaths_low": 7200.0,
+          "deaths_high": 44600.0
+        },
+        "2011": {
+          "cases": 9101932.0,
+          "cases_low": 3647000.0,
+          "cases_high": 23770000.0,
+          "deaths": 16648.0,
+          "deaths_low": 5400.0,
+          "deaths_high": 44300.0
+        },
+        "2010": {
+          "cases": 9471475.0,
+          "cases_low": 3092000.0,
+          "cases_high": 27090000.0,
+          "deaths": 18909.0,
+          "deaths_low": 4780.0,
+          "deaths_high": 58100.0
+        }
+      }
+    },
+    "UGA": {
+      "name": "Uganda",
+      "years": {
+        "2024": {
+          "cases": 13215579.0,
+          "cases_low": 7711000.0,
+          "cases_high": 21340000.0,
+          "deaths": 16204.0,
+          "deaths_low": 14000.0,
+          "deaths_high": 19500.0
+        },
+        "2023": {
+          "cases": 13019258.0,
+          "cases_low": 7586000.0,
+          "cases_high": 20730000.0,
+          "deaths": 15945.0,
+          "deaths_low": 13800.0,
+          "deaths_high": 19300.0
+        },
+        "2022": {
+          "cases": 12612787.0,
+          "cases_low": 7571000.0,
+          "cases_high": 19770000.0,
+          "deaths": 17538.0,
+          "deaths_low": 13900.0,
+          "deaths_high": 23600.0
+        },
+        "2021": {
+          "cases": 12332244.0,
+          "cases_low": 8404000.0,
+          "cases_high": 17460000.0,
+          "deaths": 17438.0,
+          "deaths_low": 13900.0,
+          "deaths_high": 23100.0
+        },
+        "2020": {
+          "cases": 11366057.0,
+          "cases_low": 8768000.0,
+          "cases_high": 14510000.0,
+          "deaths": 18514.0,
+          "deaths_low": 14200.0,
+          "deaths_high": 25300.0
+        },
+        "2019": {
+          "cases": 10785343.0,
+          "cases_low": 8479000.0,
+          "cases_high": 13510000.0,
+          "deaths": 15947.0,
+          "deaths_low": 14200.0,
+          "deaths_high": 18300.0
+        },
+        "2018": {
+          "cases": 11190095.0,
+          "cases_low": 8653000.0,
+          "cases_high": 14180000.0,
+          "deaths": 15254.0,
+          "deaths_low": 13800.0,
+          "deaths_high": 17100.0
+        },
+        "2017": {
+          "cases": 11109517.0,
+          "cases_low": 8429000.0,
+          "cases_high": 14280000.0,
+          "deaths": 15802.0,
+          "deaths_low": 14400.0,
+          "deaths_high": 17500.0
+        },
+        "2016": {
+          "cases": 10903429.0,
+          "cases_low": 8189000.0,
+          "cases_high": 14190000.0,
+          "deaths": 15637.0,
+          "deaths_low": 14400.0,
+          "deaths_high": 17100.0
+        },
+        "2015": {
+          "cases": 10835166.0,
+          "cases_low": 8251000.0,
+          "cases_high": 13940000.0,
+          "deaths": 15762.0,
+          "deaths_low": 14700.0,
+          "deaths_high": 17000.0
+        },
+        "2014": {
+          "cases": 10631444.0,
+          "cases_low": 8294000.0,
+          "cases_high": 13470000.0,
+          "deaths": 17748.0,
+          "deaths_low": 16600.0,
+          "deaths_high": 19100.0
+        },
+        "2013": {
+          "cases": 10964151.0,
+          "cases_low": 8642000.0,
+          "cases_high": 13700000.0,
+          "deaths": 18788.0,
+          "deaths_low": 17700.0,
+          "deaths_high": 20000.0
+        },
+        "2012": {
+          "cases": 12011037.0,
+          "cases_low": 9539000.0,
+          "cases_high": 14940000.0,
+          "deaths": 22473.0,
+          "deaths_low": 21200.0,
+          "deaths_high": 23900.0
+        },
+        "2011": {
+          "cases": 12771289.0,
+          "cases_low": 10100000.0,
+          "cases_high": 15950000.0,
+          "deaths": 23537.0,
+          "deaths_low": 22200.0,
+          "deaths_high": 25000.0
+        },
+        "2010": {
+          "cases": 13149835.0,
+          "cases_low": 10440000.0,
+          "cases_high": 16320000.0,
+          "deaths": 25736.0,
+          "deaths_low": 24300.0,
+          "deaths_high": 27200.0
+        }
+      }
+    },
+    "KEN": {
+      "name": "Kenya",
+      "years": {
+        "2024": {
+          "cases": 4185536.0,
+          "cases_low": 2105000.0,
+          "cases_high": 7394000.0,
+          "deaths": 11656.0,
+          "deaths_low": 11300.0,
+          "deaths_high": 12100.0
+        },
+        "2023": {
+          "cases": 4082575.0,
+          "cases_low": 2065000.0,
+          "cases_high": 7352000.0,
+          "deaths": 11478.0,
+          "deaths_low": 11100.0,
+          "deaths_high": 11900.0
+        },
+        "2022": {
+          "cases": 4453797.0,
+          "cases_low": 2410000.0,
+          "cases_high": 7599000.0,
+          "deaths": 11811.0,
+          "deaths_low": 11200.0,
+          "deaths_high": 12600.0
+        },
+        "2021": {
+          "cases": 4719850.0,
+          "cases_low": 3105000.0,
+          "cases_high": 6911000.0,
+          "deaths": 11669.0,
+          "deaths_low": 11100.0,
+          "deaths_high": 12400.0
+        },
+        "2020": {
+          "cases": 4438409.0,
+          "cases_low": 3331000.0,
+          "cases_high": 5776000.0,
+          "deaths": 11384.0,
+          "deaths_low": 10800.0,
+          "deaths_high": 12000.0
+        },
+        "2019": {
+          "cases": 3669775.0,
+          "cases_low": 2707000.0,
+          "cases_high": 4822000.0,
+          "deaths": 10883.0,
+          "deaths_low": 10600.0,
+          "deaths_high": 11200.0
+        },
+        "2018": {
+          "cases": 3722839.0,
+          "cases_low": 2679000.0,
+          "cases_high": 4975000.0,
+          "deaths": 10789.0,
+          "deaths_low": 10600.0,
+          "deaths_high": 11100.0
+        },
+        "2017": {
+          "cases": 3780809.0,
+          "cases_low": 2717000.0,
+          "cases_high": 5143000.0,
+          "deaths": 10664.0,
+          "deaths_low": 10400.0,
+          "deaths_high": 10900.0
+        },
+        "2016": {
+          "cases": 3719331.0,
+          "cases_low": 2661000.0,
+          "cases_high": 5115000.0,
+          "deaths": 10483.0,
+          "deaths_low": 10300.0,
+          "deaths_high": 10700.0
+        },
+        "2015": {
+          "cases": 3851683.0,
+          "cases_low": 2815000.0,
+          "cases_high": 5118000.0,
+          "deaths": 10423.0,
+          "deaths_low": 10200.0,
+          "deaths_high": 10700.0
+        },
+        "2014": {
+          "cases": 3888161.0,
+          "cases_low": 2900000.0,
+          "cases_high": 5116000.0,
+          "deaths": 10393.0,
+          "deaths_low": 10200.0,
+          "deaths_high": 10600.0
+        },
+        "2013": {
+          "cases": 3843685.0,
+          "cases_low": 2874000.0,
+          "cases_high": 5020000.0,
+          "deaths": 10297.0,
+          "deaths_low": 10100.0,
+          "deaths_high": 10600.0
+        },
+        "2012": {
+          "cases": 3696499.0,
+          "cases_low": 2777000.0,
+          "cases_high": 4834000.0,
+          "deaths": 10203.0,
+          "deaths_low": 9960.0,
+          "deaths_high": 10500.0
+        },
+        "2011": {
+          "cases": 3531077.0,
+          "cases_low": 2620000.0,
+          "cases_high": 4691000.0,
+          "deaths": 10091.0,
+          "deaths_low": 9850.0,
+          "deaths_high": 10300.0
+        },
+        "2010": {
+          "cases": 3339223.0,
+          "cases_low": 2470000.0,
+          "cases_high": 4439000.0,
+          "deaths": 9664.0,
+          "deaths_low": 9440.0,
+          "deaths_high": 9890.0
+        }
+      }
+    },
+    "GHA": {
+      "name": "Ghana",
+      "years": {
+        "2024": {
+          "cases": 6739843.0,
+          "cases_low": 4669000.0,
+          "cases_high": 9434000.0,
+          "deaths": 11635.0,
+          "deaths_low": 11000.0,
+          "deaths_high": 12600.0
+        },
+        "2023": {
+          "cases": 6585886.0,
+          "cases_low": 4871000.0,
+          "cases_high": 8693000.0,
+          "deaths": 11464.0,
+          "deaths_low": 10800.0,
+          "deaths_high": 12400.0
+        },
+        "2022": {
+          "cases": 6987387.0,
+          "cases_low": 5255000.0,
+          "cases_high": 9127000.0,
+          "deaths": 11463.0,
+          "deaths_low": 10700.0,
+          "deaths_high": 12500.0
+        },
+        "2021": {
+          "cases": 6909085.0,
+          "cases_low": 5232000.0,
+          "cases_high": 8993000.0,
+          "deaths": 11373.0,
+          "deaths_low": 10700.0,
+          "deaths_high": 12300.0
+        },
+        "2020": {
+          "cases": 7003408.0,
+          "cases_low": 5361000.0,
+          "cases_high": 9019000.0,
+          "deaths": 11311.0,
+          "deaths_low": 10700.0,
+          "deaths_high": 12200.0
+        },
+        "2019": {
+          "cases": 6729077.0,
+          "cases_low": 5140000.0,
+          "cases_high": 8690000.0,
+          "deaths": 11116.0,
+          "deaths_low": 10600.0,
+          "deaths_high": 11700.0
+        },
+        "2018": {
+          "cases": 6518545.0,
+          "cases_low": 4974000.0,
+          "cases_high": 8384000.0,
+          "deaths": 11103.0,
+          "deaths_low": 10700.0,
+          "deaths_high": 11600.0
+        },
+        "2017": {
+          "cases": 6787448.0,
+          "cases_low": 5197000.0,
+          "cases_high": 8709000.0,
+          "deaths": 11522.0,
+          "deaths_low": 11100.0,
+          "deaths_high": 12100.0
+        },
+        "2016": {
+          "cases": 7190096.0,
+          "cases_low": 5548000.0,
+          "cases_high": 9186000.0,
+          "deaths": 12293.0,
+          "deaths_low": 11800.0,
+          "deaths_high": 12900.0
+        },
+        "2015": {
+          "cases": 7919823.0,
+          "cases_low": 6202000.0,
+          "cases_high": 9963000.0,
+          "deaths": 13260.0,
+          "deaths_low": 12700.0,
+          "deaths_high": 13900.0
+        },
+        "2014": {
+          "cases": 8799642.0,
+          "cases_low": 7034000.0,
+          "cases_high": 10870000.0,
+          "deaths": 14384.0,
+          "deaths_low": 13800.0,
+          "deaths_high": 15000.0
+        },
+        "2013": {
+          "cases": 9429908.0,
+          "cases_low": 7682000.0,
+          "cases_high": 11510000.0,
+          "deaths": 15618.0,
+          "deaths_low": 15000.0,
+          "deaths_high": 16300.0
+        },
+        "2012": {
+          "cases": 9819967.0,
+          "cases_low": 8026000.0,
+          "cases_high": 11980000.0,
+          "deaths": 16573.0,
+          "deaths_low": 15900.0,
+          "deaths_high": 17300.0
+        },
+        "2011": {
+          "cases": 9789325.0,
+          "cases_low": 8019000.0,
+          "cases_high": 11840000.0,
+          "deaths": 17163.0,
+          "deaths_low": 16500.0,
+          "deaths_high": 17900.0
+        },
+        "2010": {
+          "cases": 9334147.0,
+          "cases_low": 7627000.0,
+          "cases_high": 11260000.0,
+          "deaths": 16891.0,
+          "deaths_low": 16200.0,
+          "deaths_high": 17600.0
+        }
+      }
+    },
+    "MDG": {
+      "name": "Madagascar",
+      "years": {
+        "2024": {
+          "cases": 8165311.0,
+          "cases_low": 5216000.0,
+          "cases_high": 11340000.0,
+          "deaths": 20903.0,
+          "deaths_low": 8080.0,
+          "deaths_high": 38900.0
+        },
+        "2023": {
+          "cases": 6239945.0,
+          "cases_low": 3991000.0,
+          "cases_high": 8713000.0,
+          "deaths": 15974.0,
+          "deaths_low": 6120.0,
+          "deaths_high": 29900.0
+        },
+        "2022": {
+          "cases": 3563507.0,
+          "cases_low": 2279000.0,
+          "cases_high": 4946000.0,
+          "deaths": 9121.0,
+          "deaths_low": 3510.0,
+          "deaths_high": 17000.0
+        },
+        "2021": {
+          "cases": 4938471.0,
+          "cases_low": 3156000.0,
+          "cases_high": 6852000.0,
+          "deaths": 12640.0,
+          "deaths_low": 4840.0,
+          "deaths_high": 23700.0
+        },
+        "2020": {
+          "cases": 4016745.0,
+          "cases_low": 2668000.0,
+          "cases_high": 5489000.0,
+          "deaths": 10281.0,
+          "deaths_low": 4090.0,
+          "deaths_high": 18800.0
+        },
+        "2019": {
+          "cases": 2024097.0,
+          "cases_low": 1383000.0,
+          "cases_high": 2718000.0,
+          "deaths": 5004.0,
+          "deaths_low": 2020.0,
+          "deaths_high": 8970.0
+        },
+        "2018": {
+          "cases": 1975799.0,
+          "cases_low": 1397000.0,
+          "cases_high": 2630000.0,
+          "deaths": 4884.0,
+          "deaths_low": 2030.0,
+          "deaths_high": 8720.0
+        },
+        "2017": {
+          "cases": 2068659.0,
+          "cases_low": 1495000.0,
+          "cases_high": 2709000.0,
+          "deaths": 5114.0,
+          "deaths_low": 2140.0,
+          "deaths_high": 9040.0
+        },
+        "2016": {
+          "cases": 1654009.0,
+          "cases_low": 1161000.0,
+          "cases_high": 2249000.0,
+          "deaths": 4088.0,
+          "deaths_low": 1750.0,
+          "deaths_high": 7280.0
+        },
+        "2015": {
+          "cases": 2720036.0,
+          "cases_low": 1927000.0,
+          "cases_high": 3652000.0,
+          "deaths": 6724.0,
+          "deaths_low": 2830.0,
+          "deaths_high": 12000.0
+        },
+        "2014": {
+          "cases": 1233241.0,
+          "cases_low": 865000.0,
+          "cases_high": 1689000.0,
+          "deaths": 3048.0,
+          "deaths_low": 1270.0,
+          "deaths_high": 5450.0
+        },
+        "2013": {
+          "cases": 1535144.0,
+          "cases_low": 984000.0,
+          "cases_high": 2358000.0,
+          "deaths": 3795.0,
+          "deaths_low": 1550.0,
+          "deaths_high": 7460.0
+        },
+        "2012": {
+          "cases": 1660818.0,
+          "cases_low": 1016000.0,
+          "cases_high": 2608000.0,
+          "deaths": 4105.0,
+          "deaths_low": 1580.0,
+          "deaths_high": 8100.0
+        },
+        "2011": {
+          "cases": 846187.0,
+          "cases_low": 516000.0,
+          "cases_high": 1242000.0,
+          "deaths": 2091.0,
+          "deaths_low": 800.0,
+          "deaths_high": 4020.0
+        },
+        "2010": {
+          "cases": 987619.0,
+          "cases_low": 571000.0,
+          "cases_high": 1600000.0,
+          "deaths": 2441.0,
+          "deaths_low": 940.0,
+          "deaths_high": 4990.0
+        }
+      }
+    },
+    "MWI": {
+      "name": "Malawi",
+      "years": {
+        "2024": {
+          "cases": 6378088.0,
+          "cases_low": 4143000.0,
+          "cases_high": 9341000.0,
+          "deaths": 7501.0,
+          "deaths_low": 6480.0,
+          "deaths_high": 9320.0
+        },
+        "2023": {
+          "cases": 6141690.0,
+          "cases_low": 4196000.0,
+          "cases_high": 8638000.0,
+          "deaths": 7376.0,
+          "deaths_low": 6360.0,
+          "deaths_high": 9200.0
+        },
+        "2022": {
+          "cases": 5872451.0,
+          "cases_low": 4121000.0,
+          "cases_high": 8127000.0,
+          "deaths": 7525.0,
+          "deaths_low": 6340.0,
+          "deaths_high": 9680.0
+        },
+        "2021": {
+          "cases": 5623024.0,
+          "cases_low": 3886000.0,
+          "cases_high": 7924000.0,
+          "deaths": 7456.0,
+          "deaths_low": 6310.0,
+          "deaths_high": 9400.0
+        },
+        "2020": {
+          "cases": 5528376.0,
+          "cases_low": 3619000.0,
+          "cases_high": 8007000.0,
+          "deaths": 7423.0,
+          "deaths_low": 6280.0,
+          "deaths_high": 9340.0
+        },
+        "2019": {
+          "cases": 5332690.0,
+          "cases_low": 3520000.0,
+          "cases_high": 7695000.0,
+          "deaths": 6892.0,
+          "deaths_low": 6140.0,
+          "deaths_high": 7960.0
+        },
+        "2018": {
+          "cases": 5020241.0,
+          "cases_low": 3631000.0,
+          "cases_high": 6729000.0,
+          "deaths": 6921.0,
+          "deaths_low": 6220.0,
+          "deaths_high": 7860.0
+        },
+        "2017": {
+          "cases": 4770449.0,
+          "cases_low": 3657000.0,
+          "cases_high": 6143000.0,
+          "deaths": 7024.0,
+          "deaths_low": 6380.0,
+          "deaths_high": 7840.0
+        },
+        "2016": {
+          "cases": 4581211.0,
+          "cases_low": 3508000.0,
+          "cases_high": 5918000.0,
+          "deaths": 7092.0,
+          "deaths_low": 6530.0,
+          "deaths_high": 7740.0
+        },
+        "2015": {
+          "cases": 4457220.0,
+          "cases_low": 3389000.0,
+          "cases_high": 5736000.0,
+          "deaths": 7341.0,
+          "deaths_low": 6850.0,
+          "deaths_high": 7880.0
+        },
+        "2014": {
+          "cases": 4571742.0,
+          "cases_low": 3409000.0,
+          "cases_high": 5972000.0,
+          "deaths": 7737.0,
+          "deaths_low": 7300.0,
+          "deaths_high": 8220.0
+        },
+        "2013": {
+          "cases": 4947690.0,
+          "cases_low": 3789000.0,
+          "cases_high": 6422000.0,
+          "deaths": 8372.0,
+          "deaths_low": 7950.0,
+          "deaths_high": 8850.0
+        },
+        "2012": {
+          "cases": 5576252.0,
+          "cases_low": 4397000.0,
+          "cases_high": 6965000.0,
+          "deaths": 9345.0,
+          "deaths_low": 8870.0,
+          "deaths_high": 9870.0
+        },
+        "2011": {
+          "cases": 6033448.0,
+          "cases_low": 4866000.0,
+          "cases_high": 7390000.0,
+          "deaths": 10264.0,
+          "deaths_low": 9740.0,
+          "deaths_high": 10800.0
+        },
+        "2010": {
+          "cases": 5779560.0,
+          "cases_low": 4668000.0,
+          "cases_high": 7071000.0,
+          "deaths": 11179.0,
+          "deaths_low": 10600.0,
+          "deaths_high": 11900.0
+        }
+      }
+    },
+    "ZMB": {
+      "name": "Zambia",
+      "years": {
+        "2024": {
+          "cases": 5380115.0,
+          "cases_low": 4333000.0,
+          "cases_high": 6652000.0,
+          "deaths": 8682.0,
+          "deaths_low": 7740.0,
+          "deaths_high": 10200.0
+        },
+        "2023": {
+          "cases": 5224073.0,
+          "cases_low": 4214000.0,
+          "cases_high": 6398000.0,
+          "deaths": 8525.0,
+          "deaths_low": 7570.0,
+          "deaths_high": 10100.0
+        },
+        "2022": {
+          "cases": 4959659.0,
+          "cases_low": 4015000.0,
+          "cases_high": 6061000.0,
+          "deaths": 8834.0,
+          "deaths_low": 7570.0,
+          "deaths_high": 10900.0
+        },
+        "2021": {
+          "cases": 4724078.0,
+          "cases_low": 3819000.0,
+          "cases_high": 5794000.0,
+          "deaths": 8734.0,
+          "deaths_low": 7540.0,
+          "deaths_high": 10600.0
+        },
+        "2020": {
+          "cases": 4464614.0,
+          "cases_low": 3543000.0,
+          "cases_high": 5550000.0,
+          "deaths": 8556.0,
+          "deaths_low": 7400.0,
+          "deaths_high": 10300.0
+        },
+        "2019": {
+          "cases": 4144367.0,
+          "cases_low": 3249000.0,
+          "cases_high": 5181000.0,
+          "deaths": 8084.0,
+          "deaths_low": 7430.0,
+          "deaths_high": 8940.0
+        },
+        "2018": {
+          "cases": 3990124.0,
+          "cases_low": 3155000.0,
+          "cases_high": 4953000.0,
+          "deaths": 8046.0,
+          "deaths_low": 7470.0,
+          "deaths_high": 8770.0
+        },
+        "2017": {
+          "cases": 3838911.0,
+          "cases_low": 3017000.0,
+          "cases_high": 4755000.0,
+          "deaths": 7892.0,
+          "deaths_low": 7400.0,
+          "deaths_high": 8470.0
+        },
+        "2016": {
+          "cases": 3874779.0,
+          "cases_low": 3091000.0,
+          "cases_high": 4797000.0,
+          "deaths": 7930.0,
+          "deaths_low": 7490.0,
+          "deaths_high": 8420.0
+        },
+        "2015": {
+          "cases": 3899391.0,
+          "cases_low": 3120000.0,
+          "cases_high": 4823000.0,
+          "deaths": 8015.0,
+          "deaths_low": 7610.0,
+          "deaths_high": 8460.0
+        },
+        "2014": {
+          "cases": 3774704.0,
+          "cases_low": 2988000.0,
+          "cases_high": 4720000.0,
+          "deaths": 8037.0,
+          "deaths_low": 7660.0,
+          "deaths_high": 8460.0
+        },
+        "2013": {
+          "cases": 3511365.0,
+          "cases_low": 2732000.0,
+          "cases_high": 4434000.0,
+          "deaths": 7459.0,
+          "deaths_low": 7160.0,
+          "deaths_high": 7810.0
+        },
+        "2012": {
+          "cases": 3074514.0,
+          "cases_low": 2385000.0,
+          "cases_high": 3867000.0,
+          "deaths": 6979.0,
+          "deaths_low": 6730.0,
+          "deaths_high": 7270.0
+        },
+        "2011": {
+          "cases": 2614996.0,
+          "cases_low": 2044000.0,
+          "cases_high": 3285000.0,
+          "deaths": 6666.0,
+          "deaths_low": 6440.0,
+          "deaths_high": 6920.0
+        },
+        "2010": {
+          "cases": 2373068.0,
+          "cases_low": 1871000.0,
+          "cases_high": 2968000.0,
+          "deaths": 6353.0,
+          "deaths_low": 6150.0,
+          "deaths_high": 6590.0
+        }
+      }
+    },
+    "COD": {
+      "name": "Democratic Republic of the Congo",
+      "years": {
+        "2024": {
+          "cases": 35175261.0,
+          "cases_low": 26570000.0,
+          "cases_high": 45560000.0,
+          "deaths": 67676.0,
+          "deaths_low": 43400.0,
+          "deaths_high": 110000.0
+        },
+        "2023": {
+          "cases": 34412847.0,
+          "cases_low": 26070000.0,
+          "cases_high": 44480000.0,
+          "deaths": 67464.0,
+          "deaths_low": 43100.0,
+          "deaths_high": 110000.0
+        },
+        "2022": {
+          "cases": 33580334.0,
+          "cases_low": 25340000.0,
+          "cases_high": 43240000.0,
+          "deaths": 70024.0,
+          "deaths_low": 44700.0,
+          "deaths_high": 114000.0
+        },
+        "2021": {
+          "cases": 33515984.0,
+          "cases_low": 25730000.0,
+          "cases_high": 43200000.0,
+          "deaths": 70300.0,
+          "deaths_low": 45700.0,
+          "deaths_high": 111000.0
+        },
+        "2020": {
+          "cases": 32532899.0,
+          "cases_low": 24840000.0,
+          "cases_high": 41830000.0,
+          "deaths": 75025.0,
+          "deaths_low": 50200.0,
+          "deaths_high": 115000.0
+        },
+        "2019": {
+          "cases": 31580724.0,
+          "cases_low": 24500000.0,
+          "cases_high": 40160000.0,
+          "deaths": 75254.0,
+          "deaths_low": 52400.0,
+          "deaths_high": 109000.0
+        },
+        "2018": {
+          "cases": 30384274.0,
+          "cases_low": 23470000.0,
+          "cases_high": 38460000.0,
+          "deaths": 77570.0,
+          "deaths_low": 55300.0,
+          "deaths_high": 109000.0
+        },
+        "2017": {
+          "cases": 28221065.0,
+          "cases_low": 21650000.0,
+          "cases_high": 35910000.0,
+          "deaths": 68597.0,
+          "deaths_low": 50200.0,
+          "deaths_high": 93500.0
+        },
+        "2016": {
+          "cases": 26049693.0,
+          "cases_low": 19960000.0,
+          "cases_high": 33530000.0,
+          "deaths": 66971.0,
+          "deaths_low": 50300.0,
+          "deaths_high": 89000.0
+        },
+        "2015": {
+          "cases": 24556966.0,
+          "cases_low": 18950000.0,
+          "cases_high": 31200000.0,
+          "deaths": 60443.0,
+          "deaths_low": 46800.0,
+          "deaths_high": 77700.0
+        },
+        "2014": {
+          "cases": 23314218.0,
+          "cases_low": 18190000.0,
+          "cases_high": 29590000.0,
+          "deaths": 60156.0,
+          "deaths_low": 47600.0,
+          "deaths_high": 75700.0
+        },
+        "2013": {
+          "cases": 23531534.0,
+          "cases_low": 18530000.0,
+          "cases_high": 29410000.0,
+          "deaths": 57471.0,
+          "deaths_low": 46300.0,
+          "deaths_high": 70600.0
+        },
+        "2012": {
+          "cases": 24598662.0,
+          "cases_low": 19390000.0,
+          "cases_high": 30740000.0,
+          "deaths": 64511.0,
+          "deaths_low": 53000.0,
+          "deaths_high": 77700.0
+        },
+        "2011": {
+          "cases": 25522250.0,
+          "cases_low": 20390000.0,
+          "cases_high": 31680000.0,
+          "deaths": 78483.0,
+          "deaths_low": 65300.0,
+          "deaths_high": 93200.0
+        },
+        "2010": {
+          "cases": 26144344.0,
+          "cases_low": 21050000.0,
+          "cases_high": 32050000.0,
+          "deaths": 85123.0,
+          "deaths_low": 72200.0,
+          "deaths_high": 99700.0
+        }
+      }
+    },
+    "MLI": {
+      "name": "Mali",
+      "years": {
+        "2024": {
+          "cases": 8474969.0,
+          "cases_low": 5972000.0,
+          "cases_high": 12050000.0,
+          "deaths": 14239.0,
+          "deaths_low": 11200.0,
+          "deaths_high": 18400.0
+        },
+        "2023": {
+          "cases": 8229337.0,
+          "cases_low": 5808000.0,
+          "cases_high": 11700000.0,
+          "deaths": 14203.0,
+          "deaths_low": 11200.0,
+          "deaths_high": 18300.0
+        },
+        "2022": {
+          "cases": 7988199.0,
+          "cases_low": 5627000.0,
+          "cases_high": 11360000.0,
+          "deaths": 14277.0,
+          "deaths_low": 11500.0,
+          "deaths_high": 17900.0
+        },
+        "2021": {
+          "cases": 7744735.0,
+          "cases_low": 5463000.0,
+          "cases_high": 11010000.0,
+          "deaths": 14352.0,
+          "deaths_low": 11900.0,
+          "deaths_high": 17600.0
+        },
+        "2020": {
+          "cases": 7586538.0,
+          "cases_low": 5354000.0,
+          "cases_high": 10780000.0,
+          "deaths": 16288.0,
+          "deaths_low": 12600.0,
+          "deaths_high": 21100.0
+        },
+        "2019": {
+          "cases": 6863255.0,
+          "cases_low": 4844000.0,
+          "cases_high": 9742000.0,
+          "deaths": 13982.0,
+          "deaths_low": 12100.0,
+          "deaths_high": 16400.0
+        },
+        "2018": {
+          "cases": 7710138.0,
+          "cases_low": 5441000.0,
+          "cases_high": 10950000.0,
+          "deaths": 16287.0,
+          "deaths_low": 14300.0,
+          "deaths_high": 18800.0
+        },
+        "2017": {
+          "cases": 7469199.0,
+          "cases_low": 5279000.0,
+          "cases_high": 10620000.0,
+          "deaths": 16903.0,
+          "deaths_low": 15000.0,
+          "deaths_high": 19200.0
+        },
+        "2016": {
+          "cases": 7184988.0,
+          "cases_low": 5063000.0,
+          "cases_high": 10200000.0,
+          "deaths": 17286.0,
+          "deaths_low": 15500.0,
+          "deaths_high": 19400.0
+        },
+        "2015": {
+          "cases": 7097168.0,
+          "cases_low": 5034000.0,
+          "cases_high": 10060000.0,
+          "deaths": 18935.0,
+          "deaths_low": 17100.0,
+          "deaths_high": 21000.0
+        },
+        "2014": {
+          "cases": 7740479.0,
+          "cases_low": 5562000.0,
+          "cases_high": 10730000.0,
+          "deaths": 21886.0,
+          "deaths_low": 20000.0,
+          "deaths_high": 24000.0
+        },
+        "2013": {
+          "cases": 7699696.0,
+          "cases_low": 5513000.0,
+          "cases_high": 10580000.0,
+          "deaths": 23614.0,
+          "deaths_low": 21700.0,
+          "deaths_high": 25700.0
+        },
+        "2012": {
+          "cases": 7194633.0,
+          "cases_low": 5122000.0,
+          "cases_high": 9768000.0,
+          "deaths": 23378.0,
+          "deaths_low": 21600.0,
+          "deaths_high": 25300.0
+        },
+        "2011": {
+          "cases": 6491808.0,
+          "cases_low": 4634000.0,
+          "cases_high": 8858000.0,
+          "deaths": 22149.0,
+          "deaths_low": 20600.0,
+          "deaths_high": 23900.0
+        },
+        "2010": {
+          "cases": 5957047.0,
+          "cases_low": 4268000.0,
+          "cases_high": 8204000.0,
+          "deaths": 19905.0,
+          "deaths_low": 18600.0,
+          "deaths_high": 21400.0
+        }
+      }
+    },
+    "SEN": {
+      "name": "Senegal",
+      "years": {
+        "2024": {
+          "cases": 680515.0,
+          "cases_low": 535000.0,
+          "cases_high": 839000.0,
+          "deaths": 1742.0,
+          "deaths_low": 770.0,
+          "deaths_high": 2960.0
+        },
+        "2023": {
+          "cases": 627067.0,
+          "cases_low": 444000.0,
+          "cases_high": 891000.0,
+          "deaths": 1605.0,
+          "deaths_low": 690.0,
+          "deaths_high": 2960.0
+        },
+        "2022": {
+          "cases": 672507.0,
+          "cases_low": 531000.0,
+          "cases_high": 826000.0,
+          "deaths": 1721.0,
+          "deaths_low": 750.0,
+          "deaths_high": 2900.0
+        },
+        "2021": {
+          "cases": 720754.0,
+          "cases_low": 569000.0,
+          "cases_high": 880000.0,
+          "deaths": 1845.0,
+          "deaths_low": 800.0,
+          "deaths_high": 3140.0
+        },
+        "2020": {
+          "cases": 597453.0,
+          "cases_low": 472000.0,
+          "cases_high": 729000.0,
+          "deaths": 1529.0,
+          "deaths_low": 670.0,
+          "deaths_high": 2580.0
+        },
+        "2019": {
+          "cases": 672221.0,
+          "cases_low": 455000.0,
+          "cases_high": 908000.0,
+          "deaths": 1720.0,
+          "deaths_low": 700.0,
+          "deaths_high": 3130.0
+        },
+        "2018": {
+          "cases": 1047659.0,
+          "cases_low": 729000.0,
+          "cases_high": 1402000.0,
+          "deaths": 2682.0,
+          "deaths_low": 1120.0,
+          "deaths_high": 4840.0
+        },
+        "2017": {
+          "cases": 805691.0,
+          "cases_low": 560000.0,
+          "cases_high": 1068000.0,
+          "deaths": 2062.0,
+          "deaths_low": 840.0,
+          "deaths_high": 3720.0
+        },
+        "2016": {
+          "cases": 684129.0,
+          "cases_low": 470000.0,
+          "cases_high": 924000.0,
+          "deaths": 1751.0,
+          "deaths_low": 710.0,
+          "deaths_high": 3200.0
+        },
+        "2015": {
+          "cases": 1010929.0,
+          "cases_low": 687000.0,
+          "cases_high": 1370000.0,
+          "deaths": 2587.0,
+          "deaths_low": 1030.0,
+          "deaths_high": 4730.0
+        },
+        "2014": {
+          "cases": 532782.0,
+          "cases_low": 391000.0,
+          "cases_high": 692000.0,
+          "deaths": 1363.0,
+          "deaths_low": 570.0,
+          "deaths_high": 2400.0
+        },
+        "2013": {
+          "cases": 793415.0,
+          "cases_low": 566000.0,
+          "cases_high": 1052000.0,
+          "deaths": 2031.0,
+          "deaths_low": 840.0,
+          "deaths_high": 3600.0
+        },
+        "2012": {
+          "cases": 706020.0,
+          "cases_low": 490000.0,
+          "cases_high": 957000.0,
+          "deaths": 1807.0,
+          "deaths_low": 750.0,
+          "deaths_high": 3260.0
+        },
+        "2011": {
+          "cases": 626038.0,
+          "cases_low": 441000.0,
+          "cases_high": 833000.0,
+          "deaths": 1602.0,
+          "deaths_low": 660.0,
+          "deaths_high": 2850.0
+        },
+        "2010": {
+          "cases": 763134.0,
+          "cases_low": 536000.0,
+          "cases_high": 1015000.0,
+          "deaths": 1953.0,
+          "deaths_low": 800.0,
+          "deaths_high": 3480.0
+        }
+      }
+    },
+    "CMR": {
+      "name": "Cameroon",
+      "years": {
+        "2024": {
+          "cases": 7585555.0,
+          "cases_low": 5542000.0,
+          "cases_high": 10180000.0,
+          "deaths": 11702.0,
+          "deaths_low": 9800.0,
+          "deaths_high": 14400.0
+        },
+        "2023": {
+          "cases": 7350770.0,
+          "cases_low": 5639000.0,
+          "cases_high": 9446000.0,
+          "deaths": 11602.0,
+          "deaths_low": 9710.0,
+          "deaths_high": 14300.0
+        },
+        "2022": {
+          "cases": 7323632.0,
+          "cases_low": 5654000.0,
+          "cases_high": 9311000.0,
+          "deaths": 12779.0,
+          "deaths_low": 10400.0,
+          "deaths_high": 16200.0
+        },
+        "2021": {
+          "cases": 7284817.0,
+          "cases_low": 5581000.0,
+          "cases_high": 9316000.0,
+          "deaths": 12961.0,
+          "deaths_low": 10700.0,
+          "deaths_high": 16000.0
+        },
+        "2020": {
+          "cases": 6940869.0,
+          "cases_low": 5191000.0,
+          "cases_high": 9065000.0,
+          "deaths": 13523.0,
+          "deaths_low": 11300.0,
+          "deaths_high": 16500.0
+        },
+        "2019": {
+          "cases": 6209127.0,
+          "cases_low": 4690000.0,
+          "cases_high": 8088000.0,
+          "deaths": 11458.0,
+          "deaths_low": 10200.0,
+          "deaths_high": 12900.0
+        },
+        "2018": {
+          "cases": 6176286.0,
+          "cases_low": 4711000.0,
+          "cases_high": 7937000.0,
+          "deaths": 11779.0,
+          "deaths_low": 10700.0,
+          "deaths_high": 13000.0
+        },
+        "2017": {
+          "cases": 6248935.0,
+          "cases_low": 4696000.0,
+          "cases_high": 8125000.0,
+          "deaths": 11922.0,
+          "deaths_low": 10900.0,
+          "deaths_high": 13000.0
+        },
+        "2016": {
+          "cases": 6298245.0,
+          "cases_low": 4631000.0,
+          "cases_high": 8351000.0,
+          "deaths": 12120.0,
+          "deaths_low": 11200.0,
+          "deaths_high": 13100.0
+        },
+        "2015": {
+          "cases": 6170151.0,
+          "cases_low": 4454000.0,
+          "cases_high": 8307000.0,
+          "deaths": 12214.0,
+          "deaths_low": 11300.0,
+          "deaths_high": 13200.0
+        },
+        "2014": {
+          "cases": 6011473.0,
+          "cases_low": 4242000.0,
+          "cases_high": 8265000.0,
+          "deaths": 12229.0,
+          "deaths_low": 11400.0,
+          "deaths_high": 13100.0
+        },
+        "2013": {
+          "cases": 5802116.0,
+          "cases_low": 4071000.0,
+          "cases_high": 7957000.0,
+          "deaths": 12222.0,
+          "deaths_low": 11400.0,
+          "deaths_high": 13100.0
+        },
+        "2012": {
+          "cases": 5434180.0,
+          "cases_low": 4028000.0,
+          "cases_high": 7178000.0,
+          "deaths": 12071.0,
+          "deaths_low": 11300.0,
+          "deaths_high": 12900.0
+        },
+        "2011": {
+          "cases": 5393901.0,
+          "cases_low": 4102000.0,
+          "cases_high": 6928000.0,
+          "deaths": 11870.0,
+          "deaths_low": 11100.0,
+          "deaths_high": 12700.0
+        },
+        "2010": {
+          "cases": 5815288.0,
+          "cases_low": 4444000.0,
+          "cases_high": 7467000.0,
+          "deaths": 12439.0,
+          "deaths_low": 11600.0,
+          "deaths_high": 13300.0
+        }
+      }
+    },
+    "BFA": {
+      "name": "Burkina Faso",
+      "years": {
+        "2024": {
+          "cases": 8324231.0,
+          "cases_low": 5507000.0,
+          "cases_high": 12060000.0,
+          "deaths": 16184.0,
+          "deaths_low": 11300.0,
+          "deaths_high": 24100.0
+        },
+        "2023": {
+          "cases": 8139355.0,
+          "cases_low": 5382000.0,
+          "cases_high": 11700000.0,
+          "deaths": 16146.0,
+          "deaths_low": 11300.0,
+          "deaths_high": 24100.0
+        },
+        "2022": {
+          "cases": 8019213.0,
+          "cases_low": 5348000.0,
+          "cases_high": 11590000.0,
+          "deaths": 16436.0,
+          "deaths_low": 11800.0,
+          "deaths_high": 23700.0
+        },
+        "2021": {
+          "cases": 8326915.0,
+          "cases_low": 5527000.0,
+          "cases_high": 12050000.0,
+          "deaths": 16733.0,
+          "deaths_low": 12300.0,
+          "deaths_high": 23500.0
+        },
+        "2020": {
+          "cases": 8122685.0,
+          "cases_low": 5375000.0,
+          "cases_high": 11720000.0,
+          "deaths": 18937.0,
+          "deaths_low": 12900.0,
+          "deaths_high": 28600.0
+        },
+        "2019": {
+          "cases": 7472680.0,
+          "cases_low": 5064000.0,
+          "cases_high": 10750000.0,
+          "deaths": 16283.0,
+          "deaths_low": 12600.0,
+          "deaths_high": 21500.0
+        },
+        "2018": {
+          "cases": 7280725.0,
+          "cases_low": 4892000.0,
+          "cases_high": 10380000.0,
+          "deaths": 16604.0,
+          "deaths_low": 13100.0,
+          "deaths_high": 21300.0
+        },
+        "2017": {
+          "cases": 7093584.0,
+          "cases_low": 4906000.0,
+          "cases_high": 10000000.0,
+          "deaths": 17134.0,
+          "deaths_low": 13900.0,
+          "deaths_high": 21400.0
+        },
+        "2016": {
+          "cases": 7215226.0,
+          "cases_low": 5351000.0,
+          "cases_high": 9555000.0,
+          "deaths": 18145.0,
+          "deaths_low": 15000.0,
+          "deaths_high": 22100.0
+        },
+        "2015": {
+          "cases": 7848131.0,
+          "cases_low": 6210000.0,
+          "cases_high": 9775000.0,
+          "deaths": 21478.0,
+          "deaths_low": 18100.0,
+          "deaths_high": 25500.0
+        },
+        "2014": {
+          "cases": 8132937.0,
+          "cases_low": 6535000.0,
+          "cases_high": 10000000.0,
+          "deaths": 24153.0,
+          "deaths_low": 20700.0,
+          "deaths_high": 28100.0
+        },
+        "2013": {
+          "cases": 8620220.0,
+          "cases_low": 6941000.0,
+          "cases_high": 10590000.0,
+          "deaths": 26341.0,
+          "deaths_low": 23000.0,
+          "deaths_high": 30100.0
+        },
+        "2012": {
+          "cases": 9159529.0,
+          "cases_low": 7380000.0,
+          "cases_high": 11230000.0,
+          "deaths": 31360.0,
+          "deaths_low": 27900.0,
+          "deaths_high": 35200.0
+        },
+        "2011": {
+          "cases": 9242057.0,
+          "cases_low": 7455000.0,
+          "cases_high": 11290000.0,
+          "deaths": 36043.0,
+          "deaths_low": 32500.0,
+          "deaths_high": 39900.0
+        },
+        "2010": {
+          "cases": 9194223.0,
+          "cases_low": 7399000.0,
+          "cases_high": 11260000.0,
+          "deaths": 37944.0,
+          "deaths_low": 34500.0,
+          "deaths_high": 41700.0
+        }
+      }
+    },
+    "GIN": {
+      "name": "Guinea",
+      "years": {
+        "2024": {
+          "cases": 4221103.0,
+          "cases_low": 2923000.0,
+          "cases_high": 5912000.0,
+          "deaths": 10245.0,
+          "deaths_low": 8480.0,
+          "deaths_high": 12600.0
+        },
+        "2023": {
+          "cases": 4112792.0,
+          "cases_low": 2882000.0,
+          "cases_high": 5647000.0,
+          "deaths": 10188.0,
+          "deaths_low": 8410.0,
+          "deaths_high": 12600.0
+        },
+        "2022": {
+          "cases": 4015495.0,
+          "cases_low": 3011000.0,
+          "cases_high": 5258000.0,
+          "deaths": 10283.0,
+          "deaths_low": 8680.0,
+          "deaths_high": 12400.0
+        },
+        "2021": {
+          "cases": 4036996.0,
+          "cases_low": 3121000.0,
+          "cases_high": 5159000.0,
+          "deaths": 10381.0,
+          "deaths_low": 8970.0,
+          "deaths_high": 12300.0
+        },
+        "2020": {
+          "cases": 4077448.0,
+          "cases_low": 2921000.0,
+          "cases_high": 5553000.0,
+          "deaths": 11118.0,
+          "deaths_low": 9260.0,
+          "deaths_high": 13600.0
+        },
+        "2019": {
+          "cases": 4186659.0,
+          "cases_low": 2905000.0,
+          "cases_high": 5877000.0,
+          "deaths": 10898.0,
+          "deaths_low": 9710.0,
+          "deaths_high": 12400.0
+        },
+        "2018": {
+          "cases": 4450281.0,
+          "cases_low": 3208000.0,
+          "cases_high": 6027000.0,
+          "deaths": 11592.0,
+          "deaths_low": 10400.0,
+          "deaths_high": 13100.0
+        },
+        "2017": {
+          "cases": 4439978.0,
+          "cases_low": 3211000.0,
+          "cases_high": 5970000.0,
+          "deaths": 11460.0,
+          "deaths_low": 10400.0,
+          "deaths_high": 12800.0
+        },
+        "2016": {
+          "cases": 4425005.0,
+          "cases_low": 3262000.0,
+          "cases_high": 5898000.0,
+          "deaths": 11417.0,
+          "deaths_low": 10400.0,
+          "deaths_high": 12600.0
+        },
+        "2015": {
+          "cases": 4523155.0,
+          "cases_low": 3422000.0,
+          "cases_high": 5928000.0,
+          "deaths": 12092.0,
+          "deaths_low": 11100.0,
+          "deaths_high": 13200.0
+        },
+        "2014": {
+          "cases": 4551149.0,
+          "cases_low": 3472000.0,
+          "cases_high": 5819000.0,
+          "deaths": 12703.0,
+          "deaths_low": 11700.0,
+          "deaths_high": 13900.0
+        },
+        "2013": {
+          "cases": 4630441.0,
+          "cases_low": 3692000.0,
+          "cases_high": 5761000.0,
+          "deaths": 13268.0,
+          "deaths_low": 12200.0,
+          "deaths_high": 14400.0
+        },
+        "2012": {
+          "cases": 4715376.0,
+          "cases_low": 3910000.0,
+          "cases_high": 5660000.0,
+          "deaths": 14478.0,
+          "deaths_low": 13400.0,
+          "deaths_high": 15600.0
+        },
+        "2011": {
+          "cases": 4569440.0,
+          "cases_low": 3742000.0,
+          "cases_high": 5505000.0,
+          "deaths": 14505.0,
+          "deaths_low": 13500.0,
+          "deaths_high": 15600.0
+        },
+        "2010": {
+          "cases": 4322048.0,
+          "cases_low": 3477000.0,
+          "cases_high": 5341000.0,
+          "deaths": 13854.0,
+          "deaths_low": 12900.0,
+          "deaths_high": 14900.0
+        }
+      }
+    },
+    "ZWE": {
+      "name": "Zimbabwe",
+      "years": {
+        "2024": {
+          "cases": 148833.0,
+          "cases_low": 89000.0,
+          "cases_high": 214000.0,
+          "deaths": 381.0,
+          "deaths_low": 140.0,
+          "deaths_high": 730.0
+        },
+        "2023": {
+          "cases": 635589.0,
+          "cases_low": 380000.0,
+          "cases_high": 909000.0,
+          "deaths": 1627.0,
+          "deaths_low": 610.0,
+          "deaths_high": 3130.0
+        },
+        "2022": {
+          "cases": 365695.0,
+          "cases_low": 220000.0,
+          "cases_high": 523000.0,
+          "deaths": 936.0,
+          "deaths_low": 340.0,
+          "deaths_high": 1780.0
+        },
+        "2021": {
+          "cases": 342543.0,
+          "cases_low": 203000.0,
+          "cases_high": 491000.0,
+          "deaths": 876.0,
+          "deaths_low": 330.0,
+          "deaths_high": 1680.0
+        },
+        "2020": {
+          "cases": 1152901.0,
+          "cases_low": 692000.0,
+          "cases_high": 1662000.0,
+          "deaths": 2951.0,
+          "deaths_low": 1110.0,
+          "deaths_high": 5640.0
+        },
+        "2019": {
+          "cases": 782740.0,
+          "cases_low": 470000.0,
+          "cases_high": 1124000.0,
+          "deaths": 2003.0,
+          "deaths_low": 740.0,
+          "deaths_high": 3810.0
+        },
+        "2018": {
+          "cases": 634718.0,
+          "cases_low": 393000.0,
+          "cases_high": 897000.0,
+          "deaths": 1624.0,
+          "deaths_low": 620.0,
+          "deaths_high": 3050.0
+        },
+        "2017": {
+          "cases": 1337886.0,
+          "cases_low": 835000.0,
+          "cases_high": 1934000.0,
+          "deaths": 3424.0,
+          "deaths_low": 1330.0,
+          "deaths_high": 6480.0
+        },
+        "2016": {
+          "cases": 760626.0,
+          "cases_low": 498000.0,
+          "cases_high": 1052000.0,
+          "deaths": 1947.0,
+          "deaths_low": 770.0,
+          "deaths_high": 3590.0
+        },
+        "2015": {
+          "cases": 1067121.0,
+          "cases_low": 727000.0,
+          "cases_high": 1453000.0,
+          "deaths": 2731.0,
+          "deaths_low": 1100.0,
+          "deaths_high": 4980.0
+        },
+        "2014": {
+          "cases": 1093059.0,
+          "cases_low": 807000.0,
+          "cases_high": 1397000.0,
+          "deaths": 2798.0,
+          "deaths_low": 1180.0,
+          "deaths_high": 4890.0
+        },
+        "2013": {
+          "cases": 863692.0,
+          "cases_low": 614000.0,
+          "cases_high": 1131000.0,
+          "deaths": 2211.0,
+          "deaths_low": 920.0,
+          "deaths_high": 3940.0
+        },
+        "2012": {
+          "cases": 592559.0,
+          "cases_low": 405000.0,
+          "cases_high": 793000.0,
+          "deaths": 1516.0,
+          "deaths_low": 620.0,
+          "deaths_high": 2760.0
+        },
+        "2011": {
+          "cases": 722030.0,
+          "cases_low": 475000.0,
+          "cases_high": 996000.0,
+          "deaths": 1848.0,
+          "deaths_low": 730.0,
+          "deaths_high": 3400.0
+        },
+        "2010": {
+          "cases": 1097776.0,
+          "cases_low": 597000.0,
+          "cases_high": 1746000.0,
+          "deaths": 2810.0,
+          "deaths_low": 1020.0,
+          "deaths_high": 5610.0
+        }
+      }
+    },
+    "RWA": {
+      "name": "Rwanda",
+      "years": {
+        "2024": {
+          "cases": 1099728.0,
+          "cases_low": 855000.0,
+          "cases_high": 1354000.0,
+          "deaths": 3410.0,
+          "deaths_low": 3190.0,
+          "deaths_high": 3840.0
+        },
+        "2023": {
+          "cases": 748570.0,
+          "cases_low": 583000.0,
+          "cases_high": 921000.0,
+          "deaths": 3349.0,
+          "deaths_low": 3130.0,
+          "deaths_high": 3780.0
+        },
+        "2022": {
+          "cases": 1168150.0,
+          "cases_low": 908000.0,
+          "cases_high": 1441000.0,
+          "deaths": 3311.0,
+          "deaths_low": 3090.0,
+          "deaths_high": 3730.0
+        },
+        "2021": {
+          "cases": 1585741.0,
+          "cases_low": 1232000.0,
+          "cases_high": 1956000.0,
+          "deaths": 3263.0,
+          "deaths_low": 3050.0,
+          "deaths_high": 3640.0
+        },
+        "2020": {
+          "cases": 2784545.0,
+          "cases_low": 2164000.0,
+          "cases_high": 3430000.0,
+          "deaths": 3186.0,
+          "deaths_low": 3000.0,
+          "deaths_high": 3510.0
+        },
+        "2019": {
+          "cases": 4923219.0,
+          "cases_low": 3827000.0,
+          "cases_high": 6069000.0,
+          "deaths": 3139.0,
+          "deaths_low": 2970.0,
+          "deaths_high": 3400.0
+        },
+        "2018": {
+          "cases": 5963859.0,
+          "cases_low": 4506000.0,
+          "cases_high": 7500000.0,
+          "deaths": 3143.0,
+          "deaths_low": 2980.0,
+          "deaths_high": 3380.0
+        },
+        "2017": {
+          "cases": 8681013.0,
+          "cases_low": 6348000.0,
+          "cases_high": 11160000.0,
+          "deaths": 3107.0,
+          "deaths_low": 2960.0,
+          "deaths_high": 3300.0
+        },
+        "2016": {
+          "cases": 4887836.0,
+          "cases_low": 3595000.0,
+          "cases_high": 6237000.0,
+          "deaths": 3053.0,
+          "deaths_low": 2930.0,
+          "deaths_high": 3200.0
+        },
+        "2015": {
+          "cases": 3585563.0,
+          "cases_low": 2668000.0,
+          "cases_high": 4539000.0,
+          "deaths": 2996.0,
+          "deaths_low": 2890.0,
+          "deaths_high": 3120.0
+        },
+        "2014": {
+          "cases": 2299121.0,
+          "cases_low": 1727000.0,
+          "cases_high": 2892000.0,
+          "deaths": 2959.0,
+          "deaths_low": 2860.0,
+          "deaths_high": 3070.0
+        },
+        "2013": {
+          "cases": 1214623.0,
+          "cases_low": 1012000.0,
+          "cases_high": 1429000.0,
+          "deaths": 2954.0,
+          "deaths_low": 2860.0,
+          "deaths_high": 3060.0
+        },
+        "2012": {
+          "cases": 646386.0,
+          "cases_low": 511000.0,
+          "cases_high": 787000.0,
+          "deaths": 2955.0,
+          "deaths_low": 2860.0,
+          "deaths_high": 3060.0
+        },
+        "2011": {
+          "cases": 390611.0,
+          "cases_low": 292000.0,
+          "cases_high": 495000.0,
+          "deaths": 2977.0,
+          "deaths_low": 2890.0,
+          "deaths_high": 3080.0
+        },
+        "2010": {
+          "cases": 1079765.0,
+          "cases_low": 748000.0,
+          "cases_high": 1426000.0,
+          "deaths": 3002.0,
+          "deaths_low": 2920.0,
+          "deaths_high": 3100.0
+        }
+      }
+    },
+    "TGO": {
+      "name": "Togo",
+      "years": {
+        "2024": {
+          "cases": 2371693.0,
+          "cases_low": 1583000.0,
+          "cases_high": 3397000.0,
+          "deaths": 3486.0,
+          "deaths_low": 2900.0,
+          "deaths_high": 4290.0
+        },
+        "2023": {
+          "cases": 2463762.0,
+          "cases_low": 1791000.0,
+          "cases_high": 3292000.0,
+          "deaths": 3456.0,
+          "deaths_low": 2870.0,
+          "deaths_high": 4260.0
+        },
+        "2022": {
+          "cases": 2532312.0,
+          "cases_low": 1833000.0,
+          "cases_high": 3376000.0,
+          "deaths": 3527.0,
+          "deaths_low": 2930.0,
+          "deaths_high": 4350.0
+        },
+        "2021": {
+          "cases": 2481567.0,
+          "cases_low": 1817000.0,
+          "cases_high": 3357000.0,
+          "deaths": 3546.0,
+          "deaths_low": 2980.0,
+          "deaths_high": 4300.0
+        },
+        "2020": {
+          "cases": 2461528.0,
+          "cases_low": 1771000.0,
+          "cases_high": 3348000.0,
+          "deaths": 3577.0,
+          "deaths_low": 3050.0,
+          "deaths_high": 4250.0
+        },
+        "2019": {
+          "cases": 2454104.0,
+          "cases_low": 1799000.0,
+          "cases_high": 3272000.0,
+          "deaths": 3426.0,
+          "deaths_low": 3020.0,
+          "deaths_high": 3910.0
+        },
+        "2018": {
+          "cases": 2663084.0,
+          "cases_low": 2076000.0,
+          "cases_high": 3354000.0,
+          "deaths": 3558.0,
+          "deaths_low": 3170.0,
+          "deaths_high": 4000.0
+        },
+        "2017": {
+          "cases": 2829242.0,
+          "cases_low": 2278000.0,
+          "cases_high": 3474000.0,
+          "deaths": 3858.0,
+          "deaths_low": 3460.0,
+          "deaths_high": 4310.0
+        },
+        "2016": {
+          "cases": 2896314.0,
+          "cases_low": 2340000.0,
+          "cases_high": 3547000.0,
+          "deaths": 4642.0,
+          "deaths_low": 4170.0,
+          "deaths_high": 5160.0
+        },
+        "2015": {
+          "cases": 2853364.0,
+          "cases_low": 2310000.0,
+          "cases_high": 3483000.0,
+          "deaths": 5151.0,
+          "deaths_low": 4660.0,
+          "deaths_high": 5700.0
+        },
+        "2014": {
+          "cases": 2757163.0,
+          "cases_low": 2256000.0,
+          "cases_high": 3333000.0,
+          "deaths": 5123.0,
+          "deaths_low": 4680.0,
+          "deaths_high": 5620.0
+        },
+        "2013": {
+          "cases": 2692633.0,
+          "cases_low": 2197000.0,
+          "cases_high": 3264000.0,
+          "deaths": 4930.0,
+          "deaths_low": 4550.0,
+          "deaths_high": 5360.0
+        },
+        "2012": {
+          "cases": 2387317.0,
+          "cases_low": 1894000.0,
+          "cases_high": 2971000.0,
+          "deaths": 4402.0,
+          "deaths_low": 4090.0,
+          "deaths_high": 4750.0
+        },
+        "2011": {
+          "cases": 2148045.0,
+          "cases_low": 1646000.0,
+          "cases_high": 2757000.0,
+          "deaths": 4021.0,
+          "deaths_low": 3760.0,
+          "deaths_high": 4310.0
+        },
+        "2010": {
+          "cases": 2144504.0,
+          "cases_low": 1640000.0,
+          "cases_high": 2784000.0,
+          "deaths": 4043.0,
+          "deaths_low": 3790.0,
+          "deaths_high": 4320.0
+        }
+      }
+    },
+    "BEN": {
+      "name": "Benin",
+      "years": {
+        "2024": {
+          "cases": 5123465.0,
+          "cases_low": 3296000.0,
+          "cases_high": 7629000.0,
+          "deaths": 9946.0,
+          "deaths_low": 7860.0,
+          "deaths_high": 12700.0
+        },
+        "2023": {
+          "cases": 5097786.0,
+          "cases_low": 3435000.0,
+          "cases_high": 7287000.0,
+          "deaths": 9928.0,
+          "deaths_low": 7840.0,
+          "deaths_high": 12700.0
+        },
+        "2022": {
+          "cases": 5181843.0,
+          "cases_low": 3663000.0,
+          "cases_high": 7173000.0,
+          "deaths": 10942.0,
+          "deaths_low": 8230.0,
+          "deaths_high": 14500.0
+        },
+        "2021": {
+          "cases": 5072961.0,
+          "cases_low": 3719000.0,
+          "cases_high": 6736000.0,
+          "deaths": 11115.0,
+          "deaths_low": 8600.0,
+          "deaths_high": 14300.0
+        },
+        "2020": {
+          "cases": 4927525.0,
+          "cases_low": 3675000.0,
+          "cases_high": 6420000.0,
+          "deaths": 10320.0,
+          "deaths_low": 8690.0,
+          "deaths_high": 12300.0
+        },
+        "2019": {
+          "cases": 5089580.0,
+          "cases_low": 3915000.0,
+          "cases_high": 6507000.0,
+          "deaths": 10732.0,
+          "deaths_low": 9430.0,
+          "deaths_high": 12200.0
+        },
+        "2018": {
+          "cases": 5048803.0,
+          "cases_low": 4009000.0,
+          "cases_high": 6281000.0,
+          "deaths": 10715.0,
+          "deaths_low": 9600.0,
+          "deaths_high": 12000.0
+        },
+        "2017": {
+          "cases": 5005399.0,
+          "cases_low": 4052000.0,
+          "cases_high": 6144000.0,
+          "deaths": 11265.0,
+          "deaths_low": 10200.0,
+          "deaths_high": 12500.0
+        },
+        "2016": {
+          "cases": 4865347.0,
+          "cases_low": 3930000.0,
+          "cases_high": 5975000.0,
+          "deaths": 11244.0,
+          "deaths_low": 10200.0,
+          "deaths_high": 12400.0
+        },
+        "2015": {
+          "cases": 4439351.0,
+          "cases_low": 3525000.0,
+          "cases_high": 5524000.0,
+          "deaths": 10069.0,
+          "deaths_low": 9230.0,
+          "deaths_high": 11000.0
+        },
+        "2014": {
+          "cases": 4071327.0,
+          "cases_low": 3142000.0,
+          "cases_high": 5192000.0,
+          "deaths": 8848.0,
+          "deaths_low": 8150.0,
+          "deaths_high": 9620.0
+        },
+        "2013": {
+          "cases": 3878086.0,
+          "cases_low": 2989000.0,
+          "cases_high": 4950000.0,
+          "deaths": 8439.0,
+          "deaths_low": 7800.0,
+          "deaths_high": 9130.0
+        },
+        "2012": {
+          "cases": 3797021.0,
+          "cases_low": 2986000.0,
+          "cases_high": 4745000.0,
+          "deaths": 8246.0,
+          "deaths_low": 7660.0,
+          "deaths_high": 8890.0
+        },
+        "2011": {
+          "cases": 3865748.0,
+          "cases_low": 3047000.0,
+          "cases_high": 4847000.0,
+          "deaths": 8511.0,
+          "deaths_low": 7930.0,
+          "deaths_high": 9150.0
+        },
+        "2010": {
+          "cases": 4086249.0,
+          "cases_low": 3259000.0,
+          "cases_high": 5090000.0,
+          "deaths": 9282.0,
+          "deaths_low": 8660.0,
+          "deaths_high": 9970.0
+        }
+      }
+    },
+    "SDN": {
+      "name": "Sudan",
+      "years": {}
+    },
+    "AGO": {
+      "name": "Angola",
+      "years": {
+        "2024": {
+          "cases": 9808643.0,
+          "cases_low": 6072000.0,
+          "cases_high": 14860000.0,
+          "deaths": 16385.0,
+          "deaths_low": 11400.0,
+          "deaths_high": 25500.0
+        },
+        "2023": {
+          "cases": 9388568.0,
+          "cases_low": 5790000.0,
+          "cases_high": 14530000.0,
+          "deaths": 16169.0,
+          "deaths_low": 11200.0,
+          "deaths_high": 25300.0
+        },
+        "2022": {
+          "cases": 9268350.0,
+          "cases_low": 5751000.0,
+          "cases_high": 14010000.0,
+          "deaths": 20286.0,
+          "deaths_low": 13000.0,
+          "deaths_high": 33700.0
+        },
+        "2021": {
+          "cases": 8930365.0,
+          "cases_low": 5854000.0,
+          "cases_high": 12960000.0,
+          "deaths": 20493.0,
+          "deaths_low": 13100.0,
+          "deaths_high": 33800.0
+        },
+        "2020": {
+          "cases": 8179791.0,
+          "cases_low": 5141000.0,
+          "cases_high": 12210000.0,
+          "deaths": 17198.0,
+          "deaths_low": 11600.0,
+          "deaths_high": 27000.0
+        },
+        "2019": {
+          "cases": 7870619.0,
+          "cases_low": 5185000.0,
+          "cases_high": 11400000.0,
+          "deaths": 15253.0,
+          "deaths_low": 10700.0,
+          "deaths_high": 22800.0
+        },
+        "2018": {
+          "cases": 7274804.0,
+          "cases_low": 5332000.0,
+          "cases_high": 9794000.0,
+          "deaths": 14399.0,
+          "deaths_low": 10300.0,
+          "deaths_high": 21100.0
+        },
+        "2017": {
+          "cases": 6510001.0,
+          "cases_low": 5064000.0,
+          "cases_high": 8221000.0,
+          "deaths": 13849.0,
+          "deaths_low": 9970.0,
+          "deaths_high": 19900.0
+        },
+        "2016": {
+          "cases": 5538352.0,
+          "cases_low": 4284000.0,
+          "cases_high": 7023000.0,
+          "deaths": 12961.0,
+          "deaths_low": 9580.0,
+          "deaths_high": 18100.0
+        },
+        "2015": {
+          "cases": 4912741.0,
+          "cases_low": 3760000.0,
+          "cases_high": 6316000.0,
+          "deaths": 12090.0,
+          "deaths_low": 9130.0,
+          "deaths_high": 16500.0
+        },
+        "2014": {
+          "cases": 4450526.0,
+          "cases_low": 3267000.0,
+          "cases_high": 5894000.0,
+          "deaths": 11615.0,
+          "deaths_low": 8890.0,
+          "deaths_high": 15500.0
+        },
+        "2013": {
+          "cases": 4136885.0,
+          "cases_low": 3031000.0,
+          "cases_high": 5538000.0,
+          "deaths": 11219.0,
+          "deaths_low": 8780.0,
+          "deaths_high": 14700.0
+        },
+        "2012": {
+          "cases": 3853483.0,
+          "cases_low": 2857000.0,
+          "cases_high": 5084000.0,
+          "deaths": 11144.0,
+          "deaths_low": 8880.0,
+          "deaths_high": 14300.0
+        },
+        "2011": {
+          "cases": 3803798.0,
+          "cases_low": 2848000.0,
+          "cases_high": 4966000.0,
+          "deaths": 11524.0,
+          "deaths_low": 9300.0,
+          "deaths_high": 14500.0
+        },
+        "2010": {
+          "cases": 3968548.0,
+          "cases_low": 3008000.0,
+          "cases_high": 5118000.0,
+          "deaths": 12185.0,
+          "deaths_low": 9980.0,
+          "deaths_high": 15100.0
+        }
+      }
+    },
+    "LSO": {
+      "name": "Lesotho",
+      "years": {}
+    },
+    "SWZ": {
+      "name": "Eswatini",
+      "years": {
+        "2024": {
+          "cases": 193.0,
+          "cases_low": null,
+          "cases_high": null,
+          "deaths": 0.0,
+          "deaths_low": null,
+          "deaths_high": null
+        },
+        "2023": {
+          "cases": 597.0,
+          "cases_low": null,
+          "cases_high": null,
+          "deaths": 7.0,
+          "deaths_low": null,
+          "deaths_high": null
+        },
+        "2022": {
+          "cases": 214.0,
+          "cases_low": null,
+          "cases_high": null,
+          "deaths": 4.0,
+          "deaths_low": null,
+          "deaths_high": null
+        },
+        "2021": {
+          "cases": 505.0,
+          "cases_low": null,
+          "cases_high": null,
+          "deaths": 5.0,
+          "deaths_low": null,
+          "deaths_high": null
+        },
+        "2020": {
+          "cases": 233.0,
+          "cases_low": null,
+          "cases_high": null,
+          "deaths": 2.0,
+          "deaths_low": null,
+          "deaths_high": null
+        },
+        "2019": {
+          "cases": 252.0,
+          "cases_low": null,
+          "cases_high": null,
+          "deaths": 3.0,
+          "deaths_low": null,
+          "deaths_high": null
+        },
+        "2018": {
+          "cases": 686.0,
+          "cases_low": null,
+          "cases_high": null,
+          "deaths": 2.0,
+          "deaths_low": null,
+          "deaths_high": null
+        },
+        "2017": {
+          "cases": 440.0,
+          "cases_low": null,
+          "cases_high": null,
+          "deaths": 20.0,
+          "deaths_low": null,
+          "deaths_high": null
+        },
+        "2016": {
+          "cases": 250.0,
+          "cases_low": null,
+          "cases_high": null,
+          "deaths": 3.0,
+          "deaths_low": null,
+          "deaths_high": null
+        },
+        "2015": {
+          "cases": 318.0,
+          "cases_low": null,
+          "cases_high": null,
+          "deaths": 5.0,
+          "deaths_low": null,
+          "deaths_high": null
+        },
+        "2014": {
+          "cases": 389.0,
+          "cases_low": null,
+          "cases_high": null,
+          "deaths": 4.0,
+          "deaths_low": null,
+          "deaths_high": null
+        },
+        "2013": {
+          "cases": 728.0,
+          "cases_low": null,
+          "cases_high": null,
+          "deaths": 4.0,
+          "deaths_low": null,
+          "deaths_high": null
+        },
+        "2012": {
+          "cases": 409.0,
+          "cases_low": null,
+          "cases_high": null,
+          "deaths": 3.0,
+          "deaths_low": null,
+          "deaths_high": null
+        },
+        "2011": {
+          "cases": 379.0,
+          "cases_low": null,
+          "cases_high": null,
+          "deaths": 1.0,
+          "deaths_low": null,
+          "deaths_high": null
+        },
+        "2010": {
+          "cases": 268.0,
+          "cases_low": null,
+          "cases_high": null,
+          "deaths": 8.0,
+          "deaths_low": null,
+          "deaths_high": null
+        }
+      }
+    },
+    "MMR": {
+      "name": "Myanmar",
+      "years": {
+        "2024": {
+          "cases": 701778.0,
+          "cases_low": 422000.0,
+          "cases_high": 2943000.0,
+          "deaths": 410.0,
+          "deaths_low": 170.0,
+          "deaths_high": 1890.0
+        },
+        "2023": {
+          "cases": 847232.0,
+          "cases_low": 510000.0,
+          "cases_high": 3702000.0,
+          "deaths": 660.0,
+          "deaths_low": 280.0,
+          "deaths_high": 2940.0
+        },
+        "2022": {
+          "cases": 585710.0,
+          "cases_low": 352000.0,
+          "cases_high": 2509000.0,
+          "deaths": 467.0,
+          "deaths_low": 200.0,
+          "deaths_high": 2030.0
+        },
+        "2021": {
+          "cases": 292853.0,
+          "cases_low": 177000.0,
+          "cases_high": 1238000.0,
+          "deaths": 231.0,
+          "deaths_low": 99.0,
+          "deaths_high": 1010.0
+        },
+        "2020": {
+          "cases": 82134.0,
+          "cases_low": 67000.0,
+          "cases_high": 99000.0,
+          "deaths": 77.0,
+          "deaths_low": 38.0,
+          "deaths_high": 120.0
+        },
+        "2019": {
+          "cases": 78326.0,
+          "cases_low": 64000.0,
+          "cases_high": 95000.0,
+          "deaths": 97.0,
+          "deaths_low": 48.0,
+          "deaths_high": 160.0
+        },
+        "2018": {
+          "cases": 108681.0,
+          "cases_low": 88000.0,
+          "cases_high": 131000.0,
+          "deaths": 164.0,
+          "deaths_low": 80.0,
+          "deaths_high": 270.0
+        },
+        "2017": {
+          "cases": 120755.0,
+          "cases_low": 98000.0,
+          "cases_high": 145000.0,
+          "deaths": 209.0,
+          "deaths_low": 99.0,
+          "deaths_high": 340.0
+        },
+        "2016": {
+          "cases": 162032.0,
+          "cases_low": 131000.0,
+          "cases_high": 195000.0,
+          "deaths": 274.0,
+          "deaths_low": 130.0,
+          "deaths_high": 440.0
+        },
+        "2015": {
+          "cases": 271652.0,
+          "cases_low": 220000.0,
+          "cases_high": 328000.0,
+          "deaths": 481.0,
+          "deaths_low": 230.0,
+          "deaths_high": 780.0
+        },
+        "2014": {
+          "cases": 383705.0,
+          "cases_low": 282000.0,
+          "cases_high": 532000.0,
+          "deaths": 729.0,
+          "deaths_low": 330.0,
+          "deaths_high": 1300.0
+        },
+        "2013": {
+          "cases": 611838.0,
+          "cases_low": 455000.0,
+          "cases_high": 846000.0,
+          "deaths": 1169.0,
+          "deaths_low": 530.0,
+          "deaths_high": 2090.0
+        },
+        "2012": {
+          "cases": 1754334.0,
+          "cases_low": 1254000.0,
+          "cases_high": 2535000.0,
+          "deaths": 3412.0,
+          "deaths_low": 1530.0,
+          "deaths_high": 6310.0
+        },
+        "2011": {
+          "cases": 1326603.0,
+          "cases_low": 1024000.0,
+          "cases_high": 1772000.0,
+          "deaths": 3214.0,
+          "deaths_low": 1420.0,
+          "deaths_high": 5570.0
+        },
+        "2010": {
+          "cases": 1507212.0,
+          "cases_low": 1100000.0,
+          "cases_high": 2137000.0,
+          "deaths": 3623.0,
+          "deaths_low": 1590.0,
+          "deaths_high": 6530.0
+        }
+      }
+    },
+    "PNG": {
+      "name": "Papua New Guinea",
+      "years": {
+        "2024": {
+          "cases": 1605117.0,
+          "cases_low": 1115000.0,
+          "cases_high": 2136000.0,
+          "deaths": 3315.0,
+          "deaths_low": 1400.0,
+          "deaths_high": 5940.0
+        },
+        "2023": {
+          "cases": 1529373.0,
+          "cases_low": 1055000.0,
+          "cases_high": 2031000.0,
+          "deaths": 3080.0,
+          "deaths_low": 1300.0,
+          "deaths_high": 5490.0
+        },
+        "2022": {
+          "cases": 1660032.0,
+          "cases_low": 1149000.0,
+          "cases_high": 2202000.0,
+          "deaths": 3398.0,
+          "deaths_low": 1430.0,
+          "deaths_high": 6080.0
+        },
+        "2021": {
+          "cases": 1237112.0,
+          "cases_low": 856000.0,
+          "cases_high": 1646000.0,
+          "deaths": 2449.0,
+          "deaths_low": 1050.0,
+          "deaths_high": 4380.0
+        },
+        "2020": {
+          "cases": 1470120.0,
+          "cases_low": 1011000.0,
+          "cases_high": 1975000.0,
+          "deaths": 2962.0,
+          "deaths_low": 1240.0,
+          "deaths_high": 5200.0
+        },
+        "2019": {
+          "cases": 1346175.0,
+          "cases_low": 914000.0,
+          "cases_high": 1835000.0,
+          "deaths": 2694.0,
+          "deaths_low": 1140.0,
+          "deaths_high": 4820.0
+        },
+        "2018": {
+          "cases": 1301773.0,
+          "cases_low": 850000.0,
+          "cases_high": 1845000.0,
+          "deaths": 2571.0,
+          "deaths_low": 1070.0,
+          "deaths_high": 4700.0
+        },
+        "2017": {
+          "cases": 1230223.0,
+          "cases_low": 798000.0,
+          "cases_high": 1758000.0,
+          "deaths": 2510.0,
+          "deaths_low": 1030.0,
+          "deaths_high": 4560.0
+        },
+        "2016": {
+          "cases": 1208966.0,
+          "cases_low": 811000.0,
+          "cases_high": 1660000.0,
+          "deaths": 2568.0,
+          "deaths_low": 1070.0,
+          "deaths_high": 4660.0
+        },
+        "2015": {
+          "cases": 884727.0,
+          "cases_low": 577000.0,
+          "cases_high": 1258000.0,
+          "deaths": 1860.0,
+          "deaths_low": 750.0,
+          "deaths_high": 3420.0
+        },
+        "2014": {
+          "cases": 1613869.0,
+          "cases_low": 937000.0,
+          "cases_high": 2530000.0,
+          "deaths": 3142.0,
+          "deaths_low": 1230.0,
+          "deaths_high": 6050.0
+        },
+        "2013": {
+          "cases": 1420220.0,
+          "cases_low": 769000.0,
+          "cases_high": 2236000.0,
+          "deaths": 3452.0,
+          "deaths_low": 1260.0,
+          "deaths_high": 6760.0
+        },
+        "2012": {
+          "cases": 1249917.0,
+          "cases_low": 408000.0,
+          "cases_high": 2564000.0,
+          "deaths": 2739.0,
+          "deaths_low": 700.0,
+          "deaths_high": 6340.0
+        },
+        "2011": {
+          "cases": 899054.0,
+          "cases_low": 326000.0,
+          "cases_high": 1593000.0,
+          "deaths": 2032.0,
+          "deaths_low": 570.0,
+          "deaths_high": 4380.0
+        },
+        "2010": {
+          "cases": 1079284.0,
+          "cases_low": 387000.0,
+          "cases_high": 1924000.0,
+          "deaths": 2354.0,
+          "deaths_low": 670.0,
+          "deaths_high": 5070.0
+        }
+      }
+    },
+    "HTI": {
+      "name": "Haiti",
+      "years": {
+        "2024": {
+          "cases": 91461.0,
+          "cases_low": 56000.0,
+          "cases_high": 143000.0,
+          "deaths": 234.0,
+          "deaths_low": 89.0,
+          "deaths_high": 460.0
+        },
+        "2023": {
+          "cases": 23824.0,
+          "cases_low": 16000.0,
+          "cases_high": 32000.0,
+          "deaths": 60.0,
+          "deaths_low": 24.0,
+          "deaths_high": 110.0
+        },
+        "2022": {
+          "cases": 26231.0,
+          "cases_low": 17000.0,
+          "cases_high": 36000.0,
+          "deaths": 67.0,
+          "deaths_low": 26.0,
+          "deaths_high": 120.0
+        },
+        "2021": {
+          "cases": 22546.0,
+          "cases_low": 14000.0,
+          "cases_high": 35000.0,
+          "deaths": 57.0,
+          "deaths_low": 22.0,
+          "deaths_high": 110.0
+        },
+        "2020": {
+          "cases": 38093.0,
+          "cases_low": 25000.0,
+          "cases_high": 51000.0,
+          "deaths": 97.0,
+          "deaths_low": 38.0,
+          "deaths_high": 180.0
+        },
+        "2019": {
+          "cases": 17703.0,
+          "cases_low": 12000.0,
+          "cases_high": 24000.0,
+          "deaths": 45.0,
+          "deaths_low": 17.0,
+          "deaths_high": 82.0
+        },
+        "2018": {
+          "cases": 16000.0,
+          "cases_low": 11000.0,
+          "cases_high": 22000.0,
+          "deaths": 40.0,
+          "deaths_low": 15.0,
+          "deaths_high": 74.0
+        },
+        "2017": {
+          "cases": 33122.0,
+          "cases_low": 22000.0,
+          "cases_high": 45000.0,
+          "deaths": 84.0,
+          "deaths_low": 33.0,
+          "deaths_high": 160.0
+        },
+        "2016": {
+          "cases": 36279.0,
+          "cases_low": 24000.0,
+          "cases_high": 49000.0,
+          "deaths": 92.0,
+          "deaths_low": 37.0,
+          "deaths_high": 170.0
+        },
+        "2015": {
+          "cases": 32185.0,
+          "cases_low": 21000.0,
+          "cases_high": 43000.0,
+          "deaths": 82.0,
+          "deaths_low": 32.0,
+          "deaths_high": 150.0
+        },
+        "2014": {
+          "cases": 33119.0,
+          "cases_low": 22000.0,
+          "cases_high": 45000.0,
+          "deaths": 84.0,
+          "deaths_low": 33.0,
+          "deaths_high": 160.0
+        },
+        "2013": {
+          "cases": 62551.0,
+          "cases_low": 38000.0,
+          "cases_high": 97000.0,
+          "deaths": 160.0,
+          "deaths_low": 62.0,
+          "deaths_high": 310.0
+        },
+        "2012": {
+          "cases": 65545.0,
+          "cases_low": 40000.0,
+          "cases_high": 102000.0,
+          "deaths": 167.0,
+          "deaths_low": 64.0,
+          "deaths_high": 330.0
+        },
+        "2011": {
+          "cases": 81483.0,
+          "cases_low": 49000.0,
+          "cases_high": 127000.0,
+          "deaths": 208.0,
+          "deaths_low": 81.0,
+          "deaths_high": 410.0
+        },
+        "2010": {
+          "cases": 85077.0,
+          "cases_low": 48000.0,
+          "cases_high": 138000.0,
+          "deaths": 217.0,
+          "deaths_low": 84.0,
+          "deaths_high": 440.0
+        }
+      }
+    }
+  }
+}

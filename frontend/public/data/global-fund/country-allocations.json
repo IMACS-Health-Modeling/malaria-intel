@@ -1,0 +1,1711 @@
+{
+  "_meta": {
+    "source": "Global Fund Data Explorer API",
+    "endpoints": [
+      "https://data.api.theglobalfund.org/location/{ISO3}/grants/pie-charts?components=Malaria",
+      "https://data.api.theglobalfund.org/allocations/table?components=Malaria"
+    ],
+    "fetched_at": "2026-04-12T18:27:31.897570+00:00",
+    "pmi_countries_count": 27,
+    "cycles": [
+      "2017-2019",
+      "2020-2022",
+      "2023-2025"
+    ],
+    "errors": {}
+  },
+  "countries": {
+    "MOZ": {
+      "name": "Mozambique",
+      "iso3": "MOZ",
+      "malaria_disbursed_usd": 791442733.76,
+      "malaria_pct_of_portfolio": 28.5125,
+      "total_portfolio_usd": 2775772005.02,
+      "grant_count": 6,
+      "total_signed_usd": 847079051.88,
+      "cycles": {
+        "Funda\u00e7\u00e3o para o Desenvolvimento da Comunidade": {
+          "amount": 213364151.3,
+          "percentage": 7.6866598162287705
+        },
+        "Centro de Colabora\u00e7\u00e3o em Sa\u00fade": {
+          "amount": 154613984.23,
+          "percentage": 5.570125498433577
+        },
+        "The National AIDS Council (CNCS) of Mozambique": {
+          "amount": 6156897.68,
+          "percentage": 0.22180847954605834
+        },
+        "World Vision International": {
+          "amount": 219715527.47,
+          "percentage": 7.915474580500242
+        },
+        "Ministry of Health of Mozambique": {
+          "amount": 2181921444.34,
+          "percentage": 78.60593162529135
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 791442733.76,
+          "pct": 28.5125
+        },
+        {
+          "component": "RSSH",
+          "amount": 47871903.27,
+          "pct": 1.7246
+        },
+        {
+          "component": "TB/HIV",
+          "amount": 169384000.17,
+          "pct": 6.1022
+        },
+        {
+          "component": "HIV",
+          "amount": 1603971076.17,
+          "pct": 57.7847
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 163102291.65,
+          "pct": 5.8759
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 167870339,
+        "2020-2022": 200001211,
+        "2023-2025": 207998460
+      }
+    },
+    "TZA": {
+      "name": "Tanzania",
+      "iso3": "TZA",
+      "malaria_disbursed_usd": 1162965768.37,
+      "malaria_pct_of_portfolio": 32.8711,
+      "total_portfolio_usd": 3537963464.59,
+      "grant_count": 0,
+      "total_signed_usd": 0,
+      "cycles": {
+        "The Ministry of Health of the Government of the United Republic of Tanzania": {
+          "amount": 77030497.19,
+          "percentage": 2.17725530410266
+        },
+        "null": {
+          "amount": 10680342.81,
+          "percentage": 0.30187826745230967
+        },
+        "Pact Madagascar": {
+          "amount": 41598257.72,
+          "percentage": 1.1757684367388077
+        },
+        "Ministry of Finance of the United Republic of Tanzania": {
+          "amount": 3260939869.54,
+          "percentage": 92.16997015874773
+        },
+        "Population Services International": {
+          "amount": 54307874.58,
+          "percentage": 1.5350038270192685
+        },
+        "Amref Health Africa": {
+          "amount": 92711016.47,
+          "percentage": 2.6204628000799297
+        },
+        "Management and Development for Health (MDH)": {
+          "amount": 695606.28,
+          "percentage": 0.019661205859303893
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 1162965768.37,
+          "pct": 32.8711
+        },
+        {
+          "component": "RSSH",
+          "amount": 110136808.53,
+          "pct": 3.113
+        },
+        {
+          "component": "TB/HIV",
+          "amount": 142787786.78,
+          "pct": 4.0359
+        },
+        {
+          "component": "HIV",
+          "amount": 1954923061.01,
+          "pct": 55.2556
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 167150039.9,
+          "pct": 4.7245
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 145258808,
+        "2020-2022": 179362012,
+        "2023-2025": 182910065
+      },
+      "_alloc_matched_as": "Tanzania (United Republic)"
+    },
+    "NGA": {
+      "name": "Nigeria",
+      "iso3": "NGA",
+      "malaria_disbursed_usd": 1849214704.18,
+      "malaria_pct_of_portfolio": 42.6015,
+      "total_portfolio_usd": 4340727855.89,
+      "grant_count": 9,
+      "total_signed_usd": 2015712411.38,
+      "cycles": {
+        "Catholic Relief Services - United States Conference of Catholic Bishops": {
+          "amount": 813560759.21,
+          "percentage": 18.74249633286885
+        },
+        "National Malaria Elimination Programme of the Federal Ministry of Health of the Federal Republic of Nigeria": {
+          "amount": 629549697.9,
+          "percentage": 14.503321074269937
+        },
+        "National Tuberculosis & Leprosy Control Programme": {
+          "amount": 331039179.86,
+          "percentage": 7.626351866560992
+        },
+        "National Action Committee on AIDS of the Federal Government of Nigeria": {
+          "amount": 15380152.38,
+          "percentage": 0.35432196835676844
+        },
+        "Lagos State Ministry of Health": {
+          "amount": 35884628.33,
+          "percentage": 0.8266961099924197
+        },
+        "National Agency for the Control of AIDS": {
+          "amount": 858926860.02,
+          "percentage": 19.7876229179977
+        },
+        "Management Sciences for Health": {
+          "amount": 35890054.55,
+          "percentage": 0.826821117138229
+        },
+        "Society For Family Health": {
+          "amount": 364138833.98,
+          "percentage": 8.388888823930632
+        },
+        "Institute of Human Virology Nigeria": {
+          "amount": 368166205.18,
+          "percentage": 8.481669835173602
+        },
+        "Christian Health Association of Nigeria": {
+          "amount": 23565071.17,
+          "percentage": 0.5428829438828834
+        },
+        "The Yakubu Gowon Center for National Unity and International Cooperation": {
+          "amount": 144503916.28,
+          "percentage": 3.329025017864698
+        },
+        "Family Health International (FHI360)": {
+          "amount": 480433215.15,
+          "percentage": 11.068033544146122
+        },
+        "Planned Parenthood Federation of Nigeria": {
+          "amount": 6596481.12,
+          "percentage": 0.15196716631403495
+        },
+        "National AIDS, Viral Hepatitis and STIs Control Programme": {
+          "amount": 14759797.26,
+          "percentage": 0.3400304683918897
+        },
+        "Civil Society for HIV/AIDS in Nigeria (CiSHAN)": {
+          "amount": 6559543.93,
+          "percentage": 0.15111622169768726
+        },
+        "Association For Reproductive And Family Health": {
+          "amount": 211773459.57,
+          "percentage": 4.878754591413542
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "HIV",
+          "amount": 1266767895.78,
+          "pct": 29.1833
+        },
+        {
+          "component": "Malaria",
+          "amount": 1849214704.18,
+          "pct": 42.6015
+        },
+        {
+          "component": "RSSH",
+          "amount": 336928708.88,
+          "pct": 7.762
+        },
+        {
+          "component": "TB/HIV",
+          "amount": 200804787.1,
+          "pct": 4.6261
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 687011759.95,
+          "pct": 15.8271
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 313409111,
+        "2020-2022": 417893727,
+        "2023-2025": 417695711
+      }
+    },
+    "ETH": {
+      "name": "Ethiopia",
+      "iso3": "ETH",
+      "malaria_disbursed_usd": 886467342.85,
+      "malaria_pct_of_portfolio": 26.317,
+      "total_portfolio_usd": 3368424379.21,
+      "grant_count": 5,
+      "total_signed_usd": 905048648.59,
+      "cycles": {
+        "Network of Networks of HIV Positives in Ethiopia (NEP+)": {
+          "amount": 26562001.18,
+          "percentage": 0.7885586312681188
+        },
+        "HIV/AIDS Prevention and Control Office": {
+          "amount": 1756567072.35,
+          "percentage": 52.148033460141676
+        },
+        "Federal Ministry of Health of the Federal Democratic Republic of Ethiopia": {
+          "amount": 1548270548.05,
+          "percentage": 45.96423650196706
+        },
+        "United Nations Children's Fund": {
+          "amount": 3145128.22,
+          "percentage": 0.09337090182020445
+        },
+        "Ethiopian Inter-Faith Forum for Development, Dialogue and Action": {
+          "amount": 33879629.41,
+          "percentage": 1.0058005048029555
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 886467342.85,
+          "pct": 26.317
+        },
+        {
+          "component": "RSSH",
+          "amount": 239824786.15,
+          "pct": 7.1198
+        },
+        {
+          "component": "Multicomponent",
+          "amount": 2543781,
+          "pct": 0.0755
+        },
+        {
+          "component": "HIV",
+          "amount": 1931474626.81,
+          "pct": 57.3406
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 308113842.4,
+          "pct": 9.1471
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 129849218,
+        "2020-2022": 115344133,
+        "2023-2025": 116298685
+      }
+    },
+    "UGA": {
+      "name": "Uganda",
+      "iso3": "UGA",
+      "malaria_disbursed_usd": 1046548184.25,
+      "malaria_pct_of_portfolio": 40.3355,
+      "total_portfolio_usd": 2594607919.9,
+      "grant_count": 7,
+      "total_signed_usd": 1115502397.8,
+      "cycles": {
+        "The AIDS Support Organisation (Uganda) Limited": {
+          "amount": 288054640.74,
+          "percentage": 11.102048927342445
+        },
+        "Ministry of Finance, Planning and Economic Development of the Republic of Uganda": {
+          "amount": 2306553279.16,
+          "percentage": 88.89795107265758
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 1046548184.25,
+          "pct": 40.3355
+        },
+        {
+          "component": "RSSH",
+          "amount": 33822264.76,
+          "pct": 1.3036
+        },
+        {
+          "component": "TB/HIV",
+          "amount": 100032851.84,
+          "pct": 3.8554
+        },
+        {
+          "component": "HIV",
+          "amount": 1284681963.41,
+          "pct": 49.5135
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 129522655.64,
+          "pct": 4.992
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 188322878,
+        "2020-2022": 260024950,
+        "2023-2025": 267250747
+      }
+    },
+    "KEN": {
+      "name": "Kenya",
+      "iso3": "KEN",
+      "malaria_disbursed_usd": 505586781.72,
+      "malaria_pct_of_portfolio": 23.937,
+      "total_portfolio_usd": 2112152388.27,
+      "grant_count": 6,
+      "total_signed_usd": 560110523.38,
+      "cycles": {
+        "Kenya Network of Women With AIDS": {
+          "amount": 220875,
+          "percentage": 0.010457342056692794
+        },
+        "The National Treasury & Economic Planning of the Government of Kenya": {
+          "amount": 1544776742.68,
+          "percentage": 73.13756106136262
+        },
+        "Amref Health Africa": {
+          "amount": 274962698.77,
+          "percentage": 13.018127872639607
+        },
+        "Kenya Red Cross Society": {
+          "amount": 261364405.82,
+          "percentage": 12.374315758252447
+        },
+        "Sanaa Art Promotions": {
+          "amount": 2650813,
+          "percentage": 0.1255029236868274
+        },
+        "CARE Kenya": {
+          "amount": 28176853,
+          "percentage": 1.3340350420018134
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 505586781.72,
+          "pct": 23.937
+        },
+        {
+          "component": "HIV",
+          "amount": 1200108884.02,
+          "pct": 56.8192
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 406456722.53,
+          "pct": 19.2437
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 63225487,
+        "2020-2022": 86966676,
+        "2023-2025": 78578587
+      }
+    },
+    "GHA": {
+      "name": "Ghana",
+      "iso3": "GHA",
+      "malaria_disbursed_usd": 692761706.55,
+      "malaria_pct_of_portfolio": 46.4074,
+      "total_portfolio_usd": 1492782119.85,
+      "grant_count": 6,
+      "total_signed_usd": 728347120.18,
+      "cycles": {
+        "Planned Parenthood Association of Ghana": {
+          "amount": 4707769.19,
+          "percentage": 0.3153688088435206
+        },
+        "Ghana-West Africa Program to Combat AIDS - STI": {
+          "amount": 43125965.35,
+          "percentage": 2.888965829409415
+        },
+        "AngloGold Ashanti (Ghana) Malaria Control Limited": {
+          "amount": 134104544.54,
+          "percentage": 8.983531002734365
+        },
+        "Ministry of Health of the Republic of Ghana": {
+          "amount": 1249123333.55,
+          "percentage": 83.67753853291842
+        },
+        "Ghana AIDS Commission": {
+          "amount": 31983992.75,
+          "percentage": 2.1425760882782994
+        },
+        "Christian Health Association of Ghana": {
+          "amount": 21134470.74,
+          "percentage": 1.4157773233593973
+        },
+        "Adventist Development and Relief Agency of Ghana": {
+          "amount": 8602043.73,
+          "percentage": 0.5762424144565963
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 692761706.55,
+          "pct": 46.4074
+        },
+        {
+          "component": "TB/HIV",
+          "amount": 343720814.24,
+          "pct": 23.0255
+        },
+        {
+          "component": "HIV",
+          "amount": 371080757.56,
+          "pct": 24.8583
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 85218841.5,
+          "pct": 5.7087
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 111531421,
+        "2020-2022": 119665794,
+        "2023-2025": 120781507
+      }
+    },
+    "MDG": {
+      "name": "Madagascar",
+      "iso3": "MDG",
+      "malaria_disbursed_usd": 429438176.97,
+      "malaria_pct_of_portfolio": 68.8576,
+      "total_portfolio_usd": 623661661.49,
+      "grant_count": 13,
+      "total_signed_usd": 432533529.32,
+      "cycles": {
+        "Catholic Relief Services - United States Conference of Catholic Bishops": {
+          "amount": 15308244.31,
+          "percentage": 2.4545751735687635
+        },
+        "Office National de Nutrition": {
+          "amount": 22709252.67,
+          "percentage": 3.64127764655999
+        },
+        "Pact Madagascar": {
+          "amount": 25984529.68,
+          "percentage": 4.166446534154424
+        },
+        "Population Services International": {
+          "amount": 351479808.44,
+          "percentage": 56.357449903249474
+        },
+        "S\u00e9cr\u00e9tariat Ex\u00e9cutif du Comit\u00e9 National de Lutte Contre le VIH/SIDA de la R\u00e9publique de Madagascar": {
+          "amount": 54394474.73,
+          "percentage": 8.721792293604405
+        },
+        "Unit\u00e9 de Gestion des Projets d'Appui au Secteur Sant\u00e9 de la R\u00e9publique de Madagascar": {
+          "amount": 69341030.19,
+          "percentage": 11.118373065347043
+        },
+        "Centrale d\u2019Achat des M\u00e9dicaments Essentiels et de Mat\u00e9riel M\u00e9dical de Madagascar (SALAMA)": {
+          "amount": 17147834.06,
+          "percentage": 2.7495411565033256
+        },
+        "Association Intercooperation Madagascar (AIM)": {
+          "amount": 7066754.06,
+          "percentage": 1.13310701881477
+        },
+        "Ministry of Public Health of the Republic of Madagascar": {
+          "amount": 60229733.35,
+          "percentage": 9.657437208197823
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "HIV",
+          "amount": 80467696.98,
+          "pct": 12.9025
+        },
+        {
+          "component": "Malaria",
+          "amount": 429438176.97,
+          "pct": 68.8576
+        },
+        {
+          "component": "RSSH",
+          "amount": 39118407.07,
+          "pct": 6.2724
+        },
+        {
+          "component": "TB/HIV",
+          "amount": 24660850.77,
+          "pct": 3.9542
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 49976529.7,
+          "pct": 8.0134
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 52000000,
+        "2020-2022": 50370650,
+        "2023-2025": 72297135
+      }
+    },
+    "MWI": {
+      "name": "Malawi",
+      "iso3": "MWI",
+      "malaria_disbursed_usd": 516693499.01,
+      "malaria_pct_of_portfolio": 21.0616,
+      "total_portfolio_usd": 2453249448.04,
+      "grant_count": 5,
+      "total_signed_usd": 561580598.92,
+      "cycles": {
+        "ActionAid International Malawi": {
+          "amount": 46741741.39,
+          "percentage": 1.9052991707526465
+        },
+        "The Registered Trustees of the National AIDS Commission Trust of the Republic of Malawi": {
+          "amount": 676868846.45,
+          "percentage": 27.59070615467897
+        },
+        "World Vision Malawi": {
+          "amount": 109568739.12,
+          "percentage": 4.466269796067371
+        },
+        "Ministry of Health of the Republic of Malawi": {
+          "amount": 1620070121.08,
+          "percentage": 66.03772487850102
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 516693499.01,
+          "pct": 21.0616
+        },
+        {
+          "component": "RSSH",
+          "amount": 40211129.29,
+          "pct": 1.6391
+        },
+        {
+          "component": "TB/HIV",
+          "amount": 1210954417.95,
+          "pct": 49.3612
+        },
+        {
+          "component": "HIV",
+          "amount": 676868846.45,
+          "pct": 27.5907
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 8521555.34,
+          "pct": 0.3474
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 70670374,
+        "2020-2022": 99984069,
+        "2023-2025": 92122352
+      }
+    },
+    "ZMB": {
+      "name": "Zambia",
+      "iso3": "ZMB",
+      "malaria_disbursed_usd": 409359721.28,
+      "malaria_pct_of_portfolio": 20.2675,
+      "total_portfolio_usd": 2019779978.42,
+      "grant_count": 9,
+      "total_signed_usd": 442988731.87,
+      "cycles": {
+        "Churches Health Association of Zambia": {
+          "amount": 573936669.74,
+          "percentage": 28.415801516607253
+        },
+        "United Nations Development Programme": {
+          "amount": 374331266.38,
+          "percentage": 18.5332694837794
+        },
+        "The Ministry of Finance and National Planning of the Government of Zambia": {
+          "amount": 12557653.7,
+          "percentage": 0.6217337449707464
+        },
+        "Ministry of Health of the Republic of Zambia": {
+          "amount": 1013042824.13,
+          "percentage": 50.156097939066925
+        },
+        "Zambia National AIDS Network": {
+          "amount": 45911564.47,
+          "percentage": 2.2730973155756766
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 409359721.28,
+          "pct": 20.2675
+        },
+        {
+          "component": "TB/HIV",
+          "amount": 905404155.45,
+          "pct": 44.8269
+        },
+        {
+          "component": "HIV",
+          "amount": 656593575.48,
+          "pct": 32.5082
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 48422526.21,
+          "pct": 2.3974
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 69000000,
+        "2020-2022": 65131160,
+        "2023-2025": 77243020
+      }
+    },
+    "COD": {
+      "name": "Democratic Republic of the Congo",
+      "iso3": "COD",
+      "malaria_disbursed_usd": 1900242481.75,
+      "malaria_pct_of_portfolio": 57.2008,
+      "total_portfolio_usd": 3322057631.98,
+      "grant_count": 0,
+      "total_signed_usd": 0,
+      "cycles": {
+        "United Nations Development Programme": {
+          "amount": 433770645.93,
+          "percentage": 13.057288403255837
+        },
+        "SANRU Asbl": {
+          "amount": 1465397619.7,
+          "percentage": 44.11114381620765
+        },
+        "Population Services International": {
+          "amount": 319154663.38,
+          "percentage": 9.607138067312176
+        },
+        "Ministry of Public Health, Hygiene and Social Security": {
+          "amount": 419825258.06,
+          "percentage": 12.637506767448142
+        },
+        "Stichting Cordaid": {
+          "amount": 618312625.47,
+          "percentage": 18.612338916633295
+        },
+        "Caritas  Congo ASBL": {
+          "amount": 65596819.44,
+          "percentage": 1.974584029142903
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 1900242481.75,
+          "pct": 57.2008
+        },
+        {
+          "component": "RSSH",
+          "amount": 94752626.49,
+          "pct": 2.8522
+        },
+        {
+          "component": "TB/HIV",
+          "amount": 624574895.93,
+          "pct": 18.8008
+        },
+        {
+          "component": "HIV",
+          "amount": 542297794.38,
+          "pct": 16.3242
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 160189833.43,
+          "pct": 4.822
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 14208223,
+        "2020-2022": 34485172.89,
+        "2023-2025": 32941526.84
+      },
+      "_alloc_matched_as": "Congo"
+    },
+    "MLI": {
+      "name": "Mali",
+      "iso3": "MLI",
+      "malaria_disbursed_usd": 304531123.66,
+      "malaria_pct_of_portfolio": 39.6264,
+      "total_portfolio_usd": 768505672.57,
+      "grant_count": 5,
+      "total_signed_usd": 339371138.21,
+      "cycles": {
+        "National High Council for the Fight against AIDS": {
+          "amount": 112468466.63,
+          "percentage": 14.634695701579968
+        },
+        "Catholic Relief Services - United States Conference of Catholic Bishops": {
+          "amount": 141473475.14,
+          "percentage": 18.40890447391119
+        },
+        "United Nations Development Programme": {
+          "amount": 91184143.61,
+          "percentage": 11.865123038723494
+        },
+        "Association pour la R\u00e9silience des Communaut\u00e9s vers l\u2019Acc\u00e8s au D\u00e9veloppement et \u00e0 la Sant\u00e9 Plus": {
+          "amount": 44690437.2,
+          "percentage": 5.815238428956338
+        },
+        "Ministry of Health and Social Development of the Republic\u00a0of\u00a0Mali": {
+          "amount": 135088961,
+          "percentage": 17.578134530645944
+        },
+        "Population Services International": {
+          "amount": 170485661.81,
+          "percentage": 22.184047287493662
+        },
+        "Groupe Pivot Sant\u00e9 Population": {
+          "amount": 14095177.63,
+          "percentage": 1.834101963471991
+        },
+        "Plan International, Inc.": {
+          "amount": 59019349.55,
+          "percentage": 7.679754575217423
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 304531123.66,
+          "pct": 39.6264
+        },
+        {
+          "component": "RSSH",
+          "amount": 81369754.95,
+          "pct": 10.588
+        },
+        {
+          "component": "TB/HIV",
+          "amount": 128742218.13,
+          "pct": 16.7523
+        },
+        {
+          "component": "HIV",
+          "amount": 228349906.33,
+          "pct": 29.7135
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 25512669.5,
+          "pct": 3.3198
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 56000000,
+        "2020-2022": 90096463.91,
+        "2023-2025": 99207798.61
+      }
+    },
+    "SEN": {
+      "name": "Senegal",
+      "iso3": "SEN",
+      "malaria_disbursed_usd": 166489431.97,
+      "malaria_pct_of_portfolio": 31.195,
+      "total_portfolio_usd": 533705800.05,
+      "grant_count": 7,
+      "total_signed_usd": 166309661.25,
+      "cycles": {
+        "The Ministry of Health of the Government of the Republic of Senegal": {
+          "amount": 23547495.18,
+          "percentage": 4.4120740636121925
+        },
+        "Conseil National de Lutte contre le SIDA de la R\u00e9publique du S\u00e9n\u00e9gal": {
+          "amount": 123119420.49,
+          "percentage": 23.068780680004902
+        },
+        "IntraHealth International, Inc.": {
+          "amount": 24241083.78,
+          "percentage": 4.542031167307716
+        },
+        "Ministry of Health, Prevention and Public Hygiene of the Republic of Senegal - AIDS Division": {
+          "amount": 21643397.6,
+          "percentage": 4.055304926042091
+        },
+        "Plan International, Inc.": {
+          "amount": 23822165.13,
+          "percentage": 4.463538737590678
+        },
+        "Ministry of Health and Social Action of the Republic of Senegal": {
+          "amount": 255258623.45,
+          "percentage": 47.82759029901609
+        },
+        "Alliance Nationale des Communaut\u00e9s pour la Sant\u00e9 - S\u00e9n\u00e9gal": {
+          "amount": 62073614.42,
+          "percentage": 11.63068012642633
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 166489431.97,
+          "pct": 31.195
+        },
+        {
+          "component": "RSSH",
+          "amount": 6019903.32,
+          "pct": 1.1279
+        },
+        {
+          "component": "Multicomponent",
+          "amount": 125523330.73,
+          "pct": 23.5192
+        },
+        {
+          "component": "HIV",
+          "amount": 206836432.51,
+          "pct": 38.7548
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 28836701.52,
+          "pct": 5.4031
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 40804408,
+        "2020-2022": 36195010.2,
+        "2023-2025": 31041850.69
+      }
+    },
+    "CMR": {
+      "name": "Cameroon",
+      "iso3": "CMR",
+      "malaria_disbursed_usd": 454144290.6,
+      "malaria_pct_of_portfolio": 37.6304,
+      "total_portfolio_usd": 1206855440.58,
+      "grant_count": 5,
+      "total_signed_usd": 480331233.17,
+      "cycles": {
+        "CARE INTERNATIONAL CAMEROON": {
+          "amount": 56720173.91,
+          "percentage": 4.69983164534942
+        },
+        "Plan International, Inc.": {
+          "amount": 12794839.21,
+          "percentage": 1.0601799337169129
+        },
+        "Cameroon National Association for Family Welfare": {
+          "amount": 50195312.17,
+          "percentage": 4.159181827599563
+        },
+        "Ministry of Public Health of the Republic of Cameroon": {
+          "amount": 1081581466.62,
+          "percentage": 89.61980285726723
+        },
+        "Ministry of Health of the Republic of Cameroon": {
+          "amount": 5563648.67,
+          "percentage": 0.46100373606686307
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 454144290.6,
+          "pct": 37.6304
+        },
+        {
+          "component": "TB/HIV",
+          "amount": 50510211.18,
+          "pct": 4.1853
+        },
+        {
+          "component": "HIV",
+          "amount": 638258736.73,
+          "pct": 52.8861
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 63942202.07,
+          "pct": 5.2982
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 73453444,
+        "2020-2022": 111670203.5,
+        "2023-2025": 109654277.7
+      }
+    },
+    "BFA": {
+      "name": "Burkina Faso",
+      "iso3": "BFA",
+      "malaria_disbursed_usd": 671657036.52,
+      "malaria_pct_of_portfolio": 64.6072,
+      "total_portfolio_usd": 1039600995.46,
+      "grant_count": 6,
+      "total_signed_usd": 757650837.93,
+      "cycles": {
+        "United Nations Development Programme": {
+          "amount": 21064034.7,
+          "percentage": 2.026165306880996
+        },
+        "Secr\u00e9tariat Permanent du Conseil National de Lutte contre le Sida et les Infections Sexuellement Transmissibles (SP/CNLS-IST)": {
+          "amount": 255823255.99,
+          "percentage": 24.60783099546802
+        },
+        "Programme d'Appui au D\u00e9veloppement Sanitaire (PADS)": {
+          "amount": 700084249.96,
+          "percentage": 67.34162943449553
+        },
+        "Plan International, Inc.": {
+          "amount": 24444755.98,
+          "percentage": 2.3513594241205724
+        },
+        "Faso - Action pour le D\u00e9veloppement Communautaire": {
+          "amount": 3082783.98,
+          "percentage": 0.2965353047431373
+        },
+        "Initiative Priv\u00e9e et Communautaire pour la Sant\u00e9 et la Riposte au VIH/SIDA  au Burkina Faso (IPC/BF)": {
+          "amount": 35101914.85,
+          "percentage": 3.3764795342917298
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 671657036.52,
+          "pct": 64.6072
+        },
+        {
+          "component": "RSSH",
+          "amount": 39888006.05,
+          "pct": 3.8369
+        },
+        {
+          "component": "TB/HIV",
+          "amount": 30468775.42,
+          "pct": 2.9308
+        },
+        {
+          "component": "HIV",
+          "amount": 236265393.7,
+          "pct": 22.7265
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 61321783.77,
+          "pct": 5.8986
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 100133418,
+        "2020-2022": 155188286.6,
+        "2023-2025": 184847665.5
+      }
+    },
+    "GIN": {
+      "name": "Guinea",
+      "iso3": "GIN",
+      "malaria_disbursed_usd": 308844633.28,
+      "malaria_pct_of_portfolio": 52.77,
+      "total_portfolio_usd": 585265868.59,
+      "grant_count": 4,
+      "total_signed_usd": 329638637.97,
+      "cycles": {
+        "Catholic Relief Services - United States Conference of Catholic Bishops": {
+          "amount": 288370119.15,
+          "percentage": 49.27164467060588
+        },
+        "German Corporation for International Cooperation (GIZ) GmbH": {
+          "amount": 2855805.16,
+          "percentage": 0.487950060522083
+        },
+        "The Ministry of Health of the Republic of Guinea": {
+          "amount": 171265187.59,
+          "percentage": 29.26280119539612
+        },
+        "Population Services International": {
+          "amount": 15681252.95,
+          "percentage": 2.67933836425122
+        },
+        "Plan International, Inc.": {
+          "amount": 55599007.61,
+          "percentage": 9.499786437905048
+        },
+        "Secr\u00e9tariat Ex\u00e9cutif du Comit\u00e9 National de Lutte contre le Sida de la R\u00e9publique de Guin\u00e9e": {
+          "amount": 51494496.13,
+          "percentage": 8.798479271319641
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 308844633.28,
+          "pct": 52.77
+        },
+        {
+          "component": "TB/HIV",
+          "amount": 52725845.58,
+          "pct": 9.0089
+        },
+        {
+          "component": "HIV",
+          "amount": 207559614.63,
+          "pct": 35.4642
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 16135775.1,
+          "pct": 2.757
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 56663302,
+        "2020-2022": 72670272,
+        "2023-2025": 81506179
+      }
+    },
+    "ZWE": {
+      "name": "Zimbabwe",
+      "iso3": "ZWE",
+      "malaria_disbursed_usd": 400307748.08,
+      "malaria_pct_of_portfolio": 15.6258,
+      "total_portfolio_usd": 2561836076.92,
+      "grant_count": 7,
+      "total_signed_usd": 426955956.85,
+      "cycles": {
+        "United Nations Development Programme": {
+          "amount": 2134656957.32,
+          "percentage": 83.32527504595136
+        },
+        "The Ministry of Health and Child Care of the Republic of Zimbabwe": {
+          "amount": 404715511.41,
+          "percentage": 15.79786915549157
+        },
+        "National AIDS Council of Zimbabwe": {
+          "amount": 18459649.4,
+          "percentage": 0.7205632540780418
+        },
+        "Zimbabwe Association of Church Related Hospitals": {
+          "amount": 4003958.79,
+          "percentage": 0.1562925444790289
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 400307748.08,
+          "pct": 15.6258
+        },
+        {
+          "component": "RSSH",
+          "amount": 74106559.43,
+          "pct": 2.8927
+        },
+        {
+          "component": "HIV",
+          "amount": 1933249500.32,
+          "pct": 75.4634
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 154172269.09,
+          "pct": 6.018
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 53685777,
+        "2020-2022": 51684333,
+        "2023-2025": 47975037
+      }
+    },
+    "RWA": {
+      "name": "Rwanda",
+      "iso3": "RWA",
+      "malaria_disbursed_usd": 429890785.59,
+      "malaria_pct_of_portfolio": 22.5787,
+      "total_portfolio_usd": 1903970030.6,
+      "grant_count": 5,
+      "total_signed_usd": 441482899.59,
+      "cycles": {
+        "Ministry of Health of the Republic of Rwanda": {
+          "amount": 1902298370.6,
+          "percentage": 99.91220134912139
+        },
+        "United Nations High Commisioner for Refugees": {
+          "amount": 1671660,
+          "percentage": 0.08779865087861746
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 429890785.59,
+          "pct": 22.5787
+        },
+        {
+          "component": "RSSH",
+          "amount": 33789554.53,
+          "pct": 1.7747
+        },
+        {
+          "component": "TB/HIV",
+          "amount": 319766298.8,
+          "pct": 16.7947
+        },
+        {
+          "component": "Multicomponent",
+          "amount": 1671660,
+          "pct": 0.0878
+        },
+        {
+          "component": "HIV",
+          "amount": 1002526032.68,
+          "pct": 52.6545
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 116325699,
+          "pct": 6.1096
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 41460255,
+        "2020-2022": 54795191,
+        "2023-2025": 50034762
+      }
+    },
+    "TGO": {
+      "name": "Togo",
+      "iso3": "TGO",
+      "malaria_disbursed_usd": 235090732.13,
+      "malaria_pct_of_portfolio": 44.3995,
+      "total_portfolio_usd": 529489440.19,
+      "grant_count": 6,
+      "total_signed_usd": 257772716.02,
+      "cycles": {
+        "United Nations Development Programme": {
+          "amount": 43121232.92,
+          "percentage": 8.14392689390114
+        },
+        "The Ministry of Health of the Togolese Republic": {
+          "amount": 65663888.77,
+          "percentage": 12.401359457978504
+        },
+        "Population Services International": {
+          "amount": 41580430.6,
+          "percentage": 7.852929150972196
+        },
+        "Plan International, Inc.": {
+          "amount": 42129885.73,
+          "percentage": 7.956699894691434
+        },
+        "Secr\u00e9tariat G\u00e9n\u00e9ral du Gouvernement": {
+          "amount": 336994002.17,
+          "percentage": 63.64508460245673
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 235090732.13,
+          "pct": 44.3995
+        },
+        {
+          "component": "HIV",
+          "amount": 273340210.07,
+          "pct": 51.6234
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 21058497.99,
+          "pct": 3.9771
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 31939623,
+        "2020-2022": 60172698.4,
+        "2023-2025": 63671327.84
+      }
+    },
+    "BEN": {
+      "name": "Benin",
+      "iso3": "BEN",
+      "malaria_disbursed_usd": 200933334.42,
+      "malaria_pct_of_portfolio": 34.6474,
+      "total_portfolio_usd": 579938037.01,
+      "grant_count": 4,
+      "total_signed_usd": 200877595.89,
+      "cycles": {
+        "Programme National de Lutte contre le Paludisme de la R\u00e9publique du B\u00e9nin": {
+          "amount": 110456977.47,
+          "percentage": 19.046341233192017
+        },
+        "Catholic Relief Services - United States Conference of Catholic Bishops": {
+          "amount": 22551360.07,
+          "percentage": 3.8885809570740646
+        },
+        "Soci\u00e9t\u00e9 d\u2019Electricit\u00e9 Industrielle et de B\u00e2timents (SEIBsa)": {
+          "amount": 8421175.17,
+          "percentage": 1.45208188333658
+        },
+        "United Nations Development Programme": {
+          "amount": 20656418.27,
+          "percentage": 3.5618319461332066
+        },
+        "Programme sant\u00e9 de lutte contre le Sida": {
+          "amount": 113205868.66,
+          "percentage": 19.520338628529718
+        },
+        "National Tuberculosis Programme of the Republic of Benin": {
+          "amount": 30973276.44,
+          "percentage": 5.340790647168039
+        },
+        "Conseil National de Lutte contre le VIH/SIDA, la Tuberculose, le Paludisme, les H\u00e9patites, les Infections sexuellement transmissibles et les Epid\u00e9mies": {
+          "amount": 70650333.04,
+          "percentage": 12.182393381929831
+        },
+        "Plan International, Inc.": {
+          "amount": 71536971.15,
+          "percentage": 12.33527835470576
+        },
+        "Africare": {
+          "amount": 65362170.61,
+          "percentage": 11.270543823438322
+        },
+        "Health System Performance Program": {
+          "amount": 28937335.6,
+          "percentage": 4.98972885951625
+        },
+        "Ministry of Health of the Government of the Republic of Benin": {
+          "amount": 37186150.53,
+          "percentage": 6.41209028497622
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 200933334.42,
+          "pct": 34.6474
+        },
+        {
+          "component": "RSSH",
+          "amount": 51955334.18,
+          "pct": 8.9588
+        },
+        {
+          "component": "Multicomponent",
+          "amount": 47632334.46,
+          "pct": 8.2133
+        },
+        {
+          "component": "HIV",
+          "amount": 239632437.1,
+          "pct": 41.3204
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 39784596.85,
+          "pct": 6.8601
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 36949701,
+        "2020-2022": 55880305.52,
+        "2023-2025": 56495280.98
+      }
+    },
+    "SDN": {
+      "name": "Sudan",
+      "iso3": "SDN",
+      "malaria_disbursed_usd": 462708879.1,
+      "malaria_pct_of_portfolio": 47.1733,
+      "total_portfolio_usd": 980871017.15,
+      "grant_count": 4,
+      "total_signed_usd": 481634261.88,
+      "cycles": {
+        "United Nations Development Programme": {
+          "amount": 643902520.78,
+          "percentage": 65.64599315523776
+        },
+        "United Nations Children\u2019s Fund": {
+          "amount": 86599015.22,
+          "percentage": 8.828787241733417
+        },
+        "Federal Ministry of Health of the Republic of Sudan": {
+          "amount": 250369481.15,
+          "percentage": 25.525219603028823
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 462708879.1,
+          "pct": 47.1733
+        },
+        {
+          "component": "RSSH",
+          "amount": 16293974.44,
+          "pct": 1.6612
+        },
+        {
+          "component": "TB/HIV",
+          "amount": 28515859.53,
+          "pct": 2.9072
+        },
+        {
+          "component": "Multicomponent",
+          "amount": 156886232.07,
+          "pct": 15.9946
+        },
+        {
+          "component": "HIV",
+          "amount": 222318917.19,
+          "pct": 22.6655
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 94147154.82,
+          "pct": 9.5983
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 98522995,
+        "2020-2022": 110314123,
+        "2023-2025": 118116410
+      }
+    },
+    "AGO": {
+      "name": "Angola",
+      "iso3": "AGO",
+      "malaria_disbursed_usd": 138206929.69,
+      "malaria_pct_of_portfolio": 29.9582,
+      "total_portfolio_usd": 461332288.91,
+      "grant_count": 4,
+      "total_signed_usd": 138206929.69,
+      "cycles": {
+        "United Nations Development Programme": {
+          "amount": 332826169.63,
+          "percentage": 72.14456426112635
+        },
+        "Ministry of Health of the Republic of Angola": {
+          "amount": 111712704.77,
+          "percentage": 24.21523649123847
+        },
+        "World Vision International": {
+          "amount": 16793414.51,
+          "percentage": 3.640199247635186
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 138206929.69,
+          "pct": 29.9582
+        },
+        {
+          "component": "Multicomponent",
+          "amount": 173481595.87,
+          "pct": 37.6045
+        },
+        {
+          "component": "HIV",
+          "amount": 115793701.54,
+          "pct": 25.0998
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 33850061.81,
+          "pct": 7.3375
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 26898141,
+        "2020-2022": 31047306,
+        "2023-2025": 47999848
+      }
+    },
+    "LSO": {
+      "name": "Lesotho",
+      "iso3": "LSO",
+      "malaria_disbursed_usd": 0,
+      "malaria_pct_of_portfolio": 0,
+      "total_portfolio_usd": 390150356.98,
+      "grant_count": 0,
+      "total_signed_usd": 0,
+      "cycles": {
+        "Lesotho Council of Non-Governmental Organizations": {
+          "amount": 1922106.52,
+          "percentage": 0.49265789089064743
+        },
+        "Ministry of Finance of the Kingdom of Lesotho": {
+          "amount": 370058690.36,
+          "percentage": 94.85027598705236
+        },
+        "Pact, Inc.": {
+          "amount": 18169560.1,
+          "percentage": 4.657066122056993
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "TB/HIV",
+          "amount": 204848819.85,
+          "pct": 52.5051
+        },
+        {
+          "component": "HIV",
+          "amount": 168709401.86,
+          "pct": 43.2421
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 16592135.27,
+          "pct": 4.2528
+        }
+      ]
+    },
+    "SWZ": {
+      "name": "Eswatini",
+      "iso3": "SWZ",
+      "malaria_disbursed_usd": 18803912.16,
+      "malaria_pct_of_portfolio": 5.0908,
+      "total_portfolio_usd": 369371041.19,
+      "grant_count": 3,
+      "total_signed_usd": 19537138.73,
+      "cycles": {
+        "National Emergency Response Council on HIV and AIDS": {
+          "amount": 347079182.37,
+          "percentage": 93.96491431808447
+        },
+        "Coordinating Assembly of Non Governmental Organisation": {
+          "amount": 22291858.82,
+          "percentage": 6.035085681915529
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 18803912.16,
+          "pct": 5.0908
+        },
+        {
+          "component": "RSSH",
+          "amount": 8212962.23,
+          "pct": 2.2235
+        },
+        {
+          "component": "TB/HIV",
+          "amount": 114600071.41,
+          "pct": 31.0257
+        },
+        {
+          "component": "HIV",
+          "amount": 192644814.16,
+          "pct": 52.1548
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 35109281.23,
+          "pct": 9.5052
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 2581055,
+        "2020-2022": 2635791,
+        "2023-2025": 2632098
+      }
+    },
+    "MMR": {
+      "name": "Myanmar",
+      "iso3": "MMR",
+      "malaria_disbursed_usd": 127580525.05,
+      "malaria_pct_of_portfolio": 12.1721,
+      "total_portfolio_usd": 1048137626.95,
+      "grant_count": 3,
+      "total_signed_usd": 127580525.05,
+      "cycles": {
+        "United Nations Development Programme": {
+          "amount": 10648254.89,
+          "percentage": 1.0159214416322029
+        },
+        "Save the Children Federation, Inc.": {
+          "amount": 352731770.44,
+          "percentage": 33.65319223072092
+        },
+        "United Nations Office for Project Services": {
+          "amount": 684757601.62,
+          "percentage": 65.33088632764688
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 127580525.05,
+          "pct": 12.1721
+        },
+        {
+          "component": "HIV",
+          "amount": 558908688.81,
+          "pct": 53.324
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 361648413.09,
+          "pct": 34.5039
+        }
+      ]
+    },
+    "PNG": {
+      "name": "Papua New Guinea",
+      "iso3": "PNG",
+      "malaria_disbursed_usd": 227276431.68,
+      "malaria_pct_of_portfolio": 52.9414,
+      "total_portfolio_usd": 429298343.31,
+      "grant_count": 7,
+      "total_signed_usd": 237972702.71,
+      "cycles": {
+        "The World Vision International": {
+          "amount": 15280186.02,
+          "percentage": 3.559339619665396
+        },
+        "The Rotary Club of Port Moresby Inc.": {
+          "amount": 153833462.87,
+          "percentage": 35.83369590572017
+        },
+        "Population Services International": {
+          "amount": 31972657.12,
+          "percentage": 7.447654438515332
+        },
+        "World Vision (PNG) Trust": {
+          "amount": 133552821.1,
+          "percentage": 31.109558930573456
+        },
+        "Oil Search Foundation": {
+          "amount": 42990800.27,
+          "percentage": 10.014201298455973
+        },
+        "The Department of Health of the Government of Papua New Guinea": {
+          "amount": 51668415.93,
+          "percentage": 12.035549807069671
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 227276431.68,
+          "pct": 52.9414
+        },
+        {
+          "component": "TB/HIV",
+          "amount": 116542492.53,
+          "pct": 27.1472
+        },
+        {
+          "component": "HIV",
+          "amount": 41843627.47,
+          "pct": 9.747
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 43635791.63,
+          "pct": 10.1644
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 23563097,
+        "2020-2022": 37534289,
+        "2023-2025": 37440753
+      }
+    },
+    "HTI": {
+      "name": "Haiti",
+      "iso3": "HTI",
+      "malaria_disbursed_usd": 141749228.45,
+      "malaria_pct_of_portfolio": 20.7732,
+      "total_portfolio_usd": 682367187.88,
+      "grant_count": 4,
+      "total_signed_usd": 148335700.4,
+      "cycles": {
+        "Minist\u00e8re de la Sant\u00e9 Publique et de la Population (Unit\u00e9 de Gestion des Projets)": {
+          "amount": 29632955.99,
+          "percentage": 4.3426701219419135
+        },
+        "United Nations Development Programme": {
+          "amount": 152392370.85,
+          "percentage": 22.332898409646198
+        },
+        "Population Services International": {
+          "amount": 206445586.86,
+          "percentage": 30.254325021311722
+        },
+        "World Vision International": {
+          "amount": 131719851.14,
+          "percentage": 19.30336825679315
+        },
+        "Fondation SOGEBANK": {
+          "amount": 162176423.04,
+          "percentage": 23.766738190307017
+        }
+      },
+      "components_breakdown": [
+        {
+          "component": "Malaria",
+          "amount": 141749228.45,
+          "pct": 20.7732
+        },
+        {
+          "component": "RSSH",
+          "amount": 29632955.99,
+          "pct": 4.3427
+        },
+        {
+          "component": "TB/HIV",
+          "amount": 266030599,
+          "pct": 38.9864
+        },
+        {
+          "component": "HIV",
+          "amount": 210422459.56,
+          "pct": 30.8371
+        },
+        {
+          "component": "Tuberculosis",
+          "amount": 34531944.88,
+          "pct": 5.0606
+        }
+      ],
+      "allocations_by_cycle_usd": {
+        "2017-2019": 21600000,
+        "2020-2022": 21000000,
+        "2023-2025": 17444350
+      }
+    }
+  }
+}

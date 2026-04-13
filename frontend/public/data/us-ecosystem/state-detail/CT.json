@@ -1,0 +1,16 @@
+{
+  "code": "CT",
+  "name": "Connecticut",
+  "nih_grants_usd": 38000000,
+  "usaspending_usd": 8000000,
+  "clinical_trials": 2,
+  "org_count": 5,
+  "countries_reached": 2,
+  "top_orgs": [
+    { "name": "Yale School of Public Health", "type": "University", "usd": 22000000, "countries": ["TZA", "MOZ", "ZMB"] },
+    { "name": "Yale School of Medicine", "type": "University", "usd": 10000000, "countries": ["KEN", "UGA"] },
+    { "name": "Boehringer Ingelheim (CT R&D)", "type": "Industry", "usd": 6000000, "countries": ["NGA"] },
+    { "name": "Sacred Heart University Global Health", "type": "University", "usd": 4000000, "countries": ["GHA"] },
+    { "name": "UConn Health", "type": "University", "usd": 4000000, "countries": ["ETH"] }
+  ]
+}

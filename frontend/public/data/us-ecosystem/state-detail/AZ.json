@@ -1,0 +1,15 @@
+{
+  "code": "AZ",
+  "name": "Arizona",
+  "nih_grants_usd": 34000000,
+  "usaspending_usd": 14000000,
+  "clinical_trials": 2,
+  "org_count": 5,
+  "countries_reached": 3,
+  "top_orgs": [
+    { "name": "University of Arizona Global Health", "type": "University", "usd": 16000000, "countries": ["Kenya","Tanzania","Ethiopia"] },
+    { "name": "Arizona State University College of Health Solutions", "type": "University", "usd": 10000000, "countries": ["Nigeria","Ghana"] },
+    { "name": "Southwest Center for Global Health (U of A)", "type": "Research Institute", "usd": 6000000, "countries": ["Mozambique"] },
+    { "name": "International Rescue Committee (AZ)", "type": "NGO / Implementing Partner", "usd": 2000000, "countries": ["Uganda"] }
+  ]
+}

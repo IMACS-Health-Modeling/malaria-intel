@@ -1,0 +1,14 @@
+{
+  "code": "SC",
+  "name": "South Carolina",
+  "nih_grants_usd": 26000000,
+  "usaspending_usd": 4000000,
+  "clinical_trials": 1,
+  "org_count": 4,
+  "countries_reached": 3,
+  "top_orgs": [
+    { "name": "Medical University of South Carolina (MUSC)", "type": "University", "usd": 16000000, "countries": ["Uganda","Tanzania","Zambia"] },
+    { "name": "Clemson University", "type": "University", "usd": 6000000, "countries": ["Kenya","Nigeria"] },
+    { "name": "USC Arnold School of Public Health", "type": "University", "usd": 4000000, "countries": ["Ghana"] }
+  ]
+}

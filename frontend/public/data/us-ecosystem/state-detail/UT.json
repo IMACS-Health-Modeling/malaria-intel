@@ -1,0 +1,14 @@
+{
+  "code": "UT",
+  "name": "Utah",
+  "nih_grants_usd": 18000000,
+  "usaspending_usd": 2000000,
+  "clinical_trials": 1,
+  "org_count": 3,
+  "countries_reached": 2,
+  "top_orgs": [
+    { "name": "University of Utah Center for Global Medicine", "type": "University", "usd": 10000000, "countries": ["Uganda","Tanzania"] },
+    { "name": "Brigham Young University Global Health Initiative", "type": "University", "usd": 6000000, "countries": ["Ghana","Nigeria"] },
+    { "name": "LDS Charities / Church of Jesus Christ", "type": "NGO / Implementing Partner", "usd": 2000000, "countries": ["Malawi"] }
+  ]
+}

@@ -1,0 +1,148 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Malaria No More — Brand Typography
+   · ff-tisa-web-pro (Typekit) — body text + all UI headings, weights 400–900
+   · League Gothic              — large display / hero headlines only
+   · IBM Plex Mono              — data, numbers, code
+   ───────────────────────────────────────────────────────────────────────────── */
+@import url("https://use.typekit.net/tnu6guq.css");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+@font-face {
+  font-family: "League Gothic";
+  src: url("/fonts/LeagueGothic-400.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --fg:           #010101;
+    --bg:           #ffffff;
+    --accent:       #5b8ff4;
+    --accent-hover: #2b6ef1;
+    --orange:       #ed7238;
+    --navy:         #1d499e;
+    --teal:         #19bdc3;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-surface-0 text-txt-primary;
+    font-family: "ff-tisa-web-pro", Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "ff-tisa-web-pro", Georgia, serif;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+  }
+
+  .display-gothic {
+    font-family: "League Gothic", "LeagueGothic", "Arial Narrow", sans-serif;
+    font-weight: 400;
+    font-synthesis: none;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    line-height: 1.0;
+  }
+
+  ::selection {
+    background: rgba(237, 114, 56, 0.2);
+    color: #010101;
+  }
+
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.15);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,0.3); }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white border border-surface-3 rounded-panel shadow-card;
+  }
+  .glass-panel-strong {
+    @apply bg-white border border-surface-4 rounded-panel shadow-card-hover;
+  }
+
+  .kpi-glow {
+    box-shadow:
+      0 1px 3px rgba(0,0,0,0.06),
+      0 0 24px -8px var(--glow-color, rgba(237,114,56,0.1));
+  }
+
+  .signal-dot { @apply w-2 h-2 rounded-full; }
+
+  .gradient-text-malaria {
+    @apply bg-gradient-to-r from-signal-malaria to-signal-arbovirus bg-clip-text text-transparent;
+  }
+
+  /* ── Buttons ──────────────────────────────────────────────────────────── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2 text-sm font-semibold text-white transition-all rounded-badge;
+    background: var(--orange);
+    font-family: "ff-tisa-web-pro", Georgia, serif;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+  }
+  .btn-primary:hover { background: #bc5201; }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2 text-sm font-semibold text-white transition-all rounded-badge;
+    background: var(--accent);
+    font-family: "ff-tisa-web-pro", Georgia, serif;
+  }
+  .btn-accent:hover { background: var(--accent-hover); }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-txt-secondary
+           border border-surface-3 rounded-badge transition-colors hover:border-txt-muted hover:text-txt-primary bg-white;
+  }
+
+  /* ── Navigation ───────────────────────────────────────────────────────── */
+  .nav-link {
+    @apply text-txt-secondary hover:text-txt-primary transition-colors duration-200 text-sm;
+    font-family: "ff-tisa-web-pro", Georgia, serif;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+  .nav-link-active { @apply text-txt-primary relative; }
+  .nav-link-active::after {
+    content: "";
+    @apply absolute -bottom-1 left-0 right-0 h-[2px] rounded-full;
+    background: var(--orange);
+  }
+
+  /* ── Chapter section divider ──────────────────────────────────────────── */
+  .section-label {
+    @apply text-2xs font-mono text-txt-muted uppercase tracking-[0.12em];
+  }
+
+  /* ── Stat value ───────────────────────────────────────────────────────── */
+  .stat-value {
+    @apply font-mono tabular-nums text-txt-primary;
+  }
+}
+
+/* ── MapLibre popup overrides ─────────────────────────────────────────────── */
+.malariaintel-popup .maplibregl-popup-content {
+  background: none; border: none; border-radius: 0; padding: 0; box-shadow: none;
+}
+.malariaintel-popup .maplibregl-popup-tip { display: none; }

@@ -1,0 +1,16 @@
+{
+  "code": "VA",
+  "name": "Virginia",
+  "nih_grants_usd": 58000000,
+  "usaspending_usd": 82000000,
+  "clinical_trials": 4,
+  "org_count": 16,
+  "countries_reached": 8,
+  "top_orgs": [
+    { "name": "Chemonics International", "type": "Implementing Partner", "usd": 32000000, "countries": ["MOZ", "ZMB", "TZA", "UGA"] },
+    { "name": "ICF International", "type": "Implementing Partner", "usd": 18000000, "countries": ["ETH", "GHA", "KEN"] },
+    { "name": "Management Sciences for Health", "type": "NGO", "usd": 14000000, "countries": ["NGA", "MDG"] },
+    { "name": "George Mason University", "type": "University", "usd": 9000000, "countries": ["KEN", "TZA"] },
+    { "name": "Credence Management Solutions", "type": "Implementing Partner", "usd": 9000000, "countries": ["ETH", "MOZ"] }
+  ]
+}

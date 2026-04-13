@@ -1,0 +1,13 @@
+{
+  "code": "HI",
+  "name": "Hawaii",
+  "nih_grants_usd": 12000000,
+  "usaspending_usd": 2000000,
+  "clinical_trials": 1,
+  "org_count": 2,
+  "countries_reached": 3,
+  "top_orgs": [
+    { "name": "University of Hawaii John A. Burns School of Medicine", "type": "University", "usd": 8000000, "countries": ["Papua New Guinea","Myanmar","Solomon Islands"] },
+    { "name": "East-West Center Global Health Program", "type": "Research Institute", "usd": 4000000, "countries": ["Papua New Guinea","Vanuatu"] }
+  ]
+}

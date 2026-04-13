@@ -1,0 +1,13 @@
+{
+  "code": "OK",
+  "name": "Oklahoma",
+  "nih_grants_usd": 8000000,
+  "usaspending_usd": 2000000,
+  "clinical_trials": 0,
+  "org_count": 2,
+  "countries_reached": 1,
+  "top_orgs": [
+    { "name": "University of Oklahoma Health Sciences Center", "type": "University", "usd": 6000000, "countries": ["Nigeria"] },
+    { "name": "Oklahoma State University Global Health", "type": "University", "usd": 2000000, "countries": ["Ghana"] }
+  ]
+}

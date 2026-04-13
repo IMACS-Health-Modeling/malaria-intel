@@ -1,0 +1,388 @@
+{
+  "_meta": {
+    "generated_at": "2026-04-12T18:29:03.137679Z",
+    "source": "USAspending.gov API v2 /search/spending_by_geography/",
+    "filters": {
+      "keywords": [
+        "malaria"
+      ],
+      "awarding_agency": "Agency for International Development",
+      "time_period": "2019-01-01 to 2024-12-31",
+      "scope": "place_of_performance",
+      "geo_layer": "country",
+      "subawards": false
+    },
+    "country_count": 39,
+    "notes": {
+      "usaspending_geo": "Successfully fetched. Returns aggregated spend by place-of-performance country for USAID malaria keyword awards 2019-2024.",
+      "switzerland_note": "CHE (Switzerland) is large due to Global Fund grants routed through Geneva HQ.",
+      "usa_note": "USA spend includes domestic contract vehicles and IDIQ ceiling values.",
+      "foreignassistance_gov": "API endpoints 404 \u2014 site is a React SPA with no public REST API accessible.",
+      "usaid_socrata": "data.usaid.gov DNS resolution failed from this environment (network restriction).",
+      "top_implementers_source": "USAspending /search/spending_by_category/recipient/ \u2014 USAID malaria keyword awards 2019-2024."
+    }
+  },
+  "by_country": [
+    {
+      "country_code": "CHE",
+      "country_name": "Switzerland",
+      "amount": 11820283606.0,
+      "award_count": null
+    },
+    {
+      "country_code": "USA",
+      "country_name": "United States",
+      "amount": 2092874486.71,
+      "award_count": null
+    },
+    {
+      "country_code": "GHA",
+      "country_name": "Ghana",
+      "amount": 312181454.76,
+      "award_count": null
+    },
+    {
+      "country_code": "TZA",
+      "country_name": "Tanzania",
+      "amount": 183945168.08,
+      "award_count": null
+    },
+    {
+      "country_code": "SEN",
+      "country_name": "Senegal",
+      "amount": 97870125.67,
+      "award_count": null
+    },
+    {
+      "country_code": "COD",
+      "country_name": "Congo (Kinshasa)",
+      "amount": 89793068.93,
+      "award_count": null
+    },
+    {
+      "country_code": "RWA",
+      "country_name": "Rwanda",
+      "amount": 77998790.53,
+      "award_count": null
+    },
+    {
+      "country_code": "ETH",
+      "country_name": "Ethiopia",
+      "amount": 67783266.0,
+      "award_count": null
+    },
+    {
+      "country_code": "NGA",
+      "country_name": "Nigeria",
+      "amount": 58503529.14,
+      "award_count": null
+    },
+    {
+      "country_code": "MDG",
+      "country_name": "Madagascar",
+      "amount": 51833758.33,
+      "award_count": null
+    },
+    {
+      "country_code": "KEN",
+      "country_name": "Kenya",
+      "amount": 51746052.52,
+      "award_count": null
+    },
+    {
+      "country_code": "MOZ",
+      "country_name": "Mozambique",
+      "amount": 46597817.0,
+      "award_count": null
+    },
+    {
+      "country_code": "BFA",
+      "country_name": "Burkina Faso",
+      "amount": 43450427.85,
+      "award_count": null
+    },
+    {
+      "country_code": "ZMB",
+      "country_name": "Zambia",
+      "amount": 35828025.02,
+      "award_count": null
+    },
+    {
+      "country_code": "UGA",
+      "country_name": "Uganda",
+      "amount": 35649373.12,
+      "award_count": null
+    },
+    {
+      "country_code": "MMR",
+      "country_name": "Burma",
+      "amount": 35045125.47,
+      "award_count": null
+    },
+    {
+      "country_code": "GIN",
+      "country_name": "Guinea",
+      "amount": 34160718.0,
+      "award_count": null
+    },
+    {
+      "country_code": "MWI",
+      "country_name": "Malawi",
+      "amount": 28556117.37,
+      "award_count": null
+    },
+    {
+      "country_code": "ZWE",
+      "country_name": "Zimbabwe",
+      "amount": 27757796.0,
+      "award_count": null
+    },
+    {
+      "country_code": "CIV",
+      "country_name": "Cote D'Ivoire",
+      "amount": 26868406.0,
+      "award_count": null
+    },
+    {
+      "country_code": "GTM",
+      "country_name": "Guatemala",
+      "amount": 19701873.0,
+      "award_count": null
+    },
+    {
+      "country_code": "BEN",
+      "country_name": "Benin",
+      "amount": 18335843.63,
+      "award_count": null
+    },
+    {
+      "country_code": "BDI",
+      "country_name": "Burundi",
+      "amount": 16591220.0,
+      "award_count": null
+    },
+    {
+      "country_code": "KHM",
+      "country_name": "Cambodia",
+      "amount": 15994226.0,
+      "award_count": null
+    },
+    {
+      "country_code": "NER",
+      "country_name": "Niger",
+      "amount": 15354249.07,
+      "award_count": null
+    },
+    {
+      "country_code": "CMR",
+      "country_name": "Cameroon",
+      "amount": 13904837.75,
+      "award_count": null
+    },
+    {
+      "country_code": "LBR",
+      "country_name": "Liberia",
+      "amount": 10099178.97,
+      "award_count": null
+    },
+    {
+      "country_code": "GBR",
+      "country_name": "United Kingdom",
+      "amount": 9260000.0,
+      "award_count": null
+    },
+    {
+      "country_code": "PHL",
+      "country_name": "Philippines",
+      "amount": 8392906.0,
+      "award_count": null
+    },
+    {
+      "country_code": "SWZ",
+      "country_name": "Swaziland",
+      "amount": 7658953.0,
+      "award_count": null
+    },
+    {
+      "country_code": "THA",
+      "country_name": "Thailand",
+      "amount": 4531951.51,
+      "award_count": null
+    },
+    {
+      "country_code": "AGO",
+      "country_name": "Angola",
+      "amount": 4132723.0,
+      "award_count": null
+    },
+    {
+      "country_code": "GMB",
+      "country_name": "Gambia, The",
+      "amount": 2580000.0,
+      "award_count": null
+    },
+    {
+      "country_code": "SLE",
+      "country_name": "Sierra Leone",
+      "amount": 2379641.0,
+      "award_count": null
+    },
+    {
+      "country_code": "SSD",
+      "country_name": "South Sudan",
+      "amount": 1800000.0,
+      "award_count": null
+    },
+    {
+      "country_code": "NPL",
+      "country_name": "Nepal",
+      "amount": 904060.0,
+      "award_count": null
+    },
+    {
+      "country_code": "PER",
+      "country_name": "Peru",
+      "amount": 52309.47,
+      "award_count": null
+    },
+    {
+      "country_code": "BRA",
+      "country_name": "Brazil",
+      "amount": 0.0,
+      "award_count": null
+    },
+    {
+      "country_code": "SOM",
+      "country_name": "Somalia",
+      "amount": -1750.0,
+      "award_count": null
+    }
+  ],
+  "top_implementing_partners": [
+    {
+      "name": "THE GLOBAL FUND TO FIGHT AIDS, TUBERCULOSIS AND MALARIA (THE GLOBAL FUND)",
+      "amount": 11814283606.0,
+      "award_count": null
+    },
+    {
+      "name": "CHEMONICS INTERNATIONAL, INC.",
+      "amount": 1729167363.06,
+      "award_count": null
+    },
+    {
+      "name": "THE JOHNS HOPKINS UNIVERSITY",
+      "amount": 451144827.16,
+      "award_count": null
+    },
+    {
+      "name": "POPULATION SERVICES INTERNATIONAL",
+      "amount": 267641952.0,
+      "award_count": null
+    },
+    {
+      "name": "ABT GLOBAL LLC",
+      "amount": 174821878.0,
+      "award_count": null
+    },
+    {
+      "name": "PATH",
+      "amount": 105402439.61,
+      "award_count": null
+    },
+    {
+      "name": "RESEARCH TRIANGLE INSTITUTE",
+      "amount": 105076259.0,
+      "award_count": null
+    },
+    {
+      "name": "JHPIEGO CORP",
+      "amount": 95170018.0,
+      "award_count": null
+    },
+    {
+      "name": "ABT GLOBAL LLC",
+      "amount": 71291411.09,
+      "award_count": null
+    },
+    {
+      "name": "DELOITTE CONSULTING LIMITED",
+      "amount": 61597860.0,
+      "award_count": null
+    },
+    {
+      "name": "ELIZABETH GLASER PEDIATRIC AIDS FOUNDATION",
+      "amount": 56285603.0,
+      "award_count": null
+    },
+    {
+      "name": "FAMILY HEALTH INTERNATIONAL",
+      "amount": 47061829.0,
+      "award_count": null
+    },
+    {
+      "name": "INTRAHEALTH INTERNATIONAL, INC.",
+      "amount": 38927732.0,
+      "award_count": null
+    },
+    {
+      "name": "MISCELLANEOUS FOREIGN AWARDEES",
+      "amount": 34852496.75,
+      "award_count": null
+    },
+    {
+      "name": "PAN AMERICAN HEALTH ORGANIZATION",
+      "amount": 32759894.0,
+      "award_count": null
+    },
+    {
+      "name": "THE TRUSTEES OF COLUMBIA UNIVERSITY IN THE CITY OF NEW YORK",
+      "amount": 26080045.0,
+      "award_count": null
+    },
+    {
+      "name": "UNIVERSITY OF NORTH CAROLINA AT CHAPEL HILL",
+      "amount": 25756829.0,
+      "award_count": null
+    },
+    {
+      "name": "THE POPULATION COUNCIL, INC.",
+      "amount": 23571637.0,
+      "award_count": null
+    },
+    {
+      "name": "AMREF HEALTH AFRICA",
+      "amount": 20568304.0,
+      "award_count": null
+    },
+    {
+      "name": "PATHFINDER INTERNATIONAL",
+      "amount": 16591220.0,
+      "award_count": null
+    },
+    {
+      "name": "MANAGEMENT SCIENCES FOR HEALTH, INC.",
+      "amount": 16474114.0,
+      "award_count": null
+    },
+    {
+      "name": "JOHN SNOW, INCORPORATED",
+      "amount": 16327058.0,
+      "award_count": null
+    },
+    {
+      "name": "UNIVERSITY RESEARCH CO., LLC",
+      "amount": 15735705.0,
+      "award_count": null
+    },
+    {
+      "name": "MALARIA CONSORTIUM",
+      "amount": 13714695.12,
+      "award_count": null
+    },
+    {
+      "name": "MEDICAL CARE DEVELOPMENT INC",
+      "amount": 13478415.0,
+      "award_count": null
+    }
+  ]
+}

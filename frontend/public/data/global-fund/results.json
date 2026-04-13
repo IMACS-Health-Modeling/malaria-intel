@@ -1,0 +1,1262 @@
+{
+  "_meta": {
+    "source": "Global Fund Data Explorer API",
+    "endpoint": "https://data.api.theglobalfund.org/results/table?components=Malaria",
+    "fetched_at": "2026-04-12T18:27:44.496519+00:00",
+    "total_indicators": 78,
+    "malaria_indicators": 78,
+    "errors": {}
+  },
+  "malaria_results": [
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Suspected malaria cases that receive a parasitological test",
+      "value": 359887251,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Cases of Malaria treated",
+      "value": 173012841,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Insecticide-treated mosquito nets distributed",
+      "value": 162461617,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Children who received seasonal malaria chemoprophylaxis",
+      "value": 50930427,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Population covered by Indoor Residual Spraying",
+      "value": 27202622,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Pregnant women attending antenatal clinics who received intermittent preventive treatment for malaria",
+      "value": 17822699,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Structures covered by Indoor Residual Spraying",
+      "value": 975129,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Infants who received the full number of courses of perennial malaria chemoprevention (PMC)",
+      "value": 463068,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Confirmed malaria cases fully investigated and classified",
+      "value": 127156,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Malaria foci fully investigated and classified",
+      "value": 37553,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Districts achieving national target for the proportion of suspected malaria patients who received a parasitological test",
+      "value": 3054,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Districts achieving national target for the proportion of confirmed malaria patients who received first-line antimalarial treatment",
+      "value": 2516,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Cases reported within 24 hours of treatment (elimination settings)",
+      "value": 2249,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2023",
+      "component": "Malaria",
+      "indicator": "Suspected malaria cases that receive a parasitological test",
+      "value": 337503197,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2023",
+      "component": "Malaria",
+      "indicator": "Insecticide-treated mosquito nets distributed",
+      "value": 227186713,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2023",
+      "component": "Malaria",
+      "indicator": "Cases of Malaria treated",
+      "value": 171213753,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2023",
+      "component": "Malaria",
+      "indicator": "Children who received seasonal malaria chemoprophylaxis",
+      "value": 44595738,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2023",
+      "component": "Malaria",
+      "indicator": "Population covered by Indoor Residual Spraying",
+      "value": 17803333,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2023",
+      "component": "Malaria",
+      "indicator": "Pregnant women attending antenatal clinics who received intermittent preventive treatment for malaria",
+      "value": 15491795,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2023",
+      "component": "Malaria",
+      "indicator": "Structures covered by Indoor Residual Spraying",
+      "value": 8677513,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2023",
+      "component": "Malaria",
+      "indicator": "Confirmed malaria cases fully investigated and classified",
+      "value": 138067,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2023",
+      "component": "Malaria",
+      "indicator": "Malaria foci fully investigated and classified",
+      "value": 76444,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2022",
+      "component": "Malaria",
+      "indicator": "Suspected malaria cases that receive a parasitological test",
+      "value": 323125483,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2022",
+      "component": "Malaria",
+      "indicator": "Insecticide-treated mosquito nets distributed",
+      "value": 218100786,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2022",
+      "component": "Malaria",
+      "indicator": "Cases of Malaria treated",
+      "value": 163918125,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2022",
+      "component": "Malaria",
+      "indicator": "Children who received seasonal malaria chemoprophylaxis",
+      "value": 37103714,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2022",
+      "component": "Malaria",
+      "indicator": "Population covered by Indoor Residual Spraying",
+      "value": 20812583,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2022",
+      "component": "Malaria",
+      "indicator": "Pregnant women attending antenatal clinics who received intermittent preventive treatment for malaria",
+      "value": 14620922,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2022",
+      "component": "Malaria",
+      "indicator": "Structures covered by Indoor Residual Spraying",
+      "value": 9795552,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2022",
+      "component": "Malaria",
+      "indicator": "Confirmed malaria cases fully investigated and classified",
+      "value": 77413,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2022",
+      "component": "Malaria",
+      "indicator": "Malaria foci fully investigated and classified",
+      "value": 39305,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2021",
+      "component": "Malaria",
+      "indicator": "Suspected malaria cases that receive a parasitological test",
+      "value": 284147443,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2021",
+      "component": "Malaria",
+      "indicator": "Cases of Malaria treated",
+      "value": 147508148,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2021",
+      "component": "Malaria",
+      "indicator": "Insecticide-treated mosquito nets distributed",
+      "value": 133302764,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2021",
+      "component": "Malaria",
+      "indicator": "Children who received seasonal malaria chemoprophylaxis",
+      "value": 34450468,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2021",
+      "component": "Malaria",
+      "indicator": "Population covered by Indoor Residual Spraying",
+      "value": 19276777,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2021",
+      "component": "Malaria",
+      "indicator": "Pregnant women attending antenatal clinics who received intermittent preventive treatment for malaria",
+      "value": 11343587,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2021",
+      "component": "Malaria",
+      "indicator": "Structures covered by Indoor Residual Spraying",
+      "value": 9630755,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2021",
+      "component": "Malaria",
+      "indicator": "Confirmed malaria cases fully investigated and classified",
+      "value": 55478,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2021",
+      "component": "Malaria",
+      "indicator": "Malaria foci fully investigated and classified",
+      "value": 25363,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2020",
+      "component": "Malaria",
+      "indicator": "Suspected malaria cases that receive a parasitological test",
+      "value": 261406547,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2020",
+      "component": "Malaria",
+      "indicator": "Insecticide-treated mosquito nets distributed",
+      "value": 202005157,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2020",
+      "component": "Malaria",
+      "indicator": "Cases of Malaria treated",
+      "value": 137134813,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2020",
+      "component": "Malaria",
+      "indicator": "Children who received seasonal malaria chemoprophylaxis",
+      "value": 26683289,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2020",
+      "component": "Malaria",
+      "indicator": "Population covered by Indoor Residual Spraying",
+      "value": 16926932,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2020",
+      "component": "Malaria",
+      "indicator": "Pregnant women attending antenatal clinics who received intermittent preventive treatment for malaria",
+      "value": 11534554,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2020",
+      "component": "Malaria",
+      "indicator": "Structures covered by Indoor Residual Spraying",
+      "value": 10133803,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2020",
+      "component": "Malaria",
+      "indicator": "Confirmed malaria cases fully investigated and classified",
+      "value": 52043,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2020",
+      "component": "Malaria",
+      "indicator": "Malaria foci fully investigated and classified",
+      "value": 7683,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2019",
+      "component": "Malaria",
+      "indicator": "Suspected malaria cases that receive a parasitological test",
+      "value": 258888396,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2019",
+      "component": "Malaria",
+      "indicator": "Insecticide-treated mosquito nets distributed",
+      "value": 161677120,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2019",
+      "component": "Malaria",
+      "indicator": "Cases of Malaria treated",
+      "value": 138070353,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2019",
+      "component": "Malaria",
+      "indicator": "Population covered by Indoor Residual Spraying",
+      "value": 15251640,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2019",
+      "component": "Malaria",
+      "indicator": "Children who received seasonal malaria chemoprophylaxis",
+      "value": 14693040,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2019",
+      "component": "Malaria",
+      "indicator": "Pregnant women attending antenatal clinics who received intermittent preventive treatment for malaria",
+      "value": 11432952,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2019",
+      "component": "Malaria",
+      "indicator": "Structures covered by Indoor Residual Spraying",
+      "value": 9137467,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2019",
+      "component": "Malaria",
+      "indicator": "Confirmed malaria cases fully investigated and classified",
+      "value": 33765,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2019",
+      "component": "Malaria",
+      "indicator": "Malaria foci fully investigated and classified",
+      "value": 5972,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2018",
+      "component": "Malaria",
+      "indicator": "Suspected malaria cases that receive a parasitological test",
+      "value": 226498673,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2018",
+      "component": "Malaria",
+      "indicator": "Insecticide-treated mosquito nets distributed",
+      "value": 152867767,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2018",
+      "component": "Malaria",
+      "indicator": "Cases of Malaria treated",
+      "value": 114435433,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2018",
+      "component": "Malaria",
+      "indicator": "Population covered by Indoor Residual Spraying",
+      "value": 12451968,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2018",
+      "component": "Malaria",
+      "indicator": "Children who received seasonal malaria chemoprophylaxis",
+      "value": 10672227,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2018",
+      "component": "Malaria",
+      "indicator": "Pregnant women attending antenatal clinics who received intermittent preventive treatment for malaria",
+      "value": 9535620,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2018",
+      "component": "Malaria",
+      "indicator": "Structures covered by Indoor Residual Spraying",
+      "value": 7695951,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2018",
+      "component": "Malaria",
+      "indicator": "Prevention: People covered by LLINs distributed",
+      "value": 4252756,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2018",
+      "component": "Malaria",
+      "indicator": "Confirmed malaria cases fully investigated and classified",
+      "value": 78003,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2018",
+      "component": "Malaria",
+      "indicator": "Malaria foci fully investigated and classified",
+      "value": 7380,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2017",
+      "component": "Malaria",
+      "indicator": "Suspected malaria cases that receive a parasitological test",
+      "value": 215730104,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2017",
+      "component": "Malaria",
+      "indicator": "Prevention: People covered by LLINs distributed",
+      "value": 209779093,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2017",
+      "component": "Malaria",
+      "indicator": "Insecticide-treated mosquito nets distributed",
+      "value": 179114637,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2017",
+      "component": "Malaria",
+      "indicator": "Cases of Malaria treated",
+      "value": 114556835,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2017",
+      "component": "Malaria",
+      "indicator": "Structures covered by Indoor Residual Spraying",
+      "value": 9888178,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2017",
+      "component": "Malaria",
+      "indicator": "Children who received seasonal malaria chemoprophylaxis",
+      "value": 5647038,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2017",
+      "component": "Malaria",
+      "indicator": "Pregnant women attending antenatal clinics who received intermittent preventive treatment for malaria",
+      "value": 5110485,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2017",
+      "component": "Malaria",
+      "indicator": "Population covered by Indoor Residual Spraying",
+      "value": 4892853,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2017",
+      "component": "Malaria",
+      "indicator": "Confirmed malaria cases fully investigated and classified",
+      "value": 70222,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2017",
+      "component": "Malaria",
+      "indicator": "Malaria foci fully investigated and classified",
+      "value": 700,
+      "unit": "",
+      "source": ""
+    }
+  ],
+  "all_results": [
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Suspected malaria cases that receive a parasitological test",
+      "value": 359887251,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Cases of Malaria treated",
+      "value": 173012841,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Insecticide-treated mosquito nets distributed",
+      "value": 162461617,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Children who received seasonal malaria chemoprophylaxis",
+      "value": 50930427,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Population covered by Indoor Residual Spraying",
+      "value": 27202622,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Pregnant women attending antenatal clinics who received intermittent preventive treatment for malaria",
+      "value": 17822699,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Structures covered by Indoor Residual Spraying",
+      "value": 975129,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Infants who received the full number of courses of perennial malaria chemoprevention (PMC)",
+      "value": 463068,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Confirmed malaria cases fully investigated and classified",
+      "value": 127156,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Malaria foci fully investigated and classified",
+      "value": 37553,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Districts achieving national target for the proportion of suspected malaria patients who received a parasitological test",
+      "value": 3054,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Districts achieving national target for the proportion of confirmed malaria patients who received first-line antimalarial treatment",
+      "value": 2516,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2024",
+      "component": "Malaria",
+      "indicator": "Cases reported within 24 hours of treatment (elimination settings)",
+      "value": 2249,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2023",
+      "component": "Malaria",
+      "indicator": "Suspected malaria cases that receive a parasitological test",
+      "value": 337503197,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2023",
+      "component": "Malaria",
+      "indicator": "Insecticide-treated mosquito nets distributed",
+      "value": 227186713,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2023",
+      "component": "Malaria",
+      "indicator": "Cases of Malaria treated",
+      "value": 171213753,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2023",
+      "component": "Malaria",
+      "indicator": "Children who received seasonal malaria chemoprophylaxis",
+      "value": 44595738,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2023",
+      "component": "Malaria",
+      "indicator": "Population covered by Indoor Residual Spraying",
+      "value": 17803333,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2023",
+      "component": "Malaria",
+      "indicator": "Pregnant women attending antenatal clinics who received intermittent preventive treatment for malaria",
+      "value": 15491795,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2023",
+      "component": "Malaria",
+      "indicator": "Structures covered by Indoor Residual Spraying",
+      "value": 8677513,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2023",
+      "component": "Malaria",
+      "indicator": "Confirmed malaria cases fully investigated and classified",
+      "value": 138067,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2023",
+      "component": "Malaria",
+      "indicator": "Malaria foci fully investigated and classified",
+      "value": 76444,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2022",
+      "component": "Malaria",
+      "indicator": "Suspected malaria cases that receive a parasitological test",
+      "value": 323125483,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2022",
+      "component": "Malaria",
+      "indicator": "Insecticide-treated mosquito nets distributed",
+      "value": 218100786,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2022",
+      "component": "Malaria",
+      "indicator": "Cases of Malaria treated",
+      "value": 163918125,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2022",
+      "component": "Malaria",
+      "indicator": "Children who received seasonal malaria chemoprophylaxis",
+      "value": 37103714,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2022",
+      "component": "Malaria",
+      "indicator": "Population covered by Indoor Residual Spraying",
+      "value": 20812583,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2022",
+      "component": "Malaria",
+      "indicator": "Pregnant women attending antenatal clinics who received intermittent preventive treatment for malaria",
+      "value": 14620922,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2022",
+      "component": "Malaria",
+      "indicator": "Structures covered by Indoor Residual Spraying",
+      "value": 9795552,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2022",
+      "component": "Malaria",
+      "indicator": "Confirmed malaria cases fully investigated and classified",
+      "value": 77413,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2022",
+      "component": "Malaria",
+      "indicator": "Malaria foci fully investigated and classified",
+      "value": 39305,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2021",
+      "component": "Malaria",
+      "indicator": "Suspected malaria cases that receive a parasitological test",
+      "value": 284147443,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2021",
+      "component": "Malaria",
+      "indicator": "Cases of Malaria treated",
+      "value": 147508148,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2021",
+      "component": "Malaria",
+      "indicator": "Insecticide-treated mosquito nets distributed",
+      "value": 133302764,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2021",
+      "component": "Malaria",
+      "indicator": "Children who received seasonal malaria chemoprophylaxis",
+      "value": 34450468,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2021",
+      "component": "Malaria",
+      "indicator": "Population covered by Indoor Residual Spraying",
+      "value": 19276777,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2021",
+      "component": "Malaria",
+      "indicator": "Pregnant women attending antenatal clinics who received intermittent preventive treatment for malaria",
+      "value": 11343587,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2021",
+      "component": "Malaria",
+      "indicator": "Structures covered by Indoor Residual Spraying",
+      "value": 9630755,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2021",
+      "component": "Malaria",
+      "indicator": "Confirmed malaria cases fully investigated and classified",
+      "value": 55478,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2021",
+      "component": "Malaria",
+      "indicator": "Malaria foci fully investigated and classified",
+      "value": 25363,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2020",
+      "component": "Malaria",
+      "indicator": "Suspected malaria cases that receive a parasitological test",
+      "value": 261406547,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2020",
+      "component": "Malaria",
+      "indicator": "Insecticide-treated mosquito nets distributed",
+      "value": 202005157,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2020",
+      "component": "Malaria",
+      "indicator": "Cases of Malaria treated",
+      "value": 137134813,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2020",
+      "component": "Malaria",
+      "indicator": "Children who received seasonal malaria chemoprophylaxis",
+      "value": 26683289,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2020",
+      "component": "Malaria",
+      "indicator": "Population covered by Indoor Residual Spraying",
+      "value": 16926932,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2020",
+      "component": "Malaria",
+      "indicator": "Pregnant women attending antenatal clinics who received intermittent preventive treatment for malaria",
+      "value": 11534554,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2020",
+      "component": "Malaria",
+      "indicator": "Structures covered by Indoor Residual Spraying",
+      "value": 10133803,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2020",
+      "component": "Malaria",
+      "indicator": "Confirmed malaria cases fully investigated and classified",
+      "value": 52043,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2020",
+      "component": "Malaria",
+      "indicator": "Malaria foci fully investigated and classified",
+      "value": 7683,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2019",
+      "component": "Malaria",
+      "indicator": "Suspected malaria cases that receive a parasitological test",
+      "value": 258888396,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2019",
+      "component": "Malaria",
+      "indicator": "Insecticide-treated mosquito nets distributed",
+      "value": 161677120,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2019",
+      "component": "Malaria",
+      "indicator": "Cases of Malaria treated",
+      "value": 138070353,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2019",
+      "component": "Malaria",
+      "indicator": "Population covered by Indoor Residual Spraying",
+      "value": 15251640,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2019",
+      "component": "Malaria",
+      "indicator": "Children who received seasonal malaria chemoprophylaxis",
+      "value": 14693040,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2019",
+      "component": "Malaria",
+      "indicator": "Pregnant women attending antenatal clinics who received intermittent preventive treatment for malaria",
+      "value": 11432952,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2019",
+      "component": "Malaria",
+      "indicator": "Structures covered by Indoor Residual Spraying",
+      "value": 9137467,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2019",
+      "component": "Malaria",
+      "indicator": "Confirmed malaria cases fully investigated and classified",
+      "value": 33765,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2019",
+      "component": "Malaria",
+      "indicator": "Malaria foci fully investigated and classified",
+      "value": 5972,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2018",
+      "component": "Malaria",
+      "indicator": "Suspected malaria cases that receive a parasitological test",
+      "value": 226498673,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2018",
+      "component": "Malaria",
+      "indicator": "Insecticide-treated mosquito nets distributed",
+      "value": 152867767,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2018",
+      "component": "Malaria",
+      "indicator": "Cases of Malaria treated",
+      "value": 114435433,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2018",
+      "component": "Malaria",
+      "indicator": "Population covered by Indoor Residual Spraying",
+      "value": 12451968,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2018",
+      "component": "Malaria",
+      "indicator": "Children who received seasonal malaria chemoprophylaxis",
+      "value": 10672227,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2018",
+      "component": "Malaria",
+      "indicator": "Pregnant women attending antenatal clinics who received intermittent preventive treatment for malaria",
+      "value": 9535620,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2018",
+      "component": "Malaria",
+      "indicator": "Structures covered by Indoor Residual Spraying",
+      "value": 7695951,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2018",
+      "component": "Malaria",
+      "indicator": "Prevention: People covered by LLINs distributed",
+      "value": 4252756,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2018",
+      "component": "Malaria",
+      "indicator": "Confirmed malaria cases fully investigated and classified",
+      "value": 78003,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2018",
+      "component": "Malaria",
+      "indicator": "Malaria foci fully investigated and classified",
+      "value": 7380,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2017",
+      "component": "Malaria",
+      "indicator": "Suspected malaria cases that receive a parasitological test",
+      "value": 215730104,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2017",
+      "component": "Malaria",
+      "indicator": "Prevention: People covered by LLINs distributed",
+      "value": 209779093,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2017",
+      "component": "Malaria",
+      "indicator": "Insecticide-treated mosquito nets distributed",
+      "value": 179114637,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2017",
+      "component": "Malaria",
+      "indicator": "Cases of Malaria treated",
+      "value": 114556835,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2017",
+      "component": "Malaria",
+      "indicator": "Structures covered by Indoor Residual Spraying",
+      "value": 9888178,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2017",
+      "component": "Malaria",
+      "indicator": "Children who received seasonal malaria chemoprophylaxis",
+      "value": 5647038,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2017",
+      "component": "Malaria",
+      "indicator": "Pregnant women attending antenatal clinics who received intermittent preventive treatment for malaria",
+      "value": 5110485,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2017",
+      "component": "Malaria",
+      "indicator": "Population covered by Indoor Residual Spraying",
+      "value": 4892853,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2017",
+      "component": "Malaria",
+      "indicator": "Confirmed malaria cases fully investigated and classified",
+      "value": 70222,
+      "unit": "",
+      "source": ""
+    },
+    {
+      "year": "2017",
+      "component": "Malaria",
+      "indicator": "Malaria foci fully investigated and classified",
+      "value": 700,
+      "unit": "",
+      "source": ""
+    }
+  ]
+}

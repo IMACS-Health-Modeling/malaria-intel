@@ -1,0 +1,15 @@
+{
+  "code": "TN",
+  "name": "Tennessee",
+  "nih_grants_usd": 78000000,
+  "usaspending_usd": 16000000,
+  "clinical_trials": 4,
+  "org_count": 9,
+  "countries_reached": 6,
+  "top_orgs": [
+    { "name": "Vanderbilt University Medical Center", "type": "University", "usd": 44000000, "countries": ["Uganda","Kenya","Tanzania","Malawi"] },
+    { "name": "Vanderbilt Institute for Global Health", "type": "Research Institute", "usd": 20000000, "countries": ["Uganda","Ethiopia","Mozambique"] },
+    { "name": "Meharry Medical College", "type": "University", "usd": 10000000, "countries": ["Nigeria","Ghana"] },
+    { "name": "University of Tennessee Health Science Center", "type": "University", "usd": 4000000, "countries": ["Cameroon"] }
+  ]
+}
