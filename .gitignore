@@ -51,3 +51,6 @@ graphify-out/cache/
 # Misc
 .vercel
 *.tsbuildinfo
+
+# Pipeline env (secrets — never commit)
+.env.pipeline
