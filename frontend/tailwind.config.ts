@@ -76,11 +76,12 @@ const config: Config = {
         "glow-blue": "0 0 20px rgba(91,143,244,0.15)",
       },
       animation: {
-        "pulse-slow":   "pulse 3s cubic-bezier(0.4,0,0.6,1) infinite",
-        "pulse-ring":   "pulse-ring 2s cubic-bezier(0.4,0,0.6,1) infinite",
-        "fade-in":      "fade-in 0.5s ease-out",
-        "slide-up":     "slide-up 0.4s cubic-bezier(0.2,0,0,1)",
-        "count-up":     "fade-in 0.8s ease-out",
+        "pulse-slow":     "pulse 3s cubic-bezier(0.4,0,0.6,1) infinite",
+        "pulse-ring":     "pulse-ring 2s cubic-bezier(0.4,0,0.6,1) infinite",
+        "fade-in":        "fade-in 0.5s ease-out",
+        "slide-up":       "slide-up 0.4s cubic-bezier(0.2,0,0,1)",
+        "count-up":       "fade-in 0.8s ease-out",
+        "ticker-scroll":  "ticker-scroll 60s linear infinite",
       },
       keyframes: {
         "pulse-ring": {
@@ -94,6 +95,10 @@ const config: Config = {
         "slide-up": {
           from: { opacity: "0", transform: "translateY(12px)" },
           to:   { opacity: "1", transform: "translateY(0)" },
+        },
+        "ticker-scroll": {
+          from: { transform: "translateX(0)" },
+          to:   { transform: "translateX(-50%)" },
         },
       },
     },

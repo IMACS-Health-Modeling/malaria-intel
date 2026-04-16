@@ -1,0 +1,88 @@
+Here's the full intelligence brief before I ask anything.         
+                                                                                        
+---                                                                                     
+Executive Brief: The Data Gap Is Bigger Than It Looks                                                                                                                                                   
+                                                                                                                                                                                                        
+What We Have Today                                                                                                                                                                                      
+                                                                                                                                                                                                        
+The current S3 bucket (malariascope-dev-data-019847570980/v1/) has 14 flat JSON files:                                                                                                                  
+                                                                                                                                                                                                        
+burden/          4 files   — 27 PMI countries, Africa-heavy                                                                                                                                             
+events/          1 file    — active-threats.json, STALE (March 2026, 6 weeks old)                                                                                                                       
+finance/         6 files   — US-only funding lens                                                                                                                                                       
+funding/         1 file    — Global Fund flows                                                                                                                                                          
+geo/             1 file    — endemic-boundaries.json                                                                                                                                                    
+scenarios/       1 file    — precomputed country scenarios                                                                                                                                              
+                                            
+The existing Python pipeline (pipelines/) has 5 ingest scripts (NIH, WHO RBM, ForeignAssistance, ClinicalTrials, USAspending) — all wired for US domestic spending. The WHO RBM script explicitly limits
+to 27 PMI countries in Africa. There is zero Americas endemic coverage, zero disease diversity beyond malaria, no real-time signals.
+                                                                                                                                                                                                        
+---                                                                                                                                 
+The Sources Available and What They'd Add    
+                                                                                                                                                                                                        
+┌───────────────────────┬─────────────────────────────────────────────────────────────────────────────────┬─────────────────────────┬──────────────┬─────────────────────────────────┐
+│        Source         │                                What it gives us                                 │        Coverage         │    Years     │             Access              │                  
+├───────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼─────────────────────────┼──────────────┼─────────────────────────────────┤
+│ WHO GHO OData         │ 35 malaria indicators with CI                                                   │ 194 countries           │ 2000–2024    │ Free API (deprecating end-2025) │                  
+├───────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼─────────────────────────┼──────────────┼─────────────────────────────────┤
+│ WMR Annexes 2022–2025 │ Estimated cases/deaths, species split, interventions, AMR                       │ 87 endemic countries    │ 2000–2024    │ Direct XLSX download            │                  
+├───────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼─────────────────────────┼──────────────┼─────────────────────────────────┤                  
+│ IHME GBD 2021         │ Incidence/mortality/DALYs with uncertainty, subnational for 21 countries        │ 204 countries           │ 1990–2021    │ Batch CSV download              │                  
+├───────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼─────────────────────────┼──────────────┼─────────────────────────────────┤                  
+│ Global Fund OData v4  │ Intervention-level budgets, disbursements, programmatic results                 │ ~100 countries          │ 2002–present │ Free OData API                  │
+├───────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼─────────────────────────┼──────────────┼─────────────────────────────────┤                  
+│ WHO DON               │ All outbreak alerts: Ebola, Dengue, MERS, novel flu, cholera                    │ Global, all WHO regions │ 1990–present │ Scrape + Bedrock NLP            │
+├───────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼─────────────────────────┼──────────────┼─────────────────────────────────┤                  
+│ CDC MMWR              │ US imported malaria, species breakdown, acquisition country, treatment outcomes │ US cases                │ 1973–2022    │ CSV + HTML scrape               │
+├───────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼─────────────────────────┼──────────────┼─────────────────────────────────┤                  
+│ PAHO PLISA            │ Americas endemic malaria — Brazil, Colombia, Venezuela, Haiti                   │ ~20 Americas countries  │ 2000–present │ API                             │
+├───────────────────────┼─────────────────────────────────────────────────────────────────────────────────┼─────────────────────────┼──────────────┼─────────────────────────────────┤                  
+│ ProMED RSS            │ Real-time outbreak signals, drug resistance alerts                              │ Global                  │ 1995–present │ RSS (live)                      │
+└───────────────────────┴─────────────────────────────────────────────────────────────────────────────────┴─────────────────────────┴──────────────┴─────────────────────────────────┘                  
+                                                                                                                                    
+Estimated rows once ingested: ~300,000 structured rows covering all regions, 20+ diseases, 1990–2024.                                                                                                   
+                                                                                                                                    
+---                                                                                                                                                                                                     
+The Americas Problem Is Severe                                                                                                      
+                                                                                                                                                                                                        
+The app is positioned as "America First" but it can't report on:
+- Brazil (600K+ malaria cases/year in Amazonia, #1 in the Americas)                                                                                                                                     
+- Colombia, Venezuela, Peru, Haiti, Honduras — all endemic                                                                                                                                              
+- US imported cases and their acquisition countries                                                                                                                                                     
+- Dengue, Zika, Chikungunya in US territories (Puerto Rico, USVI)                                                                                                                                       
+- Any arboviral burden in US allies (UK, Australia, Japan — travelers)                                                                                                                                  
+                                                                                                                                                                                                        
+PAHO PLISA + IHME GBD + CDC MMWR together fix this entirely.                                                                                                                                            
+                                                                                                                                                                                                        
+---                                                                                                                                                                                                     
+Proposed Architecture                                                                                                                                                                                   
+                                                                                                                                    
+                    ┌─────────────────────────────────────┐
+Sources           │            L0 Ingest                │   S3: raw/{source}/dt=YYYY-MM-DD/
+─────────         │  ┌──────────────────────────────┐   │                                                                                                                                             
+WHO GHO OData ────┤  │ Python scrapers + API clients │   │                                                                                                                                            
+WMR Excel    ─────┤  │ +                             │   │                                                                                                                                            
+IHME GBD CSV ─────┤  │ Bedrock (Claude Haiku)        │   │   ← NLP for DON/MMWR PDFs                                                                                                                  
+Global Fund  ─────┤  │ for unstructured source NLP   │   │                                                                                                                                            
+WHO DON HTML ─────┤  └──────────────────────────────┘   │                                                                                                                                             
+CDC MMWR HTML─────┤                                     │                                                                                                                                             
+PAHO PLISA   ─────┘                                     │                                                                                                                                             
+                    ┌─────────────────────────────────────┐                                                                         
+                    │            L1 Transform              │   S3: processed/ OR RDS (Postgres)                                                                                                         
+                    │  Normalize → Dedupe → Link entities  │                                                                                                                                            
+                    │  Compute DCI scores (Bedrock Sonnet) │                                                                                                                                            
+                    └─────────────────────────────────────┘                                                                                                                                             
+                    ┌─────────────────────────────────────┐                                                                                                                                             
+                    │            L2 Serve                  │   S3: serving/v2/ + existing v1/                                                                                                           
+                    │  Rebuild all chapter JSONs           │                                                                                                                                            
+                    │  New: Command page live data         │                                                                                                                                            
+                    └─────────────────────────────────────┘                                                                                                                                             
+                                                                                                                                                                                                        
+Bedrock role: Claude Haiku at L0 for NLP extraction from WHO DON HTML and CDC MMWR reports (entity extraction: disease, country, case counts, dates, severity). Claude Sonnet at L1 for DCI score       
+computation on new multi-disease data.                                                                                                                                                                  
+                                                                                                                                                                                                        
+---                                                                                                                                 
+The Reference S3 Bucket                      
+                        
+The explore agent found a second bucket referenced in the existing code: imacs-mm-foundation-data-prod. This has OECD DAC2A data (1.4GB CSV), Global Fund full financials, and implementing partner
+data. I need to know if that's accessible.  

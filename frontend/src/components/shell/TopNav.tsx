@@ -36,7 +36,7 @@ export function TopNav() {
   return (
     <header className="h-16 flex items-center px-6 gap-10 border-b border-surface-3 bg-white z-50 shrink-0">
       {/* Logo + Branding */}
-      <Link href="/investment" className="flex items-center gap-3 shrink-0">
+      <Link href="/command" className="flex items-center gap-3 shrink-0">
         <Image
           src="/mnm-logo.webp"
           alt="Malaria No More logo"

@@ -203,6 +203,104 @@ export const fetchStateDetail = (code: string) => get<StateData>(`data/us-ecosys
 export const fetchImpact      = () => get<ImpactResults>("data/impact/results.json");
 export const fetchOutlook     = () => get<OutlookData>("data/risk/outlook.json");
 
+// ── Command page — live S3 data (WHO DON, burden, threats) ──────────────────
+
+const CMD_ROOT =
+  process.env.DATA_ROOT_COMMAND ??
+  "https://malariascope-dev-data-019847570980.s3.amazonaws.com/v1";
+
+async function getCmd<T>(path: string): Promise<T> {
+  const url = `${CMD_ROOT}/${path}`;
+  const res = await fetch(url, { next: { revalidate: 300 } });
+  if (!res.ok) throw new Error(`Command data fetch failed: ${url} (${res.status})`);
+  return res.json() as Promise<T>;
+}
+
+export type GlobalSummary = {
+  period: string;
+  global: {
+    estimated_cases: number;
+    estimated_deaths: number;
+    countries_endemic: number;
+    countries_in_alert: number;
+    pf_proportion: number;
+    pv_proportion: number;
+    cases_change_yoy: number;
+    deaths_change_yoy: number;
+    funding_gap_usd: number;
+    total_funding_usd?: number;
+    active_febrile_overlaps?: number;
+  };
+  top_burden_countries: CommandCountrySummary[];
+};
+
+export type CommandCountrySummary = {
+  iso3: string;
+  name: string;
+  region?: string;
+  incidence_per_1000: number;
+  cases: number;
+  deaths: number;
+  cases_change_yoy: number | null;
+  deaths_change_yoy?: number;
+  llin_coverage?: number;
+  irs_coverage?: number;
+  act_coverage?: number;
+  rdt_coverage?: number;
+  funding_per_capita?: number;
+  elimination_phase?: string;
+  population_at_risk?: number | null;
+  alert_level: string;
+  lat?: number;
+  lng?: number;
+  change_yoy?: number;
+  data_year?: number;
+};
+
+export type ThreatEvent = {
+  event_id: string;
+  disease: string;
+  event_type: string;
+  country_iso3: string;
+  country_name: string;
+  admin1: string;
+  severity: number;
+  start_date: string;
+  status: string;
+  cases_reported: number | null;
+  deaths_reported: number | null;
+  overlap_with_malaria_zone: number;
+  dci_score: number | null;
+  source: string;
+  lat: number;
+  lng: number;
+  narrative: string;
+};
+
+export type GlobalTimeseriesPoint = {
+  year: number;
+  cases_millions: number;
+  deaths_thousands: number;
+  incidence_per_1000: number;
+  llin_coverage: number;
+  act_coverage: number;
+};
+
+export type EndemicBoundaries = {
+  type: "FeatureCollection";
+  features: Array<{
+    type: "Feature";
+    properties: { iso3: string; name: string };
+    geometry: { type: string; coordinates: unknown };
+  }>;
+};
+
+export const getGlobalSummary    = () => getCmd<GlobalSummary>("burden/global-summary.json");
+export const getCommandCountries = () => getCmd<CommandCountrySummary[]>("burden/countries.json");
+export const getActiveThreats    = () => getCmd<ThreatEvent[]>("events/active-threats.json");
+export const getGlobalTimeseries = () => getCmd<GlobalTimeseriesPoint[]>("burden/timeseries-global.json");
+export const getEndemicBoundaries = () => getCmd<EndemicBoundaries>("geo/endemic-boundaries.json");
+
 // ── US Map geometry (server-side only) ───────────────────────────────────────
 
 export type { StatePath } from "./map-types";

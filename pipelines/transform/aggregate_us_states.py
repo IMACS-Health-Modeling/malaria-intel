@@ -50,7 +50,7 @@ def run(dry_run: bool = False) -> None:
         try:
             nih_raw = get_json(latest_raw("nih-reporter", "grants.json"))
             for grant in nih_raw.get("grants", []):
-                state = grant.get("_state", "").upper().strip()
+                state = (grant.get("_state") or "").upper().strip()
                 amount = grant.get("award_amount") or 0
                 if state and len(state) == 2:
                     nih_usd[state] += float(amount)

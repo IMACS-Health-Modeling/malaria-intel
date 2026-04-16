@@ -19,8 +19,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 import boto3
 from pipelines.utils.s3 import get_json, put_json, processed_key, BUCKET
 from pipelines.utils.logger import PipelineLogger
-
-s3 = boto3.client("s3")
+from pipelines.utils.db import fetchall
 
 # PMI priority countries with FY2024 approximate allocations (USD)
 # Source: PMI FY2024 Congressional Budget Justification
@@ -46,27 +45,28 @@ COUNTRY_NAMES: dict[str, str] = {
 
 
 def load_global_fund_flows() -> dict[str, float]:
-    """Load Global Fund grant data from existing raw layer."""
-    try:
-        gf_key = "raw/health/global-fund/grants/Grants.json.gz"
-        # Try from foundation bucket first
-        resp = boto3.client("s3").get_object(
-            Bucket="imacs-mm-foundation-data-prod", Key=gf_key
-        )
-        import gzip, json as _json
-        data = _json.loads(gzip.decompress(resp["Body"].read()))
-        grants = data if isinstance(data, list) else data.get("grants", [])
+    """Load Global Fund approved grant amounts from fact_funding DB table.
 
+    Uses the most recent board-approved grant year per country as the
+    representative GF commitment. US share ~33% of total GF.
+    """
+    try:
+        rows = fetchall(
+            """SELECT iso3, SUM(amount_usd) as total
+               FROM malaria.fact_funding
+               WHERE source_code = 'global_fund_v4'
+                 AND amount_type = 'approved'
+                 AND amount_usd > 0
+                 AND disease = 'malaria'
+               GROUP BY iso3""",
+            None,
+        )
         # GF US contribution is ~33% of total disbursements
-        flows: dict[str, float] = defaultdict(float)
-        for g in grants:
-            country = g.get("countryCode", g.get("country_code", ""))
-            disease = g.get("grantId", g.get("grant_id", ""))
-            # Only malaria grants (grant ID contains -M-)
-            if "-M-" in str(disease) or str(disease).endswith("-M"):
-                disbursed = g.get("disbursedAmount", g.get("disbursed_amount", 0)) or 0
-                flows[country] += float(disbursed) * 0.33  # US ~33% of GF
-        return dict(flows)
+        flows: dict[str, float] = {
+            r["iso3"]: float(r["total"] or 0) * 0.33
+            for r in rows if r["iso3"]
+        }
+        return flows
     except Exception:
         return {}
 

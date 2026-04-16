@@ -24,17 +24,16 @@ KEYWORDS = ["malaria", "PMI", "antimalarial", "plasmodium falciparum", "insectic
 FISCAL_YEARS = list(range(2015, 2025))
 
 
-def fetch_by_geography(keyword: str, fiscal_year: int, award_type: str) -> list[dict]:
-    """Fetch spending aggregated by recipient state for a keyword + FY."""
+def fetch_by_geography(keyword: str, fiscal_year: int) -> list[dict]:
+    """Fetch spending aggregated by recipient state for a keyword + FY (all award types combined)."""
     payload = {
         "filters": {
             "keywords": [keyword],
             "time_period": [{"start_date": f"{fiscal_year-1}-10-01", "end_date": f"{fiscal_year}-09-30"}],
-            "award_type_codes": ["02", "03", "04", "05"] if award_type == "grants" else ["A", "B", "C", "D"],
+            "award_type_codes": ["02", "03", "04", "05", "A", "B", "C", "D"],
         },
         "scope": "recipient_location",
         "geo_layer": "state",
-        "geo_layer_filters": [],
     }
     resp = requests.post(f"{API_BASE}/search/spending_by_geography/", json=payload, timeout=60)
     resp.raise_for_status()
@@ -51,19 +50,18 @@ def run(dry_run: bool = False, date: str | None = None) -> None:
     with log.step("Fetch USAspending geography data"):
         for keyword in KEYWORDS:
             for fy in FISCAL_YEARS:
-                for award_type in ["grants", "contracts"]:
-                    try:
-                        results = fetch_by_geography(keyword, fy, award_type)
-                        for r in results:
-                            code = r.get("shape_code", "")
-                            amt = r.get("aggregated_amount", 0) or 0
-                            if code:
-                                state_totals[code] = state_totals.get(code, 0) + amt
-                                if r.get("display_name"):
-                                    state_names[code] = r["display_name"]
-                        log.info(f"  kw={keyword!r} fy={fy} type={award_type} → {len(results)} states")
-                    except Exception as e:
-                        log.warn(f"  Failed kw={keyword!r} fy={fy} type={award_type}: {e}")
+                try:
+                    results = fetch_by_geography(keyword, fy)
+                    for r in results:
+                        code = r.get("shape_code", "")
+                        amt = r.get("aggregated_amount", 0) or 0
+                        if code:
+                            state_totals[code] = state_totals.get(code, 0) + amt
+                            if r.get("display_name"):
+                                state_names[code] = r["display_name"]
+                    log.info(f"  kw={keyword!r} fy={fy} → {len(results)} states")
+                except Exception as e:
+                    log.warn(f"  Failed kw={keyword!r} fy={fy}: {e}")
 
     records = [
         {"state_code": code, "state_name": state_names.get(code, code), "total_usd": round(total)}

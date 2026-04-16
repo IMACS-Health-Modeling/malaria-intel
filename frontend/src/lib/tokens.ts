@@ -9,6 +9,12 @@ export const color = {
     climate:      "#5B8FF4",
     surveillance: "#19bdc3",
   },
+  uncertainty: {
+    low:       "#1d499e",
+    moderate:  "#ED7238",
+    high:      "#ef6801",
+    very_high: "#dc2626",
+  },
   accent: {
     orange: "#ED7238",
     navy:   "#1d499e",
@@ -17,6 +23,22 @@ export const color = {
     yellow: "#f5ec51",
     dark:   "#2c3277",
   },
+} as const;
+
+export const ALERT_LEVELS = {
+  extreme:  { label: "Extreme",  color: "#7c3aed" },
+  critical: { label: "Critical", color: "#dc2626" },
+  high:     { label: "High",     color: "#ef6801" },
+  moderate: { label: "Moderate", color: "#ED7238" },
+  low:      { label: "Low",      color: "#1d499e" },
+} as const;
+
+export const EVENT_COLORS: Record<string, string> = {
+  arbovirus:   "#FF8951",
+  hemorrhagic: "#dc2626",
+  bacterial:   "#7c3aed",
+  conflict:    "#dc2626",
+  respiratory: "#4f46e5",
 } as const;
 
 export const font = {
@@ -35,6 +57,13 @@ export const motion = {
 /** Chapter metadata — single source of truth for nav + pages */
 export const CHAPTERS = [
   {
+    id:    "command",
+    href:  "/command",
+    label: "Command",
+    desc:  "The global malaria threat landscape",
+    color: color.signal.conflict,
+  },
+  {
     id:    "investment",
     href:  "/investment",
     label: "Investment",
@@ -49,18 +78,18 @@ export const CHAPTERS = [
     color: color.accent.navy,
   },
   {
-    id:    "us-ecosystem",
-    href:  "/us-ecosystem",
-    label: "US Ecosystem",
-    desc:  "Who in America does this work",
-    color: color.accent.teal,
-  },
-  {
     id:    "impact",
     href:  "/impact",
     label: "Impact",
     desc:  "What the investment achieved",
     color: color.accent.blue,
+  },
+  {
+    id:    "us-ecosystem",
+    href:  "/us-ecosystem",
+    label: "US Ecosystem",
+    desc:  "Who in America does this work",
+    color: color.accent.teal,
   },
   {
     id:    "outlook",
