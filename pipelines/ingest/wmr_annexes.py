@@ -284,6 +284,244 @@ def parse_annex_wide(ws) -> list[dict]:
     return rows_out
 
 
+_4C_CHANNELS = [
+    (2, "global_fund"),
+    (3, "pmi_usaid"),
+    (4, "world_bank"),
+    (5, "uk_aid"),
+    (6, "other"),
+    (7, "government"),
+]
+
+_4D_INDICATORS = [
+    (2, "itn_delivered",       None),
+    (3, "llin_coverage_pct",   "pct"),
+    (4, "irs_population",      None),
+    (5, "rdt_distributed",     None),
+    (6, "act_courses",         None),
+    (7, "act_cases_treated",   None),
+]
+
+
+def _dash_to_none(v) -> float | None:
+    """Convert WMR dash markers and blank to None; parse numeric strings."""
+    if v is None:
+        return None
+    s = str(v).replace(",", "").replace(" ", "").replace("\u2013", "").strip()
+    if not s or s in ("-", "–", "NA", "na", "–"):
+        return None
+    try:
+        return float(s)
+    except ValueError:
+        return None
+
+
+def _parse_country_year_wide(ws, col_specs: list[tuple]) -> list[dict]:
+    """
+    Generic parser for WMR wide-format sheets where:
+      col 0 = Country (blank rows carry forward)
+      col 1 = Year
+      col N = data values per col_specs: list of (col_idx, key_name)
+    Skips rows with no year or where country resolves to None.
+    """
+    rows_out: list[dict] = []
+    current_iso3: str | None = None
+    data_started = False
+
+    for row in ws.iter_rows(values_only=True):
+        if not any(row):
+            continue
+        col0 = str(row[0]).strip() if row[0] is not None else ""
+        col1 = row[1]
+
+        # Detect data start: col1 is a year integer
+        if not data_started:
+            try:
+                y = int(float(str(col1))) if col1 else 0
+                if 1990 <= y <= 2030:
+                    data_started = True
+            except (ValueError, TypeError):
+                pass
+
+        if not data_started:
+            if col0 and col0.upper() not in {r.upper() for r in _REGION_NAMES}:
+                iso3 = _name_to_iso3(col0)
+                if iso3:
+                    current_iso3 = iso3
+            continue
+
+        if col0:
+            col0_up = col0.upper()
+            if col0_up in {r.upper() for r in _REGION_NAMES}:
+                current_iso3 = None
+                continue
+            iso3 = _name_to_iso3(col0)
+            current_iso3 = iso3 if iso3 else None
+
+        if not current_iso3:
+            continue
+
+        try:
+            year = int(float(str(col1)))
+        except (TypeError, ValueError):
+            continue
+        if not (1990 <= year <= 2030):
+            continue
+
+        rec: dict = {"iso3": current_iso3, "year": year}
+        for col_idx, key in col_specs:
+            val = row[col_idx] if len(row) > col_idx else None
+            rec[key] = _dash_to_none(val)
+        rows_out.append(rec)
+
+    return rows_out
+
+
+def parse_annex_4c(ws) -> list[dict]:
+    """
+    Annex 4C — Funding for malaria (reported by donors).
+    Returns flat rows: {iso3, year, channel, amount_usd}
+    """
+    col_specs = [(col_idx, chan) for col_idx, chan in _4C_CHANNELS]
+    raw = _parse_country_year_wide(ws, col_specs)
+    out: list[dict] = []
+    for rec in raw:
+        for _, chan in _4C_CHANNELS:
+            amt = rec.get(chan)
+            if amt is not None and amt != 0.0:
+                out.append({"iso3": rec["iso3"], "year": rec["year"],
+                             "channel": chan, "amount_usd": amt})
+    return out
+
+
+def parse_annex_4d(ws) -> list[dict]:
+    """
+    Annex 4D — Commodities / interventions distributed.
+    Returns flat rows: {iso3, year, indicator, value, unit}
+    """
+    col_specs = [(col_idx, ind) for col_idx, ind, _ in _4D_INDICATORS]
+    raw = _parse_country_year_wide(ws, col_specs)
+    out: list[dict] = []
+    for rec in raw:
+        for _, ind, unit in _4D_INDICATORS:
+            val = rec.get(ind)
+            if val is not None:
+                out.append({"iso3": rec["iso3"], "year": rec["year"],
+                             "indicator": ind, "value": val, "unit": unit})
+    return out
+
+
+_INTERV_INDICATOR_MAP = {
+    "number of itns distributed":                                          "itn_delivered",
+    "modelled percentage of population with access to an itn":             "llin_coverage_pct",
+    "number of people protected by irs":                                   "irs_population",
+    "number of rdts distributed":                                          "rdt_distributed",
+    "any first-line treatment courses delivered (including act)":          "act_courses",
+    "act treatment courses distributed":                                   "act_courses",
+    "number of malaria cases treated with act":                            "act_cases_treated",
+    "number of malaria cases treated with any first-line treatment":       "act_cases_treated",
+    "no. of itns delivered":                                               "itn_delivered",
+    "modelled percentage of populat":                                      "llin_coverage_pct",
+    "no. of people protected by irs":                                      "irs_population",
+    "no. of rdts distributed":                                             "rdt_distributed",
+    "any first-line treatment cours":                                      "act_courses",
+    "no. of malaria cases treated w":                                      "act_cases_treated",
+}
+
+
+def parse_long_format_interventions(ws) -> list[dict]:
+    """
+    Parse Long_Format intervention sheet: region, iso, country, year, indicator, value.
+    Maps indicator text to our internal codes. Used by WMR 2025.
+    """
+    rows_out: list[dict] = []
+    for i, row in enumerate(ws.iter_rows(values_only=True)):
+        if i == 0:
+            continue  # skip header
+        if not row or row[1] is None:
+            continue
+        iso3 = str(row[1]).strip().upper()
+        if len(iso3) != 3:
+            continue
+        try:
+            year = int(row[3])
+        except (TypeError, ValueError):
+            continue
+        indicator_raw = str(row[4] or "").strip().lower()
+        value = _num(row[5])
+        if value is None:
+            continue
+        # Match indicator
+        internal = None
+        for prefix, code in _INTERV_INDICATOR_MAP.items():
+            if indicator_raw.startswith(prefix):
+                internal = code
+                break
+        if internal is None:
+            continue
+        unit = "pct" if internal == "llin_coverage_pct" else None
+        rows_out.append({"iso3": iso3, "year": year, "indicator": internal,
+                         "value": value, "unit": unit})
+    return rows_out
+
+
+def parse_annex_4g(ws) -> list[dict]:
+    """
+    Annex 4G — Population denominators (single-year snapshot).
+    Returns rows: {iso3, population, at_risk_low_high, at_risk_high}
+    Used to backfill dim_country.population.
+    """
+    rows_out: list[dict] = []
+    current_iso3: str | None = None
+    data_started = False
+
+    for row in ws.iter_rows(values_only=True):
+        if not any(row):
+            continue
+        col0 = str(row[0]).strip() if row[0] is not None else ""
+
+        # Detect data: col1 contains a large population number (> 50000)
+        if not data_started:
+            try:
+                v = _dash_to_none(row[1] if len(row) > 1 else None)
+                if v and v > 50_000:
+                    data_started = True
+            except Exception:
+                pass
+
+        if not data_started:
+            if col0 and col0.upper() not in {r.upper() for r in _REGION_NAMES}:
+                iso3 = _name_to_iso3(col0)
+                if iso3:
+                    current_iso3 = iso3
+            continue
+
+        if col0:
+            col0_up = col0.upper()
+            if col0_up in {r.upper() for r in _REGION_NAMES}:
+                current_iso3 = None
+                continue
+            iso3 = _name_to_iso3(col0)
+            current_iso3 = iso3 if iso3 else None
+
+        if not current_iso3:
+            continue
+
+        pop        = _dash_to_none(row[1] if len(row) > 1 else None)
+        at_risk_lh = _dash_to_none(row[2] if len(row) > 2 else None)
+        at_risk_h  = _dash_to_none(row[3] if len(row) > 3 else None)
+
+        if pop:
+            rows_out.append({
+                "iso3": current_iso3,
+                "population": pop,
+                "at_risk_low_high": at_risk_lh,
+                "at_risk_high": at_risk_h,
+            })
+
+    return rows_out
+
+
 def process_wmr_year(wmr_year: int, log, dry_run: bool, date: str | None) -> list[tuple]:
     """Load annex 4h for a WMR year. Returns list of (row_dict, source_code)."""
     source_code = SOURCE_CODE_MAP.get(wmr_year, f"wmr_{wmr_year}")
@@ -346,6 +584,58 @@ def process_wmr_year(wmr_year: int, log, dry_run: bool, date: str | None) -> lis
     return [(row, source_code) for row in rows]
 
 
+def process_wmr_interventions(wmr_year: int, log, dry_run: bool) -> tuple[list, list, list]:
+    """Load annexes 4c/4d/4g for wmr_year. Returns (funding_rows, intervention_rows, pop_rows)."""
+    source_code = SOURCE_CODE_MAP.get(wmr_year, f"wmr_{wmr_year}")
+    foundation_keys = FOUNDATION_ANNEXES.get(wmr_year, {})
+    funding_rows: list[dict] = []
+    interv_rows:  list[dict] = []
+    pop_rows:     list[dict] = []
+
+    def _load(annex: str) -> openpyxl.Workbook | None:
+        key = foundation_keys.get(annex)
+        if key:
+            wb = load_foundation_xlsx(key)
+            if wb:
+                return wb
+        return None
+
+    # 4c — Funding (only WMR 2024 has it)
+    if "4c" in foundation_keys:
+        wb = _load("4c")
+        if wb:
+            ws = wb.active
+            funding_rows = parse_annex_4c(ws)
+            log.info(f"  WMR {wmr_year} 4c: {len(funding_rows)} funding rows")
+
+    # 4d — Commodities/interventions (WMR 2024 wide format)
+    if "4d" in foundation_keys:
+        wb = _load("4d")
+        if wb:
+            ws = wb.active
+            interv_rows = parse_annex_4d(ws)
+            log.info(f"  WMR {wmr_year} 4d: {len(interv_rows)} intervention rows")
+
+    # 4g — WMR 2025 renumbered 4d as 4g; it contains Long_Format interventions
+    # WMR 2024 4g = population denominators; WMR 2025 4g = commodities
+    if "4g" in foundation_keys:
+        wb = _load("4g")
+        if wb:
+            sheet_names_lower = {n.lower(): n for n in wb.sheetnames}
+            if "long_format" in sheet_names_lower and not interv_rows:
+                # WMR 2025 pattern: Long_Format = interventions data
+                ws = wb[sheet_names_lower["long_format"]]
+                interv_rows = parse_long_format_interventions(ws)
+                log.info(f"  WMR {wmr_year} 4g (long_format): {len(interv_rows)} intervention rows")
+            else:
+                # WMR 2024 pattern: wide format = population denominators
+                ws = wb.active
+                pop_rows = parse_annex_4g(ws)
+                log.info(f"  WMR {wmr_year} 4g: {len(pop_rows)} population rows")
+
+    return funding_rows, interv_rows, pop_rows
+
+
 def run(dry_run: bool = False, date: str | None = None, years: list[int] | None = None) -> None:
     log = PipelineLogger("wmr_annexes", dry_run=dry_run)
     target_years = years or [2025, 2024, 2023, 2022]
@@ -388,7 +678,87 @@ def run(dry_run: bool = False, date: str | None = None, years: list[int] | None 
             except Exception as e:
                 log.warn(f"  DB skipped: {e}")
 
-    log.finish(records=len(all_tuples))
+    # ── Interventions, funding, population (4c/4d/4g) ────────────────────────
+    all_funding:  list[dict] = []
+    all_interv:   list[dict] = []
+    all_pop:      list[dict] = []
+    with log.step(f"Process WMR 4c/4d/4g annexes: {target_years}"):
+        for yr in target_years:
+            f, i, p = process_wmr_interventions(yr, log, dry_run)
+            all_funding.extend([(row, SOURCE_CODE_MAP.get(yr, f"wmr_{yr}")) for row in f])
+            all_interv.extend( [(row, SOURCE_CODE_MAP.get(yr, f"wmr_{yr}")) for row in i])
+            all_pop.extend(p)
+
+    if not dry_run:
+        # ── Upsert 4c → fact_funding ─────────────────────────────────────────
+        if all_funding:
+            with log.step("Upsert WMR 4c funding → PostgreSQL"):
+                try:
+                    from pipelines.utils.db import upsert_many, filter_valid_iso3
+                    SQL = """
+                        INSERT INTO malaria.fact_funding
+                            (iso3, year, source_code, channel, disease, amount_usd, amount_type)
+                        VALUES %s
+                        ON CONFLICT DO NOTHING
+                    """
+                    db_rows = [
+                        (row["iso3"], row["year"], src, row["channel"],
+                         DISEASE_CODE, row["amount_usd"], "disbursed")
+                        for row, src in all_funding
+                    ]
+                    db_rows, skipped = filter_valid_iso3(db_rows, iso3_col=0)
+                    if skipped:
+                        log.info(f"  Skipped {skipped} rows (ISO3 not in dim_country)")
+                    inserted = upsert_many(SQL, db_rows)
+                    log.info(f"  Upserted {inserted} funding rows")
+                except Exception as e:
+                    log.warn(f"  DB skipped: {e}")
+
+        # ── Upsert 4d → fact_intervention ────────────────────────────────────
+        if all_interv:
+            with log.step("Upsert WMR 4d interventions → PostgreSQL"):
+                try:
+                    from pipelines.utils.db import upsert_many, filter_valid_iso3
+                    SQL = """
+                        INSERT INTO malaria.fact_intervention
+                            (iso3, year, source_code, indicator, value, unit)
+                        VALUES %s
+                        ON CONFLICT (iso3, year, source_code, indicator)
+                        DO UPDATE SET value=EXCLUDED.value, ingested_at=NOW()
+                    """
+                    db_rows = [
+                        (row["iso3"], row["year"], src,
+                         row["indicator"], row["value"], row.get("unit"))
+                        for row, src in all_interv
+                    ]
+                    db_rows, skipped = filter_valid_iso3(db_rows, iso3_col=0)
+                    if skipped:
+                        log.info(f"  Skipped {skipped} rows (ISO3 not in dim_country)")
+                    inserted = upsert_many(SQL, db_rows)
+                    log.info(f"  Upserted {inserted} intervention rows")
+                except Exception as e:
+                    log.warn(f"  DB skipped: {e}")
+
+        # ── Update dim_country.population from 4g ────────────────────────────
+        if all_pop:
+            with log.step("Update dim_country.population from WMR 4g"):
+                try:
+                    from pipelines.utils.db import get_conn, filter_valid_iso3
+                    pop_tuples = [(int(r["population"]), r["iso3"]) for r in all_pop if r.get("population")]
+                    with get_conn() as conn:
+                        with conn.cursor() as cur:
+                            for pop, iso3 in pop_tuples:
+                                cur.execute(
+                                    "UPDATE malaria.dim_country SET population=%s WHERE iso3=%s",
+                                    (pop, iso3),
+                                )
+                        conn.commit()
+                    log.info(f"  Updated population for {len(pop_tuples)} countries")
+                except Exception as e:
+                    log.warn(f"  Population update skipped: {e}")
+
+    total = len(all_tuples) + len(all_funding) + len(all_interv)
+    log.finish(records=total)
 
 
 if __name__ == "__main__":

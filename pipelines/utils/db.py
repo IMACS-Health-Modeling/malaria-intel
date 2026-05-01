@@ -1,16 +1,36 @@
 """
 Database utility — PostgreSQL connection and helpers.
-Connection string from DATABASE_URL env var.
+Connection string from DATABASE_URL env var, with fallback to .env.pipeline file.
 """
 
 import os
 import psycopg2
 import psycopg2.extras
+from pathlib import Path
 from typing import Any
 
-DATABASE_URL = os.environ.get(
-    "DATABASE_URL",
-    "postgresql://postgres:postgres@localhost:5432/malaria_intel"
+
+def _load_env_pipeline() -> str | None:
+    """
+    Read DATABASE_URL from .env.pipeline file if not set in environment.
+    Searches from this file's location up to the repo root.
+    """
+    search = Path(__file__).resolve().parent
+    for _ in range(5):
+        candidate = search / ".env.pipeline"
+        if candidate.exists():
+            for line in candidate.read_text().splitlines():
+                line = line.strip()
+                if line.startswith("DATABASE_URL="):
+                    return line.split("=", 1)[1].strip()
+        search = search.parent
+    return None
+
+
+DATABASE_URL = (
+    os.environ.get("DATABASE_URL")
+    or _load_env_pipeline()
+    or "postgresql://postgres:postgres@localhost:5432/malaria_intel"
 )
 
 

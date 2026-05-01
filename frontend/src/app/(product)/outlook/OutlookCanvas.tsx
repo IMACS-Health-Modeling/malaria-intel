@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import type { OutlookData } from "@/lib/data";
 import { ChapterHero } from "@/components/ui/ChapterHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { InfoTooltip } from "@/components/ui/InfoTooltip";
+import { METRIC_META } from "@/lib/metric-metadata";
 
 // ── Hooks ─────────────────────────────────────────────────────────────────────
 
@@ -108,15 +110,24 @@ function FundingGapSection({ data }: { data: OutlookData }) {
         <div className="grid grid-cols-3 gap-4">
           <div className="bg-surface-1 rounded-panel p-4 text-center border border-surface-3">
             <p className="text-2xs text-txt-muted mb-1">Current Funded</p>
-            <p className="text-xl font-mono font-bold" style={{ color: "#19bdc3" }}>{fmtB(funded)}</p>
+            <div className="flex items-center justify-center">
+              <p className="text-xl font-mono font-bold" style={{ color: "#19bdc3" }}>{fmtB(funded)}</p>
+              <InfoTooltip meta={METRIC_META.financing_gap} size={10} />
+            </div>
           </div>
           <div className="bg-surface-1 rounded-panel p-4 text-center border border-surface-3">
             <p className="text-2xs text-txt-muted mb-1">Annual Gap</p>
-            <p className="text-xl font-mono font-bold text-red-600">{fmtB(gap)}</p>
+            <div className="flex items-center justify-center">
+              <p className="text-xl font-mono font-bold text-red-600">{fmtB(gap)}</p>
+              <InfoTooltip meta={METRIC_META.financing_gap} size={10} />
+            </div>
           </div>
           <div className="bg-surface-1 rounded-panel p-4 text-center border border-surface-3">
             <p className="text-2xs text-txt-muted mb-1">US Share of Global Funding</p>
-            <p className="text-xl font-mono font-bold text-txt-primary">~17%</p>
+            <div className="flex items-center justify-center">
+              <p className="text-xl font-mono font-bold text-txt-primary">~17%</p>
+              <InfoTooltip meta={METRIC_META.us_pct_of_budget} size={10} />
+            </div>
           </div>
         </div>
       </div>
@@ -190,6 +201,7 @@ function CountryDependencySection({
                       <span className="text-xs font-mono text-txt-primary w-8 flex-shrink-0 text-right">
                         {c.us_pct_of_budget}%
                       </span>
+                      <InfoTooltip meta={METRIC_META.us_pct_of_budget} size={10} />
                     </div>
                   </td>
                   <td className="px-4 py-3">
@@ -268,9 +280,12 @@ function ScenarioBar({ scenario, maxLives, index, inView }: {
           <div className="mb-3">
             <div className="flex justify-between mb-1">
               <span className="text-2xs font-mono text-txt-muted">Lives at additional risk</span>
-              <span className="text-sm font-mono font-bold tabular-nums" style={{ color: barColor }}>
-                {livesCounted.toLocaleString()}
-              </span>
+              <div className="flex items-center">
+                <span className="text-sm font-mono font-bold tabular-nums" style={{ color: barColor }}>
+                  {livesCounted.toLocaleString()}
+                </span>
+                <InfoTooltip meta={METRIC_META.scenario_lives_at_risk} size={10} />
+              </div>
             </div>
             <div className="h-3 w-full bg-surface-2 rounded-pill overflow-hidden">
               <div

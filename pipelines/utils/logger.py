@@ -38,9 +38,23 @@ class PipelineLogger:
     def step(self, name: str) -> "StepContext":
         return StepContext(self, name)
 
-    def finish(self, records: int = 0) -> None:
+    def finish(self, records: int = 0, s3_keys: list[str] | None = None) -> None:
         elapsed = round(time.time() - self.start_ts, 2)
         self._log("finish", f"Pipeline complete in {elapsed}s", records=records, elapsed_s=elapsed)
+        if not self.dry_run:
+            try:
+                from pipelines.utils.db import get_conn
+                with get_conn() as conn:
+                    with conn.cursor() as cur:
+                        cur.execute(
+                            """INSERT INTO malaria.pipeline_runs
+                               (pipeline_name, stage, status, records_processed, finished_at, s3_keys)
+                               VALUES (%s, %s, %s, %s, NOW(), %s)""",
+                            (self.name, "full", "success", records, s3_keys),
+                        )
+                    conn.commit()
+            except Exception as e:
+                self._log("warn", f"pipeline_runs write failed: {e}")
 
 
 class StepContext:

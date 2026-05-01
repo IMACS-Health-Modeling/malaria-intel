@@ -6,6 +6,7 @@ import type { ImpactResults, CaseTrendsData } from "@/lib/data";
 import { ChapterHero } from "@/components/ui/ChapterHero";
 import { KPICard } from "@/components/ui/KPICard";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { METRIC_META } from "@/lib/metric-metadata";
 
 // ── In-view hook ──────────────────────────────────────────────────────────────
 
@@ -427,6 +428,7 @@ export function ImpactCanvas({ data, trends }: { data: ImpactResults; trends: Ca
             subvalue="Since 2010 (PMI-attributed)"
             glowColor="rgba(91,143,244,0.15)"
             accent="#5B8FF4"
+            meta={METRIC_META.lives_saved}
           />
           <KPICard
             label="Cases Averted Annually"
@@ -434,6 +436,7 @@ export function ImpactCanvas({ data, trends }: { data: ImpactResults; trends: Ca
             subvalue="Per year across PMI countries"
             glowColor="rgba(91,143,244,0.10)"
             accent="#5B8FF4"
+            meta={METRIC_META.cases_averted}
           />
           <KPICard
             label="Child Deaths Prevented"
@@ -441,6 +444,7 @@ export function ImpactCanvas({ data, trends }: { data: ImpactResults; trends: Ca
             subvalue="Under-5 mortality reduction"
             glowColor="rgba(25,189,195,0.12)"
             accent="#19bdc3"
+            meta={METRIC_META.child_deaths_prevented}
           />
           <KPICard
             label="Cost Per Life Saved"
@@ -448,6 +452,7 @@ export function ImpactCanvas({ data, trends }: { data: ImpactResults; trends: Ca
             subvalue="Among most cost-effective interventions"
             glowColor="rgba(91,143,244,0.10)"
             accent="#5B8FF4"
+            meta={METRIC_META.cost_per_death_averted}
           />
         </div>
 
@@ -460,6 +465,7 @@ export function ImpactCanvas({ data, trends }: { data: ImpactResults; trends: Ca
               subvalue="Insecticide-treated bed nets"
               glowColor="rgba(25,189,195,0.10)"
               accent="#19bdc3"
+              meta={METRIC_META.gf_nets_distributed}
             />
             <KPICard
               label="Cases Treated (GF)"
@@ -467,6 +473,7 @@ export function ImpactCanvas({ data, trends }: { data: ImpactResults; trends: Ca
               subvalue="Confirmed cases treated"
               glowColor="rgba(25,189,195,0.10)"
               accent="#19bdc3"
+              meta={METRIC_META.gf_cases_treated}
             />
             <KPICard
               label="Children via SMC (GF)"
@@ -481,6 +488,7 @@ export function ImpactCanvas({ data, trends }: { data: ImpactResults; trends: Ca
               subvalue="US-catalyzed Global Fund grants"
               glowColor="rgba(25,189,195,0.10)"
               accent="#19bdc3"
+              meta={METRIC_META.gf_disbursed}
             />
           </div>
         )}

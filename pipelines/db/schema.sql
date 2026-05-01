@@ -205,6 +205,26 @@ CREATE TABLE IF NOT EXISTS fact_climate (
 
 CREATE INDEX IF NOT EXISTS idx_climate_iso3 ON fact_climate (iso3, year);
 
+-- ── Partners / Ecosystem ─────────────────────────────────────────────────
+
+CREATE TABLE IF NOT EXISTS dim_partner (
+    id              SERIAL PRIMARY KEY,
+    name            TEXT     NOT NULL,
+    entity_type     TEXT,                  -- academia, cro, ngo, pharma, government, service_provider
+    entity_type_raw TEXT,                  -- original label from source
+    city            TEXT,
+    state_code      CHAR(2),               -- US 2-letter abbreviation
+    country_iso3    CHAR(3)  DEFAULT 'USA',
+    notes           TEXT,                  -- role / contribution description
+    active_year     SMALLINT,              -- reporting year (2026 = 2025-26 cycle)
+    data_source     TEXT     DEFAULT 'mmv_us_partners',
+    ingested_at     TIMESTAMPTZ DEFAULT NOW(),
+    UNIQUE (name, active_year)
+);
+
+CREATE INDEX IF NOT EXISTS idx_partner_type ON dim_partner (entity_type);
+CREATE INDEX IF NOT EXISTS idx_partner_year ON dim_partner (active_year);
+
 -- ── Pipeline run log ──────────────────────────────────────────────────────
 
 CREATE TABLE IF NOT EXISTS pipeline_runs (

@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { geoNaturalEarth1, geoPath } from "d3";
 import * as topojson from "topojson-client";
 import { ChapterHero } from "@/components/ui/ChapterHero";
+import { InfoTooltip } from "@/components/ui/InfoTooltip";
+import { METRIC_META } from "@/lib/metric-metadata";
 import type { WorldMapData, CountryFlow } from "@/lib/data";
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -217,14 +219,17 @@ export function FlowsCanvas({ data }: { data: WorldMapData }) {
         {selectedCountry === null && (
           <div className="grid grid-cols-2 gap-2 px-6 py-4 border-b border-surface-3 bg-surface-1">
             {[
-              { label: "Total US Allocation", value: `$${(data.flows.reduce((s, f) => s + f.us_allocation_usd, 0) / 1e9).toFixed(1)}B` },
-              { label: "PMI Countries", value: String(data.flows.length) },
-              { label: "Total Cases (2023)", value: `${(data.flows.reduce((s, f) => s + f.malaria_cases, 0) / 1e6).toFixed(0)}M` },
-              { label: "Total Deaths (2023)", value: `${(data.flows.reduce((s, f) => s + f.malaria_deaths, 0) / 1e3).toFixed(0)}K` },
+              { label: "Total US Allocation", value: `$${(data.flows.reduce((s, f) => s + f.us_allocation_usd, 0) / 1e9).toFixed(1)}B`, meta: METRIC_META.total_us_committed },
+              { label: "PMI Countries", value: String(data.flows.length), meta: METRIC_META.endemic_countries },
+              { label: "Total Cases (2023)", value: `${(data.flows.reduce((s, f) => s + f.malaria_cases, 0) / 1e6).toFixed(0)}M`, meta: METRIC_META.global_cases },
+              { label: "Total Deaths (2023)", value: `${(data.flows.reduce((s, f) => s + f.malaria_deaths, 0) / 1e3).toFixed(0)}K`, meta: METRIC_META.global_deaths },
             ].map((kpi) => (
               <div key={kpi.label} className="bg-white rounded-panel px-3 py-2 border border-surface-3">
                 <p className="text-2xs font-mono text-txt-muted uppercase tracking-[0.1em] mb-0.5">{kpi.label}</p>
-                <p className="text-base font-mono font-bold text-txt-primary">{kpi.value}</p>
+                <div className="flex items-center">
+                  <p className="text-base font-mono font-bold text-txt-primary">{kpi.value}</p>
+                  <InfoTooltip meta={kpi.meta} size={10} />
+                </div>
               </div>
             ))}
           </div>
@@ -281,9 +286,12 @@ export function FlowsCanvas({ data }: { data: WorldMapData }) {
 
               <h2 className="text-xl font-bold text-txt-primary mb-1">{selectedCountry.name}</h2>
               <div className="flex items-center gap-4 mb-5">
-                <p className="text-sm font-mono text-accent-orange">
-                  PMI Allocation: ${fmtUSD(selectedCountry.us_allocation_usd)}
-                </p>
+                <div className="flex items-center">
+                  <p className="text-sm font-mono text-accent-orange">
+                    PMI Allocation: ${fmtUSD(selectedCountry.us_allocation_usd)}
+                  </p>
+                  <InfoTooltip meta={METRIC_META.pmi_allocation} size={10} />
+                </div>
                 {(selectedCountry.usaspending_actual_usd ?? 0) > 0 && (
                   <p className="text-sm font-mono text-accent-teal">
                     USAID Actual: ${fmtUSD(selectedCountry.usaspending_actual_usd!)}
@@ -299,15 +307,21 @@ export function FlowsCanvas({ data }: { data: WorldMapData }) {
                 <div className="flex gap-4">
                   <div className="flex-1">
                     <p className="text-2xs font-mono text-txt-muted mb-0.5">Cases</p>
-                    <p className="text-sm font-mono font-medium text-txt-primary">
-                      {fmtNum(selectedCountry.malaria_cases)}
-                    </p>
+                    <div className="flex items-center">
+                      <p className="text-sm font-mono font-medium text-txt-primary">
+                        {fmtNum(selectedCountry.malaria_cases)}
+                      </p>
+                      <InfoTooltip meta={METRIC_META.country_cases} size={10} />
+                    </div>
                   </div>
                   <div className="flex-1">
                     <p className="text-2xs font-mono text-txt-muted mb-0.5">Deaths</p>
-                    <p className="text-sm font-mono font-medium text-txt-primary">
-                      {fmtNum(selectedCountry.malaria_deaths)}
-                    </p>
+                    <div className="flex items-center">
+                      <p className="text-sm font-mono font-medium text-txt-primary">
+                        {fmtNum(selectedCountry.malaria_deaths)}
+                      </p>
+                      <InfoTooltip meta={METRIC_META.country_deaths} size={10} />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -321,16 +335,22 @@ export function FlowsCanvas({ data }: { data: WorldMapData }) {
                   <div className="flex gap-4">
                     <div className="flex-1">
                       <p className="text-2xs font-mono text-txt-muted mb-0.5">Disbursed</p>
-                      <p className="text-sm font-mono font-medium text-accent-teal">
-                        ${fmtUSD(selectedCountry.gf_disbursed_usd)}
-                      </p>
+                      <div className="flex items-center">
+                        <p className="text-sm font-mono font-medium text-accent-teal">
+                          ${fmtUSD(selectedCountry.gf_disbursed_usd)}
+                        </p>
+                        <InfoTooltip meta={METRIC_META.gf_disbursed} size={10} />
+                      </div>
                     </div>
                     {selectedCountry.gf_committed_usd != null && selectedCountry.gf_committed_usd > 0 && (
                       <div className="flex-1">
                         <p className="text-2xs font-mono text-txt-muted mb-0.5">Committed</p>
-                        <p className="text-sm font-mono font-medium text-txt-secondary">
-                          ${fmtUSD(selectedCountry.gf_committed_usd)}
-                        </p>
+                        <div className="flex items-center">
+                          <p className="text-sm font-mono font-medium text-txt-secondary">
+                            ${fmtUSD(selectedCountry.gf_committed_usd)}
+                          </p>
+                          <InfoTooltip meta={METRIC_META.gf_committed} size={10} />
+                        </div>
                       </div>
                     )}
                   </div>

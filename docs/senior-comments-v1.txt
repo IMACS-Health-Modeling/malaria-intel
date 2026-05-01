@@ -1,0 +1,163 @@
+CORE NARRATIVE PRINCIPLE
+The "driver story" goes first, but stays small.
+
+On Page 1, tell the story of why malaria is failing globally — what the drivers are, pulled from literature
+But this story should NOT occupy much real estate on the page
+Analogy from your senior: It's like a fair — the entry ticket (driver story) is required to get in, but people actually care about the food coupons inside (the deeper insights). People want the driver context present but they don't want to dwell on it because it doesn't affect their decisions
+Keep it minimal. The real value is the insights that come immediately after.
+
+
+REFERENCE MATERIAL — READ THE BILL EMAIL
+Your senior forwarded an email that was sent to Bill, Drew, Jennie, and Spencer
+
+Action: Read it top to bottom
+That email contains the executive insights — that's the level of intelligence people are actually consuming today
+Example: The Global Fund monthly call yesterday (after Rwanda/Zambia) — someone mentioned that Central African Republic (CAR) wants Seasonal Malaria Chemoprevention (SMC). The question becomes: can your platform surface this kind of linkage from data?
+Similar angles exist across multiple countries — these are qualitative angles that no data dashboard (not even WHO GHO) captures
+WHO GHO gives the same indicators everyone already sees — zero added value. Your value comes from web tooling + RAG-extracted qualitative intelligence
+
+
+WHAT INSIGHTS TO EXTRACT AND SHOW
+Build out intelligence on these specific threads:
+
+Climate change impact — how it's affecting malaria transmission (country-by-country, region-by-region)
+Dollar flow narrative — where money is coming from, where it's going, what it's funding (deeper than Page 2's fund flow)
+Product pipeline story — which malaria products have been developed so far
+
+R21 vaccine — pull its full story: trial funding, where trials happened, how much funding came in
+RTS,S vaccine (the older one — "RR" in transcript is likely RTS,S) — same story
+Two people won the Malaria Prize for these — find and include that
+
+
+Vector resistance data as of today — current state, not historical
+Pull all of this through web tooling and RAG, not by hand
+
+
+TWO DIMENSIONS OF VALUE FOR INFORMATION
+Your senior defined the value hierarchy:
+
+Recency — today's info > yesterday's info. More recent = more valuable.
+Length (time span) — how far back the data goes, showing change over time. This is the higher-value dimension. If you can show how something has changed over 20 years, that's where the insight lives.
+
+Both matter. You've already nailed the "change over time" angle on the Zambia and Rwanda pages — that's valuable. Do the same at global level.
+
+MAJOR ACTION: GLOBALIZE THE OUTBREAK/FLOOD/DROUGHT MAP
+What you already have: On the Zambia and Rwanda country pages, your map shows:
+
+Cholera outbreaks
+Dengue outbreaks
+Other disease outbreaks
+Where flood happened, where drought happened
+How disease is increasing/decreasing
+
+Your senior says: take that same map logic and do it at GLOBAL level.
+The workflow he wants:
+Step 1 — Don't do a global systematic review
+
+For country-level maps you did systematic reviews. Don't do that for global — no budget/time for it
+Instead: extract from existing reports that say "in year X, flood happened in location Y"
+Build a time-series table from these reports
+The map reads the table and iterates through time
+
+Step 2 — Keep it global-scale, not hyper-local
+
+An executive looking at the world view doesn't care that "flood in this specific river caused X cases"
+They want world-level aggregated statistics — "this is the flood impact globally, broken down by region"
+Regional breakdown: "African region had X impact"
+Granularity has value, aggregation has value — but at world-view, scale up cleanly so the visual isn't messy
+As the user scrolls/zooms into Africa, granularity should increase automatically
+The system should handle this natively — user scrolls to Africa, detail appears. Center on a country, detail appears for that country
+
+
+CRITICAL WORKFLOW: HOW TO BUILD THE GLOBAL MAP (EXACT STEPS)
+Your senior was very specific here. Apurv, this is for you:
+Do NOT start from the existing data in the repo/sage. Start fresh.
+Step 1 — Isolate the map component
+
+Open a fresh, separate Claude/Plot window with no prior context
+Ask it: "I need a map that does X" — describe what you want the map to do
+Don't show it your existing map. Just describe the requirement.
+
+Step 2 — Extract the current data schema
+
+Find what table/JSON is currently feeding Apurv's existing map
+Export that table/JSON structure
+
+Step 3 — Ask Claude/Plot to design the global extension
+
+Give Claude (in the fresh window, connected to your current sessions) the table/JSON
+Ask: "To feed this table with all countries' global data, what literature do we need to search? What web scraping is needed? What quantitative data do we need?"
+Let Claude do deep research and give you the answer
+
+Step 4 — Split quality vs quantity
+
+Take Claude's research output and plug it into your own system
+Rule: Only rely on quantitative data that Claude/Plot can verify
+Do NOT rely on qualitative/evidence data from this — 5 million articles, 200 million evidence points, you can't search through that reliably
+For qualitative/evidence extraction, build a separate tooling engine
+
+Step 5 — Build a dedicated search + scraping engine
+
+This engine runs every week
+It goes out, finds new articles and literature
+Appends new rows to a running table
+Start by populating 20–30 years of historical data, then let it auto-append going forward
+
+
+WHAT TO SHOW ON THE GLOBAL MAP (LAYERS)
+Your senior wants a satellite base map with togglable layers:
+Layer 1 — Outbreak data
+
+Every infectious disease outbreak (WHO DON + CDC MMWR — you already have this data)
+Show them as live blinking/marked points on the satellite map (like the Rwanda/Zambia existing view)
+
+Layer 2 — Malaria case intensity (country-level only)
+
+Do NOT model at sub-national level for global view
+Clean, country-level indicators only
+Mark at the national capital with a clear indicator
+Categorize: "more than X cases," "less than Y cases" — so users can classify high-endemic vs low-endemic areas at a glance
+Or: make it a heatmap layer over the satellite — darker = higher malaria burden. This alone is "game-changing"
+
+Layer 3 — Water bodies / rivers
+
+You have gridded MBBI data? — overlay it
+Show where water bodies are (breeding grounds)
+
+Layer 4 — Population density
+
+Global population data at 100m resolution exists — use it
+Overlay this
+
+Layer 5 — Climate/environment data
+
+Floods, droughts, temperature anomalies
+Pulled from literature via the time-series table you'll build
+
+How the layer system works:
+
+User clicks a button → that specific layer becomes visible on top of the satellite map
+Multiple layers can stack
+Keep it clean — don't show everything at once
+
+For the temporal story:
+
+Outbreaks, floods, droughts → show on a time-series chart (the same chart style you already used on the country pages)
+Same visual language, just scaled to global
+
+
+THE HALLMARK — WHAT MAKES THIS SPECIAL
+Your senior explicitly said this twice:
+
+"The Zambia and Rwanda stories you two built — THAT should be our hallmark for providing intelligence."
+
+Your country-level storytelling is the signature product. Everything else builds on that template.
+
+PREDICTION & FORECASTING (New Demand)
+Your senior wants you to go beyond historical data:
+
+Today's value is in prediction, forecasting, detection — not just showing what happened
+At country level you have the opportunity — use any model you want, but forecast
+Forecast upcoming outbreaks
+Detection of emerging patterns
+"Whatever model you want — just do it"

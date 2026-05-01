@@ -1,12 +1,18 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { KPICard } from "@/components/ui/KPICard";
-import { ThreatTicker } from "@/components/ui/ThreatTicker";
-import { GlobalMap } from "@/components/command/GlobalMap";
-import { BurdenTable } from "@/components/command/BurdenTable";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  TrendingUp, TrendingDown, Minus,
+  ArrowUpRight, X, AlertTriangle, ShieldCheck,
+} from "lucide-react";
+import { GlobalIntelMap } from "@/components/map/GlobalIntelMap";
+import { LayerToggle } from "@/components/map/LayerToggle";
 import { InfoTooltip } from "@/components/ui/InfoTooltip";
-import { color } from "@/lib/tokens";
+import { METRIC_META } from "@/lib/metric-metadata";
+import { cn } from "@/lib/cn";
+import type { MetricMeta } from "@/lib/metric-metadata";
 import type {
   GlobalSummary,
   CommandCountrySummary,
@@ -16,230 +22,349 @@ import type {
 } from "@/lib/data";
 
 type Props = {
-  summary: GlobalSummary;
-  countries: CommandCountrySummary[];
-  threats: ThreatEvent[];
+  summary:    GlobalSummary;
+  countries:  CommandCountrySummary[];
+  threats:    ThreatEvent[];
   timeseries: GlobalTimeseriesPoint[];
   boundaries: EndemicBoundaries;
 };
 
-function fmt(n: number, suffix = ""): string {
-  if (n >= 1e9) return `${(n / 1e9).toFixed(1)}B${suffix}`;
-  if (n >= 1e6) return `${(n / 1e6).toFixed(0)}M${suffix}`;
-  if (n >= 1e3) return `${(n / 1e3).toFixed(0)}K${suffix}`;
-  return `${n}${suffix}`;
+/* ── Formatters ────────────────────────────────────────────────────────────── */
+function fmt(n: number): string {
+  if (n >= 1e9) return `${(n / 1e9).toFixed(1)}B`;
+  if (n >= 1e6) return `${(n / 1e6).toFixed(0)}M`;
+  if (n >= 1e3) return `${(n / 1e3).toFixed(0)}K`;
+  return `${n}`;
+}
+function fmtPct(n: number): string {
+  return `${n > 0 ? "+" : ""}${n.toFixed(1)}%`;
 }
 
-export function CommandCanvas({ summary, countries, threats, timeseries, boundaries }: Props) {
-  const g = summary.global;
-
-  const dciSignal = useMemo(() => {
-    const withDci = threats.filter((t) => t.dci_score !== null && t.dci_score >= 0.3);
-    const critical = withDci.filter((t) => (t.dci_score ?? 0) >= 0.8).length;
-    const high     = withDci.filter((t) => (t.dci_score ?? 0) >= 0.6 && (t.dci_score ?? 0) < 0.8).length;
-    const moderate = withDci.filter((t) => (t.dci_score ?? 0) >= 0.3 && (t.dci_score ?? 0) < 0.6).length;
-    const affected = new Set(withDci.map((t) => t.country_iso3)).size;
-    return { total: withDci.length, critical, high, moderate, countries: affected };
-  }, [threats]);
-
-  const [sidebarFilter, setSidebarFilter] = useState<"all" | "alert" | string>("all");
-
-  const regions = useMemo(() => {
-    const rs = new Set(countries.map((c) => c.region).filter(Boolean) as string[]);
-    return Array.from(rs).sort();
-  }, [countries]);
-
-  const filteredCountries = useMemo(() => {
-    const sorted = [...countries].sort((a, b) => b.cases - a.cases);
-    if (sidebarFilter === "all") return sorted;
-    if (sidebarFilter === "alert")
-      return sorted.filter(
-        (c) => c.alert_level === "critical" || c.alert_level === "extreme" || c.alert_level === "high"
-      );
-    return sorted.filter((c) => c.region === sidebarFilter);
-  }, [countries, sidebarFilter]);
-
-  // suppress timeseries unused warning until we add a chart
-  void timeseries;
+/* ── KPI chip ──────────────────────────────────────────────────────────────── */
+function KpiChip({
+  label, value, change, sub, meta,
+}: { label: string; value: string; change?: number | null; sub?: string; meta?: MetricMeta }) {
+  const Dir =
+    change == null ? Minus
+    : change > 0   ? TrendingUp
+    : TrendingDown;
+  const changeColor =
+    change == null ? "text-txt-muted"
+    : change > 0   ? "text-red-500"
+    : "text-emerald-500";
 
   return (
-    <div className="flex flex-col h-full">
-      {/* Threat Ticker */}
-      <ThreatTicker events={threats} />
-
-      {/* Attribution bar */}
-      <div className="px-4 py-1 bg-surface-1 border-b border-surface-3 flex items-center justify-between">
-        <p className="text-2xs text-txt-muted">Decision Intelligence</p>
-        <p className="text-2xs text-txt-muted font-mono">WHO WMR 2024 · GF API v4 · NASA Power</p>
+    <div className="bg-white/90 backdrop-blur-[18px] border border-white/80 rounded-[14px] px-4 py-2.5 shadow-card min-w-[130px]">
+      <p className="text-[9px] font-mono text-txt-muted uppercase tracking-[0.1em] mb-0.5">{label}</p>
+      <div className="flex items-center">
+        <p className="font-gothic text-[28px] leading-none text-txt-primary" style={{ fontSynthesis: "none" }}>
+          {value}
+        </p>
+        {meta && <InfoTooltip meta={meta} size={10} />}
       </div>
+      {change != null && (
+        <p className={cn("flex items-center gap-1 text-[10px] font-mono mt-0.5", changeColor)}>
+          <Dir size={9} />{fmtPct(change)} YoY
+        </p>
+      )}
+      {sub && change == null && (
+        <p className="text-[10px] text-txt-muted mt-0.5">{sub}</p>
+      )}
+    </div>
+  );
+}
 
-      {/* KPI Bar */}
-      <div className="grid grid-cols-6 gap-3 px-4 py-3 border-b border-surface-3 bg-surface-1">
-        <KPICard
-          label="Est. Cases"
-          value={fmt(g.estimated_cases)}
-          subvalue="Latest · WHO WMR 2024"
-          change={g.cases_change_yoy}
-          changeLabel="YoY"
-          glowColor="rgba(249, 93, 47, 0.12)"
-        />
-        <KPICard
-          label="Est. Deaths"
-          value={fmt(g.estimated_deaths)}
-          subvalue="Latest · WHO WMR 2024"
-          change={g.deaths_change_yoy}
-          changeLabel="YoY"
-          glowColor="rgba(239, 68, 68, 0.12)"
-        />
-        <KPICard
-          label="Endemic Countries"
-          value={String(g.countries_endemic)}
-          subvalue={`${g.countries_in_alert} in alert · WHO GHO 2023`}
-          glowColor="rgba(250, 204, 21, 0.10)"
-        />
-        <KPICard
-          label="Total Funding"
-          value={g.total_funding_usd ? `$${(g.total_funding_usd / 1e9).toFixed(1)}B` : "—"}
-          subvalue="Global Fund API · 2023"
-          glowColor="rgba(247, 165, 29, 0.12)"
-        />
-        <KPICard
-          label="Financing Gap"
-          value={`$${(g.funding_gap_usd / 1e9).toFixed(1)}B`}
-          subvalue="vs annual need · WHO GTS 2021 rev."
-          glowColor="rgba(22, 163, 74, 0.10)"
-        />
-        <div className="glass-panel px-4 py-3 flex flex-col justify-between col-span-1">
-          <div className="flex items-center gap-1 mb-1">
-            <p className="text-2xs text-txt-muted font-medium uppercase tracking-wider">
-              Active DCI Risk
-            </p>
-            <InfoTooltip
-              title="Diagnostic Confusion Index (DCI) — Global Signal"
-              body="Active concurrent febrile outbreaks that overlap with malaria-endemic zones, creating misdiagnosis risk. DCI ≥ 0.8 = Critical. DCI 0.6–0.8 = High. DCI 0.3–0.6 = Moderate. This signal is unique to MalariaScope — no other platform computes diagnostic interference as a transmission risk amplifier."
-              side="left"
-            />
-          </div>
-          <p className="text-xl font-display font-semibold text-txt-primary tabular-nums leading-tight">
-            {dciSignal.countries}{" "}
-            <span className="text-sm font-normal text-txt-muted">countries</span>
-          </p>
-          <p className="text-2xs text-txt-muted mt-0.5">MalariaScope · DCI model</p>
-          <div className="flex items-center gap-2 mt-1">
-            {dciSignal.critical > 0 && (
-              <span className="text-2xs font-mono px-1.5 py-0.5 rounded-full bg-uncertainty-very-high/15 text-uncertainty-very-high font-semibold">
-                {dciSignal.critical} critical
-              </span>
-            )}
-            {dciSignal.high > 0 && (
-              <span className="text-2xs font-mono px-1.5 py-0.5 rounded-full bg-uncertainty-high/15 text-uncertainty-high">
-                {dciSignal.high} high
-              </span>
-            )}
-            {dciSignal.moderate > 0 && (
-              <span className="text-2xs font-mono px-1.5 py-0.5 rounded-full bg-uncertainty-moderate/15 text-uncertainty-moderate">
-                {dciSignal.moderate} mod
-              </span>
-            )}
-          </div>
+/* ── Coverage bar ──────────────────────────────────────────────────────────── */
+function CoverageBar({ label, value, meta }: { label: string; value: number; meta?: MetricMeta }) {
+  return (
+    <div>
+      <div className="flex justify-between mb-1">
+        <span className="text-[11px] text-txt-secondary">{label}</span>
+        <div className="flex items-center">
+          <span className="text-[11px] font-mono font-semibold text-txt-primary">{value.toFixed(0)}%</span>
+          {meta && <InfoTooltip meta={meta} size={10} />}
         </div>
       </div>
+      <div className="h-1.5 bg-surface-2 rounded-full overflow-hidden">
+        <div
+          className="h-full rounded-full"
+          style={{
+            width: `${Math.min(value, 100)}%`,
+            background: value >= 70 ? "#10b981" : value >= 40 ? "#f59e0b" : "#ef4444",
+          }}
+        />
+      </div>
+    </div>
+  );
+}
 
-      {/* Main content: Map + Sidebar */}
-      <div className="flex flex-1 overflow-hidden">
-        {/* Map — 65% */}
-        <div className="flex-[65] relative">
-          <GlobalMap
-            countries={countries}
-            threats={threats}
-            boundaries={boundaries}
-          />
+/* ── Country modal ─────────────────────────────────────────────────────────── */
+function CountryModal({
+  country,
+  onClose,
+}: {
+  country: CommandCountrySummary;
+  onClose: () => void;
+}) {
+  const changeColor = !country.cases_change_yoy ? "text-txt-muted"
+    : country.cases_change_yoy > 0 ? "text-red-500" : "text-emerald-500";
+  const ChangeIcon = !country.cases_change_yoy ? Minus
+    : country.cases_change_yoy > 0 ? TrendingUp : TrendingDown;
 
-          {/* Legend */}
-          <div className="absolute bottom-4 left-4 glass-panel px-3 py-2.5 flex flex-col gap-2">
-            <p className="text-2xs text-txt-muted font-medium uppercase tracking-wider">
-              Burden (incidence/1,000) · WHO WMR 2024
-            </p>
-            <div className="flex items-center gap-2">
-              {[
-                { label: ">300",    color: color.uncertainty.very_high },
-                { label: "150-300", color: color.uncertainty.high },
-                { label: "50-150",  color: color.uncertainty.moderate },
-                { label: "<50",     color: color.uncertainty.low },
-              ].map((item) => (
-                <div key={item.label} className="flex items-center gap-1">
-                  <span className="w-2.5 h-2.5 rounded-sm" style={{ backgroundColor: item.color, opacity: 0.55 }} />
-                  <span className="text-2xs text-txt-muted">{item.label}</span>
-                </div>
-              ))}
-            </div>
-            <p className="text-2xs text-txt-muted font-medium uppercase tracking-wider mt-1">
-              Active Threats
-            </p>
-            <div className="flex items-center gap-2">
-              {[
-                { label: "Arbovirus",   color: color.signal.arbovirus },
-                { label: "Hemorrhagic", color: color.uncertainty.very_high },
-                { label: "Bacterial",   color: "#a78bfa" },
-                { label: "Conflict",    color: color.signal.conflict },
-              ].map((item) => (
-                <div key={item.label} className="flex items-center gap-1">
-                  <span
-                    className="w-2 h-2 rounded-full border"
-                    style={{ borderColor: item.color, backgroundColor: `${item.color}40` }}
-                  />
-                  <span className="text-2xs text-txt-muted">{item.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+  const alertHigh = country.alert_level === "high" || country.alert_level === "critical";
 
-        {/* Sidebar — 35% */}
-        <div className="flex-[35] border-l border-surface-3 bg-surface-1 flex flex-col overflow-hidden">
-          <div className="px-4 py-3 border-b border-surface-3">
-            <div className="flex items-center justify-between mb-2">
-              <h2 className="text-sm font-display font-semibold text-txt-primary">
-                {sidebarFilter === "all"
-                  ? "Highest Burden"
-                  : sidebarFilter === "alert"
-                  ? "Countries in Alert"
-                  : sidebarFilter}
+  return (
+    <motion.div
+      className="absolute inset-0 z-30 pointer-events-none"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      {/* Backdrop — click to close */}
+      <div
+        className="absolute inset-0 pointer-events-auto"
+        onClick={onClose}
+      />
+
+      {/* Panel — slides in from right */}
+      <motion.div
+        className="absolute top-4 right-4 bottom-4 w-[340px] bg-white/96 backdrop-blur-2xl border border-surface-3 rounded-[22px] shadow-overlay flex flex-col overflow-hidden pointer-events-auto"
+        initial={{ x: 40, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ x: 40, opacity: 0 }}
+        transition={{ type: "spring", stiffness: 320, damping: 32 }}
+      >
+        {/* Header */}
+        <div className="px-5 pt-5 pb-4 border-b border-surface-2 shrink-0">
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <div className="flex items-center gap-2 mb-0.5">
+                {alertHigh && (
+                  <AlertTriangle size={13} className="text-amber-500 shrink-0" />
+                )}
+                {country.elimination_phase && (
+                  <ShieldCheck size={13} className="text-emerald-500 shrink-0" />
+                )}
+                <span className="text-[9px] font-mono text-txt-muted uppercase tracking-[0.1em]">
+                  {country.iso3} · {country.region ?? "—"}
+                </span>
+              </div>
+              <h2 className="font-gothic text-2xl text-txt-primary leading-tight" style={{ fontSynthesis: "none" }}>
+                {country.name}
               </h2>
-              <span className="text-2xs text-txt-muted font-mono">{filteredCountries.length} countries</span>
+              {country.elimination_phase && (
+                <span className="inline-block mt-1 text-[10px] font-mono text-emerald-600 bg-emerald-50 border border-emerald-200 rounded-pill px-2 py-0.5">
+                  {country.elimination_phase}
+                </span>
+              )}
             </div>
-            <div className="flex flex-wrap gap-1">
-              {(["all", "alert"] as const).map((f) => (
-                <button
-                  key={f}
-                  onClick={() => setSidebarFilter(f)}
-                  className={`text-2xs px-2 py-0.5 rounded-pill border transition-colors cursor-pointer ${
-                    sidebarFilter === f
-                      ? "bg-signal-malaria/15 border-signal-malaria/40 text-signal-malaria font-medium"
-                      : "border-surface-3 text-txt-muted hover:text-txt-primary"
-                  }`}
-                >
-                  {f === "all" ? "All" : "⚠ Alert"}
-                </button>
-              ))}
-              {regions.map((r) => (
-                <button
-                  key={r}
-                  onClick={() => setSidebarFilter(r)}
-                  className={`text-2xs px-2 py-0.5 rounded-pill border transition-colors cursor-pointer ${
-                    sidebarFilter === r
-                      ? "bg-signal-climate/15 border-signal-climate/40 text-signal-climate font-medium"
-                      : "border-surface-3 text-txt-muted hover:text-txt-primary"
-                  }`}
-                >
-                  {r}
-                </button>
-              ))}
+            <button
+              onClick={onClose}
+              className="p-1.5 rounded-[8px] hover:bg-surface-2 text-txt-muted hover:text-txt-primary transition-colors shrink-0"
+            >
+              <X size={15} />
+            </button>
+          </div>
+        </div>
+
+        {/* Body */}
+        <div className="flex-1 overflow-y-auto px-5 py-4 space-y-5">
+
+          {/* Burden */}
+          <div>
+            <p className="text-[9px] font-mono text-txt-muted uppercase tracking-[0.1em] mb-3">Burden</p>
+            <div className="grid grid-cols-2 gap-3">
+              <div className="bg-surface-1 rounded-[14px] p-3">
+                <p className="text-[9px] font-mono text-txt-muted uppercase tracking-[0.08em] mb-1">Cases</p>
+                <div className="flex items-center">
+                  <p className="font-gothic text-[26px] leading-none text-txt-primary" style={{ fontSynthesis: "none" }}>
+                    {fmt(country.cases)}
+                  </p>
+                  <InfoTooltip meta={METRIC_META.country_cases} size={10} />
+                </div>
+                {country.cases_change_yoy != null && (
+                  <p className={cn("flex items-center gap-1 text-[10px] font-mono mt-1", changeColor)}>
+                    <ChangeIcon size={9} />{fmtPct(country.cases_change_yoy)} YoY
+                  </p>
+                )}
+              </div>
+              <div className="bg-surface-1 rounded-[14px] p-3">
+                <p className="text-[9px] font-mono text-txt-muted uppercase tracking-[0.08em] mb-1">Deaths</p>
+                <div className="flex items-center">
+                  <p className="font-gothic text-[26px] leading-none text-txt-primary" style={{ fontSynthesis: "none" }}>
+                    {fmt(country.deaths)}
+                  </p>
+                  <InfoTooltip meta={METRIC_META.country_deaths} size={10} />
+                </div>
+                <p className="text-[10px] text-txt-muted font-mono mt-1">est. 2023</p>
+              </div>
+            </div>
+            <div className="bg-surface-1 rounded-[14px] p-3 mt-3">
+              <p className="text-[9px] font-mono text-txt-muted uppercase tracking-[0.08em] mb-1">Incidence</p>
+              <div className="flex items-end gap-1.5">
+                <span className="font-gothic text-[26px] leading-none text-txt-primary" style={{ fontSynthesis: "none" }}>
+                  {country.incidence_per_1000.toFixed(1)}
+                </span>
+                <InfoTooltip meta={METRIC_META.country_incidence} size={10} />
+                <span className="text-[11px] text-txt-muted font-mono mb-1">per 1,000 pop at risk</span>
+              </div>
             </div>
           </div>
-          <BurdenTable countries={filteredCountries} className="flex-1" />
+
+          {/* Interventions */}
+          {(country.llin_coverage != null || country.irs_coverage != null || country.act_coverage != null) && (
+            <div>
+              <p className="text-[9px] font-mono text-txt-muted uppercase tracking-[0.1em] mb-3">Intervention Coverage</p>
+              <div className="space-y-2.5">
+                {country.llin_coverage != null && (
+                  <CoverageBar label="ITN / LLIN use" value={country.llin_coverage} meta={METRIC_META.llin_coverage} />
+                )}
+                {country.irs_coverage != null && (
+                  <CoverageBar label="Indoor residual spraying" value={country.irs_coverage} meta={METRIC_META.irs_coverage} />
+                )}
+                {country.act_coverage != null && (
+                  <CoverageBar label="ACT treatment" value={country.act_coverage} meta={METRIC_META.act_coverage} />
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* Funding */}
+          {country.funding_per_capita != null && (
+            <div>
+              <p className="text-[9px] font-mono text-txt-muted uppercase tracking-[0.1em] mb-2">Financing</p>
+              <div className="bg-surface-1 rounded-[14px] p-3 flex items-center justify-between">
+                <span className="text-[12px] text-txt-secondary">External funding / capita</span>
+                <div className="flex items-center">
+                  <span className="font-mono font-semibold text-[15px] text-txt-primary">
+                    ${country.funding_per_capita.toFixed(2)}
+                  </span>
+                  <InfoTooltip meta={METRIC_META.funding_per_capita} size={10} />
+                </div>
+              </div>
+            </div>
+          )}
         </div>
+
+        {/* Footer CTA */}
+        <div className="px-5 py-4 border-t border-surface-2 shrink-0">
+          <p className="text-[10px] text-txt-muted font-mono mb-3">
+            Sources: WHO WMR 2024 · Global Fund API · WHO GHED
+          </p>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+/* ── Main canvas ───────────────────────────────────────────────────────────── */
+export function CommandCanvas({ summary, countries, threats, boundaries }: Props) {
+  const g       = summary.global;
+  const router  = useRouter();
+  const lookup  = new Map(countries.map((c) => [c.iso3, c]));
+
+  const [selected, setSelected] = useState<CommandCountrySummary | null>(null);
+
+  function handleCountryClick(iso3: string) {
+    const c = lookup.get(iso3);
+    if (c) setSelected(c);
+  }
+
+  return (
+    <div
+      className="relative w-full overflow-hidden"
+      style={{ height: "calc(100vh - 64px)" }}
+    >
+      {/* ── Full-viewport map ── */}
+      <div className="absolute inset-0">
+        <GlobalIntelMap
+          countries={countries}
+          threats={threats}
+          boundaries={boundaries}
+          onCountryClick={handleCountryClick}
+        />
       </div>
+
+      {/* ── Top-left: headline ── */}
+      <motion.div
+        className="absolute top-5 left-5 z-10 max-w-sm pointer-events-none"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-surface-3 rounded-pill px-3 py-1 mb-2 pointer-events-auto">
+          <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse-slow" />
+          <span className="text-[10px] font-mono text-txt-muted uppercase tracking-[0.1em]">
+            Global Intelligence · WHO WMR 2024
+          </span>
+        </div>
+        <h1
+          className="font-gothic text-txt-primary uppercase pointer-events-auto"
+          style={{ fontSize: "clamp(28px, 3.5vw, 48px)", lineHeight: 1.05, fontSynthesis: "none" }}
+        >
+          The curve has bent<br />the wrong way.
+        </h1>
+      </motion.div>
+
+      {/* ── Top-right: layer toggle ── */}
+      <motion.div
+        className="absolute top-5 right-5 z-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+      >
+        <LayerToggle />
+      </motion.div>
+
+      {/* ── Bottom-left: KPI chips ── */}
+      <motion.div
+        className="absolute bottom-5 left-5 z-10 flex gap-2.5 flex-wrap"
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+      >
+        <KpiChip label="Estimated Cases"   value={fmt(g.estimated_cases)}  change={g.cases_change_yoy} meta={METRIC_META.global_cases} />
+        <KpiChip label="Estimated Deaths"  value={fmt(g.estimated_deaths)} change={g.deaths_change_yoy ?? null} meta={METRIC_META.global_deaths} />
+        <KpiChip label="Endemic Countries" value={String(g.countries_endemic)} sub={`${g.countries_in_alert} in alert`} meta={METRIC_META.endemic_countries} />
+      </motion.div>
+
+      {/* ── Bottom-right: Follow the money ── */}
+      <motion.button
+        onClick={() => router.push("/investment")}
+        className="absolute bottom-5 right-5 z-10 flex items-center gap-2 bg-white/90 backdrop-blur-md border border-surface-3 rounded-[14px] px-4 py-2.5 shadow-card hover:shadow-card-hover hover:bg-white transition-all duration-200 group"
+        initial={{ opacity: 0, x: 10 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 0.7 }}
+      >
+        <span className="text-[11px] font-mono text-txt-secondary uppercase tracking-[0.08em] group-hover:text-txt-primary transition-colors">
+          Follow the money
+        </span>
+        <ArrowUpRight size={14} className="text-txt-muted group-hover:text-txt-primary transition-colors" />
+      </motion.button>
+
+      {/* ── Click hint ── */}
+      <motion.div
+        className="absolute bottom-[60px] left-1/2 -translate-x-1/2 z-10 pointer-events-none"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: selected ? 0 : 0.7 }}
+        transition={{ duration: 0.4, delay: 1.5 }}
+      >
+        <div className="bg-white/80 backdrop-blur-sm border border-surface-3 rounded-pill px-3 py-1.5">
+          <span className="text-[10px] font-mono text-txt-muted uppercase tracking-[0.1em]">
+            Click any country for details
+          </span>
+        </div>
+      </motion.div>
+
+      {/* ── Country detail modal ── */}
+      <AnimatePresence>
+        {selected && (
+          <CountryModal
+            country={selected}
+            onClose={() => setSelected(null)}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }

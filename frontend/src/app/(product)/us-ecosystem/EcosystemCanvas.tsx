@@ -6,6 +6,9 @@ import type { MapMouseEvent, MapRef, LayerProps } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 import type { USEcosystemData, StateData, TopContractor } from "@/lib/data";
 import { X, MapPin, FlaskConical, Building2, Globe } from "lucide-react";
+import { InfoTooltip } from "@/components/ui/InfoTooltip";
+import { METRIC_META } from "@/lib/metric-metadata";
+import type { MetricMeta } from "@/lib/metric-metadata";
 
 // ── Constants ─────────────────────────────────────────────────────────────────
 
@@ -51,18 +54,21 @@ function getFillColor(nihUSD: number): string {
 
 // ── Sub-components ────────────────────────────────────────────────────────────
 
-function KPICard({ label, value, sub, accent }: {
-  label: string; value: string; sub?: string; accent?: string;
+function KPICard({ label, value, sub, accent, meta }: {
+  label: string; value: string; sub?: string; accent?: string; meta?: MetricMeta;
 }) {
   return (
     <div className="bg-white border border-surface-3 rounded-panel px-4 py-3 flex-1 min-w-0 shadow-sm">
       <p className="text-2xs font-mono uppercase tracking-[0.12em] text-txt-muted mb-1 truncate">{label}</p>
-      <p
-        className="text-xl font-mono font-semibold text-txt-primary"
-        style={accent ? { color: accent } : {}}
-      >
-        {value}
-      </p>
+      <div className="flex items-center">
+        <p
+          className="text-xl font-mono font-semibold text-txt-primary"
+          style={accent ? { color: accent } : {}}
+        >
+          {value}
+        </p>
+        {meta && <InfoTooltip meta={meta} size={10} />}
+      </div>
       {sub && <p className="text-2xs font-mono text-txt-muted mt-0.5 truncate">{sub}</p>}
     </div>
   );
@@ -183,17 +189,20 @@ function StatePopup({ summary, onClose }: { summary: StateData; onClose: () => v
 
         <div className="grid grid-cols-4 gap-0 border-b border-surface-3 shrink-0">
           {[
-            { icon: <FlaskConical size={13} />, label: "NIH Grants", value: fmtUSD(data.nih_grants_usd), color: "#9b7ed4" },
-            { icon: <Building2 size={13} />, label: "Federal Awards", value: fmtUSD(data.usaspending_usd), color: "#ED7238" },
-            { icon: <FlaskConical size={13} />, label: "Clinical Trials", value: String(data.clinical_trials), color: "#e67a3c" },
-            { icon: <Globe size={13} />, label: "Countries", value: String(data.countries_reached), color: "#8daad8" },
+            { icon: <FlaskConical size={13} />, label: "NIH Grants", value: fmtUSD(data.nih_grants_usd), color: "#9b7ed4", meta: METRIC_META.nih_grants_state },
+            { icon: <Building2 size={13} />, label: "Federal Awards", value: fmtUSD(data.usaspending_usd), color: "#ED7238", meta: METRIC_META.usaspending_state },
+            { icon: <FlaskConical size={13} />, label: "Clinical Trials", value: String(data.clinical_trials), color: "#e67a3c", meta: undefined },
+            { icon: <Globe size={13} />, label: "Countries", value: String(data.countries_reached), color: "#8daad8", meta: undefined },
           ].map((stat, i) => (
             <div key={i} className="px-4 py-3 text-center border-r last:border-r-0 border-surface-3">
               <div className="flex items-center justify-center gap-1 mb-1" style={{ color: stat.color }}>
                 {stat.icon}
                 <p className="text-2xs font-mono uppercase tracking-[0.1em] text-txt-muted">{stat.label}</p>
               </div>
-              <p className="text-lg font-mono font-semibold text-txt-primary">{stat.value}</p>
+              <div className="flex items-center justify-center">
+                <p className="text-lg font-mono font-semibold text-txt-primary">{stat.value}</p>
+                {stat.meta && <InfoTooltip meta={stat.meta} size={10} />}
+              </div>
             </div>
           ))}
         </div>
@@ -521,8 +530,8 @@ export function EcosystemCanvas({ data }: { data: USEcosystemData }) {
       <div className="flex-1 flex flex-col overflow-hidden min-w-0">
         {/* KPI strip */}
         <div className="flex gap-2 px-6 pt-4 pb-3 border-b border-surface-3 bg-white">
-          <KPICard label="NIH Research Grants" value={fmtUSD(data.total_nih_usd)} sub="malaria R&D portfolio" accent="#9b7ed4" />
-          <KPICard label="Federal Field Awards" value={fmtUSD(totalFederal)} sub="USAID implementation" accent="#e67a3c" />
+          <KPICard label="NIH Research Grants" value={fmtUSD(data.total_nih_usd)} sub="malaria R&D portfolio" accent="#9b7ed4" meta={METRIC_META.nih_grants_state} />
+          <KPICard label="Federal Field Awards" value={fmtUSD(totalFederal)} sub="USAID implementation" accent="#e67a3c" meta={METRIC_META.usaspending_state} />
           <KPICard label="US Organizations" value={String(data.total_orgs)} sub="universities, NGOs, firms" />
           <KPICard label="Clinical Trials" value={String(data.total_trials)} sub="active & recruiting" accent="#d44f2a" />
           <KPICard label="Active States" value={String(activeStates)} sub={`${maxCountries} countries reached`} />

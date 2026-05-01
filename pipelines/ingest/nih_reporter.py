@@ -110,10 +110,39 @@ def run(dry_run: bool = False, date: str | None = None) -> None:
             put_json(key, payload)
             put_meta(key, payload["_meta"])
         log.info(f"s3://{BUCKET}/{key}")
+
+        with log.step("Upsert NIH grants → PostgreSQL fact_funding"):
+            try:
+                from pipelines.utils.db import upsert_many
+                SQL = """
+                    INSERT INTO malaria.fact_funding
+                        (year, source_code, channel, disease, amount_usd, amount_type,
+                         grant_id, implementing_partner)
+                    VALUES %s
+                    ON CONFLICT DO NOTHING
+                """
+                db_rows = [
+                    (
+                        g.get("fiscal_year"),
+                        "nih_reporter",
+                        "nih",
+                        "malaria",
+                        float(g["award_amount"]) if g.get("award_amount") else None,
+                        "awarded",
+                        g.get("project_num"),
+                        g.get("_org_name"),
+                    )
+                    for g in unique_grants
+                    if g.get("award_amount") and g.get("fiscal_year")
+                ]
+                inserted = upsert_many(SQL, db_rows)
+                log.info(f"  Upserted {inserted} rows")
+            except Exception as e:
+                log.warn(f"  DB skipped: {e}")
     else:
         log.info(f"[DRY RUN] Would write {len(unique_grants)} grants to s3://{BUCKET}/{key}")
 
-    log.finish(records=len(unique_grants))
+    log.finish(records=len(unique_grants), s3_keys=[key])
 
 
 if __name__ == "__main__":

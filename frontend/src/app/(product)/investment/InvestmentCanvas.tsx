@@ -12,6 +12,9 @@ import {
   type SeriesPoint,
 } from "d3";
 import type { InvestmentOverview, GeographicSpendData } from "@/lib/data";
+import { InfoTooltip } from "@/components/ui/InfoTooltip";
+import { METRIC_META } from "@/lib/metric-metadata";
+import type { MetricMeta } from "@/lib/metric-metadata";
 
 // ── Hooks ─────────────────────────────────────────────────────────────────────
 
@@ -74,16 +77,19 @@ function SectionLabel({ eyebrow, headline, accent = "#ED7238" }: {
 
 // ── Animated Hero KPI (must be its own component — uses hook) ─────────────────
 
-function AnimatedHeroKPI({ label, raw, display, accent, sub }: {
-  label: string; raw: number; display: (n: number) => string; accent: string; sub: string;
+function AnimatedHeroKPI({ label, raw, display, accent, sub, meta }: {
+  label: string; raw: number; display: (n: number) => string; accent: string; sub: string; meta?: MetricMeta;
 }) {
   const count = useCountUp(raw, 1600, true);
   return (
     <div className="px-5 py-4 border-r border-white/10 last:border-r-0">
       <p className="text-2xs font-mono uppercase tracking-[0.1em] text-white/50 mb-1">{label}</p>
-      <p className="text-2xl font-mono font-bold leading-none tabular-nums" style={{ color: accent }}>
-        {display(count)}
-      </p>
+      <div className="flex items-center">
+        <p className="text-2xl font-mono font-bold leading-none tabular-nums" style={{ color: accent }}>
+          {display(count)}
+        </p>
+        {meta && <InfoTooltip meta={meta} size={11} className="opacity-60 hover:opacity-100" />}
+      </div>
       <p className="text-2xs font-mono text-white/40 mt-1">{sub}</p>
     </div>
   );
@@ -417,9 +423,12 @@ function PortfolioSection({ split, efficiency }: {
                 </div>
               </div>
               <div className="text-right shrink-0 ml-3">
-                <p className="text-base font-mono font-bold" style={{ color: e.color }}>
-                  {fmtK(e.cost_per_death_averted_usd)}
-                </p>
+                <div className="flex items-center justify-end">
+                  <p className="text-base font-mono font-bold" style={{ color: e.color }}>
+                    {fmtK(e.cost_per_death_averted_usd)}
+                  </p>
+                  <InfoTooltip meta={METRIC_META.cost_per_death_averted} size={10} />
+                </div>
                 <p className="text-2xs font-mono text-txt-muted">per death averted</p>
                 <p className="text-2xs font-mono text-txt-muted">{e.pct_children}% children</p>
               </div>
@@ -780,24 +789,28 @@ export function InvestmentCanvas({ data, geoSpend }: { data: InvestmentOverview;
             raw={Math.round(data.total_committed_usd / 1e8)}
             display={n => `$${(n / 10).toFixed(1)}B`}
             accent="#ffffff" sub="2010–2024 cumulative"
+            meta={METRIC_META.total_us_committed}
           />
           <AnimatedHeroKPI
             label="PMI Annual (FY2024)"
             raw={Math.round(data.years[data.years.length - 1].pmi / 1e6)}
             display={n => `$${n}M`}
             accent="#fbbf24" sub="President's Malaria Initiative"
+            meta={METRIC_META.pmi_annual}
           />
           <AnimatedHeroKPI
             label="US → Global Fund"
             raw={Math.round(data.gf_us_contribution_usd / 1e8)}
             display={n => `$${(n / 10).toFixed(1)}B`}
             accent="#5eead4" sub="US share of GF contributions"
+            meta={METRIC_META.gf_us_contribution}
           />
           <AnimatedHeroKPI
             label="NIH Malaria R&D"
             raw={Math.round(data.nih_annual_avg_usd / 1e6)}
             display={n => `$${n}M/yr`}
             accent="#93c5fd" sub="Research & development"
+            meta={METRIC_META.nih_annual}
           />
         </div>
       </div>
@@ -875,13 +888,16 @@ export function InvestmentCanvas({ data, geoSpend }: { data: InvestmentOverview;
             </p>
             <div className="grid grid-cols-3 gap-3">
               {[
-                { label: "US Total to GF",  value: `$${(data.gf_us_contribution_usd / 1e9).toFixed(1)}B`,  color: "#1d499e" },
-                { label: "GF Malaria Disbursed", value: `$${(data.gf_malaria_disbursed_usd / 1e9).toFixed(1)}B`, color: "#19bdc3" },
-                { label: "US Share of GF", value: `${data.us_donor_share_pct}%`, color: "#ED7238" },
+                { label: "US Total to GF",  value: `$${(data.gf_us_contribution_usd / 1e9).toFixed(1)}B`,  color: "#1d499e", meta: METRIC_META.gf_us_contribution },
+                { label: "GF Malaria Disbursed", value: `$${(data.gf_malaria_disbursed_usd / 1e9).toFixed(1)}B`, color: "#19bdc3", meta: METRIC_META.gf_disbursed },
+                { label: "US Share of GF", value: `${data.us_donor_share_pct}%`, color: "#ED7238", meta: METRIC_META.gf_us_contribution },
               ].map((item) => (
                 <div key={item.label} className="bg-surface-1 rounded-panel p-3 border border-surface-3 text-center">
                   <p className="text-2xs font-mono text-txt-muted mb-1 leading-tight">{item.label}</p>
-                  <p className="text-base font-mono font-bold" style={{ color: item.color }}>{item.value}</p>
+                  <div className="flex items-center justify-center">
+                    <p className="text-base font-mono font-bold" style={{ color: item.color }}>{item.value}</p>
+                    <InfoTooltip meta={item.meta} size={10} />
+                  </div>
                 </div>
               ))}
             </div>

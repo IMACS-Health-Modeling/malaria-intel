@@ -123,36 +123,57 @@ def fetch_live_nasa(iso3: str, lat: float, lon: float) -> list[dict]:
         return []
 
 
-def run(dry_run: bool = False, date: str | None = None, live: bool = False) -> None:
+def fetch_endemic_centroids() -> dict[str, tuple[float, float]]:
+    """Query dim_country for lat/lng of all endemic countries."""
+    try:
+        from pipelines.utils.db import fetchall
+        rows = fetchall(
+            "SELECT iso3, lat, lng FROM malaria.dim_country WHERE lat IS NOT NULL AND lng IS NOT NULL"
+        )
+        return {r["iso3"].strip(): (float(r["lat"]), float(r["lng"])) for r in rows}
+    except Exception:
+        return FALLBACK_CENTROIDS
+
+
+def run(dry_run: bool = False, date: str | None = None, live: bool = False, force_live: bool = False) -> None:
     log = PipelineLogger("nasa_power_climate", dry_run=dry_run)
     all_rows: list[dict] = []
 
-    # ── Foundation bucket ──────────────────────────────────────────────────
-    with log.step("Load NASA POWER from foundation bucket"):
-        foundation_iso3s = list_foundation_countries()
-        log.info(f"  {len(foundation_iso3s)} countries in foundation")
-
-        for iso3 in foundation_iso3s:
-            key = f"{FOUNDATION_PREFIX}/{iso3}_monthly_climate.json"
-            try:
-                resp = _s3.get_object(Bucket=FOUNDATION_BUCKET, Key=key)
-                data = json.loads(resp["Body"].read())
-                rows = parse_nasa_geojson(iso3, data)
-                all_rows.extend(rows)
-            except Exception as e:
-                log.warn(f"  {iso3}: {e}")
-
-        log.info(f"  Foundation rows: {len(all_rows)}")
-
-    # ── Live API for countries not in foundation ───────────────────────────
-    if live:
-        missing = [iso3 for iso3 in FALLBACK_CENTROIDS if iso3 not in foundation_iso3s]
-        with log.step(f"Fetch {len(missing)} missing countries via live API"):
-            for iso3 in missing:
-                lat, lon = FALLBACK_CENTROIDS[iso3]
+    # ── Force-live: fetch ALL countries from NASA API (gets T2M_MAX/T2M_MIN) ──
+    if force_live:
+        centroids = fetch_endemic_centroids()
+        with log.step(f"Force-live: fetch {len(centroids)} countries from NASA API"):
+            for iso3, (lat, lon) in centroids.items():
                 rows = fetch_live_nasa(iso3, lat, lon)
                 log.info(f"  {iso3}: {len(rows)} rows")
                 all_rows.extend(rows)
+    else:
+        # ── Foundation bucket ────────────────────────────────────────────────
+        with log.step("Load NASA POWER from foundation bucket"):
+            foundation_iso3s = list_foundation_countries()
+            log.info(f"  {len(foundation_iso3s)} countries in foundation")
+
+            for iso3 in foundation_iso3s:
+                key = f"{FOUNDATION_PREFIX}/{iso3}_monthly_climate.json"
+                try:
+                    resp = _s3.get_object(Bucket=FOUNDATION_BUCKET, Key=key)
+                    data = json.loads(resp["Body"].read())
+                    rows = parse_nasa_geojson(iso3, data)
+                    all_rows.extend(rows)
+                except Exception as e:
+                    log.warn(f"  {iso3}: {e}")
+
+            log.info(f"  Foundation rows: {len(all_rows)}")
+
+        # ── Live API for countries not in foundation ─────────────────────────
+        if live:
+            missing = [iso3 for iso3 in FALLBACK_CENTROIDS if iso3 not in foundation_iso3s]
+            with log.step(f"Fetch {len(missing)} missing countries via live API"):
+                for iso3 in missing:
+                    lat, lon = FALLBACK_CENTROIDS[iso3]
+                    rows = fetch_live_nasa(iso3, lat, lon)
+                    log.info(f"  {iso3}: {len(rows)} rows")
+                    all_rows.extend(rows)
 
     # Deduplicate
     seen = set()
@@ -188,7 +209,11 @@ def run(dry_run: bool = False, date: str | None = None, live: bool = False) -> N
                     VALUES %s
                     ON CONFLICT (iso3, year, month, source)
                     DO UPDATE SET temp_avg_c=EXCLUDED.temp_avg_c,
-                                  rainfall_mm=EXCLUDED.rainfall_mm, ingested_at=NOW()
+                                  temp_max_c=EXCLUDED.temp_max_c,
+                                  temp_min_c=EXCLUDED.temp_min_c,
+                                  rainfall_mm=EXCLUDED.rainfall_mm,
+                                  humidity_pct=EXCLUDED.humidity_pct,
+                                  ingested_at=NOW()
                 """
                 db_rows = [
                     (r["iso3"], r["year"], r["month"],
@@ -214,5 +239,7 @@ if __name__ == "__main__":
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--date", default=None)
     parser.add_argument("--live", action="store_true")
+    parser.add_argument("--force-live", action="store_true",
+                        help="Re-fetch ALL countries from NASA API (gets T2M_MAX/T2M_MIN)")
     args = parser.parse_args()
-    run(dry_run=args.dry_run, date=args.date, live=args.live)
+    run(dry_run=args.dry_run, date=args.date, live=args.live, force_live=args.force_live)

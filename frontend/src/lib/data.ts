@@ -203,17 +203,19 @@ export const fetchStateDetail = (code: string) => get<StateData>(`data/us-ecosys
 export const fetchImpact      = () => get<ImpactResults>("data/impact/results.json");
 export const fetchOutlook     = () => get<OutlookData>("data/risk/outlook.json");
 
-// ── Command page — live S3 data (WHO DON, burden, threats) ──────────────────
+// ── Command page — serving layer via S3 SDK (private bucket, server-side only) ─
 
-const CMD_ROOT =
-  process.env.DATA_ROOT_COMMAND ??
-  "https://malariascope-dev-data-019847570980.s3.amazonaws.com/v1";
+const CMD_BUCKET = process.env.CMD_S3_BUCKET ?? "cdah-malaria-intel-dev";
+const CMD_PREFIX = process.env.CMD_S3_PREFIX ?? "serving/v1";
 
 async function getCmd<T>(path: string): Promise<T> {
-  const url = `${CMD_ROOT}/${path}`;
-  const res = await fetch(url, { next: { revalidate: 300 } });
-  if (!res.ok) throw new Error(`Command data fetch failed: ${url} (${res.status})`);
-  return res.json() as Promise<T>;
+  const { S3Client, GetObjectCommand } = await import("@aws-sdk/client-s3");
+  const client = new S3Client({ region: process.env.AWS_REGION ?? "us-east-1" });
+  const key = `${CMD_PREFIX}/${path}`;
+  const resp = await client.send(new GetObjectCommand({ Bucket: CMD_BUCKET, Key: key }));
+  const body = await resp.Body?.transformToString("utf-8");
+  if (!body) throw new Error(`Empty S3 response: s3://${CMD_BUCKET}/${key}`);
+  return JSON.parse(body) as T;
 }
 
 export type GlobalSummary = {
@@ -295,11 +297,11 @@ export type EndemicBoundaries = {
   }>;
 };
 
-export const getGlobalSummary    = () => getCmd<GlobalSummary>("burden/global-summary.json");
-export const getCommandCountries = () => getCmd<CommandCountrySummary[]>("burden/countries.json");
-export const getActiveThreats    = () => getCmd<ThreatEvent[]>("events/active-threats.json");
-export const getGlobalTimeseries = () => getCmd<GlobalTimeseriesPoint[]>("burden/timeseries-global.json");
-export const getEndemicBoundaries = () => getCmd<EndemicBoundaries>("geo/endemic-boundaries.json");
+export const getGlobalSummary    = () => getCmd<GlobalSummary>("command/global-summary.json");
+export const getCommandCountries = () => getCmd<CommandCountrySummary[]>("command/countries.json");
+export const getActiveThreats    = () => getCmd<ThreatEvent[]>("command/active-threats.json");
+export const getGlobalTimeseries = () => getCmd<GlobalTimeseriesPoint[]>("command/global-timeseries.json");
+export const getEndemicBoundaries = () => getCmd<EndemicBoundaries>("command/endemic-boundaries.json");
 
 // ── US Map geometry (server-side only) ───────────────────────────────────────
 

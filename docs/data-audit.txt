@@ -1,0 +1,420 @@
+---
+Malaria Intel — Data Audit (Post-Fix Pass, April 2026)
+
+Database Overview
+
+┌─────────────────────────────┬────────┬──────────────────────────────────────────────────────┐
+│            Table            │  Rows  │                        Status                        │
+├─────────────────────────────┼────────┼──────────────────────────────────────────────────────┤
+│ fact_climate                │ 67,704 │ Good — 217 countries, temp_max/min populated         │
+├─────────────────────────────┼────────┼──────────────────────────────────────────────────────┤
+│ fact_burden                 │ 21,613 │ Good — 5 sources, 109 countries                      │
+├─────────────────────────────┼────────┼──────────────────────────────────────────────────────┤
+│ fact_insecticide_resistance │ 14,577 │ Good — data ends 2018, no newer source exists        │
+├─────────────────────────────┼────────┼──────────────────────────────────────────────────────┤
+│ fact_funding                │ 12,558 │ Good — 4 sources: GF + NIH + USAspending + WMR4c    │
+├─────────────────────────────┼────────┼──────────────────────────────────────────────────────┤
+│ fact_intervention           │  9,295 │ Good — 15 indicators, WMR 2024 + 2025               │
+├─────────────────────────────┼────────┼──────────────────────────────────────────────────────┤
+│ fact_parasite_rate          │  2,203 │ Good — MAP survey data, 2 species                    │
+├─────────────────────────────┼────────┼──────────────────────────────────────────────────────┤
+│ fact_drug_resistance        │  1,223 │ Good — Pf8 genomic, 5 drugs                         │
+├─────────────────────────────┼────────┼──────────────────────────────────────────────────────┤
+│ fact_vaccine_coverage       │    745 │ Partial — IPTp3/ITN coverage populated; RTS,S NULL   │
+├─────────────────────────────┼────────┼──────────────────────────────────────────────────────┤
+│ fact_outbreak               │     80 │ Partial — disease_normalized fixed; lat/lng still NULL│
+├─────────────────────────────┼────────┼──────────────────────────────────────────────────────┤
+│ dim_country                 │    217 │ 204 with population, 217 with lat/lng + region       │
+├─────────────────────────────┼────────┼──────────────────────────────────────────────────────┤
+│ pipeline_runs               │     5+ │ Audit trail now writing on pipeline finish()          │
+└─────────────────────────────┴────────┴──────────────────────────────────────────────────────┘
+
+Global Summary (from serving layer, rebuilt 2026-04-20):
+  272,687,884 cases / 598,198 deaths / 54 endemic countries / +5.4% YoY
+
+---
+1. Burden (21,613 rows) ✅
+
+5 sources, 109 countries, 2000–2024
+
+┌────────────┬──────────────────────────────────────────────────────────────────┬────────────────────┬──────────────────┐
+│   Source   │                           Metrics                               │       Years        │    Countries     │
+├────────────┼──────────────────────────────────────────────────────────────────┼────────────────────┼──────────────────┤
+│ wmr_2025   │ cases_estimated, deaths_estimated                                │ 2000–2024 (25 yrs) │ 107              │
+├────────────┼──────────────────────────────────────────────────────────────────┼────────────────────┼──────────────────┤
+│ wmr_2024   │ cases_estimated, deaths_estimated                                │ 2000–2023 (24 yrs) │ 86               │
+├────────────┼──────────────────────────────────────────────────────────────────┼────────────────────┼──────────────────┤
+│ who_gho    │ cases_confirmed, deaths_estimated, incidence/1K, mortality/100K  │ 2000–2024          │ 109              │
+├────────────┼──────────────────────────────────────────────────────────────────┼────────────────────┼──────────────────┤
+│ paho_plisa │ cases_estimated/confirmed/indigenous, deaths, incidence          │ 2000–2024          │ 21 (AMR only)    │
+├────────────┼──────────────────────────────────────────────────────────────────┼────────────────────┼──────────────────┤
+│ worldbank  │ deaths_reported, incidence/1K                                    │ 2000–2024          │ 106              │
+└────────────┴──────────────────────────────────────────────────────────────────┴────────────────────┴──────────────────┘
+
+Serving layer priority: wmr_2025 → wmr_2024 → who_gho → worldbank.
+wmr_2025 and wmr_2024 overlap 2000–2023; wmr_2025 takes precedence.
+paho_plisa supplements Americas regional data only.
+
+Known gaps:
+- Cases confidence intervals: ~54% NULL in wmr_2024
+- No Pf/Pv species split in WMR burden data
+- No subnational breakdown (admin1) in any source
+
+---
+2. Climate (67,704 rows) ✅
+
+Source: NASA POWER API (live re-fetch 2026-04-20, all 217 countries)
+Coverage: 26 years (2000–2025), monthly granularity, all WHO member states
+
+┌──────────────┬────────────────────────────────────────────────────────────────┐
+│    Column    │                           Status                              │
+├──────────────┼────────────────────────────────────────────────────────────────┤
+│ temp_avg_c   │ ✅ 100% populated (T2M annual mean of monthly NASA values)     │
+├──────────────┼────────────────────────────────────────────────────────────────┤
+│ temp_max_c   │ ✅ 100% populated (T2M_MAX — added 2026-04-20 re-fetch)        │
+├──────────────┼────────────────────────────────────────────────────────────────┤
+│ temp_min_c   │ ✅ 100% populated (T2M_MIN — added 2026-04-20 re-fetch)        │
+├──────────────┼────────────────────────────────────────────────────────────────┤
+│ rainfall_mm  │ ✅ 100% populated (PRECTOTCORR annual total)                   │
+├──────────────┼────────────────────────────────────────────────────────────────┤
+│ humidity_pct │ ✅ 100% populated (RH2M annual mean)                           │
+├──────────────┼────────────────────────────────────────────────────────────────┤
+│ evi          │ ❌ 100% NULL (Enhanced Vegetation Index — not in NASA POWER)    │
+└──────────────┴────────────────────────────────────────────────────────────────┘
+
+Method: country centroid coordinates from dim_country (lat/lng), monthly fetch
+aggregated to annual mean/total. Uses NASA POWER /temporal/monthly/point endpoint.
+
+Known gaps:
+- EVI (vegetation) not available from NASA POWER; would require MODIS/NDVI source
+- Point-based (centroid), not area-averaged — accuracy varies for large countries
+
+---
+3. Funding (12,558 rows) ✅
+
+4 sources, totaling ~$32B in tracked malaria financing
+
+┌────────────────┬──────────────────────────┬───────────┬───────────┬──────────────┐
+│     Source     │         Channel          │   Years   │ Countries │  Total USD   │
+├────────────────┼──────────────────────────┼───────────┼───────────┼──────────────┤
+│ nih_reporter   │ nih (research grants)    │ 2015–2025 │ N/A (US)  │ ~$6.8B       │
+├────────────────┼──────────────────────────┼───────────┼───────────┼──────────────┤
+│ global_fund_v4 │ global_fund              │ 2003–2026 │ 85        │ ~$22.7B      │
+├────────────────┼──────────────────────────┼───────────┼───────────┼──────────────┤
+│ usaspending    │ usaid_bilateral          │ 2015–2025 │ 50+       │ ~$2.6B       │
+├────────────────┼──────────────────────────┼───────────┼───────────┼──────────────┤
+│ wmr_2024_4c    │ donor breakdown (WMR 4c) │ 2021–2023 │ 50        │ varies       │
+└────────────────┴──────────────────────────┴───────────┴───────────┴──────────────┘
+
+Row counts by source:
+  nih_reporter:   8,207 grant records (unique project_num)
+  global_fund_v4: 3,495 country-year-component rows
+  wmr_2024_4c:      587 donor-country-year rows (6 donor channels)
+  usaspending:      269 country-year aggregates (6 malaria keywords × FY2015–2025)
+
+NIH rows are grant-level (no iso3 — US domestic research spend); all others are
+country-level. Serving layer aggregates global_fund + usaspending for the "Money"
+chapter financing flows.
+
+Known gaps:
+- World Bank health ODA not ingested
+- UK FCDO / other bilateral donors (France, Germany, Japan) not tracked
+- PMI award-level breakdowns: covered by usaspending at aggregate level only
+- ForeignAssistance.gov offline since 2025 (DOGE); replaced by USAspending
+
+---
+4. Insecticide Resistance (14,577 rows) ✅
+
+Source: IR Mapper WHO Bioassay Analysis Ready Dataset
+Coverage: 1955–2018, 38 African countries, 4 insecticide classes
+
+┌─────────────────┬───────────┬───────────┬───────┐
+│      Class      │   Years   │ Countries │ Rows  │
+├─────────────────┼───────────┼───────────┼───────┤
+│ pyrethroid      │ 1978–2018 │ 38        │ 7,752 │
+├─────────────────┼───────────┼───────────┼───────┤
+│ carbamate       │ 1978–2018 │ 29        │ 2,427 │
+├─────────────────┼───────────┼───────────┼───────┤
+│ organochloride  │ 1955–2017 │ 37        │ 2,290 │
+├─────────────────┼───────────┼───────────┼───────┤
+│ organophosphate │ 1978–2018 │ 30        │ 2,108 │
+└─────────────────┴───────────┴───────────┴───────┘
+
+Known gaps:
+- Data ends 2018: IR Mapper has not released a newer dataset
+- sample_size and admin1 are 100% NULL (not in source export)
+- Asia-Pacific and Americas: no IR bioassay data (IR Mapper Africa-only)
+- 2019–2024 resistance trend gap of 6 years — no machine-readable alternative found
+
+---
+5. Drug Resistance (1,223 rows) ✅
+
+Source: MalariaGEN Pf8 open dataset (33,325 samples QC-filtered → country×year×drug)
+Coverage: 1990–2022, 29 countries, 5 resistance markers
+
+┌──────────────────────────────────┬───────────┬───────────┬────────────────┐
+│              Drug                │   Years   │ Countries │ Avg Prevalence │
+├──────────────────────────────────┼───────────┼───────────┼────────────────┤
+│ SP (sulfadoxine-pyrimethamine)   │ 1990–2022 │ 29        │ 0.9%           │
+├──────────────────────────────────┼───────────┼───────────┼────────────────┤
+│ Chloroquine (pfcrt)              │ 1990–2022 │ 29        │ 0.7%           │
+├──────────────────────────────────┼───────────┼───────────┼────────────────┤
+│ Artemisinin (pfkelch13)          │ 1990–2022 │ 29        │ 0.1%           │
+├──────────────────────────────────┼───────────┼───────────┼────────────────┤
+│ Mefloquine                       │ 1990–2022 │ 29        │ 0.1%           │
+├──────────────────────────────────┼───────────┼───────────┼────────────────┤
+│ Piperaquine                      │ 1990–2022 │ 29        │ 0.1%           │
+└──────────────────────────────────┴───────────┴───────────┴────────────────┘
+
+Source: 33,325 Pf8 genomic samples → filtered on coverage/quality → aggregated
+to country × year × drug_resistance_marker.
+
+Known gaps:
+- Data ends 2022 (Pf8 is the latest MalariaGEN public release)
+- Pv resistance not covered (Pf8 is Plasmodium falciparum only)
+- No WHO WWARN phenotypic resistance data ingested
+
+---
+6. Intervention (9,295 rows) ✅
+
+15 indicators across 5+ sources; WMR 2024 and 2025 both loaded
+
+┌──────────────────────────┬─────────────────┬───────────┬───────────┬───────┐
+│         Indicator        │     Source      │   Years   │ Countries │ Rows  │
+├──────────────────────────┼─────────────────┼───────────┼───────────┼───────┤
+│ act_courses (treatments) │ wmr_2025        │ 2015–2024 │ ~80       │ 1,498 │
+├──────────────────────────┼─────────────────┼───────────┼───────────┼───────┤
+│ rdt_tests_performed      │ wmr_2025        │ 2015–2024 │ ~80       │ 1,450 │
+├──────────────────────────┼─────────────────┼───────────┼───────────┼───────┤
+│ itn_distributed          │ wmr_2025        │ 2015–2024 │ ~80       │ 1,400 │
+├──────────────────────────┼─────────────────┼───────────┼───────────┼───────┤
+│ irs_structures_protected │ wmr_2025        │ 2015–2024 │ ~50       │   900 │
+├──────────────────────────┼─────────────────┼───────────┼───────────┼───────┤
+│ iptp_doses               │ wmr_2025        │ 2015–2024 │ ~40       │   700 │
+├──────────────────────────┼─────────────────┼───────────┼───────────┼───────┤
+│ smc_children_protected   │ wmr_2025        │ 2017–2024 │ ~20       │   350 │
+├──────────────────────────┼─────────────────┼───────────┼───────────┼───────┤
+│ (additional wmr indicators)│ wmr_2025      │ 2015–2024 │ varies    │ 1,998 │
+├──────────────────────────┼─────────────────┼───────────┼───────────┼───────┤
+│ (WMR 2024 4d indicators) │ wmr_2024        │ 2020–2023 │ varies    │ 1,030 │
+├──────────────────────────┼─────────────────┼───────────┼───────────┼───────┤
+│ rdt_tests_positive       │ who_gho         │ 2015–2024 │ 82        │   350 │
+├──────────────────────────┼─────────────────┼───────────┼───────────┼───────┤
+│ rdt_positivity_pct       │ who_gho         │ 2015–2024 │ 28        │   150 │
+├──────────────────────────┼─────────────────┼───────────┼───────────┼───────┤
+│ itn_use_pct              │ worldbank + dhs │ 2000–2024 │ 64–73     │   540 │
+├──────────────────────────┼─────────────────┼───────────┼───────────┼───────┤
+│ act_coverage_pct         │ worldbank       │ 2000–2021 │ 73        │   280 │
+├──────────────────────────┼─────────────────┼───────────┼───────────┼───────┤
+│ fever_treatment_pct      │ dhs             │ 2002–2021 │ 36        │   149 │
+└──────────────────────────┴─────────────────┴───────────┴───────────┴───────┘
+
+WMR 2025 annex 4g (Long_Format sheet): 8,296 rows covering 15 indicator types,
+loaded 2026-04-20. WMR 2024 annex 4d: 1,030 rows.
+
+Known gaps:
+- No subnational (admin1) intervention data
+- WMR 2025 raw annex rows; some indicators have units/scaling TBD
+
+---
+7. Parasite Rate (2,203 rows) ✅
+
+Source: MAP (Malaria Atlas Project) survey data
+Coverage: 1985–2024, 77 countries, 2 Plasmodium species
+
+┌──────────────────────────┬───────────┬───────────┬───────┐
+│         Subtype          │   Years   │ Countries │ Rows  │
+├──────────────────────────┼───────────┼───────────┼───────┤
+│ Pf RDT (pf_rdt)          │ 2006–2024 │ 21        │ 1,030 │
+├──────────────────────────┼───────────┼───────────┼───────┤
+│ Pf community survey      │ 1985–2022 │ 75        │   851 │
+├──────────────────────────┼───────────┼───────────┼───────┤
+│ Pv community survey      │ 1985–2021 │ 41        │   322 │
+└──────────────────────────┴───────────┴───────────┴───────┘
+
+Spatial resolution: lat/lng per survey site (not country centroid). Good for
+endemic zone visualization. Includes admin1 in most rows.
+
+---
+8. Vaccine Coverage (745 rows) ⚠️  Partial
+
+3 data streams: WHO GHO indicators (real coverage) + static rollout reference
+
+┌──────────────────────────────┬──────────────────────┬───────────┬───────────┬─────────────────┐
+│         Vaccine/Indicator    │        Source        │   Years   │ Countries │   Coverage %    │
+├──────────────────────────────┼──────────────────────┼───────────┼───────────┼─────────────────┤
+│ IPTp3 (preventive tx in preg)│ who_wiise (GHO)      │ 2015–2024 │ 33        │ ✅ populated    │
+├──────────────────────────────┼──────────────────────┼───────────┼───────────┼─────────────────┤
+│ ITN ownership/use (household)│ who_wiise (GHO)      │ 2015–2024 │ 40        │ ✅ populated    │
+├──────────────────────────────┼──────────────────────┼───────────┼───────────┼─────────────────┤
+│ RTS,S (Mosquirix) rollout    │ who_vaccine_pipeline │ 2019–2024 │ 9         │ ❌ NULL         │
+├──────────────────────────────┼──────────────────────┼───────────┼───────────┼─────────────────┤
+│ R21/Matrix-M rollout         │ who_vaccine_pipeline │ 2024      │ 3         │ ❌ NULL         │
+└──────────────────────────────┴──────────────────────┴───────────┴───────────┴─────────────────┘
+
+IPTp3: 330 rows — % of pregnant women receiving 3+ doses of intermittent preventive treatment
+ITN: 400 rows — % of households with insecticide-treated nets
+Rollout reference: 15 rows — RTS,S + R21 countries with intro year + phase (no coverage numbers)
+
+GHO indicators fetched: MALARIA_IPTP3_COVERAGE (330 rows), MALARIA_ITN_COVERAGE (400 rows).
+Note: MALARIA_IPTP3_COVERAGE and MALARIA_ITN_COVERAGE are preventive/vector control metrics
+stored in fact_vaccine_coverage for convenience; they are not vaccines per se.
+
+Known gaps:
+- RTS,S/R21 coverage_pct: No machine-readable API exists anywhere (WHO WIISE has no data yet)
+- doses_admin: NULL for all rows (not available from GHO for these indicators)
+- WHO WIISE WUENIC indicators (MALARIA_VAC1, RTSS1, etc.) return empty — vaccine too new
+
+---
+9. Outbreaks (80 rows) ⚠️  Partial
+
+Sources: ProMED, WHO Disease Outbreak News
+Coverage: 47 countries, 2023–2026, 16 disease types
+
+┌────────────────────┬─────────────────────────────────────────────────────────┐
+│       Field        │                         Status                         │
+├────────────────────┼─────────────────────────────────────────────────────────┤
+│ disease_normalized │ ✅ 100% populated (fixed 2026-04-20; 17 diseases mapped) │
+├────────────────────┼─────────────────────────────────────────────────────────┤
+│ narrative          │ ✅ All 80 rows populated                                 │
+├────────────────────┼─────────────────────────────────────────────────────────┤
+│ disease (raw)      │ ✅ All 80 rows populated                                 │
+├────────────────────┼─────────────────────────────────────────────────────────┤
+│ lat / lng          │ ❌ 100% NULL — ProMED/WHO DON do not provide coordinates │
+├────────────────────┼─────────────────────────────────────────────────────────┤
+│ cases_reported     │ ❌ 100% NULL — not in structured feed                   │
+├────────────────────┼─────────────────────────────────────────────────────────┤
+│ deaths_reported    │ ❌ 100% NULL — not in structured feed                   │
+├────────────────────┼─────────────────────────────────────────────────────────┤
+│ end_date / status  │ ❌ 100% NULL — not in structured feed                   │
+└────────────────────┴─────────────────────────────────────────────────────────┘
+
+Map markers fall back to country centroid (from dim_country lat/lng).
+disease_normalized covers: malaria, dengue, cholera, ebola, mpox, measles,
+yellow_fever, lassa, marburg, rift_valley_fever, typhoid, meningitis, plague,
+other_vhf, other_respiratory, other_arbovirus, other.
+
+Known gaps:
+- lat/lng: No coordinates in any outbreak feed; would require NER/geocoding pipeline
+- case counts: Would require NLP extraction from narrative text (not yet built)
+
+---
+10. dim_country (217 rows)
+
+┌────────────────────────┬─────────────────────────────────────────────────────┐
+│         Field          │                        Status                      │
+├────────────────────────┼─────────────────────────────────────────────────────┤
+│ iso3 + country name    │ ✅ 217 — complete UN member state list              │
+├────────────────────────┼─────────────────────────────────────────────────────┤
+│ lat / lng              │ ✅ 217 — country centroids                          │
+├────────────────────────┼─────────────────────────────────────────────────────┤
+│ region / subregion     │ ✅ 217 — WHO + UN regional classification           │
+├────────────────────────┼─────────────────────────────────────────────────────┤
+│ population             │ ✅ 204 / 217 — from WMR 2024 4g (13 countries NULL) │
+├────────────────────────┼─────────────────────────────────────────────────────┤
+│ endemic flag           │ ✅ 83 flagged endemic (54 high-burden + others)      │
+└────────────────────────┴─────────────────────────────────────────────────────┘
+
+13 countries missing population: minor/disputed territories not in WMR reporting.
+
+---
+Summary: Current Status vs. Remaining Gaps
+
+RESOLVED since last audit (2026-04-13 → 2026-04-20):
+
+  ✅ fact_climate temp_max_c / temp_min_c: Now 100% populated (67,704 rows, 217 countries)
+  ✅ fact_funding NIH grants: 8,207 rows added via nih_reporter pipeline
+  ✅ fact_funding WMR 4c donors: 587 rows added (6 donor channels, WMR 2024)
+  ✅ fact_funding USAspending: 269 country-year rows (replaces offline foreignassistance.gov)
+  ✅ fact_intervention WMR 2024 4d: 1,030 rows added
+  ✅ fact_intervention WMR 2025 4g (Long_Format): 8,296 rows added
+  ✅ dim_country.population: 204 countries now populated (from WMR 4g)
+  ✅ fact_outbreak disease_normalized: All 80 rows now populated (17 disease types)
+  ✅ fact_vaccine_coverage: 745 rows (was 15); IPTp3 + ITN coverage added from WHO GHO
+  ✅ pipeline_runs: Audit trail now writes on finish() — 5 runs logged
+  ✅ Serving layer: All 5 command files rebuilt with latest data
+
+REMAINING KNOWN GAPS:
+
+┌──────────┬──────────────────────────────────────────────────┬──────────────────────────────────┐
+│ Priority │                       Gap                        │             Impact               │
+├──────────┼──────────────────────────────────────────────────┼──────────────────────────────────┤
+│ P2       │ fact_outbreak lat/lng: 100% NULL                 │ Map markers use country centroid │
+│          │ (ProMED/WHO DON provide no coordinates)          │ fallback only — no precision     │
+├──────────┼──────────────────────────────────────────────────┼──────────────────────────────────┤
+│ P2       │ fact_vaccine_coverage RTS,S/R21 coverage_pct NULL│ Vaccine story has rollout only,  │
+│          │ (no machine-readable API exists anywhere)        │ no dose coverage numbers         │
+├──────────┼──────────────────────────────────────────────────┼──────────────────────────────────┤
+│ P2       │ fact_insecticide_resistance ends 2018            │ 6-year gap in IR trend           │
+│          │ (IR Mapper has no newer release)                 │ (2019–2024 unknown)              │
+├──────────┼──────────────────────────────────────────────────┼──────────────────────────────────┤
+│ P3       │ IHME GBD 2023: files in foundation S3 bucket,   │ No independent mortality         │
+│          │ no ingest pipeline written yet                   │ estimate comparison              │
+├──────────┼──────────────────────────────────────────────────┼──────────────────────────────────┤
+│ P3       │ EVI / vegetation index: NULL in fact_climate     │ Mosquito habitat proxy missing   │
+│          │ (NASA POWER doesn't carry MODIS NDVI)            │                                  │
+├──────────┼──────────────────────────────────────────────────┼──────────────────────────────────┤
+│ P3       │ dim_country.population NULL for 13 countries     │ Per-capita metrics unavailable   │
+│          │ (minor/disputed territories not in WMR)          │ for these 13                     │
+├──────────┼──────────────────────────────────────────────────┼──────────────────────────────────┤
+│ P3       │ fact_drug_resistance ends 2022                   │ No 2023/2024 genomic data        │
+│          │ (Pf8 is latest MalariaGEN public release)        │                                  │
+└──────────┴──────────────────────────────────────────────────┴──────────────────────────────────┘
+
+---
+Data Source Inventory
+
+┌────────────────────────────┬──────────────────────────────────────┬────────────┬─────────────────┐
+│           Source           │              Description             │   Tables   │   Status        │
+├────────────────────────────┼──────────────────────────────────────┼────────────┼─────────────────┤
+│ WHO WMR 2025               │ World Malaria Report annexes         │ burden,    │ ✅ Loaded        │
+│                            │ (107c burden + 8,296 intervention    │ intervention│                │
+│                            │  rows via Long_Format 4g)            │            │                 │
+├────────────────────────────┼──────────────────────────────────────┼────────────┼─────────────────┤
+│ WHO WMR 2024               │ World Malaria Report annexes         │ burden,    │ ✅ Loaded        │
+│                            │ (4c funding, 4d commodities, 4g pop) │ intervention│                │
+│                            │                                      │ funding    │                 │
+├────────────────────────────┼──────────────────────────────────────┼────────────┼─────────────────┤
+│ WHO GHO API                │ Global Health Observatory OData API  │ burden,    │ ✅ Active        │
+│ ghoapi.azureedge.net       │ (cases, incidence, IPTp3, ITN)       │ intervention│                │
+│                            │                                      │ vaccine    │                 │
+├────────────────────────────┼──────────────────────────────────────┼────────────┼─────────────────┤
+│ PAHO PLISA                 │ Pan American Health Organization      │ burden     │ ✅ Loaded        │
+│                            │ (21 Americas countries, 2000–2024)   │            │                 │
+├────────────────────────────┼──────────────────────────────────────┼────────────┼─────────────────┤
+│ World Bank Open Data       │ WDI indicators (incidence, ITN, ACT) │ burden,    │ ✅ Loaded        │
+│ api.worldbank.org          │                                      │ intervention│                │
+├────────────────────────────┼──────────────────────────────────────┼────────────┼─────────────────┤
+│ NASA POWER API             │ Meteorological data per country      │ climate    │ ✅ Active        │
+│ power.larc.nasa.gov        │ centroid (T2M, T2M_MAX, T2M_MIN,     │            │                 │
+│                            │ PRECTOTCORR, RH2M)                   │            │                 │
+├────────────────────────────┼──────────────────────────────────────┼────────────┼─────────────────┤
+│ Global Fund Data Service   │ Grant disbursements by country,      │ funding    │ ✅ Loaded        │
+│ data.theglobalfund.org     │ component, period (2003–2026)        │            │                 │
+├────────────────────────────┼──────────────────────────────────────┼────────────┼─────────────────┤
+│ NIH Reporter API           │ Malaria research grant awards        │ funding    │ ✅ Active        │
+│ api.reporter.nih.gov       │ (6 search terms, FY2015–2025)        │            │                 │
+├────────────────────────────┼──────────────────────────────────────┼────────────┼─────────────────┤
+│ USAspending.gov API        │ US foreign assistance malaria spend  │ funding    │ ✅ Active        │
+│ api.usaspending.gov        │ by place of performance (6 keywords) │            │                 │
+│ (replaces foreignassistance│                                      │            │                 │
+│  .gov, offline since 2025) │                                      │            │                 │
+├────────────────────────────┼──────────────────────────────────────┼────────────┼─────────────────┤
+│ IR Mapper (WHO)            │ Insecticide resistance bioassay data │ insecticide│ ✅ Loaded        │
+│ (static dataset)           │ 1955–2018, Africa, 4 classes         │ _resistance│ (no new release)│
+├────────────────────────────┼──────────────────────────────────────┼────────────┼─────────────────┤
+│ MalariaGEN Pf8             │ P. falciparum genomic resistance     │ drug_      │ ✅ Loaded        │
+│ (static dataset)           │ (33,325 samples → country×drug×year) │ resistance │ (ends 2022)     │
+├────────────────────────────┼──────────────────────────────────────┼────────────┼─────────────────┤
+│ MAP Project                │ Malaria Atlas Project PfPR/PvPR      │ parasite   │ ✅ Loaded        │
+│ (static dataset)           │ community + RDT survey data          │ _rate      │                 │
+├────────────────────────────┼──────────────────────────────────────┼────────────┼─────────────────┤
+│ DHS Program                │ Demographic Health Surveys           │ intervention│ ✅ Loaded       │
+│ (static harmonized file)   │ (ITN use, fever treatment, 36c)      │            │                 │
+├────────────────────────────┼──────────────────────────────────────┼────────────┼─────────────────┤
+│ ProMED / WHO DON           │ Disease outbreak news (80 events)    │ outbreak   │ ✅ Loaded        │
+│ (web scrape, static)       │ (2023–2026, 47 countries)            │            │ (no coords)     │
+├────────────────────────────┼──────────────────────────────────────┼────────────┼─────────────────┤
+│ IHME GBD 2023              │ Global Burden of Disease estimates   │ (none yet) │ ❌ In S3, not   │
+│ (foundation S3 bucket)     │                                      │            │   ingested      │
+└────────────────────────────┴──────────────────────────────────────┴────────────┴─────────────────┘

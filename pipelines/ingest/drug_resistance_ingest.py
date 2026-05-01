@@ -1,286 +1,215 @@
 """
 L0 — Malaria drug resistance ingest.
-PRIMARY: Reads WMR drug resistance Excel from foundation bucket:
-  raw/malaria-intelligence/drug_resistance/wmr2024_annex_2_drug_resistance.xlsx  (confirmed)
-  raw/malaria-intelligence/drug_resistance/elife_kelch13_artR_supp1.xlsx         (artemisinin resistance)
 
-Parses by country-year-drug-mutation and stores in PostgreSQL fact_drug_resistance.
+Sources:
+  1. eLife 105544 kelch13 CSV (artemisinin partial resistance, global, 1980-2023)
+     URL: https://cdn.elifesciences.org/articles/105544/elife-105544-fig1-data1-v1.csv
+     112,934 sample-level rows. Columns: Sample, Country, Population, Year, Marker, Continent
+     Marker = 'pfkelch13 mutation name' or '3D7_REF' (wildtype).
+     Aggregated to: country × year × mutation → prevalence_pct + sample_size.
+     Critical for: Africa R561H/A675V detections 2019-2023 (Rwanda, Uganda, Eritrea).
+
+  2. MalariaGEN Pf8 (separate pipeline: malariagen_pf8.py)
+     Handled by malariagen_pf8.py — this pipeline complements it with kelch13 specifics.
+
+NOTE on foundation bucket:
+  raw/malaria-intelligence/drug_resistance/elife_kelch13_artR_supp1.xlsx is a 7-row
+  mutation CLASSIFICATION reference table, not sample data. Ignored here.
+  raw/malaria-intelligence/drug_resistance/wmr2024_annex_2_drug_resistance.xlsx is
+  ITN distribution data (Annex 2), not therapeutic efficacy data. Skipped.
+
+Output:
+  S3: raw/drug-resistance/dt=YYYY-MM-DD/elife-kelch13.json
+  DB: malaria.fact_drug_resistance (data_source='elife_kelch13')
 
 Usage:
     python -m pipelines.ingest.drug_resistance_ingest [--dry-run] [--date YYYY-MM-DD]
 """
 
 import argparse
+import csv
 import io
 import sys
+from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-import boto3
-import openpyxl
+import requests
 from pipelines.utils.s3 import put_json, put_meta, raw_key, BUCKET
 from pipelines.utils.logger import PipelineLogger
 
-FOUNDATION_BUCKET = "imacs-mm-foundation-data-prod"
+SOURCE_CODE = "elife_kelch13"
 
-# Confirmed foundation paths from S3 audit
-FOUNDATION_FILES = [
-    {
-        # NOTE: This file is WMR Annex 2 (ITN distribution data), NOT therapeutic efficacy.
-        # It is skipped here; ITN data is ingested by dhs_malaria and who_gho_full pipelines.
-        # True drug resistance data (WMR Annex 4 / WWARN) is not yet in the foundation bucket.
-        "key":    "raw/malaria-intelligence/drug_resistance/wmr2024_annex_2_drug_resistance.xlsx",
-        "source": "wmr_2024",
-        "type":   "wmr_annex2",
-        "skip":   True,
-    },
-    {
-        "key":    "raw/malaria-intelligence/drug_resistance/elife_kelch13_artR_supp1.xlsx",
-        "source": "wmr_2024",
-        "type":   "elife_kelch13",
-        "skip":   False,
-    },
-]
+# eLife 105544 supplementary data — sample-level kelch13 genotypes
+ELIFE_CSV_URL = "https://cdn.elifesciences.org/articles/105544/elife-105544-fig1-data1-v1.csv"
 
-DRUG_KEYWORDS = {
-    "artemisinin": ["artemisinin", "artesunate", "kelch", "k13", "pfkelch13", "c580y", "f446i", "r539t", "art"],
-    "chloroquine": ["chloroquine", "cq", "pfcrt", "76t"],
-    "sp":          ["sulfadoxine", "sp", "pyrimethamine", "pfdhfr", "pfdhps", "dhfr", "dhps"],
-    "lumefantrine": ["lumefantrine", "lum", "pfmdr1"],
-    "piperaquine": ["piperaquine", "pip", "plasmepsin"],
+# Wildtype marker — not a resistance mutation
+WILDTYPE_MARKER = "3D7_REF"
+
+# WHO validated / candidate artemisinin partial resistance markers (pfkelch13)
+# Source: WHO Technical Report on Artemisinin and ACT Resistance 2023
+WHO_VALIDATED_MUTATIONS = {
+    "F446I", "N458Y", "M476I", "Y493H", "R539T", "I543T", "P553L",
+    "R561H", "P574L", "C580Y",
+}
+WHO_CANDIDATE_MUTATIONS = {
+    "P441L", "G449A", "C469F", "C469Y", "A481V", "R515K", "P527H",
+    "N537I", "N537D", "G538V", "V568G", "R622I", "A675V",
 }
 
-SEVERITY_KEYWORDS = {
-    "full":    ["full", "high", "resistant", ">10%", ">20%"],
-    "partial": ["partial", "moderate", "intermediate", "5-10%"],
-    "low":     ["low", "suspected", "emerging", "rare", "<5%"],
+# Country name → ISO3 (covers all countries in the eLife dataset)
+COUNTRY_ISO3: dict[str, str] = {
+    "Papua New Guinea": "PNG", "Uganda": "UGA", "DRC": "COD",
+    "Democratic Republic of the Congo": "COD", "Congo DRC": "COD",
+    "Ghana": "GHA", "Kenya": "KEN", "Tanzania": "TZA", "Ethiopia": "ETH",
+    "Rwanda": "RWA", "Malawi": "MWI", "Mozambique": "MOZ", "Zambia": "ZMB",
+    "Mali": "MLI", "Burkina Faso": "BFA", "Senegal": "SEN", "Niger": "NER",
+    "Guinea": "GIN", "Cameroon": "CMR", "Nigeria": "NGA", "Benin": "BEN",
+    "Togo": "TGO", "Gambia": "GMB", "The Gambia": "GMB", "Sierra Leone": "SLE",
+    "Liberia": "LBR", "Ivory Coast": "CIV", "Cote d'Ivoire": "CIV",
+    "Madagascar": "MDG", "Zimbabwe": "ZWE", "Angola": "AGO",
+    "South Sudan": "SSD", "Sudan": "SDN", "Eritrea": "ERI",
+    "Somalia": "SOM", "Djibouti": "DJI", "Comoros": "COM",
+    "Central African Republic": "CAF", "Chad": "TCD", "Gabon": "GAB",
+    "Equatorial Guinea": "GNQ", "Sao Tome": "STP", "Congo": "COG",
+    "Burundi": "BDI", "Namibia": "NAM", "Botswana": "BWA",
+    "Cambodia": "KHM", "Myanmar": "MMR", "Thailand": "THA",
+    "Vietnam": "VNM", "Laos": "LAO", "Indonesia": "IDN", "India": "IND",
+    "Bangladesh": "BGD", "Pakistan": "PAK", "Philippines": "PHL",
+    "China": "CHN", "Colombia": "COL", "Peru": "PER", "Brazil": "BRA",
+    "Haiti": "HTI", "Guyana": "GUY", "Venezuela": "VEN",
+    "Solomon Islands": "SLB", "Vanuatu": "VUT",
 }
 
-_s3 = boto3.client("s3", region_name="us-east-1")
 
-
-def load_foundation_xlsx(key: str) -> bytes | None:
-    try:
-        resp = _s3.get_object(Bucket=FOUNDATION_BUCKET, Key=key)
-        return resp["Body"].read()
-    except Exception:
-        return None
-
-
-def classify_drug(text: str) -> str:
-    t = text.lower()
-    for drug, kws in DRUG_KEYWORDS.items():
-        if any(kw in t for kw in kws):
-            return drug
-    return "unknown"
-
-
-def classify_severity(text: str) -> str:
-    t = text.lower()
-    for severity, kws in SEVERITY_KEYWORDS.items():
-        if any(kw in t for kw in kws):
-            return severity
+def _severity(mutation: str) -> str:
+    if mutation in WHO_VALIDATED_MUTATIONS:
+        return "full"
+    if mutation in WHO_CANDIDATE_MUTATIONS:
+        return "partial"
     return "low"
 
 
-def parse_wmr_annex2(ws) -> list[dict]:
-    """Parse WMR annex 2 drug resistance sheet."""
-    rows_out: list[dict] = []
-    header_found = False
-    col_map: dict[str, int] = {}
+def fetch_and_aggregate(log) -> list[dict]:
+    """
+    Download eLife 105544 fig1-data1 CSV (112,934 sample rows).
+    Aggregate to country × year × mutation → prevalence_pct + sample_size.
 
-    for row in ws.iter_rows(values_only=True):
-        if not any(row):
+    Algorithm:
+      For each (country, year): total = all samples (including wildtype)
+      For each (country, year, mutation != 3D7_REF): mutant_count / total = prevalence
+    """
+    log.info(f"  Fetching {ELIFE_CSV_URL}")
+    resp = requests.get(ELIFE_CSV_URL, timeout=120)
+    resp.raise_for_status()
+    log.info(f"  Downloaded {len(resp.content):,} bytes, {resp.text.count(chr(10)):,} lines")
+
+    reader = csv.DictReader(io.StringIO(resp.text))
+
+    # (country_name, year) → total sample count
+    totals: dict[tuple[str, int], int] = defaultdict(int)
+    # (country_name, year, mutation) → mutant count
+    mutants: dict[tuple[str, int, str], int] = defaultdict(int)
+
+    skipped = 0
+    for row in reader:
+        country = str(row.get("Country") or "").strip()
+        year_raw = str(row.get("Year") or "").strip()
+        marker   = str(row.get("Marker") or "").strip()
+
+        if not country or not year_raw or not marker:
+            skipped += 1
             continue
-        row_str = [str(c).lower().strip() if c is not None else "" for c in row]
-
-        if not header_found:
-            if any(k in row_str for k in ("iso3", "country", "country code")):
-                header_found = True
-                for j, cell in enumerate(row_str):
-                    col_map[cell] = j
-                continue
-        else:
-            def _get(*keys):
-                for k in keys:
-                    if k in col_map and row[col_map[k]] is not None:
-                        return row[col_map[k]]
-                return None
-
-            iso3       = _get("iso3", "iso", "country code", "iso3_code")
-            year       = _get("year", "survey_year", "report_year", "data_year")
-            drug       = _get("drug", "antimalarial", "drug_name", "medicine", "treatment")
-            mutation   = _get("mutation", "marker", "resistance_marker", "allele", "variant")
-            prevalence = _get("prevalence_pct", "prevalence", "frequency", "frequency_pct", "%", "proportion")
-            sample     = _get("sample_size", "n", "samples", "tested", "surveyed")
-            severity   = _get("severity", "resistance_level", "level", "classification")
-            lat        = _get("latitude", "lat")
-            lng        = _get("longitude", "lng", "long", "lon")
-            country    = _get("country", "country_name", "name")
-
-            # Infer iso3 from country name if missing
-            if not iso3 and country:
-                iso3 = str(country).strip().upper()[:3]
-
-            if not iso3 or len(str(iso3).strip()) != 3:
-                continue
-            try:
-                year_int = int(float(str(year))) if year else None
-            except (ValueError, TypeError):
-                year_int = None
-            if not year_int:
-                continue
-
-            drug_str = str(drug or "").strip()
-            mut_str  = str(mutation or "").strip()
-            sev_str  = str(severity or "").strip()
-
-            try:
-                prev = float(str(prevalence or 0).replace("%", "").replace(",", "").strip())
-                if prev > 1.0:
-                    prev = prev / 100.0
-            except (ValueError, TypeError):
-                prev = None
-
-            rows_out.append({
-                "iso3":              str(iso3).strip().upper(),
-                "year":              year_int,
-                "drug":              classify_drug(drug_str),
-                "resistance_marker": mut_str[:50],
-                "mutation":          mut_str[:20],
-                "prevalence_pct":    prev,
-                "sample_size":       int(float(str(sample))) if sample else None,
-                "severity":          classify_severity(sev_str or drug_str),
-                "lat":               float(lat) if lat else None,
-                "lng":               float(lng) if lng else None,
-            })
-
-    return rows_out
-
-
-def parse_kelch13(ws) -> list[dict]:
-    """Parse eLife kelch13 artemisinin resistance supplementary data."""
-    rows_out: list[dict] = []
-    header_found = False
-    col_map: dict[str, int] = {}
-
-    for row in ws.iter_rows(values_only=True):
-        if not any(row):
+        try:
+            year = int(float(year_raw))
+        except (ValueError, TypeError):
+            skipped += 1
             continue
-        row_str = [str(c).lower().strip() if c is not None else "" for c in row]
+        if year < 1984 or year > 2030:
+            skipped += 1
+            continue
 
-        if not header_found:
-            if any(k in row_str for k in ("country", "iso3", "mutation", "kelch")):
-                header_found = True
-                for j, cell in enumerate(row_str):
-                    col_map[cell] = j
-                continue
-        else:
-            def _get(*keys):
-                for k in keys:
-                    if k in col_map and row[col_map[k]] is not None:
-                        return row[col_map[k]]
-                return None
+        totals[(country, year)] += 1
+        if marker != WILDTYPE_MARKER:
+            mutants[(country, year, marker)] += 1
 
-            iso3     = _get("iso3", "iso", "country code")
-            country  = _get("country", "country_name")
-            year     = _get("year", "sample_year", "collection_year")
-            mutation = _get("mutation", "variant", "allele", "kelch13_mutation")
-            prev     = _get("prevalence", "frequency", "proportion", "%")
-            sample   = _get("n", "sample_size", "samples")
-            lat      = _get("latitude", "lat")
-            lng      = _get("longitude", "lng", "long")
+    log.info(f"  Skipped {skipped} malformed rows")
+    log.info(f"  Country-year combinations: {len(totals)}")
 
-            if not iso3 and country:
-                iso3 = str(country).strip().upper()[:3]
-            if not iso3 or len(str(iso3).strip()) != 3:
-                continue
-            try:
-                year_int = int(float(str(year))) if year else None
-            except (ValueError, TypeError):
-                year_int = None
-            if not year_int:
-                continue
-
-            try:
-                prev_f = float(str(prev or 0).replace("%", "").strip())
-                if prev_f > 1.0:
-                    prev_f = prev_f / 100.0
-            except (ValueError, TypeError):
-                prev_f = None
-
-            rows_out.append({
-                "iso3":              str(iso3).strip().upper(),
-                "year":              year_int,
-                "drug":              "artemisinin",
-                "resistance_marker": "pfkelch13",
-                "mutation":          str(mutation or "")[:20],
-                "prevalence_pct":    prev_f,
-                "sample_size":       int(float(str(sample))) if sample else None,
-                "severity":          "partial",  # kelch13 = partial resistance
-                "lat":               float(lat) if lat else None,
-                "lng":               float(lng) if lng else None,
-            })
+    # Build aggregated rows
+    rows_out: list[dict] = []
+    for (country, year, mutation), count in mutants.items():
+        total = totals.get((country, year), 0)
+        if total == 0:
+            continue
+        iso3 = COUNTRY_ISO3.get(country)
+        if not iso3:
+            continue
+        prevalence = count / total
+        rows_out.append({
+            "iso3":              iso3,
+            "year":              year,
+            "drug":              "artemisinin",
+            "resistance_marker": "pfkelch13",
+            "mutation":          mutation[:20],
+            "prevalence_pct":    round(prevalence, 5),
+            "sample_size":       total,
+            "severity":          _severity(mutation),
+        })
 
     return rows_out
 
 
 def run(dry_run: bool = False, date: str | None = None) -> None:
     log = PipelineLogger("drug_resistance_ingest", dry_run=dry_run)
-    all_rows: list[dict] = []
 
-    for file_spec in FOUNDATION_FILES:
-        key  = file_spec["key"]
-        src  = file_spec["source"]
-        kind = file_spec["type"]
+    with log.step("Fetch + aggregate eLife 105544 kelch13 data"):
+        rows = fetch_and_aggregate(log)
 
-        if file_spec.get("skip"):
-            log.info(f"  Skipping {key.split('/')[-1]} (ITN data, not drug resistance)")
-            continue
-
-        with log.step(f"Load {kind} from foundation: {key.split('/')[-1]}"):
-            content = load_foundation_xlsx(key)
-            if content is None:
-                log.warn(f"  Not found: {key}")
-                continue
-
-            wb = openpyxl.load_workbook(io.BytesIO(content), data_only=True)
-            log.info(f"  Sheets: {wb.sheetnames}")
-
-            for sheet_name in wb.sheetnames:
-                ws = wb[sheet_name]
-                if kind == "kelch13":
-                    rows = parse_kelch13(ws)
-                else:
-                    rows = parse_wmr_annex2(ws)
-                if rows:
-                    log.info(f"  Sheet '{sheet_name}': {len(rows)} rows")
-                    all_rows.extend(rows)
-
-    log.info(f"Total drug resistance records: {len(all_rows)}")
-
-    if not all_rows:
-        log.warn("No data parsed — check sheet structure")
+    if not rows:
+        log.warn("No rows parsed")
         log.finish(records=0)
         return
 
+    log.info(f"Total aggregated rows: {len(rows)}")
+
+    # Summary stats
+    countries = len({r["iso3"] for r in rows})
+    years     = sorted({r["year"] for r in rows})
+    mutations = len({r["mutation"] for r in rows})
+    validated = [r for r in rows if r["mutation"] in WHO_VALIDATED_MUTATIONS]
+    log.info(f"  Countries: {countries}, Years: {min(years)}-{max(years)}, Mutations: {mutations}")
+    log.info(f"  WHO-validated mutation rows: {len(validated)}")
+
+    # Africa 2019+ R561H specifically (key narrative data point)
+    r561h_africa = [
+        r for r in rows
+        if r["mutation"] == "R561H" and r["year"] >= 2019
+        and r["iso3"] in {"RWA", "UGA", "ERI", "ETH", "TZA", "KEN"}
+    ]
+    if r561h_africa:
+        log.info(f"  R561H Africa 2019+: {len(r561h_africa)} rows")
+        for r in sorted(r561h_africa, key=lambda x: -x["prevalence_pct"])[:5]:
+            log.info(f"    {r['iso3']} {r['year']}: {r['prevalence_pct']*100:.1f}% ({r['sample_size']} samples)")
+
     payload = {
         "_meta": {
-            "source": "wmr_2024",
-            "record_count": len(all_rows),
-            "fetched_at": datetime.now(timezone.utc).isoformat(),
+            "source":       SOURCE_CODE,
+            "upstream_url": ELIFE_CSV_URL,
+            "record_count": len(rows),
+            "fetched_at":   datetime.now(timezone.utc).isoformat(),
         },
-        "rows": all_rows,
+        "rows": rows,
     }
-    key = raw_key("drug-resistance", "wmr-dr.json", date=date)
+    key = raw_key("drug-resistance", "elife-kelch13.json", date=date)
 
     if not dry_run:
         with log.step("Upload to S3"):
             put_json(key, payload)
             put_meta(key, payload["_meta"])
-        log.info(f"s3://{BUCKET}/{key}")
+            log.info(f"  s3://{BUCKET}/{key}")
 
         with log.step("Upsert → PostgreSQL fact_drug_resistance"):
             try:
@@ -288,14 +217,15 @@ def run(dry_run: bool = False, date: str | None = None) -> None:
                 SQL = """
                     INSERT INTO malaria.fact_drug_resistance
                         (iso3, year, drug, resistance_marker, mutation,
-                         prevalence_pct, sample_size, data_source, severity, lat, lng)
-                    VALUES %s ON CONFLICT DO NOTHING
+                         prevalence_pct, sample_size, data_source, severity)
+                    VALUES %s
+                    ON CONFLICT DO NOTHING
                 """
                 db_rows = [
-                    (r["iso3"], r["year"], r["drug"], r.get("resistance_marker", ""),
-                     r.get("mutation", ""), r.get("prevalence_pct"), r.get("sample_size"),
-                     "wmr_2024", r.get("severity", "low"), r.get("lat"), r.get("lng"))
-                    for r in all_rows
+                    (r["iso3"], r["year"], r["drug"], r["resistance_marker"],
+                     r["mutation"], r["prevalence_pct"], r["sample_size"],
+                     SOURCE_CODE, r["severity"])
+                    for r in rows
                 ]
                 db_rows, skipped = filter_valid_iso3(db_rows, iso3_col=0)
                 if skipped:
@@ -303,15 +233,17 @@ def run(dry_run: bool = False, date: str | None = None) -> None:
                 inserted = upsert_many(SQL, db_rows)
                 log.info(f"  Upserted {inserted} rows")
             except Exception as e:
-                log.warn(f"  DB skipped: {e}")
+                log.warn(f"  DB upsert failed: {e}")
     else:
-        log.info(f"[DRY RUN] {len(all_rows)} rows")
+        log.info(f"[DRY RUN] {len(rows)} rows ready")
+        for r in rows[:3]:
+            log.info(f"  {r['iso3']} {r['year']} {r['mutation']}: {r['prevalence_pct']*100:.2f}% (n={r['sample_size']})")
 
-    log.finish(records=len(all_rows))
+    log.finish(records=len(rows), s3_keys=[key] if not dry_run else None)
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description="Ingest eLife kelch13 artemisinin resistance data")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--date", default=None)
     args = parser.parse_args()

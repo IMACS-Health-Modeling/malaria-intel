@@ -2,6 +2,8 @@
 
 import { cn } from "@/lib/cn";
 import { TrendingUp, TrendingDown, Minus } from "lucide-react";
+import { InfoTooltip } from "@/components/ui/InfoTooltip";
+import type { MetricMeta } from "@/lib/metric-metadata";
 
 type Props = {
   label: string;
@@ -12,9 +14,10 @@ type Props = {
   glowColor?: string;
   className?: string;
   accent?: string;
+  meta?: MetricMeta;
 };
 
-export function KPICard({ label, value, subvalue, change, changeLabel, glowColor, className, accent }: Props) {
+export function KPICard({ label, value, subvalue, change, changeLabel, glowColor, className, accent, meta }: Props) {
   const trend = change === undefined || change === 0 ? "flat" : change > 0 ? "up" : "down";
 
   return (
@@ -26,7 +29,10 @@ export function KPICard({ label, value, subvalue, change, changeLabel, glowColor
       }}
     >
       <p className="text-2xs text-txt-muted font-mono uppercase tracking-widest mb-2">{label}</p>
-      <p className="text-xl font-semibold text-txt-primary tabular-nums leading-snug tracking-tight">{value}</p>
+      <div className="flex items-center">
+        <p className="text-xl font-semibold text-txt-primary tabular-nums leading-snug tracking-tight">{value}</p>
+        {meta && <InfoTooltip meta={meta} />}
+      </div>
       <div className="flex items-center gap-2 mt-2">
         {subvalue && <span className="text-2xs text-txt-muted">{subvalue}</span>}
         {change !== undefined && (

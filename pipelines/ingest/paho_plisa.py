@@ -43,29 +43,53 @@ SOURCE_CODE = "paho_plisa"
 DISEASE_CODE = "malaria"
 
 
-def fetch_paho_via_gho(indicator: str) -> list[dict]:
+PAGE_SIZE = 1000  # WHO GHO OData max; $top > 1000 returns 400
+
+
+def _gho_paginate(indicator: str) -> list[dict]:
     """
-    Fetch PAHO-region malaria data via WHO GHO, filtering to AMR region.
-    More reliable than direct PAHO API.
+    Paginate through all GHO records for an indicator using $skip.
+    '$top=1000' is the confirmed max; larger values return 400.
+    Uses direct URL construction to keep '$' unencoded.
     """
-    params = {
-        "$filter": f"SpatialDimType eq 'COUNTRY' and TimeDimType eq 'YEAR'",
-        "$select": "SpatialDim,TimeDim,NumericValue,Low,High",
-        "$top": 5000,
-    }
-    resp = requests.get(f"{WHO_GHO_PAHO_URL}/{indicator}", params=params, timeout=60)
-    resp.raise_for_status()
-    rows = resp.json().get("value", [])
-    # Filter to PAHO countries
+    all_rows: list[dict] = []
+    skip = 0
+    while True:
+        url = f"{WHO_GHO_PAHO_URL}/{indicator}?$top={PAGE_SIZE}&$skip={skip}"
+        resp = requests.get(url, timeout=90)
+        resp.raise_for_status()
+        batch = resp.json().get("value", [])
+        all_rows.extend(batch)
+        if len(batch) < PAGE_SIZE:
+            break
+        skip += PAGE_SIZE
+    return all_rows
+
+
+def fetch_gho_all_countries(indicator: str) -> list[dict]:
+    """Fetch all countries (paginated), filter to PAHO in Python."""
+    rows = _gho_paginate(indicator)
     return [r for r in rows if r.get("SpatialDim", "") in PAHO_COUNTRIES]
 
 
-GHO_INDICATORS = {
-    "MALARIA_EST_CASES":  "cases_estimated",
-    "MALARIA_EST_DEATHS": "deaths_estimated",
-    "MALARIA_INCIDENCE":  "incidence_per_1000",
-    "MALARIA_CASES":      "cases_reported",
-    "MALARIA_DEATHS":     "deaths_reported",
+def fetch_gho_filtered(indicator: str) -> list[dict]:
+    """Same paginated fetch as fetch_gho_all_countries — filter applied in Python."""
+    return fetch_gho_all_countries(indicator)
+
+
+# Estimated burden indicators (use $top only — $filter not supported on these)
+GHO_EST_INDICATORS = {
+    "MALARIA_EST_CASES":      "cases_estimated",
+    "MALARIA_EST_DEATHS":     "deaths_estimated",
+    "MALARIA_EST_INCIDENCE":  "incidence_per_1000",
+    "MALARIA_EST_MORTALITY":  "mortality_per_100k",
+}
+
+# Reported/confirmed indicators (support $filter on SpatialDimType/TimeDimType)
+GHO_CONF_INDICATORS = {
+    "MALARIA_CONF_CASES":     "cases_confirmed",
+    "MALARIA_INDIG":          "cases_indigenous",
+    "MALARIA_TOTAL_CASES":    "cases_total",
 }
 
 
@@ -74,29 +98,40 @@ def run(dry_run: bool = False, date: str | None = None) -> None:
 
     all_rows: list[dict] = []
 
-    with log.step("Fetch PAHO malaria data via WHO GHO (AMR filter)"):
-        for code, metric in GHO_INDICATORS.items():
-            log.info(f"  {code}")
+    def _append(rows, metric, is_modeled):
+        for r in rows:
+            iso3  = r.get("SpatialDim", "")
+            year  = r.get("TimeDim")
+            value = r.get("NumericValue")
+            if iso3 and year and value is not None:
+                all_rows.append({
+                    "iso3":       iso3,
+                    "year":       int(year),
+                    "metric":     metric,
+                    "value":      float(value),
+                    "value_low":  float(r["Low"])  if r.get("Low")  is not None else None,
+                    "value_high": float(r["High"]) if r.get("High") is not None else None,
+                    "is_modeled": is_modeled,
+                    "region":     "AMR",
+                })
+
+    with log.step("Fetch estimated burden (no filter — fetch all, slice AMR)"):
+        for code, metric in GHO_EST_INDICATORS.items():
             try:
-                rows = fetch_paho_via_gho(code)
-                for r in rows:
-                    iso3 = r.get("SpatialDim", "")
-                    year = r.get("TimeDim")
-                    value = r.get("NumericValue")
-                    if iso3 and year and value is not None:
-                        all_rows.append({
-                            "iso3":       iso3,
-                            "year":       int(year),
-                            "metric":     metric,
-                            "value":      float(value),
-                            "value_low":  float(r["Low"])  if r.get("Low")  is not None else None,
-                            "value_high": float(r["High"]) if r.get("High") is not None else None,
-                            "is_modeled": metric in ("cases_estimated", "deaths_estimated", "incidence_per_1000"),
-                            "region":     "AMR",
-                        })
-                log.info(f"    → {len(rows)} AMR records")
+                rows = fetch_gho_all_countries(code)
+                _append(rows, metric, is_modeled=True)
+                log.info(f"  {code}: {len(rows)} AMR records")
             except Exception as e:
-                log.warn(f"    {code} failed: {e}")
+                log.warn(f"  {code} failed: {e}")
+
+    with log.step("Fetch confirmed/reported cases (OData filter)"):
+        for code, metric in GHO_CONF_INDICATORS.items():
+            try:
+                rows = fetch_gho_filtered(code)
+                _append(rows, metric, is_modeled=False)
+                log.info(f"  {code}: {len(rows)} AMR records")
+            except Exception as e:
+                log.warn(f"  {code} failed: {e}")
 
     log.info(f"Total PAHO rows: {len(all_rows)}")
 
